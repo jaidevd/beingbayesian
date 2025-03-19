@@ -1,0 +1,102 @@
+B1q2_hhrv: schedule
+qtr_hhrv: yr_quarter
+visit_hhrv: visit
+b1q3_hhrv:
+  label: Sector
+  categories:
+    1: rural
+    2: urban
+state_hhrv:
+  label: state
+  categories:
+    '01': Jammu & Kashmir
+    '02': Himachal Pradesh
+    '03': Punjab
+    '04': Chandigarh
+    '05': Uttarakhand
+    '06': Haryana
+    '07': Delhi
+    '08': Rajasthan
+    '09': Uttar Pradesh
+    '10': Bihar
+    '11': Sikkim
+    '12': Arunachal Pradesh
+    '13': Nagaland
+    '14': Manipur
+    '15': Mizoram
+    '16': Tripura
+    '17': Meghalaya
+    '18': Assam
+    '19': West Bengal
+    '20': Jharkhand
+    '21': Odisha
+    '22': Chhattisgarh
+    '23': Madhya Pradesh
+    '24': Gujarat
+    '25': D & N. Haveli & Daman & Diu
+    '27': Maharashtra
+    '28': Andhra Pradesh
+    '29': Karnataka
+    '30': Goa
+    '31': Lakshadweep
+    '32': Kerala
+    '33': Tamilnadu
+    '34': Puduchery
+    '35': Andaman & N. Island
+    '36': Telangana
+    '37': Ladakh
+distcode_hhrv: district
+nss_region_hhrv: nss-region
+b1q5_hhrv: stratum
+b1q6_hhrv: sub-stratum
+b1q11_hhrv: sub-sample
+b1q12_hhrv: fod-sub-region
+b1q1_hhrv: FSU
+b1q13_hhrv: sample-sg-sb-no
+b1q14_hhrv: second-stage-stratum-no
+b1q15_hhrv: sample-hh-no
+b1q9_hhrv: month
+b1q17_hhrv:
+  label: response_code
+  categories:
+    '1': informant: co-operative and capable
+    '2': informant: co-operative but not capable
+    '3': informant: busy
+    '4': informant: reluctant
+    '9': others
+b1q18_hhrv: survey_code
+b1q19_hhrv: reason_substitution_org_hh
+b3q1_hhrv: hh_size
+b3q2_hhrv:
+  label: hh_type
+  categories:
+    '1': Self-employed
+    '2': Regular wage/salary earning
+    '3': Casual labour
+    '9': Others
+b3q3_hhrv:
+  label: religion
+  categories:
+    '1': Hinduism
+    '2': Islam
+    '3': Christianity
+    '4': Sikhism
+    '5': Jainism
+    '6': Buddhism
+    '7': Zoroastrianism
+    '9': Others
+b3q4_hhrv:
+  label: social_group
+  categories:
+    '1': ST
+    '2': SC
+    '3': OBC
+    '9': others
+b3q5_hhrv: monthly_consumer_expenditure
+b1q16_hhrv: informat_serial_no
+b2q2i_hhrv: survey_date
+b2q4_hhrv: Total Time Taken To Canvass Sch. 10.4
+nss_hhrv: Ns count for sector x stratum x substratum x sub-sample
+nsc_hhrv: Ns count for sector x stratum x substratum
+mult_hhrv: subsample_multiplier
+no_qtr_hhrv: Count of contributing State x Sector x Stratum x SubStratum in 4 Quarters
