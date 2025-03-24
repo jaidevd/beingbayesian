@@ -1,0 +1,483 @@
+B1q2_perv1: Schedule
+qtr_perv1: yr_quarter
+visit_perv1: visit
+b1q3_perv1:
+  label: Sector
+  categories:
+    1: rural
+    2: urban
+state_perv1:
+  label: state
+  categories:
+    '01': Jammu & Kashmir
+    '02': Himachal Pradesh
+    '03': Punjab
+    '04': Chandigarh
+    '05': Uttarakhand
+    '06': Haryana
+    '07': Delhi
+    '08': Rajasthan
+    '09': Uttar Pradesh
+    '10': Bihar
+    '11': Sikkim
+    '12': Arunachal Pradesh
+    '13': Nagaland
+    '14': Manipur
+    '15': Mizoram
+    '16': Tripura
+    '17': Meghalaya
+    '18': Assam
+    '19': West Bengal
+    '20': Jharkhand
+    '21': Odisha
+    '22': Chhattisgarh
+    '23': Madhya Pradesh
+    '24': Gujarat
+    '25': D & N. Haveli & Daman & Diu
+    '27': Maharashtra
+    '28': Andhra Pradesh
+    '29': Karnataka
+    '30': Goa
+    '31': Lakshadweep
+    '32': Kerala
+    '33': Tamilnadu
+    '34': Puduchery
+    '35': Andaman & N. Island
+    '36': Telangana
+    '37': Ladakh
+distcode_perv1: district
+nss_region_perv1: nss-region
+b1q5_perv1: stratum
+b1q6_perv1: sub-stratum
+b1q11_perv1: sub-sample
+b1q12_perv1: fod-sub-region
+b1q1_perv1: FSU
+b1q13_perv1: sample-sg-sb-no
+b1q14_perv1: second-stage-stratum-no
+b1q15_perv1: sample-hh-no
+b4q1_perv1: person_serial_no
+b4q4_perv1:
+  label: rel_to_hh
+  categories:
+    '1': self (head)
+    '2': spouse of head
+    '3': married child
+    '4': spouse of married child
+    '5': unmarried child
+    '6': grandchild
+    '7': father/mother/father-in-law/mother-in-law
+    '8': brother/sister/brother-in-law/sister-in-law/other relatives
+    '9': servants/employees/other non-relatives
+b4q5_perv1:
+  label: gender
+  categories:
+    1: male
+    2: female
+    3: transgender
+b4q6_perv1: age
+b4q7_perv1:
+  label: marital_status
+  categories:
+    '1': never married
+    '2': currently married
+    '3': widowed
+    '4': divorced/separated
+b4q8_perv1:
+  label: general_education
+  categories:
+    1: "not literate"
+    2: "literate without formal schooling : EGS/ NFEC/ AEC"
+    3: "literate without formal schooling: TLC"
+    4: "others"
+    5: "below primary"
+    6: "primary"
+    7: "middle"
+    8: "secondary"
+    10: "higher secondary"
+    11: "diploma/certificate course"
+    12: "graduate"
+    13: "postgraduate and above"
+b4q9_perv1:
+  label: technical_education
+  categories:
+    1: "no technical education"
+    2: "technical degree in agriculture"
+    3: "technical degree in engineering/technology"
+    4: "technical degree in medicine"
+    5: "technical degree in crafts"
+    6: "technical degree in other subjects"
+    7: "diploma or certificate (below graduate level) in agriculture"
+    8: "diploma or certificate (below graduate level) in engineering/technology"
+    9: "diploma or certificate (below graduate level) in medicine"
+    10: "diploma or certificate (below graduate level) in crafts"
+    11: "diploma or certificate (below graduate level) in other subjects"
+    12: "diploma or certificate (graduate and above level) in agriculture"
+    13: "diploma or certificate (graduate and above level) in engineering/technology"
+    14: "diploma or certificate (graduate and above level) in medicine"
+    15: "diploma or certificate (graduate and above level) in crafts"
+    16: "diploma or certificate (graduate and above level) in other subjects"
+b4q10_perv1: n_year_formal_education
+b4q11_perv1:
+  label: current_attendance_educational_inst
+  categories:
+    1: "currently not attending, never attended: school too far"
+    2: "currently not attending, never attended: to supplement household income"
+    3: "currently not attending, never attended: education not considered necessary"
+    4: "currently not attending, never attended: to attend domestic chores"
+    5: "currently not attending, never attended: others"
+    11: "ever attended but currently not attending: school too far"
+    12: "ever attended but currently not attending: to supplement household income"
+    13: "ever attended but currently not attending: education not considered necessary"
+    14: "ever attended but currently not attending: to attend domestic chores"
+    15: "ever attended but currently not attending: others"
+    21: "currently attending in: EGS/ NFEC/ AEC"
+    22: "currently attending in: TLC"
+    23: "currently attending in: pre-primary (nursery/ Kindergarten, etc.)"
+    24: "currently attending in: primary (class I to IV/ V)"
+    25: "currently attending in: middle"
+    26: "currently attending in: secondary"
+    27: "currently attending in: higher secondary"
+    28: "graduate in: agriculture"
+    29: "graduate in: engineering/ technology"
+    30: "graduate in: medicine"
+    31: "graduate in: other subjects"
+    32: "graduate in: post graduate and above"
+    33: "diploma or certificate (below graduate level) in: agriculture"
+    34: "diploma or certificate (below graduate level) in: engineering/ technology"
+    35: "diploma or certificate (below graduate level) in: medicine"
+    36: "diploma or certificate (below graduate level) in: crafts"
+    37: "diploma or certificate (below graduate level) in: other subjects"
+    38: "diploma or certificate (graduate level) in: agriculture"
+    39: "diploma or certificate (graduate level) in: engineering/ technology"
+    40: "diploma or certificate (graduate level) in: medicine"
+    41: "diploma or certificate (graduate level) in: crafts"
+    42: "diploma or certificate (graduate level) in: other subjects"
+    43: "diploma or certificate in post graduate and above level"
+b4q12_perv1:
+  label: formal_vocational_tech_training
+  categories:
+    1: "yes: received formal vocational/technical training"
+    2: "received vocational/technical training other than formal vocational/technical training hereditary"
+    3: "received vocational/technical training other than formal vocational/technical training self-learning"
+    4: "received vocational/technical training other than formal vocational/technical training learning on the job"
+    5: "received vocational/technical training other than formal vocational/technical training others"
+    6: "did not receive any vocational/technical training"
+b4pt1q3_perv1:
+  label: training_completed_in_last_year
+  categories:
+    1: yes
+    2: no
+b4pt1q4_perv1:
+  label: field_of_training
+  categories:
+    1: "aerospace and aviation"
+    2: "agriculture, non-crop based agriculture, food processing"
+    3: "allied manufacturing- gems and jewellery, leather, rubber, furniture and fittings, printing"
+    4: "artisan/craftsman/handicraft/creative arts and cottage based production"
+    5: "automotive"
+    6: "beauty and wellness"
+    7: "chemical engineering, hydrocarbons, chemicals and petrochemicals"
+    8: "civil engineering- construction, plumbing, paints and coatings"
+    9: "electrical, power and electronics"
+    10: "healthcare and life sciences"
+    11: "hospitality and tourism"
+    12: "iron and steel, mining, earthmoving and infra building"
+    13: "IT-ITeS"
+    14: "logistics"
+    15: "mechanical engineering-capital goods, strategic manufacturing"
+    16: "media-journalism, mass communication and entertainment"
+    17: "office and business related work"
+    18: "security"
+    19: "telecom"
+    20: "textiles and handlooms, apparels"
+    21: "work related to childcare, nutrition, pre-school and crèche"
+    99: "other"
+b4pt1q5_perv1:
+    label: duration_of_training
+    categories:
+      1: "less than 3 months"
+      2: "3-6 months"
+      3: "6-12 months"
+      4: "1-1.5 yrs"
+      5: "1.5-2 yrs"
+      6: "2 yrs or more"
+b4pt1q6_perv1:
+  label: training_type
+  categories:
+    1: on the job
+    2: other than on the job, part time
+    3: other than on the job, full time
+b4pt1q7_perv1:
+  label: source_of_funding
+  categories:
+    1: "govt"
+    2: "own"
+    9: "other"
+b5pt1q3_perv1:
+  label: work_status
+  categories:
+    11: "worked in h.h. enterprise (self-employed): own account worker"
+    12: "worked in h.h. enterprise (self-employed): employer"
+    21: "worked as helper in h.h. enterprise (unpaid family worker)"
+    31: "worked as regular salaried/ wage employee"
+    41: "worked as casual wage labour: in public works"
+    51: "in other types of work"
+    81: "did not work but was seeking and/or available for work"
+    91: "attended educational institution"
+    92: "attended domestic duties only"
+    93: "attended domestic duties and was also engaged in free collection of goods (vegetables, roots, firewood, cattle feed, etc.), sewing, tailoring, weaving, etc. for household use"
+    94: "rentiers, pensioners, remittance recipients, etc."
+    95: "not able to work due to disability"
+    97: "others (including begging, prostitution, etc.)"
+    99: "unspecified"
+b5pt1q5_perv1: industry_code_nic
+b5pt1q6_perv1: occupation_code_nco
+b5pt1q7_perv1:
+  label: work_subsidiary
+  categories:
+    1: "yes"
+    2: "no"
+b5pt1q8_perv1:
+  label: location_of_work
+  categories:
+    "10": "workplace in rural areas and located in dwelling unit (3582)"
+    "11": "workplace in rural areas and located in structure attached to own dwelling unit (3828)"
+    "12": "workplace in rural areas [description missing] (1397)"
+    "13": "workplace in rural areas and located in detached structure adjacent to own dwelling unit (2717)"
+    "14": "workplace in rural areas and located in own enterprise/unit/office/shop but away from own dwelling (6218)"
+    "15": "workplace in rural areas and located in employer's dwelling unit (635)"
+    "16": "workplace in rural areas and located in employer's enterprise/unit/office/shop but outside employer's dwelling (12161)"
+    "17": "workplace in rural areas and located in street with fixed location (794)"
+    "18": "workplace in rural areas and located in construction site (9846)"
+    "19": "workplace in rural areas and located in others (4235)"
+    "20": "workplace in urban areas [description missing] (3360)"
+    "21": "workplace in urban areas and located in: dwelling unit (2292)"
+    "22": "workplace in urban areas and located in: structure attached to own dwelling unit (419)"
+    "23": "workplace in urban areas and located in: detached structure adjacent to own dwelling unit (1006)"
+    "24": "workplace in urban areas and located in: own enterprise/unit/office/shop but away from own dwelling (11382)"
+    "25": "workplace in urban areas and located in: employer's dwelling unit (2697)"
+    "26": "workplace in urban areas and located in: employer's enterprise/unit/office/shop but outside employer's dwelling (32671)"
+    "27": "workplace in urban areas and located in: street with fixed location (1764)"
+    "28": "workplace in urban areas and located in: construction site (7349)"
+    "29": "workplace in urban areas and located in: others (3164)"
+    "99": "no fixed workplace (4737)"
+b5pt1q9_perv1:
+  label: enterprise_type
+  categories:
+    "01": "proprietary: male"
+    "02": "proprietary: female"
+    "03": "partnership: with members from same household"
+    "04": "partnership: with members from different household"
+    "05": "partnership: Government/local body"
+    "06": "partnership: Public Sector Enterprises"
+    "07": "partnership: Autonomous Bodies"
+    "08": "partnership: Public/Private limited company"
+    "10": "partnership: Co-operative societies"
+    "11": "partnership: trust/other non-profit institutions"
+    "12": "partnership: employer's households(i.e., private households employing maid servant, watchman, cook, etc.)"
+    "19": "partnership: others"
+b5pt1q10_perv1:
+  label: n_workers_in_enterprise
+  categories:
+    "1": "less than 6"
+    "2": "6 and above but less than 10"
+    "3": "10 and above but less than 20"
+    "4": "20 and abobe"
+    "9": "not known"
+    "Sysmiss": "missing value"
+b5pt1q11_perv1:
+  label: type_job_contract
+  categories:
+    1: no written job contract
+    2: written job contract for 1 year or less
+    3: written job contract for 1-3 years
+    4: written job contract for more than 3 years
+b5pt1q12_perv1:
+  label: paid_leave_eligible
+  categories:
+    1: yes
+    2: no
+b5pt1q13_perv1:
+  label: social_security_benefits
+  categories:
+    "1": "only PF/ pension (i.e., GPF, CPF, PPF, pension, etc.)"
+    "2": "only gratuity"
+    "3": "only health care & maternity benefits"
+    "4": "only PF/ pension and gratuity"
+    "5": "only PF/ pension and health care & maternity benefits"
+    "6": "only gratuity and health care & maternity benefits"
+    "7": "PF/ pension, gratuity, health care & maternity benefits"
+    "8": "not eligible for any of above social security benefit"
+    "9": "not known"
+b5pt1q14_perv1:
+  label: usage_of_product_of_economic_activities
+  categories:
+    "1": "for own consumption only and did not intend to sell any part of it"
+    "2": "for own consumption and intended to sell some part of it (less than 50%)"
+    "3": "for own consumption and intended to sell major part of it (more than or equal 50%)"
+    "4": "the entire produce is for selling"
+b5pt2q3_perv1:
+  label: work_status_b5pt2q3
+  categories:
+    "11": "worked in h.h. enterprise (self-employed): own account worker"
+    "12": "worked in h.h. enterprise (self-employed): employer"
+    "21": "worked as helper in h.h. enterprise (unpaid family worker)"
+    "31": "worked as regular salaried/ wage employee"
+    "41": "worked as casual wage labour: in public works"
+    "51": "in other types of work"
+    "81": "did not work but was seeking and/or available for work"
+    "91": "attended educational institution"
+    "92": "attended domestic duties only"
+    "93": "attended domestic duties and was also engaged in free collection of goods (vegetables, roots, firewood, cattle feed, etc.), sewing, tailoring, weaving, etc. for household use"
+    "94": "rentiers, pensioners, remittance recipients, etc."
+    "95": "not able to work due to disability"
+    "97": "others (including begging, prostitution, etc.)"
+b5pt2q5_perv1: industry_code_nic
+b5pt2q6_perv1: occupation_code_nco
+b5pt2q7_perv1:
+  label: subsidiary_location_of_work
+  categories:
+    "10": "workplace in rural areas and located in dwelling unit"
+    "11": "workplace in rural areas and located in structure attached to own dwelling unit"
+    "12": "workplace in rural areas [description missing]"
+    "13": "workplace in rural areas and located in detached structure adjacent to own dwelling unit"
+    "14": "workplace in rural areas and located in own enterprise/unit/office/shop but away from own dwelling"
+    "15": "workplace in rural areas and located in employer's dwelling unit"
+    "16": "workplace in rural areas and located in employer's enterprise/unit/office/shop but outside employer's dwelling"
+    "17": "workplace in rural areas and located in street with fixed location"
+    "18": "workplace in rural areas and located in construction site"
+    "19": "workplace in rural areas and located in others"
+    "20": "workplace in urban areas [description missing]"
+    "21": "workplace in urban areas and located in: dwelling unit"
+    "22": "workplace in urban areas and located in: structure attached to own dwelling unit"
+    "23": "workplace in urban areas and located in: detached structure adjacent to own dwelling unit"
+    "24": "workplace in urban areas and located in: own enterprise/unit/office/shop but away from own dwelling"
+    "25": "workplace in urban areas and located in: employer's dwelling unit"
+    "26": "workplace in urban areas and located in: employer's enterprise/unit/office/shop but outside employer's dwelling"
+    "27": "workplace in urban areas and located in: street with fixed location"
+    "28": "workplace in urban areas and located in: construction site"
+    "29": "workplace in urban areas and located in: others"
+    "99": "no fixed workplace"
+b5pt2q8_perv1:
+  label: subsidiary_enterprise_type_code
+  categories:
+    "01": "proprietary: male"
+    "02": "proprietary: female"
+    "03": "partnership: with members from same household"
+    "04": "partnership: with members from different household"
+    "05": "partnership: Government/local body"
+    "06": "partnership: Public Sector Enterprises"
+    "07": "partnership: Autonomous Bodies"
+    "08": "partnership: Public/Private limited company"
+    "10": "partnership: Co-operative societies"
+    "11": "partnership: trust/other non-profit institutions"
+    "12": "partnership: employer's households(i.e., private households employing maid servant, watchman, cook, etc.)"
+    "19": "partnership: others"
+b5pt2q9_perv1:
+  label: n_workers_in_subsidiary_enterprise
+  categories:
+    "1": "less than 6"
+    "2": "6 and above but less than 10"
+    "3": "10 and above but less than 20"
+    "4": "20 and abobe"
+    "9": "not known"
+    "Sysmiss": "missing value"
+b5pt2q10_perv1:
+  label: type_job_contract_subsidiary
+  categories:
+    "1": "no written job contract"
+    "2": "written job contract for 1 year or less"
+    "3": "written job contract more than 1 year to 3 years"
+    "4": "written job contract more than 3 years"
+b5pt2q11_perv1:
+  label: paid_leave_eligible_subsidiary
+  categories:
+    1: yes
+    2: no
+b5pt2q12_perv1:
+  label: social_security_benefits_subsidiary
+  categories:
+    "1": "only PF/ pension (i.e., GPF, CPF, PPF, pension, etc.)"
+    "2": "only gratuity"
+    "3": "only health care & maternity benefits"
+    "4": "only PF/ pension and gratuity"
+    "5": "only PF/ pension and health care & maternity benefits"
+    "6": "only gratuity and health care & maternity benefits"
+    "7": "PF/ pension, gratuity, health care & maternity benefits"
+    "8": "not eligible for any of above social security benefit"
+    "9": "not known"
+b5pt2q13_perv1:
+  label: usage_of_product_of_economic_activities_subsidiary
+  categories:
+    "1": "for own consumption only and did not intend to sell any part of it"
+    "2": "for own consumption and intended to sell some part of it (less than 50%)"
+    "3": "for own consumption and intended to sell major part of it (more than or equal 50%)"
+    "4": "the entire produce is for selling"
+b5pt3q5_perv1:
+  label: wored_prior_to_last_yr
+  categories:
+    1: yes
+    2: no
+b5pt3q6_perv1:
+  label: duration of engagement in economic activity in principal activity status
+  categories:
+    "1": "less than or equal to 6 months"
+    "2": "more than 6 months but less than or equal to 1 year"
+    "3": "more than 1 year but less than or equal to 2 years"
+    "4": "more than 2 years but less than or equal to 3 years"
+    "5": "more than three years"
+b5pt3q7_perv1:
+  label: duration of engagement in economic activity in subsidiary activity status
+  categories:
+    "1": "less than or equal to 6 months"
+    "2": "more than 6 months but less than or equal to 1 year"
+    "3": "more than 1 year but less than or equal to 2 years"
+    "4": "more than 2 years but less than or equal to 3 years"
+    "5": "more than three years"
+b5pt3q8_perv1:
+  label: efforts_undertaken_to_search_work
+  categories:
+    "1": "apply to prospective employers/place or answer job advertisements/ check at factories, sites work"
+    "2": "register with employment exchange"
+    "3": "register with private employment center"
+    "4": "seek financial help to start a business"
+    "5": "seek help from relatives, friends"
+    "6": "apply for permit or license to start a business"
+    "7": "others"
+b5pt3q9_perv1:
+  label: duration_of_spell_of_unemployment
+  categories:
+    "1": "less than or equal to 6 months"
+    "2": "more than 6 months but less than or equal to 1 year"
+    "3": "more than 1 year but less than or equal to 2 years"
+    "4": "more than 2 years but less than or equal to 3 years"
+    "5": "more than three years"
+b5pt3q10_perv1:
+  label: ever_worked
+  categories:
+    1: yes
+    2: no
+b5pt3q11_perv1:
+  label: reason_not_working_last_year
+  categories:
+    "01": "retrenchment/lay-off without pay"
+    "02": "end of contract/quit"
+    "03": "not operating the unit"
+    "04": "lack of work in the area"
+    "05": "retiremement"
+    "06": "child care"
+    "07": "household responsibilities other than child care"
+    "08": "health related reasons"
+    "10": "no financial need"
+    "19": "others"
+b5pt3q12_perv1:
+  label: reason_for_being_in_principal_activity_status
+  categories:
+    "1": "did not have the required training/qualification/age for work"
+    "2": "non availability of work at a convenient location"
+    "3": "health/age related reason"
+    "4": "want to continue study"
+    "5": "social reasons"
+    "6": "financially well-off"
+    "7": "child care/personal commitments in home making"
+    "9": "others"
