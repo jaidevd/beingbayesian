@@ -481,3 +481,125 @@ b5pt3q12_perv1:
     "6": "financially well-off"
     "7": "child care/personal commitments in home making"
     "9": "others"
+b6q4_3pt1_perv1:
+  label: activity_status_1
+  categories:
+    11: worked in h.h. enterprise (self-employed): own account worker
+    12: worked in h.h. enterprise (self-employed): employer
+    21: worked as helper in h.h. enterprise (unpaid family worker)
+    31: worked as regular salaried/ wage employee
+    41: worked as casual wage labour: in public works
+    42: ""
+    51: in other types of work
+    61: ""
+    62: ""
+    71: ""
+    72: ""
+    81: did not work but was seeking and/or available for work
+    82: ""
+    91: attended educational institution
+    92: attended domestic duties only
+    93: attended domestic duties and was also engaged in free collection of goods (vegetables, roots, firewood, cattle feed, etc.), sewing, tailoring, weaving, etc. for household use -
+    94: rentiers, pensioners, remittance recipients, etc.
+    95: not able to work due to disability
+    97: others (including begging, prostitution, etc.)
+    98: ""
+    99: ""
+b6q5_3pt1_perv1: activity_1_nic
+b6q6_3pt1_perv1: hours_worked_act_1_day_7
+b6q9_3pt1_perv1: wage_earned_act_1_day_7
+b6q4_act2_3pt1_perv1:
+  label: activity_status_2
+  categories:
+    11: worked in h.h. enterprise (self-employed): own account worker
+    12: worked in h.h. enterprise (self-employed): employer
+    21: worked as helper in h.h. enterprise (unpaid family worker)
+    31: worked as regular salaried/ wage employee
+    41: worked as casual wage labour: in public works
+    42: ""
+    51: in other types of work
+    61: ""
+    62: ""
+    71: ""
+    72: ""
+    81: did not work but was seeking and/or available for work
+    91: attended educational institution
+    92: attended domestic duties only
+    93: attended domestic duties and was also engaged in free collection of goods (vegetables, roots, firewood, cattle feed, etc.), sewing, tailoring, weaving, etc. for household use -
+    94: rentiers, pensioners, remittance recipients, etc.
+    95: not able to work due to disability
+    97: others (including begging, prostitution, etc.)
+b6q5_act2_3pt1_perv1: act_2_nic
+b6q6_act2_3pt1_perv1: hours_worked_act_2_day_7
+b6q9_act2_3pt1_perv1: wage_earned_act_2_day_7
+b6q7_3pt1_perv1: total_hrs_work_day_7
+b6q8_3pt1: hrs_available_for_additional_work_day_7
+b6q4_3pt2: status_code_act_1
+b6q5_3pt2: nic_act_1
+b6q6_3pt2_perv1: hrs_worked_act_1_day_6
+b6q9_3pt2_perv1: wage_earned_act_1_day_7
+b6q4_act2_3pt2_perv1: status_code_act_2
+b6q5_act2_3pt2_perv1: nic_act_2
+b6q6_act2_3pt2_perv1: hrs_worked_act2_day_6
+b6q9_act2_3pt2_perv1: wage_earned_act_2_day_6
+b6q7_3pt2_perv1: total_hrs_worked_day_6
+b6q8_3pt2_perv1: hrs_available_for_additional_work_day_6
+b6q4_3pt3_perv1: status_code_act_1
+b6q5_3pt3_perv1: nic_act_1
+b6q6_3pt3_perv1: hrs_worked_act_1_day_5
+b6q9_3pt3_perv1: wage_earned_act_1_day_5
+b6q4_act2_3pt3_perv1: status_code_act_2
+b6q5_act2_3pt3_perv1: nic_act_2
+b6q6_act2_3pt3_perv1: hrs_worked_act_2_day_5
+b6q9_act2_3pt3_perv1: wage_earned_act_2_day_5
+b6q7_3pt3_perv1: total_hrs_worked_day_5
+b6q8_3pt3: hrs_available_for_additional_work_day_5
+b6q4_3pt4_perv1: status_code_act_1
+b6q5_3pt4_perv1: nic_act_1
+b6q6_3pt4_perv1: hrs_worked_act_1_day_4
+b6q9_3pt4_perv1: wage_earned_act_1_day_4
+b6q4_act2_3pt4_perv1: status_code_act_2
+b6q5_act2_3pt4_perv1: nic_act_2
+b6q6_act2_3pt4_perv1: hrs_worked_act_2_day_4
+b6q9_act2_3pt4_perv1: wage_earned_act_2_day_4
+b6q7_3pt4_perv1: total_hrs_worked_day_4
+b6q8_3pt4_perv1: hrs_available_for_additional_work_day_4
+b6q4_3pt5_perv1: status_code_act_1
+b6q5_3pt5_perv1: nic_act_1
+b6q6_3pt5_perv1: hrs_worked_act_1_day_3
+b6q9_3pt5_perv1: wage_earned_act_1_day_3
+b6q4_act2_3pt5_act2_perv1: status_code_act_2
+b6q5_act2_3pt5_perv1: nic_act_2
+b6q6_act2_3pt5_perv1: hrs_worked_act_2_day_3
+b6q9_act2_3pt5_perv1: wage_earned_act_2_day_3
+b6q7_3pt5_perv1: total_hrs_worked_day_3
+b6q8_3pt5_perv1: hrs_available_for_additional_work_day_3
+b6q4_3pt6_perv1: status_code_act_1
+b6q5_3pt6_perv1: nic_act_1
+b6q6_3pt6_perv1: hrs_worked_act_1_day_2
+b6q9_3pt6_perv1: wage_earned_act_1_day_2
+b6q4_act2_3pt6_perv1: status_code_act_2
+b6q5_act2_3pt6_perv1: nic_act_2
+b6q6_act2_3pt6_perv1: hrs_worked_act_2_day_2
+b6q9_act2_3pt6_perv1: wage_earned_act_2_day_2
+b6q7_3pt6_perv1: total_hrs_worked_day_2
+b6q8_3pt6_perv1: hrs_available_for_additional_work_day_2
+b6q4_3pt7_perv1: status_code_act_1
+b6q5_3pt7: nic_act_1
+b6q6_3pt7_perv1: hrs_worked_act_1_day_1
+b6q9_3pt7_perv1: wage_earned_act_1_day_1
+b6q4_act2_3pt7_perv1: status_code_act_2
+b6q5_act2_3pt7_perv1: nic_act_2
+b6q6_act2_3pt7_perv1: hrs_worked_act_2_day_1
+b6q9_act2_3pt7_perv1: wage_earned_act_2_day_1
+b6q7_3pt7_perv1: total_hrs_worked_day_1
+b6q8_3pt7_perv1: hrs_available_for_additional_work_day_1
+b6q5_perv1: current_weekly_status
+b6q6_perv1: cws_industry_code
+b6q7_perv1: occupation_code_cws
+b6q9_perv1: earnings_for_regular_salaried_wage_activity
+b6q10_perv1: earnings_for_self_employed
+NSS_perv1: Ns count for sector x stratum x substratum x sub-sample
+NSC_perv1: Ns count for sector x stratum x substratum
+mult_perv1: Sub-sample wise multiplier
+no_qtr_perv1: Count of contributing State x Sector x Stratum x SubStratum in 4 Quarters

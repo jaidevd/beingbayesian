@@ -171,3 +171,4 @@ cython_debug/
 .pypirc
 
 *.zip
+**/.DS_Store
