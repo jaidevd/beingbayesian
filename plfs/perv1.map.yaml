@@ -116,7 +116,7 @@ b4q9_perv1:
     14: "diploma or certificate (graduate and above level) in medicine"
     15: "diploma or certificate (graduate and above level) in crafts"
     16: "diploma or certificate (graduate and above level) in other subjects"
-b4q10_perv1: n_year_formal_education
+b4q10_perv1: n_years_formal_education
 b4q11_perv1:
   label: current_attendance_educational_inst
   categories:
