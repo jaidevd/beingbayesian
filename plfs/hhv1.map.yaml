@@ -4,8 +4,8 @@ visit_hhv1: visit  # Should be only one value here
 b1q3_hhv1:
   label: sector
   categories:
-    1: rural
-    2: urban
+    '1': rural
+    '2': urban
 state_hhv1:
   label: state
   categories:
@@ -98,7 +98,7 @@ b3q3_hhv1:
     '6': Buddhism
     '7': Zoroastrianism
     '9': Others
-b3q4_hhrv:
+b3q4_hhv1:
   label: social_group
   categories:
     '1': ST
