@@ -2,7 +2,7 @@ B1q2_perv1: Schedule
 qtr_perv1: yr_quarter
 visit_perv1: visit
 b1q3_perv1:
-  label: Sector
+  label: sector
   categories:
     1: rural
     2: urban
@@ -55,7 +55,7 @@ b1q1_perv1: FSU
 b1q13_perv1: sample-sg-sb-no
 b1q14_perv1: second-stage-stratum-no
 b1q15_perv1: sample-hh-no
-b4q1_perv1: person_serial_no
+b4q1_perv1: person-serial-no
 b4q4_perv1:
   label: rel_to_hh
   categories:
@@ -76,7 +76,7 @@ b4q5_perv1:
     3: transgender
 b4q6_perv1: age
 b4q7_perv1:
-  label: marital_status
+  label: marital-status
   categories:
     '1': never married
     '2': currently married
@@ -484,11 +484,11 @@ b5pt3q12_perv1:
 b6q4_3pt1_perv1:
   label: activity_status_1
   categories:
-    11: worked in h.h. enterprise (self-employed): own account worker
-    12: worked in h.h. enterprise (self-employed): employer
-    21: worked as helper in h.h. enterprise (unpaid family worker)
-    31: worked as regular salaried/ wage employee
-    41: worked as casual wage labour: in public works
+    11: "worked in h.h. enterprise (self-employed): own account worker"
+    12: "worked in h.h. enterprise (self-employed): employer"
+    21: "worked as helper in h.h. enterprise (unpaid family worker)"
+    31: "worked as regular salaried/ wage employee"
+    41: "worked as casual wage labour: in public works"
     42: ""
     51: in other types of work
     61: ""
@@ -511,11 +511,11 @@ b6q9_3pt1_perv1: wage_earned_act_1_day_7
 b6q4_act2_3pt1_perv1:
   label: activity_status_2
   categories:
-    11: worked in h.h. enterprise (self-employed): own account worker
-    12: worked in h.h. enterprise (self-employed): employer
-    21: worked as helper in h.h. enterprise (unpaid family worker)
-    31: worked as regular salaried/ wage employee
-    41: worked as casual wage labour: in public works
+    11: "worked in h.h. enterprise (self-employed): own account worker"
+    12: "worked in h.h. enterprise (self-employed): employer"
+    21: "worked as helper in h.h. enterprise (unpaid family worker)"
+    31: "worked as regular salaried/ wage employee"
+    41: "worked as casual wage labour: in public works"
     42: ""
     51: in other types of work
     61: ""
