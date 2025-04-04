@@ -120,13 +120,13 @@ b4q4_perv1:
     '9': servants/employees/other non-relatives
 
 # Daily Activity Columns - Primary Activity
-b6q6_3pt1_perv1: hours_worked_primary_day1
-b6q6_3pt2_perv1: hours_worked_primary_day2
-b6q6_3pt3_perv1: hours_worked_primary_day3
+b6q6_3pt1_perv1: hours_worked_primary_day7
+b6q6_3pt2_perv1: hours_worked_primary_day6
+b6q6_3pt3_perv1: hours_worked_primary_day5
 b6q6_3pt4_perv1: hours_worked_primary_day4
-b6q6_3pt5_perv1: hours_worked_primary_day5
-b6q6_3pt6_perv1: hours_worked_primary_day6
-b6q6_3pt7_perv1: hours_worked_primary_day7
+b6q6_3pt5_perv1: hours_worked_primary_day3
+b6q6_3pt6_perv1: hours_worked_primary_day2
+b6q6_3pt7_perv1: hours_worked_primary_day1
 
 b6q9_3pt1_perv1: wage_earned_primary_day1
 b6q9_3pt2_perv1: wage_earned_primary_day2
@@ -194,13 +194,13 @@ b6q7_3pt5_perv1: total_hours_worked_day5
 b6q7_3pt6_perv1: total_hours_worked_day6
 b6q7_3pt7_perv1: total_hours_worked_day7
 
-b6q8_3pt1: hours_available_additional_work_day1
-b6q8_3pt2_perv1: hours_available_additional_work_day2
-b6q8_3pt3: hours_available_additional_work_day3
+b6q8_3pt1: hours_available_additional_work_day7
+b6q8_3pt2_perv1: hours_available_additional_work_day6
+b6q8_3pt3: hours_available_additional_work_day5
 b6q8_3pt4_perv1: hours_available_additional_work_day4
-b6q8_3pt5_perv1: hours_available_additional_work_day5
-b6q8_3pt6_perv1: hours_available_additional_work_day6
-b6q8_3pt7_perv1: hours_available_additional_work_day7
+b6q8_3pt5_perv1: hours_available_additional_work_day3
+b6q8_3pt6_perv1: hours_available_additional_work_day2
+b6q8_3pt7_perv1: hours_available_additional_work_day1
 
 # Employment and Economic Activity Columns
 b5pt1q3_perv1:
