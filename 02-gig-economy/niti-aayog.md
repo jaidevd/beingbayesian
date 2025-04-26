@@ -44,40 +44,50 @@ Skill polarization:
 * Below the 75th percentile of MPCE
 * Access to mobile phones and bank accounts
 * Occupations:
-  - Computing Professionals  
-  - Architects, Engineers and Related Professionals  
-  - Business Professionals  
-  - Computer Associate Professionals  
-  - Optical and Electronic Equipment Operators  
-  - Finance and Sales Associate Professionals  
-  - Business Services Agents and Trade Brokers  
-  - Secretaries and Keyboard-Operating Clerks  
-  - Numerical Clerks  
-  - Material Recording and Transport Clerks  
-  - Cashiers, Tellers and Related Clerks  
-  - Client Information Clerks  
-  - Travel Attendants, Guides and Related Workers  
-  - Housekeeping and Restaurant Services Workers  
-  - Personal Care and Related Workers  
-  - Shop Salespersons and Demonstrators  
-  - Stall and Market Salespersons  
-  - Motor Vehicle Drivers  
-  - Street Vendors and Related Workers  
-  - Domestic and Related Helpers, Cleaners and Launderers  
-  - Building Caretakers, Window and Related Cleaners  
+  - Computing Professionals
+  - Architects, Engineers and Related Professionals
+  - Business Professionals
+  - Computer Associate Professionals
+  - Optical and Electronic Equipment Operators
+  - Finance and Sales Associate Professionals
+  - Business Services Agents and Trade Brokers
+  - Secretaries and Keyboard-Operating Clerks
+  - Numerical Clerks
+  - Material Recording and Transport Clerks
+  - Cashiers, Tellers and Related Clerks
+  - Client Information Clerks
+  - Travel Attendants, Guides and Related Workers
+  - Housekeeping and Restaurant Services Workers
+  - Personal Care and Related Workers
+  - Shop Salespersons and Demonstrators
+  - Stall and Market Salespersons
+  - Motor Vehicle Drivers
+  - Street Vendors and Related Workers
+  - Domestic and Related Helpers, Cleaners and Launderers
+  - Building Caretakers, Window and Related Cleaners
 * Industries:
-  - Section E Manufacturing  
-  - Section D Electricity, gas, steam and air conditioning supplies  
-  - Section E Water supply; sewerage, waste management and remediation activities  
-  - Section F Construction  
-  - Division 47 Retail trade, except of motor vehicles and motorcycles  
-  - Section H Transportation and storage  
-  - Section I Accommodation and Food service activities  
-  - Section J Information and communication  
-  - Section K Financial and insurance activities  
-  - Section L Real estate activities  
-  - Section N Administrative and support service activities  
-  - Group 854 Other education Group  
-  - Group 855 Educational support services  
-  - Division 87 Residential care activities  
-  - Division 95 Repair of computers and personal and household goods  
+  - Section E Manufacturing
+  - Section D Electricity, gas, steam and air conditioning supplies
+  - Section E Water supply; sewerage, waste management and remediation activities
+  - Section F Construction
+  - Division 47 Retail trade, except of motor vehicles and motorcycles
+  - Section H Transportation and storage
+  - Section I Accommodation and Food service activities
+  - Section J Information and communication
+  - Section K Financial and insurance activities
+  - Section L Real estate activities
+  - Section N Administrative and support service activities
+  - Group 854 Other education Group
+  - Group 855 Educational support services
+  - Division 87 Residential care activities
+  - Division 95 Repair of computers and personal and household goods
+
+
+## Enhancing Social Inclusion
+
+* Gender inequality
+* Lack of job security
+* Occupational segregation and pay gap
+* Raman, Ramachandran & Sindhu
+* Distributions of women platform workers by age, marital status, education,
+  reasons for choosing platform work.
