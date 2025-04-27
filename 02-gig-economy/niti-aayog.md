@@ -43,44 +43,46 @@ Skill polarization:
 * Secondary school to graduation.
 * Below the 75th percentile of MPCE
 * Access to mobile phones and bank accounts
-* Occupations:
-  - Computing Professionals
-  - Architects, Engineers and Related Professionals
-  - Business Professionals
-  - Computer Associate Professionals
-  - Optical and Electronic Equipment Operators
-  - Finance and Sales Associate Professionals
-  - Business Services Agents and Trade Brokers
-  - Secretaries and Keyboard-Operating Clerks
-  - Numerical Clerks
-  - Material Recording and Transport Clerks
-  - Cashiers, Tellers and Related Clerks
-  - Client Information Clerks
-  - Travel Attendants, Guides and Related Workers
-  - Housekeeping and Restaurant Services Workers
-  - Personal Care and Related Workers
-  - Shop Salespersons and Demonstrators
-  - Stall and Market Salespersons
-  - Motor Vehicle Drivers
-  - Street Vendors and Related Workers
-  - Domestic and Related Helpers, Cleaners and Launderers
-  - Building Caretakers, Window and Related Cleaners
-* Industries:
-  - Section E Manufacturing
-  - Section D Electricity, gas, steam and air conditioning supplies
-  - Section E Water supply; sewerage, waste management and remediation activities
-  - Section F Construction
-  - Division 47 Retail trade, except of motor vehicles and motorcycles
-  - Section H Transportation and storage
-  - Section I Accommodation and Food service activities
-  - Section J Information and communication
-  - Section K Financial and insurance activities
-  - Section L Real estate activities
-  - Section N Administrative and support service activities
-  - Group 854 Other education Group
-  - Group 855 Educational support services
-  - Division 87 Residential care activities
-  - Division 95 Repair of computers and personal and household goods
+* Occupations (NCO 2004, NCO 2015 codes in brackets respectively):
+  - Computing Professionals (213) (251, 252)
+  - Architects, Engineers and Related Professionals (214) (214, 215, 2161)
+  - Business Professionals (241) (241, 242, 243
+  - Computer Associate Professionals (312) (351)
+  - Optical and Electronic Equipment Operators (313) (311, 321, 343, 352)
+  - Finance and Sales Associate Professionals (341) (241, 243, 331, 332, 333)
+  - Business Services Agents and Trade Brokers (342) (333)
+  - Secretaries and Keyboard-Operating Clerks (411) (412, 413)
+  - Numerical Clerks (412) (431)
+  - Material Recording and Transport Clerks (413) (432)
+  - Cashiers, Tellers and Related Clerks (421) (421, 422)
+  - Client Information Clerks (422) (422)
+  - Travel Attendants, Guides and Related Workers (511) (511)
+  - Housekeeping and Restaurant Services Workers (512) (343, 512, 513, 515, 531)
+  - Personal Care and Related Workers (513) (441, 531, 532)
+  - Shop Salespersons and Demonstrators (522) (522, 524)
+  - Stall and Market Salespersons (523) (521)
+  - Motor Vehicle Drivers (832) (832, 833)
+  - Street Vendors and Related Workers (911) (521, 524, 952)
+  - Domestic and Related Helpers, Cleaners and Launderers (913) (911, 912, 941)
+  - Building Caretakers, Window and Related Cleaners (914) (515, 912)
+* Industries (NIC 2008 in brackets):
+  - Section E Manufacturing (10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
+    23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33)
+  - Section D Electricity, gas, steam and air conditioning supplies (35)
+  - Section E Water supply; sewerage, waste management and remediation activities (36, 37,
+    38, 39)
+  - Section F Construction (41, 42, 43)
+  - Division 47 Retail trade, except of motor vehicles and motorcycles (47)
+  - Section H Transportation and storage (49, 50, 51, 52, 53)
+  - Section I Accommodation and Food service activities (55, 56)
+  - Section J Information and communication (58, 59, 60, 61, 62, 63)
+  - Section K Financial and insurance activities (64, 65, 66)
+  - Section L Real estate activities (68)
+  - Section N Administrative and support service activities (77, 78, 79, 80, 81, 82)
+  - Group 854 Other education Group (85)
+  - Group 855 Educational support services (85)
+  - Division 87 Residential care activities (87)
+  - Division 95 Repair of computers and personal and household goods (95)
 
 
 ## Enhancing Social Inclusion
