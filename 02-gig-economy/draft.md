@@ -41,3 +41,14 @@ the large-hearted will tip generously.
 
 And then there are the 'influencers' who can't let so much as a fly buzz past
 without photographing it and captioning it on LinkedIn with a motivational quote.
+
+> https://www.linkedin.com/feed/update/urn:li:activity:7315798287138144257/
+
+Social media has a peculiar relationship with gig workers. On the one hand,
+it touches customer complaining about their unprofessionalism, laziness or
+downright criminality. On the other hand, it worships their hustle. We all have
+this fantasy of being an emancipated gig worker - someone who can decide their
+own hours and make theoretically infinite money. But you'd have to take your job
+security, social security benefits and labour rights for granted to have this
+fantasy. And I daresay most of us do - so the fantasy starts looking more and
+and more appealing.
