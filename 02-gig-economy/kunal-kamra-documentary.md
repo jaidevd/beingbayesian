@@ -77,7 +77,7 @@ https://x.com/kunalkamra88/status/1874165377934250061
 In this meeting where we see Swamy and Banjara addressing a bunch of workers -
 what was Kamra doing there?
 
-* The Rajasthan government in 2023 was the first state in India to pass a bill
+* The Rajasthan government in 2023 was the first state in India to pass a act
   which extended social security benefits to gig workers.
 
 

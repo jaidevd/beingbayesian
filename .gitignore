@@ -172,4 +172,8 @@ cython_debug/
 
 *.zip
 **/.DS_Store
-plfs/docs/*
+plfs/
+*.pdf
+DDI-IND-CSO-PLFS-2023-23/
+02-gig-economy/data/plfs-2023-24-hh-v1.parquet
+PLFS_Data_2023-24/
