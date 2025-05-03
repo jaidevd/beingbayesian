@@ -1,0 +1,120 @@
+B1q2_hhv1: schedule
+qtr_hhv1: yr_quarter
+visit_hhv1: visit  # Should be only one value here
+b1q3_hhv1:
+  label: sector
+  categories:
+    '1': rural
+    '2': urban
+state_hhv1:
+  label: state
+  categories:
+    '01': Jammu & Kashmir
+    '02': Himachal Pradesh
+    '03': Punjab
+    '04': Chandigarh
+    '05': Uttarakhand
+    '06': Haryana
+    '07': Delhi
+    '08': Rajasthan
+    '09': Uttar Pradesh
+    '10': Bihar
+    '11': Sikkim
+    '12': Arunachal Pradesh
+    '13': Nagaland
+    '14': Manipur
+    '15': Mizoram
+    '16': Tripura
+    '17': Meghalaya
+    '18': Assam
+    '19': West Bengal
+    '20': Jharkhand
+    '21': Odisha
+    '22': Chhattisgarh
+    '23': Madhya Pradesh
+    '24': Gujarat
+    '25': D & N. Haveli & Daman & Diu
+    '27': Maharashtra
+    '28': Andhra Pradesh
+    '29': Karnataka
+    '30': Goa
+    '31': Lakshadweep
+    '32': Kerala
+    '33': Tamilnadu
+    '34': Puduchery
+    '35': Andaman & N. Island
+    '36': Telangana
+    '37': Ladakh
+distcode_hhv1: district
+nss_region_hhv1: nss-region
+b1q5_hhv1: stratum
+b1q6_hhv1: sub-stratum
+b1q11_hhv1: sub-sample
+b1q12_hhv1: fod-sub-region
+b1q1_hhv1: FSU
+b1q13_hhv1: sample-sg-sb-no
+b1q14_hhv1: second-stage-stratum-no
+b1q15_hhv1: sample-hh-no
+b1q9_hhv1: month
+b1q17_hhv1:
+  label: response_code
+  categories:
+    '1': informant co-operative and capable
+    '2': informant co-operative but not capable
+    '3': informant busy
+    '4': informant reluctant
+    '9': informant others
+b1q18_hhv1:
+  label: survey_code
+  categories:
+    '1': original household surveyed
+    '2': substitute household surveyed
+    '3': household casualty
+b1q19_hhv1: reason_substitution_org_hh
+b3q1_hhv1: hh_size
+b3q2_hhv1:
+  label: hh_type
+  categories:
+    rural:
+      '1': self-employed in agriculture
+      '2': self-employed in non-agriculture
+      '3': regular wage/salary earning
+      '4': casual labour in agriculture
+      '5': casual labour in non-agriculture
+      '9': others
+    urban:
+      '1': self-employed
+      '2': regular wage/salary earning
+      '3': casual labour
+      '9': others
+b3q3_hhv1:
+  label: religion
+  categories:
+    '1': Hinduism
+    '2': Islam
+    '3': Christianity
+    '4': Sikhism
+    '5': Jainism
+    '6': Buddhism
+    '7': Zoroastrianism
+    '9': Others
+b3q4_hhv1:
+  label: social_group
+  categories:
+    '1': ST
+    '2': SC
+    '3': OBC
+    '9': others
+b3q5pt1_hhv1: monthly_consumer_expenditure_goods_services  # For goods and services
+b3q5pt2_hhv1: imputed_home_grown # value of monthly consumption  of home grown stock
+b3q5pt3_hhv1: imputed_kind # value of monthly consumption from wages in kind, free collection, gifts, etc
+b3q5pt4_hhv1: annual_expenditure_clothing_footwear
+b3q5pt5_hhv1: annual_expenditure_durables
+b3q5pt6_hhv1: monthly_consumer_expenditure_others
+b1q16_hhv1: informat_serial_no
+b2q2i_hhv1: survey_date
+b2q4_hhv1: survey_time
+nss_hhv1: Ns count for sector x stratum x substratum x sub-sample
+nsc_hhv1: Ns count for sector x stratum x substratum
+mult_hhv1: subsample_multiplier
+no_qtr_hhv1: Count of contributing State x Sector x Stratum x SubStratum in 4 Quarters
