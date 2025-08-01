@@ -25,7 +25,7 @@ someone, let alone my significant other, without sounding like a pompous,
 self-important jerk.
 
 So the path of least resistance is to just fix the doorknobs. But close on the
-doorknobs' heels are door stoppers which the dog chewed off, the sofa cushions
+doorknobs' heels are door stoppers the dog chewed off, the sofa cushions
 with only the smallest visible tears, the printer cartridge refills and the
 endless stream of tiny decisions...
 
@@ -88,33 +88,43 @@ work with depth and focus at a slow and steady pace. Cal Newport would
 eventually call this slow productivity. It worked well enough for
 me to do some of my best work.
 
-After all that breakage, what remains with me is small set of ideas - don't multitask,
+After all that breakage, what remains with me is a small set of ideas - don't multitask,
 deal with interruptions the best you can, sleep well, etc. I no longer claim or
 aim to be the master of my time. It's not like I'm cured of the cosmic ulcer - far from it.
-I just don't give a shit anymore.
+I just care less now.
 
-Every now and then I see success stories of slow productivity - like that of
-June Huh - a Fields medalist who took six years to graduate, who does only about
-three hours of focused work everyday, and who is described as extremely slow and
-methodical. There's a story about how he stapled together a makeshift blanket
-because going to buy a proper blanket was too mentally exhausting. There's also
-the story of the great Richard Hamming. In his classic lecture _You and Your
+Every now and then I see success stories of slow productivity - small doses of
+vindication for my rediscovered approach. A friend heard my rant
+about doorknobs, and could not have been more sympathetic. He admitted that non-programmers rarely
+understand flow and uninterrupted immersion, and how, in social conversation it
+is difficult to defend not fixing a doorknob. He then shared with me a Quanta
+magazine profile of June Huh. "Somewhere here there's a story of a Fields
+medalist stapling together a makeshift blanket...", he said. June Huh is a late
+blooming mathematician who dropped out of high school to write poetry, then got
+enrolled in a math course, took six years to graduate and finally went on to win
+the Fields medal. He is described as extremely slow and methodical. 
+He hacked together a blanket from scrap cloth because going to buy a proper
+blanket was too mentally exhausting. I somehow just get that.
+
+There's also the story of the great Richard Hamming. In his classic lecture _You and Your
 Research_, he advocates exceptional ambition, attitude and passion. His idea of
-knowledge and productivity being like compound interest have stayed with me
-since my college days. Hamming and Huh, both poster boys of deep work and slow
+knowledge and productivity being like compound interest has stayed with me
+since my college days.
+
+Both Hamming and Huh are poster boys of deep work and slow
 productivity. But there's also something else that's common between Huh and
-Hamming - both their wives had to put up with their shennanigans. Huh admits
+Hamming - both their wives had to put up with their shenanigans. Huh admits
 that his wife was disappointed at the lack of balance in his life. Hamming, too,
 admits that he "sort of neglected" his wife sometimes, "You have to neglect
 things if you intend to get what you want done."[^4]
 
-If that's the cost of good work... thanks, but no thanks.
-.
-.
-.
+It's infuriating how, even with the best of intentions on your part, there's
+always someone else paying the price of your productivity - a parent, a spouse,
+a child or a pet.
 
-Now imagine my indignation when a captain of industry says that we've got to
-work on Sundays, and that we've been staring at our spouses for far too long.
+Now, imagine my indignation when a captain of industry tells me that I ought to
+be working 90 hours a week, on Saturdays and Sundays, and that I've been staring
+at my spouse for too long.
 
 
 # Subrahmanyan vs Keynes
