@@ -12,15 +12,15 @@ things on the other hand are very few. There's nothing inherently special about
 most things that are considered doable.
 
 Before I realize it, I'm actually saying all of this out loud with a lot of
-sincerity. She initially finds it amusing: I can't be serious, how does
-something as trivial as a broken doorknob entrance me into delivering a deep
+sincerity. She initially finds it amusing: I can't be serious! How does
+something as trivial as a broken doorknob push me into delivering a deep
 metaphysical thesis? As I ramble on, her amusement becomes hopelessness. She
 reminds me that the whole issue is a lot simpler than I'm making it - it's all
 about a few stupid doorknobs. Why can't I just fix them _today_? I don't know
 what to say.
 
 The answer is actually pretty straightforward - interruptions have a cost.
-And for programmers (I work from home),
+And for programmers (I've been working from home for the last seven years),
 interruptions are unaffordable. When I can't explain why I don't particularly
 care about what I wear or eat - it's the same basic principle. Decisions have
 a cost too, no matter how trivial. But there's no way I can say this to
@@ -51,20 +51,19 @@ easy job, a commute of predictable duration, and otherwise a fixed routine. The
 wife was similarly busy. We would see each other only at dinner and on weekends.
 Even the time spent on leisure was fixed - reading on the train, Netflix during
 dinner and video games and socializing over the weekends. Doorknobs were
-strictly the landlords' headache, who themselves were reasonable enough in the
-first place[^1]. It was all very comfortable. It never occurred to me that the
+strictly the landlords' headache[^1]. It was all very comfortable. It never occurred to me that the
 routine could be suboptimal. No thoughts of optimization or efficiency crossed
 my mind.
 
 And then something broke. I didn't quite know what.
 
 I took a new job. It was a dream job - the kind that you think you'll spend the
-rest of your life at. They had only a small team and no office in Delhi, so I
-ended up working from home. For the first time in life, I had more time than I
+rest of your life at. There was only a small team in Delhi and no office.
+So I worked from home. For the first time in life, I had more time than I
 knew what to do with. Initially all the extra time felt like a great luxury.
 Like a dutiful worker, most of the leftover time went into doing extra work. I
 quickly emerged as the new guy who gives more than 100%. In a couple of years I
-found that being that guy has diminising marginal utility. But by then I already
+found that being that guy has diminishing marginal utility. But by then I already
 had a reputation at work - and upholding it meant that I had to squeeze every
 last droplet of time and siphon it into work. This, in turn, meant that there
 was less time for everything else - especially leisure and relationships. And,
@@ -76,8 +75,8 @@ root cause of burnout, I avoided it altogether with productivity hacks.
 What had broken was _Time_ - my idea of it and how I used it.
 
 Personal productivity wasn't yet the widely influential global enterprise it is
-today. Sadly, the poeple wielding that influence today seem to suffer from the
-Kardashian effect - they seem to be only productive at creating content at
+today. Sadly, the people wielding that influence today seem to suffer from the
+Kardashian effect - they seem to be only productive at creating content about
 productivity. My journal entries from that period (journalling, too, was
 something that mindful and productive people recommended - I didn't start
 enjoying it until much later) are full of whining about how I couldn't get
@@ -135,7 +134,7 @@ doesn't sound too bad. But S N Subrahmanyan dials it up to 90 hours a week.
 Bhavish Aggarwal claims to work 140 hours a week. He believes that weekends and
 work-life balance don't apply to Indians because they a western concept. He may
 be right, but only a little homework would have revealed that the concept of
-leisure isn't foreign at all. It is advocated in something quintesentially Indian -
+leisure isn't foreign at all. It is advocated in something quintessentially Indian -
 the Constitution.
 
 > The State shall endeavour to secure, by suitable legislation or economic
@@ -147,12 +146,21 @@ Now, credit where it is due, building and running an industrial empire must come
 with a deep understanding of how people do their best work. But when
 exhortations to work longer hours are accompanied by news of stress-induced
 diseases, deaths and even suicides in the workplace - it's clear that this
-fanatical quest for workplace producitivity is not just misguided, but also
+fanatical quest for workplace productivity is not just misguided, but also
 tone-deaf. It is also, as we shall see, inevitably sexist.
 
 # How the Salaried and Skilled India Works
 
-The 2024 Time Use Survey covers the entire country apart from some inaccessible
+Between January and December of 2024, the National Statistical Office conducted
+the second national Time Use Survey (TUS) in India (The first  was conducted
+in 2019, before the pandemic). It offers precisely the kind of data that helps
+us address the question of how feasible long workhours are, and who they affect
+the most. As I wrote the following section, the central guiding question in my
+analysis was,
+
+> If people had to work 90 hours a week, what would they have to give up?
+
+The 2024 TUS covers the entire country apart from some inaccessible
 parts of Andaman & Nicobar, and is administered over the whole year to account
 for seasonal variations. For each respondent, it records the time spent on
 _everything_ in the last 24 hours in 30 minute intervals. As such, it
@@ -163,7 +171,7 @@ and designing sample cohorts, I've settled down on a ruthlessly simplified
 but still rigorous approach to the data.
 
 For one, I will be writing about that subset of the population which is most
-likely to be at the recieving end of productivity-shaming: salaried white-collar
+likely to be at the receiving end of productivity-shaming: salaried white-collar
 workers. The TUS helpfully includes a field which records whether each
 respondent was involved in an economic activity, and if so, whether they were
 self-employed or salaried. In addition, the survey also records the industrial
@@ -208,7 +216,7 @@ the kitchen.
 
 Here, too, the magnitude is more surprising than the direction. We'd expect that
 men spend much less time in the kitchen than women overall in the country - and
-we'd be right. But to see that happen even in the a small, presumably
+we'd be right. But to see that happen even in a small, presumably
 emancipated section of the population is shocking. Even among the salaried class
 with skilled jobs, men barely spend an hour cooking. Moreover, cooking is only a
 part of kitchen work - there are also the allied activities of serving food and
@@ -218,7 +226,7 @@ captured well in it's Hindi remake) where an overbearing relative decides to
 make dinner and leaves the kitchen in a mess.
 
 Other factors associated with kitchen time - like marital status, education and
-household weath - also influence it in expected ways. But the relationship
+household wealth - also influence it in expected ways. But the relationship
 between them and time spent in the kitchen isn't just monotonic - it is
 _extreme_. The women who come from the wealthiest quartile spend nearly three
 hours less in the kitchen than those from the second wealthiest quartile. Women
@@ -282,14 +290,14 @@ deficits right there!
 
 When it comes to talking, chatting and texting, 15 hours a week looks downright
 excessive. All 10-12 hours of watching TV could be cut down. There's certainly
-some some creative incentive that managers can come up with to get people to
+some creative incentive that managers can come up with to get people to
 cancel their Netflix subscriptions and delete their Instagram accounts. In fact
 I'll go so far as to say that even personal care and hygiene can be sacrificed.
-Ask Bhavish Agarwal - for someone who claims to work 20 hours a day, he
-certainly looks quite well groomed. Of course, haters could always ask why 20
-hours a day isn't enough for him to make his customers happy. If we're going to
-make reasonable arguments that time spent on work is no guarantee of quality,
-this whole post is moot.
+Ask Bhavish Aggarwal - for someone who claims to work 20 hours a day, he
+certainly looks quite well groomed. I wonder how he doesn't have dark circles.
+Of course, haters could always ask why 20 hours a day isn't enough for him to
+make his customers happy. If we're going to make reasonable arguments that time
+spent on work is no guarantee of quality, this whole post is moot.
 
 ---
 
@@ -323,8 +331,8 @@ never sell long hours to my younger colleagues.
 
 But I see bullshit when I see it. Long hours were never sold to me on a platter
 of nation building. It took me a while, but I recognized what enables me to work
-long hours - I acknowledged my privilege. And the best way to sum up the
-acknowledgement is this quote from Stephen King:
+long hours - I acknowledged my privilege. I can think of no better
+acknowledgement than this quote from Stephen King:
 
 > The combination of a healthy body and a stable relationship with a
 > self-reliant woman who takes zero shit from me or anyone else has made the
@@ -333,13 +341,4 @@ acknowledgement is this quote from Stephen King:
 But when people ask you to work ridiculously long hours, healthy bodies and
 stable relationships are exactly the kinds of things they want you to give up.
 
-It will never work.
-
 ---
-
-[^1]: _jalahshrunkhala yoga_
-[^3]: The ideal day that would never happen.
-[^4]: Stripe's unnecessary censorship.
-
-
-
