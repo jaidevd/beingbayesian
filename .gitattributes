@@ -2,3 +2,5 @@
 *.gif filter=lfs diff=lfs merge=lfs -text
 *.jpg filter=lfs diff=lfs merge=lfs -text
 *.webp filter=lfs diff=lfs merge=lfs -text
+03-90-hr-workweek/ICATUS-2016.xlsx filter=lfs diff=lfs merge=lfs -text
+03-90-hr-workweek/NIC_2008.xlsx filter=lfs diff=lfs merge=lfs -text
