@@ -127,7 +127,9 @@ revealing. For instance, he calls Moore's Law a "historically reliable rule"
 computation for granted, which to him means that we will be able to "reverse
 engineer the brain", and then reminds us that "if emulating the brain seems
 hopeless, remember the power of exponential growth". This argument, that simply
-scaling a computer to have the same computational power as the human brain will
+scaling a computer makes it smarter, has some merit, as we will see in the
+following section. But to suggest that scaling alone will make it as smart as
+the human brain, and that in turn will
 somehow bring forth the rapture, is reductive. It presupposes that the human
 brain is nothing more than a giant, parallel computer which can only do
 arithmetic and logic operations—and intelligence is the result of enough of
@@ -147,11 +149,11 @@ In short,
 * _and if_ highly scaled computers indeed mimic the human brain,
 * _and if_ we actually reverse engineer the human brain,
 
-_then_ we will have Skynet on our hands.
+_then_ we will have superintelligence on our hands.
 
 All of this is supposed to be inevitable, and it will happen before we know it.
 
-It's such an exceptional compounding of fallacies that I'm tempted to slip up
+It's such an exceptional compounding of fallacies[^4] that I'm tempted to slip up
 myself and call this nonsense "exponential". Nearly all of it is based on appeal
 to authority and hasty generalization.
 
@@ -194,3 +196,9 @@ Kurzweil took a serious interest in immortality. At the time Urban wrote his
 article, Kurzweil was taking [100 pills every
 day](https://www.businessinsider.com/ray-kurzweils-immortality-diet-2015-4).
 [^3]: That dubious honor goes, sadly, to Frank Rosenblatt himself.
+[^4]: Princeton researchers Arvin Narayanan and Sayash Kapoor came to a similar
+    conclusion in their book _AI Snake Oil_. In an entire chapter dedicated to
+    such fallacies, they write, "...we've seen in the history of AI research, that once
+    one aspect gets automated, other aspects that weren't recognized earlier
+    tend to reveal themselves as bottlenecks." Every link in the chain of "ifs"
+    above has its own bottlenecks.

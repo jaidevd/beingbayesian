@@ -294,8 +294,9 @@ the intelligent forces that those constraints hinder. Yeah, self-note. An ASI is
 like a computer security problem, but then so are a thousand other things.
 Thanks for watching.
 
-## Page number 182 LeCun shared this prestigious award with Nobel laureates
-Jeffrey Hinton and Yoshua Bengio. Of the three, Lekun is the only one who still
+## Page number 182
+LeCun shared this prestigious award with Nobel laureates Jeffrey Hinton and
+Yoshua Bengio. Of the three, Lekun is the only one who still
 treats ASI alignment as easy and the extinction risk from ASI as small. The
 other two signed the open letter in 2023 that we mentioned in the introduction.
 
