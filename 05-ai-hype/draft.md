@@ -1,3 +1,12 @@
+# Introduction
+
+> It is the internet remixed... it is language atomized by tokens and vectors. A
+> million-layered neural network sandwich that is held together by calculus,
+> linear algebra, and probability—also known as wild hope.
+
+[Compasswallah](https://youtu.be/99tU_hkw9hk)
+
+
 > It is said that to explain is to explain away. This maxim is nowhere so well
 > fulfilled as in the area of computer programming, especially in what is ealled
 > heuristic programming and artifieiM intelligence. For in those realms machines
@@ -7,39 +16,6 @@
 > its magic crumbles away...
 
 - Joseph Weizenbaum
-
-![](https://obamawhitehouse.archives.gov/sites/default/files/imagecache/gallery_img_full/image/image_file/42.jpg?itok=bdBOhLvF)
-
-Most of us would think that this picture is funny. We'd come to this realization
-at a glance, in no more than a second. And if we were to carefully unravel our
-chain of thought behind this reaction, we'd end up with something like this:
-
-* We detect that there are people in the picture
-* We see that there's someone standing on a weighing scale. We know, further,
-  what weighing scales do.
-* We notice that someone is pressing down on the scale, unbeknowst to the person
-  standing on it.
-* We know how scales work, and we know that most people are conscious of their
-  weight, and so we infer that someone is playing a prank.
-* We further realzie that the person playing a prank isn't just anyone - he's
-  one of the most powerful men in the world. It's made funnier by our collective
-  cultural belief that leaders are supposed to be dignified.
-
-That, in short, is the sort of reasoning it takes to comprehend a picture.
-
-Now, when I paste the image into ChatGPT (try it out!) and ask it why it's
-funny, here's what it says:
-
-> This picture is funny because it captures a playful moment: a man is standing
-> on a scale, and another man (in a suit) is humorously stepping on it, likely
-> to make the weight reading higher. The lighthearted teasing, unexpected in a
-> formal setting with suits and officials around, makes the scene amusing.
-
-While not as nuanced as the earlier explanation, this is still not bad at all.
-
-I first heard the example above in a lecture by Justin Johnson from a computer
-vision course in Stanford University, which in turn was borrowed from a blog
-post by Andrej Karpathy - a noted AI researcher.
 
 I've been training machines to see, read and write for 15 years now - since well
 before it was cool. I've become jaded, and I suffer from what Steven Pinker
@@ -51,6 +27,7 @@ when people think AI is going to solve all our problems.
 
 ---
 
+# The History of AI Hype
 
 The idea of thinking machines and anthropmorphized automatons in mythology and
 fiction dates back to antiquity. Cultivating some form of intelligence in a
@@ -76,14 +53,95 @@ see.
 
 A biological neuron, or a nerve cell, has dendrites, axons and a soma; which
 respectively perform the functions of input stimuli, output stimuli and an
-aggregation process on the inputs.
+aggregation process on the inputs. McCulloch & Pitts recognized that this
+simplified interpretation of a biological function was still powerful enough
+to be _programmed_ into a
+computer. A machine could be instructed to accept a bunch of numerical inputs,
+aggregate them (like summing or averaging them), and if the aggregate value was
+higher than a fixed threshold, the neuron "fires", relaying ahead an impulse.
+This idea, of interpreting a neuron as a miniature calculator, could be
+generalized further by arranging multiple neurons in a network—thus, _neural
+networks_. But this model was limited to only being programmed with explicit
+instructions. McCulloch & Pitts hadn't suggested how it could be _trained_. That
+flash of genius came in 1957 from the psychologist Frank Rosenblatt. He called
+his invention the _perceptron_ - an artificial neuron that could be programmed
+to train itself.
+
+The perceptron was... _beautiful_—there's no other word for it. It was almost
+magical. Few algorithms are as elegant as the one used to train the perceptron.
+It is a binary classification algorithm—inputs to it are
+categorized into one of two classes. The algorithm itself can be written in no
+more than three sentences. And best of all, it came with a _guarantee_: if the
+categories presented to it while training can be separated by drawing a straight
+line (or plane) between then, then the perceptron _will necessarily_ find that
+separating line. The implications are far reaching: if any two statistical patterns
+are presented such that they have a straight gap between then, the perceptron
+_will_, eventually, but _automatically_, find that gap. When I was a student I was
+[obsessed](https://jaidevd.com/posts/perceptron-convergence/) with how something
+so simple and straightforward, something that could be programmed with only a
+few lines of code, could weild such power[^2].
+
+In a
+public demonstration in 1958, Rosenblatt showed how the perceptron learnt to
+distinguish between paper sheets marked on the right versus those marked on the
+left. In a later experiment, it could tell circles apart from squares. The media
+lapped it up, Rosenblatt would say in hindsight, "with all of the exuberance and
+sense of discretion of a pack of happy bloodhounds". The New
+York time carried a piece titled "Electronic Brain Teaches Itself". The New
+Yorker magazine went further and claimed that the perceptron is capable of
+original thought. Rosenblatt himself thought that his invention would one day be
+capable of conscious thought[^3].
+
+Unfortunately, this was also the first instance of overpromising and
+under-delivering in the history of AI. As powerful as the perceptron's guarantee
+of separating patterns was, it did not take long for people to realize that
+there are enough classification problems that cannot possibly be expressed as
+separable patterns. Indeed, _most_ interesting problems in machine learning were
+of the sort where it's not possible to separate patterns by drawing straight
+lines between them. In 1969, Marvin Minsky and Seymour Papert highlighted some
+of the most apparent limitations of the perceptron. They were aware that these
+gaps could be plugged, but it was the criticism that went viral. Their often
+mis-cited work so definitively punctured the AI bubble that interest and funding
+dried up, and the field plunged into the _AI Winter_. The next few decades were
+peppered with incremental, standalone innovations. In 1986, Geoffrey Hinton with his
+collaborators Rumelhart and Williams figured out how to train neural networks
+with a process known as error backpropagation. A decade later, Yann LeCun
+created "convolutional" neural networks - an architectures that allowed neural
+networks to "see".
+
+The early 2010s saw a series of fortuitous events for AI research. An evolved
+CNN architecture named AlexNet was developed, which broke records in visual
+recognition. Nvidia published a software platform named CUDA, which allowed
+programmers to use GPUs for not just graphics, but general purpose computing.
+GPUs are massively parallel computers. As such, they were exceptionally well
+suited to the task of training neural networks (neurons can process their inputs
+independent of what most other neurons are doing at the same time). Coursera was
+founded in 2012 - and one of their two introductory courses was on machine
+learning. This meant that anybody could study machine learning, practically for free.
+Around this time, in the background, the popularity of open source software
+was growing, resulting in various open-source deep learning frameworks that are
+thriving to this day. For me, too, the stars had aligned. I was in
+the final year of engineering school in 2011, and I took a course in artificial
+neural networks. The most expensive lab on campus (to which I had unfettered
+access), contained six Nvidia workstations armed with top-of-the-line GPUs which
+a professor had managed to procure as part of a research grant. Although nobody
+could have predicted what was on the horizon, the early 2010s were a great time
+to be studying deep learning (it wasn't called AI yet).
+
+Since then, the field has seen an insane growth. As an undergraduate, I would
+well have believed that AGI was our manifest destiny. Today, the discourse
+around AGI shocks me.
 
 
 [^1]: Mark Rowlands on the endless pursuit to figure out what separates humans
     from animals.
+[^2]: Simplex sigillum veri
+[^3]:  He would later admit a certain "lack of
+mathematical rigor in preliminary reports".
 
 ---
 
+# The Superintelligence Prophecy
 
 The seeds of AI hype and misinformation started sprouting in popular discourse
 long before Instagram was awash with AI slop and every other post on LinkedIn
@@ -273,7 +331,6 @@ And that's how we arrived here. Dwarkesh Patel, the host of a popular podcast on
 AI calls the period from 2019 to 2025 _the Scaling Era_. Now that we could, it
 was time to finally put exponentialism to the test.
 
----
 
 [^1]: [Excerpts from A Conversation with Gordon
 Moore](https://web.archive.org/web/20080218225540/http://download.intel.com/museum/Moores_Law/Video-Transcripts/Excepts_A_Conversation_with_Gordon_Moore.pdf)
@@ -289,6 +346,127 @@ day](https://www.businessinsider.com/ray-kurzweils-immortality-diet-2015-4).
     one aspect gets automated, other aspects that weren't recognized earlier
     tend to reveal themselves as bottlenecks." Every link in the chain of "ifs"
     above has its own bottlenecks.
+
+---
+
+
+# Bigger, Faster... Smarter?
+
+The capacity of learning in an artificial neural network (on which most modern
+AI models are based) is measured in _parameters_—a bunch of adjustable numbers,
+like knobs and dials, which when carefully tuned, trains the network for a given
+task. The more knobs, the more tunable the network becomes, and the better it
+can learn complex patterns. It stands to reason that more parameters means a
+better ability to learn[^1]. And when more parameters are coupled with higher
+quality data and faster compute... Hallelujah!
+
+GPT-1 had 117 million parameters. Its 10x scaled successor, GPT-2, could
+actually generate coherent text! GPT-3, with 175 billion parameters, was made
+receptive to prompting and called 'InstructGPT'; which in turn formed the basis
+of ChatGPT. GPT-4 was rumoured to have nearly 1.8 trillion parameters.
+Between 2018 and 2024, exponentialism played out impressively. In late 2022, AI
+researcher and educator Andrej Karpathy said on the Lex Fridman podcast that the
+zeitgeist was "don't touch the transformer, touch everything else; scale up
+data; scale up evaluations". Even experts were fascinated by scaling leading
+to emergent capabilities. Many felt that there could, after all, be a magical
+number of parameters on the horizon, which would unlock true intelligence. The
+journalist Karen Hao has dedicated an entire chapter in her book, _Empire of
+AI_, to scaling. She writes,
+
+> The scaling doctrine had become so ingrained that some are even beginning to
+> view it as something of a natural phenomenon. Scaling compute is _the_ way,
+> not just _a_ way, to reach more advanced AI capabilities. ...the neglected
+> paths of improving the neural network itself or even the quality of its
+> training data can significantly reduce the amount of expensive compute needed
+> to reach the same performance. That's not even considering the approaches that
+> move away from deep learning.
+
+Drawing a parallel to Moore's Law, she further writes,
+
+> OpenAI's Law, or what the company would later replace with an even more
+> fevered pursuit of so-called scaling laws, is exactly the same (as Moore's
+> Law). It is not a natural phenomenon. It's a self-fulfilling prophecy.
+
+Even if this outright equivalence to Moore's Law, and Kurzweil's Law is
+accepted, there's a more fundamental idea which needs to be questioned. Is deep
+learning—as pioneered by McCulloch & Pitts, improved by Rosenblatt, and
+generalized by Hinton—a good approximation of the human brain? To what extent
+can hyperconnected, massive networks of artificial neurons be grown to match
+human intelligence? They certainly lend themselves to scaling, but how far can
+we stretch this approximation?
+
+Even Yann LeCun, one of the champions of deep learning, doubts that scaling LLMs
+alone will get us to human-level intelligence[^2]. But another pioneer of
+scaling, and co-founder of OpenAI, Ilya Sutskever, appears to be religiously
+committed to the idea. Hao wrote in an article in _The Atlantic_,
+
+> Sutskever began to behave like a spiritual leader... His constant,
+> enthusiastic refrain was "feel the AGI"... At OpenAI's 2022 holiday party,
+> Sutskever led employees in a chant: "Feel the AGI! Feel the AGI!"
+
+His religious zeal for scaling was clearly infectious. Dario Amodei, previously
+VP of research at OpenAI and then founder of Anthropic said on Dwarkesh Patel's
+podcast[^3],
+
+> One of the first things Ilya Sutskever said to me was, "Look. The models just
+> want to learn. You have to understand this. The models just want to learn. It
+> was a bit like a Zen koan. I listened to this and I became enlightened.
+
+![](images/twitter_sutskever.png)
+
+Perhaps, this kind of religious fervour is necessary to drive a movement,
+anything less would not do. But I wonder if it couldn't have been done without
+jingoism and hyperbole. Sutskever is certainly capable of restraint. In a 2023
+[interview with Dwarkesh Patel](https://www.youtube.com/watch?v=Yf1o0TQzry8),
+when pushed to speculate on AGI timelines, Sutskever carefully, and correctly,
+hesitates[^4]. When asked about how seriously he takes scaling laws, he
+admits[^5] that there's a fundamental gap between the accuracy of models
+predicated on scaling laws and the emergence of actual reasoning capability.
+
+And as of today, the music seems to have stopped.
+
+In November 2024, Sutskever reportedly [told
+Reuters](https://www.reuters.com/technology/artificial-intelligence/openai-rivals-seek-new-path-smarter-ai-current-methods-hit-limitations-2024-11-11/)
+that results from the scaling laws have plateaued. It was around the same time
+that Satya Nadella proposed the emergence of a _new_ scaling law, based on
+letting models take longer to think before responding. Going a step further, in
+March 2025, Jensen Huang suggested that the entire world got the scaling laws
+wrong, and the amount of compute needed now was "easily a hundred times more
+than we thought we needed this time last year."
+
+If you're tempted to believe either of them, remember only Upton Sinclair's
+famous line,
+
+> It is difficult to get a man to understand something when his salary depends
+> on his not understanding it.
+
+Already in the fall of 2025, GPT-5 released to lukewarm reviews. What people
+were led to believe would be a vindication of scaling turned out to be not
+significantly better than it's predecessor. Meta delayed the release of their AI
+model named "Behemoth" or "Llama 4", citing scaling limitations. xAI's grok
+series of models, too, saw delayed releases and disappointing results.
+
+Nadella and Huang seem just to be putting a positive spin on all of it - not to
+mention the multiple times Sam Altman has turned on a dime after the release of
+GPT-5.
+
+In short, it's worth asking whether LLMs today are as good as they're going to
+be for a long, long time.
+
+---
+
+[^1]: This is not without caveats. Models that are too large are prone to
+"overfitting"; the learning task and the data they are given must both be
+commensurate with their capacity. Otherwise they either simply memorize their
+training data, or don't learn anything useful at all. Overly capable models with
+poor training are a bit like awkward geniuses: like Sheldon Cooper's social
+skills.
+[^2]: "Yann LeCun... had a particular distaste for OpenAI and what he viewed as
+its bludgeon approach to pure scaling." -- Karen Hao, _Empire of AI_, p. 159.
+[^3]: Page no. 24
+[^4]: Page in the book
+[^5]: Page in the book
+
 
 ---
 
@@ -354,7 +532,7 @@ infinite of it. Today we have arrived at Studio Ghibli-style image generation.
 All it has done is generate some short-lived amusement, and a whole lot of
 long-term consternation. On-demand video generators show us fake videos of house
 cats chasing lions away and stuff that need not have been faked at all, like
-journalists polishing politicians' boots.
+news anchors polishing politicians' boots.
 
 _Slop._
 
@@ -369,3 +547,6 @@ https://youtu.be/2HMPRXstSvQ
 111
 112
 131
+
+
+
