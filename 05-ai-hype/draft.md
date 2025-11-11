@@ -35,7 +35,21 @@ mechanical, automatic, controllable object has captured humanity's imagination
 for as long as we can remember. This impulse persists across ages and cultures,
 like the search for meaning or the urge to control and master. The pursuit of
 artificial intelligence is in some ways a spiritual pursuit—an exploration of
-what it means to be intelligent, to be human[^1]. A programmer who sees their
+what it means to be intelligent, to be human. The philosopher Mark Rowlands
+argues that the only thing that makes humans humans is the desire to separate
+ourselves from other animals. We haven't been particularly successful in this
+pursuit. Over the years, we realized that language, tool use, rationality are
+all displayed by various other animals. So then we thought we're unique in our
+ability to self-reflect. But primates, elephants and—to our disappointment—even
+pigeons can identify themselves and know their place in the world[^1]. All
+anthorpomorphism, thus, is a matter of _degrees_ of similarity to human
+behaviour. There isn't a qualitative threshold beyond which a being is deemed
+human. So when it comes to human-level intelligence, emotion or behaviour,
+researchers probably should just call it a day and move on to better-defined
+problems.
+
+
+Nevertheless, a programmer who sees their
 machines learn how to see, write and read for the first time feels like
 Hephaestus creating Pandora. Algorithms become alchemy. It's only natural that
 we love it.
@@ -90,7 +104,8 @@ sense of discretion of a pack of happy bloodhounds". The New
 York time carried a piece titled "Electronic Brain Teaches Itself". The New
 Yorker magazine went further and claimed that the perceptron is capable of
 original thought. Rosenblatt himself thought that his invention would one day be
-capable of conscious thought[^3].
+capable of conscious thought, but would later admit a certain "lack of
+mathematical rigor in preliminary reports."[^3]
 
 Unfortunately, this was also the first instance of overpromising and
 under-delivering in the history of AI. As powerful as the perceptron's guarantee
@@ -132,15 +147,6 @@ Since then, the field has seen an insane growth. As an undergraduate, I would
 well have believed that AGI was our manifest destiny. Today, the discourse
 around AGI shocks me.
 
-
-[^1]: Mark Rowlands on the endless pursuit to figure out what separates humans
-    from animals.
-[^2]: Simplex sigillum veri
-[^3]:  He would later admit a certain "lack of
-mathematical rigor in preliminary reports".
-
----
-
 # The Superintelligence Prophecy
 
 The seeds of AI hype and misinformation started sprouting in popular discourse
@@ -151,7 +157,7 @@ it, but this time, the hype virus found a new ecosystem to infect: social media.
 In 2015, Tim Urban, the writer of the popular blog "Wait But Why", wrote a
 two-part series on AI, titled ["The AI Revolution: The Road to
 Superintelligence"](https://waitbutwhy.com/2015/01/artificial-intelligence-revolution-1.html).
-Even if he wasn't the first AI booster[^3] and wouldn't be the last, few people
+Even if he wasn't the first AI booster[^4] and wouldn't be the last, few people
 have been as influential as him in popularizing AI for a layperson. A fantastic
 writer and explainer of complex topics, Urban did a great job of collating many
 common AI fallacies in one place. What follows might read like a hit piece
@@ -205,7 +211,7 @@ is absurd. The economist Daniel Susskind writes,
 > slumped its way into the 21st century, though the timings differ... Most
 > economies, battered by two decades of crises—including the dot-com bust, the
 > 2007-8 financial crisis and the COVID-19 pandemic—are sluggish shadows of
-> former selves. We increasingly realize we cannot take growth for granted.
+> former selves. We increasingly realize we cannot take growth for granted.[^5]
 
 But even if we grant Kurzweil his premise—that growth is preordained,
 unstoppable—the deeper fallacy still remains: the conflation of all growth with
@@ -235,7 +241,7 @@ population are not. They only look exponential if we hold our time-windows to
 convenient periods. It is all too easy to confuse the observed effect of some
 things with the primal cause of something else.
 
-In a 2005 interview[^1], Gordon Moore himself, with humility and amusement, said
+In a 2005 interview[^6], Gordon Moore himself, with humility and amusement, said
 that the semiconductor industry "made it (Moore's Law) a self-fulfilling
 prophecy", and that it was, on his part, "lucky extrapolation". But that did
 nothing to temper Kurzweil's enthusiasm. Most of his predictions were predicated
@@ -249,7 +255,7 @@ to reiterate the same predictions. Urban's obsequiousness to Kurzweil's ideas
 could not be more evident. He quotes Kurzweil more than any other source by far,
 and appeals to his authority every step of the way. Nearly half of the footnotes
 in the first part of his post are from Kurzweil's book: _The Singularity is
-Near_[^2].
+Near_[^7].
 
 There's a sprawling introduction to Kurzweil's law, followed by justifications
 of why artificial superintelligence is an inevitable outcome of it. It's
@@ -298,9 +304,14 @@ _then_ we will have superintelligence on our hands.
 
 All of this is supposed to be inevitable, and it will happen before we know it.
 
-It's such an exceptional compounding of fallacies[^4] that I'm tempted to slip up
+It's such an exceptional compounding of fallacies that I'm tempted to slip up
 myself and call this nonsense "exponential". Nearly all of it is based on appeal
-to authority and hasty generalization.
+to authority and hasty generalization. Princeton researchers Arvin Narayanan and
+Sayash Kapoor came to a similar conclusion in their book _AI Snake Oil_. In an
+entire chapter dedicated to such fallacies, they write, "...we've seen in the
+history of AI research, that once one aspect gets automated, other aspects that
+weren't recognized earlier tend to reveal themselves as bottlenecks." Every link
+in the chain of "ifs" above has its own bottlenecks[^8].
 
 But credit where it is due, Tim Urban did write that a "growth spurt might be
 brewing right now", and he was right. In 2017, researchers from Google
@@ -331,25 +342,6 @@ And that's how we arrived here. Dwarkesh Patel, the host of a popular podcast on
 AI calls the period from 2019 to 2025 _the Scaling Era_. Now that we could, it
 was time to finally put exponentialism to the test.
 
-
-[^1]: [Excerpts from A Conversation with Gordon
-Moore](https://web.archive.org/web/20080218225540/http://download.intel.com/museum/Moores_Law/Video-Transcripts/Excepts_A_Conversation_with_Gordon_Moore.pdf)
-[^2]: Kurzweil later wrote another book, called _The Singularity is Nearer_.
-Since the Singularity is perpetually just around the corner, it makes sense that
-Kurzweil took a serious interest in immortality. At the time Urban wrote his
-article, Kurzweil was taking [100 pills every
-day](https://www.businessinsider.com/ray-kurzweils-immortality-diet-2015-4).
-[^3]: That dubious honor goes, sadly, to Frank Rosenblatt himself.
-[^4]: Princeton researchers Arvin Narayanan and Sayash Kapoor came to a similar
-    conclusion in their book _AI Snake Oil_. In an entire chapter dedicated to
-    such fallacies, they write, "...we've seen in the history of AI research, that once
-    one aspect gets automated, other aspects that weren't recognized earlier
-    tend to reveal themselves as bottlenecks." Every link in the chain of "ifs"
-    above has its own bottlenecks.
-
----
-
-
 # Bigger, Faster... Smarter?
 
 The capacity of learning in an artificial neural network (on which most modern
@@ -357,7 +349,7 @@ AI models are based) is measured in _parameters_—a bunch of adjustable numbers
 like knobs and dials, which when carefully tuned, trains the network for a given
 task. The more knobs, the more tunable the network becomes, and the better it
 can learn complex patterns. It stands to reason that more parameters means a
-better ability to learn[^1]. And when more parameters are coupled with higher
+better ability to learn[^9]. And when more parameters are coupled with higher
 quality data and faster compute... Hallelujah!
 
 GPT-1 had 117 million parameters. Its 10x scaled successor, GPT-2, could
@@ -379,7 +371,7 @@ AI_, to scaling. She writes,
 > paths of improving the neural network itself or even the quality of its
 > training data can significantly reduce the amount of expensive compute needed
 > to reach the same performance. That's not even considering the approaches that
-> move away from deep learning.
+> move away from deep learning.[^10]
 
 Drawing a parallel to Moore's Law, she further writes,
 
@@ -395,8 +387,8 @@ can hyperconnected, massive networks of artificial neurons be grown to match
 human intelligence? They certainly lend themselves to scaling, but how far can
 we stretch this approximation?
 
-Even Yann LeCun, one of the champions of deep learning, doubts that scaling LLMs
-alone will get us to human-level intelligence[^2]. But another pioneer of
+Even Yann LeCun, one of the champions of deep learning, [doubts](https://youtu.be/4__gg83s_Do) that scaling LLMs
+alone will get us to human-level intelligence[^11]. But another pioneer of
 scaling, and co-founder of OpenAI, Ilya Sutskever, appears to be religiously
 committed to the idea. Hao wrote in an article in _The Atlantic_,
 
@@ -406,7 +398,7 @@ committed to the idea. Hao wrote in an article in _The Atlantic_,
 
 His religious zeal for scaling was clearly infectious. Dario Amodei, previously
 VP of research at OpenAI and then founder of Anthropic said on Dwarkesh Patel's
-podcast[^3],
+podcast[^12],
 
 > One of the first things Ilya Sutskever said to me was, "Look. The models just
 > want to learn. You have to understand this. The models just want to learn. It
@@ -419,8 +411,8 @@ anything less would not do. But I wonder if it couldn't have been done without
 jingoism and hyperbole. Sutskever is certainly capable of restraint. In a 2023
 [interview with Dwarkesh Patel](https://www.youtube.com/watch?v=Yf1o0TQzry8),
 when pushed to speculate on AGI timelines, Sutskever carefully, and correctly,
-hesitates[^4]. When asked about how seriously he takes scaling laws, he
-admits[^5] that there's a fundamental gap between the accuracy of models
+hesitates[^13]. When asked about how seriously he takes scaling laws, he
+admits[^14] that there's a fundamental gap between the accuracy of models
 predicated on scaling laws and the emergence of actual reasoning capability.
 
 And as of today, the music seems to have stopped.
@@ -455,24 +447,9 @@ be for a long, long time.
 
 ---
 
-[^1]: This is not without caveats. Models that are too large are prone to
-"overfitting"; the learning task and the data they are given must both be
-commensurate with their capacity. Otherwise they either simply memorize their
-training data, or don't learn anything useful at all. Overly capable models with
-poor training are a bit like awkward geniuses: like Sheldon Cooper's social
-skills.
-[^2]: "Yann LeCun... had a particular distaste for OpenAI and what he viewed as
-its bludgeon approach to pure scaling." -- Karen Hao, _Empire of AI_, p. 159.
-[^3]: Page no. 24
-[^4]: Page in the book
-[^5]: Page in the book
 
-
----
-
-
-In August 2025, in the Rajya Sabha, Aam Admi Party MP Raghav Chadha demanded
-free access to generative AI tools for all Indians. Undeterred by the question
+In August 2025, in the Rajya Sabha, Aam Admi Party MP Raghav Chadha [demanded
+free access to generative AI tools](https://www.youtube.com/watch?v=rWeSb7-NBD0) for all Indians. Undeterred by the question
 of who will pay for them, social media hailed Chadha's demand as revolutionary.
 It was called "bold", "heroic", "a crucial step towards digital democracy" and a
 way to wrest the AI revolution away from Silicon Valley. The irony of how any of
@@ -482,11 +459,11 @@ at affirmative action or public welfare schemes loved the idea of free AI
 subscriptions. As much as Chadha's own party has been criticised for appeasement
 and "freebies", his proposal on AI subscriptions was unanimously applauded. 
 
-Notably, an earlier speech of Chadha from March 2025, one in which he highlights
+Notably, an [earlier speech](https://www.youtube.com/watch?v=awqpznqqV4Y) of Chadha from March 2025, one in which he highlights
 the need for infrastructure and funding needed for indigenous AI research, went
 relatively unnoticed. In India, where fewer than 10% of households own a laptop
-or a computer and internet usage is concentrated among younger, urban, educated and
-wealthy Indians, the economic utility of free ChatGPT or Gemini subscriptions is
+or a computer[^15] and internet usage is concentrated among younger, urban, educated and
+wealthy Indians[^16], the economic utility of free ChatGPT or Gemini subscriptions is
 dubious.
 
 It is not only this kind of collective, misty-eyed delusion that obfuscates the
@@ -495,7 +472,8 @@ dubious. OpenAI's own charter defines AGI as "highly autonomous systems that
 outperform humans at most economically valuable work"; but we don't have
 consensus, even between aligned parties, on what constitutes economically
 valuable work or outperforming humans. For instance, Hinton famously said
-in 2016 that we should stop training radiologists because it was "completely
+in 2016 that we should [stop training radiologists](https://youtu.be/2HMPRXstSvQ) because it was "completely
+
 obvious" that deep learning would be able to outperform them in a decade. If that had
 happened, it would have been a good example of both AI outperforming humans as
 well as creating economic value. Today, however, the field of radiology is
@@ -538,7 +516,6 @@ _Slop._
 
 ---
 https://youtu.be/ibQ2nmeP-7A?t=720
-https://youtu.be/2HMPRXstSvQ
 
 
 61
@@ -550,3 +527,37 @@ https://youtu.be/2HMPRXstSvQ
 
 
 
+---  <!--Footnotes-->
+
+[^1]: Mark Rowlands, *The Happiness of Dogs: Why the Unexamined Life is Most
+    Worth Living* (Granta, 2024), p. 78
+[^2]: It would take me a while to learn that elegance and simplicity are
+    hallmarks of mathematical wisdom. George Polya often said, "_Simplex sigillum
+    veri_—simplicity is the seal of the truth."
+[^3]: Brian Christian, *The Alignment Problem* (Atlantic Books, 2020), p 31
+[^4]: That dubious honour goes, sadly, to Frank Rosenblatt himself.
+[^5]: Daniel Susskind, *Growth: A Reckoning* (Allen Lane, 2024), p. xiv
+[^6]: [Excerpts from A Conversation with Gordon
+Moore](https://web.archive.org/web/20080218225540/http://download.intel.com/museum/Moores_Law/Video-Transcripts/Excepts_A_Conversation_with_Gordon_Moore.pdf)
+[^7]: Kurzweil later wrote another book, called _The Singularity is Nearer_.
+Since the Singularity is perpetually just around the corner, it makes sense that
+Kurzweil took a serious interest in immortality. At the time Urban wrote his
+article, Kurzweil was taking [100 pills every
+day](https://www.businessinsider.com/ray-kurzweils-immortality-diet-2015-4).
+[^8]: Arvind Narayanan & Sayash Kapoor, *AI Snake Oil* (Princeton University
+    Press, 2024), p. 152
+[^9]: This is not without caveats. Models that are too large are prone to
+"overfitting"; the learning task and the data they are given must both be
+commensurate with their capacity. Otherwise they either simply memorize their
+training data, or don't learn anything useful at all. Overly capable models with
+poor training are a bit like awkward geniuses: like Sheldon Cooper's social
+skills.
+[^10]: Karen Hao, *Empire of AI* (Allen Lane, 2025), p. 115
+[^11]:"Yann LeCun... had a particular distaste for OpenAI and what he viewed as
+its bludgeon approach to pure scaling." _Ibid._, p. 159. 
+[^12]: Dwarkesh Patel & Gavin Leech, *The Scaling Era: An Oral History of AI,
+    2019-2025* (Stripe Press, 2025), p. 24
+[^13]: _Ibid._, p. 168
+[^14]: _Ibid._, p. 26
+[^15]: _Computer ownership and usage_ by Abhishek Waghmare, Data For India (July 2025): https://www.dataforindia.com/computers/
+[^16]: _Access to phones and the internet_ by Abhishek Waghmare, Data For India (February 2024): https://www.dataforindia.com/comm-tech/
