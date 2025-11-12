@@ -2,10 +2,10 @@
 - Confirm Amodei et al. 2020 scaling-law claims and compare Satya Nadella/Jensen Huang post-training rhetoric with earlier scaling expectations (`cal-newport.md:12`, `cal-newport.md:39`, `cal-newport.md:42`, `cal-newport.md:68`).
 - Trace benchmark data showing GPT-3 on the predicted scaling curve while GPT-5 under-delivered by aligning The Information leak with Karen Hao’s timeline (`cal-newport.md:17`, `cal-newport.md:25`, `cal-newport.md:28`).
 - Pull Microsoft capex, AI revenue, and layoff numbers plus Ed Zitron’s reporting to validate the “AI layoffs are hype” claim (`cal-newport.md:7`, `cal-newport.md:49`).
-- Locate the TechCrunch piece on Ilya Sutskever’s “back to discovery” shift to reinforce the slowing-scaling narrative (`cal-newport.md:32`).
+- ~~Locate the TechCrunch piece on Ilya Sutskever’s “back to discovery” shift to reinforce the slowing-scaling narrative (`cal-newport.md:32`)~~.
 
 ## notes.md
-- Read Apple’s “Illusion of Thinking” paper to see whether claimed reasoning gains are post-training gloss (`notes.md:8`).
+- Read Apple’s “Illusion of Thinking” paper to see whether claimed reasoning gains are post-training gloss (`notes.md:8`) - this goes to show that Nadella's claims are not really all that jazz.
 - Examine arguments that latent diffusion breaks classical scaling laws to identify architectures that defy smooth scaling curves (`notes.md:7`).
 - Revisit Joseph Weizenbaum’s “magic crumbling away” essay for a historical anchor on demystifying AI claims (`notes.md:12`).
 
@@ -47,3 +47,6 @@
 
 ## draft.md
 - Use Joseph Weizenbaum’s “magic crumbles away” passage as an anchor for contrasting perceived versus actual capability in future writing (`draft.md:1`).
+
+## Others
+* Look at the jobs data (there's a chapter in each of them) from Stanford HAI
