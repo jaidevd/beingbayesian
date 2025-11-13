@@ -1,83 +1,85 @@
-# Introduction
-
-<!--
-
-After more than a decade of not knowing what I do for a living, friends and
+After a decade of not knowing what I do for a living, friends and
 family have woken up to the fact that I work in AI. When elders ask me what AI
-is, I'm tempted to tell them it's nothing that hasn't been around for decades.
+is, I'm tempted to say it's nothing that hasn't been around for decades.
 When friends ask if they're going to lose their jobs to AI, I'm tempted to tell
-them that they layoffs have nothing to do with AI, and that I can't even get
-ChatGPT to outperform an intern on my team. But saying this, even to myself,
-makes me sound jaded and cynical.
+them that the layoffs have nothing to do with AI, and that I can't even get
+ChatGPT to outperform the least productive person on my team. But saying this,
+even to myself, makes me sound cynical.
 
-I suffer from what Steven Pinker calls the [Curse of
+I think I suffer from what Steven Pinker calls the [Curse of
 Knowledge](http://wetenschappelijkschrijven.nl/wp-content/uploads/2018/03/Essay-The-Curse-of-Knowledge-by-Steven-Pinker.pdf):
 "a difficulty in imagining what it is like for someone else not to know
 something that you know." Being intimately familiar with the inner mechanisms of
-what passes as "AI", I'm usually unimpressed by it.
+what passes for "AI"[^aiterm], I'm usually unimpressed by it.
+
+Underpinning the cynicism is a mindset: as someone who's not a salesman, but a
+student, a practitioner and occasional teacher of AI—my outlook towards it is
+bound to be reductive. I fail to see something like a large language model
+(an LLM, of which ChatGPT is one application) as greater than the sum of its
+parts. All AI models are the result of a handful of relatively simple
+foundational concepts, usually taught in undergraduate mathematics. That
+they take years to master is another matter. But once grokked, they blow your
+wonder-fuse.
 
 > It is said that to explain is to explain away. This maxim is nowhere so well
 > fulfilled as in the area of computer programming, especially in what is called
-> heuristic programming and artificial intelligence. For in those realms machines
-> are made to behave in wondrous ways, often sufficient to dazzle even the most
-> experienced observer. But once a particular program is unmasked, once its
-> inner workings are explained in language sufficiently plain to induce
+> heuristic programming and artificial intelligence. For in those realms
+> machines are made to behave in wondrous ways, often sufficient to dazzle even
+> the most experienced observer. But once a particular program is unmasked, once
+> its inner workings are explained in language sufficiently plain to induce
 > understanding, its magic crumbles away...[^weiz]
+> 
+> —Joseph Weizenbaum
 
-> - Joseph Weizenbaum
--->
+This is why I find it very difficult to explain why LLMs have taken the world by
+storm. On the one hand, there's no question that the world has irrevocably
+changed; but on the other hand, the world breaks every decade or so
+anyway[^housel]. This post is an attempt to illuminate this question: what is it
+about LLMs and AI that's different _this_ time?
 
-> It is the internet remixed... it is language atomized by tokens and vectors. A
-> million-layered neural network sandwich that is held together by calculus,
-> linear algebra, and probability—also known as wild hope.
-
-[Compasswallah](https://youtu.be/99tU_hkw9hk)
-
-
+> (a large language model) is the internet remixed... it is language atomized by
+> tokens and vectors. A million-layered neural network sandwich that is held
+> together by calculus, linear algebra, and probability—also known as wild hope.
+>
+> —Rohit Gupta, aka [_Compasswallah_](https://youtu.be/99tU_hkw9hk)
 
 
-I've been training machines to see, read and write for 15 years now - since well
-before it was cool. I've become jaded, and I suffer from what Steven Pinker
-calls the "curse of knowledge". Being intimately familiar with the inner
-mechanism of these systems, I'm usually unimpressed (why, really? because you
-know that all they're doing is scaling - there's no _real_ innovation going on -
-has this out). That's made me cynical. And I therefore become frightfully mad
-when people think AI is going to solve all our problems.
-
----
+Part of the answer lies in the fact that few things are as human as language,
+and LLMs have learnt language. But a much larger part of why it's different this
+time is attributable to disingenuous, fallacious, unfalsifiable _hype_.
 
 # The History of AI Hype
 
-The idea of thinking machines and anthropomorphized automatons in mythology and
+The idea of thinking machines and automatons in mythology and
 fiction dates back to antiquity. Cultivating some form of intelligence in a
-mechanical, automatic, controllable object has captured humanity's imagination
-for as long as we can remember. This impulse persists across ages and cultures,
-like the search for meaning or the urge to control and master. The pursuit
-of artificial intelligence is in some ways a spiritual pursuit—an
+mechanical, controllable object has long captured humanity's imagination. This impulse persists across ages and cultures,
+as persistent in us as the search for meaning or the urge to control and master. The
+pursuit of artificial intelligence is also a somewhat spiritual pursuit—an
 exploration of what it means to be intelligent, to be human. The philosopher
-Mark Rowlands argues that the only thing that makes humans humans is the
-desire to separate ourselves from other animals. We haven't been
-particularly successful in this pursuit. Over the years, we realized that
-language, tool use, rationality are all displayed by various other animals.
-So then we thought we're unique in our ability to self-reflect. But
-primates, elephants and—to our disappointment—even pigeons can identify
-themselves and know their place in the world[^1]. All anthropomorphism,
-thus, is a matter of _degrees_ of similarity to human behaviour. There isn't
-a qualitative threshold beyond which a being is deemed human. So when it
-comes to human-level intelligence, emotion or behaviour, researchers
-probably should just call it a day and move on to better-defined problems.
+Mark Rowlands argues that the only thing that makes humans unique is the desire
+to separate ourselves from other animals. And we haven't been particularly
+successful at it either. Over the years, we realized that language, tool use,
+rationality are all displayed by various other animals. We then thought we're
+unique in our ability to self-reflect. But we found that primates, elephants and—to our
+disappointment—even pigeons can identify themselves and know their place in the
+world[^1].
 
+All anthropomorphism, thus, is a matter of _degrees_ of similarity to
+human behaviour. There isn't a qualitative threshold beyond which a being is
+deemed human. So when it comes to human-level intelligence, emotion or
+behaviour, AI researchers probably should just call it a day and move on to
+better-defined problems.
 
-Nevertheless, a programmer who sees their machines learn how to see, write and
-read for the first time feels like Hephaestus creating Pandora. Algorithms
+Nevertheless, a programmer who sees their machine learn how to see, write, speak
+and read for the first time feels like Hephaestus creating Pandora. Algorithms
 become alchemy. It's only natural that we love it.
 
 In the last few decades, AI has become an umbrella term, referring to a broad
 set of technologies and methods. But in its current usage in the media, "AI"
-refers almost exclusively to _generative_ AI - stuff that learns from patterns
+refers almost exclusively to _generative_ AI—stuff that learns from patterns
 in language, vision and speech to generate human-like content. Generative AI
-itself is a specialized application of a paradigm known as artificial neural
-networks—algorithms that use a collection of artificial neurons, which in turn
+itself is a specialized application of artificial neural
+networks (ANNs)—algorithms that use a collection of artificial neurons, which in turn
 are inspired by biological neurons. The artificial neuron was first proposed 80
 years ago—by neuroscientist Warren McCulloch and logician Walter Pitts. The
 history of hype in AI is almost as old as the artificial neuron, as we shall
@@ -90,12 +92,14 @@ simplified interpretation of a biological function was still powerful enough to
 be _programmed_ into a computer. A machine could be instructed to accept a bunch
 of numerical inputs, aggregate them (like summing or averaging them), and if the
 aggregate value was higher than a fixed threshold, the neuron "fires", relaying
-ahead an impulse. This idea, of interpreting a neuron as a miniature calculator,
+an impulse to a neighbouring neuron. This idea of interpreting a neuron as a miniature calculator
 could be generalized further by arranging multiple neurons in a network—thus,
-_neural networks_. But this model was limited to only being programmed with
-explicit instructions. McCulloch & Pitts hadn't suggested how it could be
+_neural networks_.
+
+But this model was constrained to explicit programming. To perform arithmetic or
+logic, you had to tell it exactly what to do. McCulloch & Pitts hadn't suggested how it could be
 _trained_. That flash of genius came in 1957 from the psychologist Frank
-Rosenblatt. He called his invention the _perceptron_ - an artificial neuron that
+Rosenblatt. He called his invention the _perceptron_—an artificial neuron that
 could be programmed to train itself.
 
 The perceptron was... _beautiful_—there's no other word for it. It was almost
@@ -130,38 +134,43 @@ there are enough classification problems that cannot possibly be expressed as
 separable patterns. Indeed, _most_ interesting problems in machine learning were
 of the sort where it's not possible to separate patterns by drawing straight
 lines between them. In 1969, Marvin Minsky and Seymour Papert highlighted some
-of the most apparent limitations of the perceptron. They were aware that these
-gaps could be plugged, but it was the criticism that went viral. Their often
-mis-cited work so definitively punctured the AI bubble that interest and funding
+of the most apparent limitations of the perceptron. Their work showed how these
+gaps could be plugged, but it was the criticism that went viral. The frequent
+mis-citing of their work so definitively punctured the AI bubble that interest and funding
 dried up, and the field plunged into the _AI Winter_. The next few decades were
-peppered with incremental, standalone innovations. In 1986, Geoffrey Hinton with
+punctuated with incremental, standalone innovations. In 1986, Geoffrey Hinton with
 his collaborators Rumelhart and Williams figured out how to train neural
 networks with a process known as error backpropagation. A decade later, Yann
-LeCun created the "convolutional" neural network - an architecture that allows
+LeCun created the "convolutional" neural network—an architecture that allows
 neural networks to "see".
 
-The early 2010s saw a series of fortuitous events for AI research. An evolved
+It was in the early 2010s that the field saw a series of fortuitous events. An evolved
 CNN architecture named AlexNet was developed, which broke records in visual
 recognition. Nvidia published a software platform named CUDA, which allowed
 programmers to use GPUs for not just graphics, but general purpose computing.
 GPUs are massively parallel computers. As such, they were exceptionally well
 suited to the task of training neural networks (neurons can process their inputs
 independent of what most other neurons are doing at the same time). Coursera was
-founded in 2012 - and one of their two introductory courses was on machine
+founded in 2012—and one of their two introductory courses was on machine
 learning. This meant that anybody could study machine learning, practically for
-free. Around this time, in the background, the popularity of open source
+free. Quietly in the background, the popularity of open source
 software was growing, resulting in various open-source deep learning frameworks
-that are thriving to this day. For me, too, the stars had aligned. I was in the
+that are thriving to this day.
+
+For me, too, the stars had aligned. I was in the
 final year of engineering school in 2011, and I took a course in artificial
-neural networks. The most expensive lab on campus (to which I had unfettered
-access), contained six Nvidia workstations armed with top-of-the-line GPUs which
-a professor had managed to procure as part of a research grant. Although nobody
+neural networks. The most expensive lab on campus (to which only a few of us had
+exclusive, unfettered access), contained six Nvidia workstations armed with
+top-of-the-line GPUs. Although nobody
 could have predicted what was on the horizon, the early 2010s were a great time
 to be studying deep learning (it wasn't called AI yet).
 
-Since then, the field has seen an insane growth. As an undergraduate, I would
-well have believed that AGI was our manifest destiny. Today, the discourse
-around AGI shocks me.
+Since then, the field has seen an insane growth. As an undergraduate, I could
+have sincerely believed that AGI (artificial _general_ intelligence—AI that matches
+or surpasses human performance) was our manifest destiny—it was obvious and certain.
+It's the sort of thing that only a naive student would believe. Today, this
+naivety and hubris are the default. And once again, eager packs of happy
+bloodhounds are back on the scent.
 
 # The Superintelligence Prophecy
 
@@ -174,15 +183,15 @@ In 2015, Tim Urban, the writer of the popular blog "Wait But Why", wrote a
 two-part series on AI, titled ["The AI Revolution: The Road to
 Superintelligence"](https://waitbutwhy.com/2015/01/artificial-intelligence-revolution-1.html).
 Even if he wasn't the first AI booster[^4] and wouldn't be the last, few people
-have been as influential as him in popularizing AI for a layperson. A fantastic
+have been as influential in popularizing AI for a layperson. A fantastic
 writer and explainer of complex topics, Urban did a great job of collating many
 common AI fallacies in one place. What follows might read like a hit piece
 against Urban, but it's really a case study. A critique of his posts serves as a
 microcosm of much that is wrong with AI hype.
 
-> It's an intimate mixture of rubbish and good ideas, and it's very hard to
->disentangle the two, because these are smart people; they're not stupid.
-
+>It's an intimate mixture of rubbish and good ideas, and it's very hard to
+> disentangle the two, because these are smart people; they're not stupid.
+>
 > —Douglas Hofstadter, [_American
 Scientist_](https://web.archive.org/web/20140122012828/https://www.americanscientist.org/bookshelf/pub/douglas-r-hofstadter)
 
@@ -192,7 +201,7 @@ in the history of technology: a pioneer of optical character recognition, speech
 synthesis and electronic keyboards, he has long since emerged as a prophet of
 technology, complete with his share of acolytes and critics. He introduced the
 Law of Accelerating Returns in his 1999 book _The Age of Spiritual Machines_.
-Here's an excerpt from a 2001 essay by Kurzweil with the same title:
+Here's an excerpt from a 2001 [essay by Kurzweil](https://link.springer.com/chapter/10.1007/978-3-662-05642-4_16):
 
 > ... the history of technology shows that technological change is
 > exponential... So we won’t experience 100 years of progress in the 21st
@@ -211,13 +220,12 @@ traced back to another non-law: Moore's Law.
 Moore's Law is the observation that the number of transistors (electronic
 switches) in an integrated circuit (like a microprocessor in our computers)
 doubles every two years. This means that the number of arithmetic and logical
-operations a chip can perform in a fixed time doubles every two years - without
-growing in size.  Kurzweil's proposal is predicated on the idea (or at least the
+operations a chip can perform in a fixed time doubles every two years—without
+growing in size. Kurzweil's proposal is predicated on the idea (or at least the
 bastardization of it) that things—economies, technologies, collective human
-knowledge, etc—grow over time. And even if Moore's Law is the cornerstone of his
-proposal, he expects everything to show "exponential growth"—something that
-cannot be taken for granted. Even if Moore's Law were to continue to hold _ad
-infinitum_ (it stopped being true years ago), the assumption that every
+knowledge, etc—all grow over time in similar ways. Even if Moore's Law is the cornerstone of his
+proposal, he expects _everything_ to show "exponential growth".
+Moore's Law stopped being true years ago. But even if were to hold _ad infinitum_, the assumption that every
 desirable component of technological change will continue to grow exponentially
 is absurd. The economist Daniel Susskind writes,
 
@@ -229,40 +237,35 @@ is absurd. The economist Daniel Susskind writes,
 > 2007-8 financial crisis and the COVID-19 pandemic—are sluggish shadows of
 > former selves. We increasingly realize we cannot take growth for granted.[^5]
 
-But even if we grant Kurzweil his premise—that growth is preordained,
-unstoppable—the deeper fallacy still remains: the conflation of all growth with
+For the sake of argument, let's grant Kurzweil his premise—that growth is preordained,
+unstoppable. The deeper fallacy still remains: the conflation of all growth with
 _exponential_ growth.
 
 The adjective "exponential" has a precise mathematical meaning. When we say that
 something grows exponentially, we mean that the rate at which it grows is
 proportional to its current size. Compound interest is a classic example of
-exponential growth. If your wealth grows at 10% today, a year later it would be
-growing at 10% of your _then_ wealth—which itself will be higher because of the
-_current_ growth of 10%. However, the figure of 10% is a fraction, which means
-that while this growth is still exponential, it is relatively slow. In contrast,
-if your wealth were to grow at 100% (i.e it doubles every year), the resulting
-growth would be massive, staggering, astronomical—pick an adjective. But
-that doesn't mean that everything which grows massively, staggeringly, or
+exponential growth. If your wealth were to grow at 100% (i.e it doubles every year), the resulting
+growth would be described as massive, staggering, astronomical—pick an adjective. But that
+doesn't mean that everything which grows massively, staggeringly, or
 astronomically is exponential. Quite often, the correct adjective is simply
-'more'. Every other chart and visual in Urban's post—like stick figures
-standing on a time-series curve, seemingly oblivious to the walls next to
-them, and a GIF of how fast an empty lake fills up if the water pouring in
-it doubles every second—reinforces this idea of the exponential curve.
+'more'. Every other chart and visual in Urban's post—like stick figures standing
+on a time-series curve, seemingly oblivious to the walls next to them, and a GIF
+of how fast an empty lake fills up if the water pouring in it doubles every
+second—reinforces this idea of the exponential curve.
 
 Even if we concede that something does grow exponentially in the true sense of
 the word, we still need to ask whether such growth is _observed_ in specific
 time-windows, or whether it is predestined. The exponential decay of a
 radioactive element is inevitable. But the growth of an economy or that of human
-population are not. They only look exponential if we hold our time-windows to
-convenient periods. It is all too easy to confuse the observed effect of some
-things with the primal cause of something else.
+population are not. They only _look_ exponential if we hold our time-windows to
+convenient periods. It is all too easy to confuse the observed effect of something with the primal cause of something else.
 
 In a 2005 interview[^6], Gordon Moore himself, with humility and amusement, said
 that the semiconductor industry "made it (Moore's Law) a self-fulfilling
 prophecy", and that it was, on his part, "lucky extrapolation". But that did
-nothing to temper Kurzweil's enthusiasm. Most of his predictions were predicated
+nothing to temper Kurzweil's enthusiasm. Many of his predictions were predicated
 almost exclusively on Moore's law—and only a few of them have come true. He has
-repeatedly time-shifted and revised his predictions (which hasn't helped), but
+repeatedly time-shifted and revised his predictions, but
 never fully retracted them. At best, his predictions can be called inaccurate.
 At worst, they are unfalsifiable.
 
@@ -289,23 +292,32 @@ explosion", he begins by reminding the reader that
 
 What in the world are "real forecasts of the future"? Not once does Urban turn a
 critical eye towards these ideas—which, even in 2015, would have been doable and
-revealing. For instance, he calls Moore's Law a "historically reliable rule"
-—something that ought to have been avoided. He takes cheaper and faster
-computation for granted, which to him means that we will be able to "reverse
-engineer the brain", and then reminds us that "if emulating the brain seems
-hopeless, remember the power of exponential growth". This argument, that simply
-scaling a computer makes it smarter, has some merit, as we will see in the
+revealing. For instance, he calls Moore's Law a "historically reliable rule". He
+takes cheaper and faster computation for granted, which to him means that we
+will be able to "reverse engineer the brain", and then reminds us that "if
+emulating the brain seems hopeless, remember the power of exponential growth".
+The logic is obviously circular.
+
+Now, the argument that simply scaling a computer makes it smarter, certainly has merit, as we will see in the
 following section. But to suggest that scaling alone will make it as smart as
 the human brain, and that in turn will somehow bring forth the rapture, is
 reductive. It presupposes that the human brain is nothing more than a giant,
-parallel computer which can only do arithmetic and logic operations—and
-intelligence is the result of enough of them.
+parallel computer which can only do arithmetic and logic operations;
+and that intelligence is a function of only these operations.
 
-After repeating the same few arguments over and over, with a lot more hubris
+Neil Postman addressed[^postman] the problem with this line of thought quite succinctly
+(his commentary applies all the more to modern chatbots):
+
+> What is most significant about this line of thinking is the dangerous
+> reductionism it represents. Human intelligence, as Weizenbaum has tried
+> energetically to remind everyone, is not transferable...
+> It is meaning, not utternace, that makes the mind unique.
+
+Tim Urban, after repeating the same few arguments over and over, with a lot more hubris
 ("we have a lot of advantages over evolution", and we can build a
 superintelligence by trying "to do what evolution did, but this time for us"),
-he climaxes with "An Intelligence Explosion—the ultimate example of the Law of
-Accelerating Returns." If that is indeed true, then hopefully the explosion will
+climaxes with "An Intelligence Explosion—the ultimate example of the Law of
+Accelerating Returns." If that is indeed true, then the explosion will
 be as full of gas as the law itself.
 
 In short,
@@ -317,10 +329,9 @@ In short,
 
 _then_ we will have superintelligence on our hands.
 
-All of this is supposed to be inevitable, and it will happen before we know it.
-
 It's such an exceptional compounding of fallacies that I'm tempted to slip up
-myself and call this nonsense "exponential". Nearly all of it is based on appeal
+myself and declare that instead of machine intelligence, it is human stupidity
+that is growing exponentially. Nearly all of it is based on appeal
 to authority and hasty generalization. Princeton researchers Arvin Narayanan and
 Sayash Kapoor came to a similar conclusion in their book _AI Snake Oil_. In an
 entire chapter dedicated to such fallacies, they write, "...we've seen in the
@@ -331,8 +342,9 @@ in the chain of "ifs" above has its own bottlenecks[^8].
 But credit where it is due, Tim Urban did write that a "growth spurt might be
 brewing right now", and he was right. In 2017, researchers from Google
 introduced the transformer architecture—the next big leap in machine learning.
-It soon became the workhorse of the large-language-model (LLM) revolution of the
-early 2020s.
+It soon became the workhorse of the LLM revolution of the early 2020s.
+
+# Bigger, Faster... Smarter?
 
 Before transformers, language models were typically recurrent, meaning they
 processed text one word (or token) at a time, each prediction depending on the
@@ -341,7 +353,7 @@ farther back the context went, the harder it became for the model to remember
 and compute efficiently. The transformer solved this bottleneck by replacing
 recurrence with attention — a way for the model to look at all words in a
 sequence at once and decide which ones matter most to predicting the next. This
-made training faster, more parallel, and more scalable.
+made training faster, more parallel and scalable.
 
 The implication was that researchers were now ready to test what they had
 suspected for ages—the question of whether sheer _scale_ can produce
@@ -349,17 +361,14 @@ intelligence. Could we systematically scale training data, computing power and
 sizes of models to see if perhaps intelligence emerges? In 2018, OpenAI
 published their results from the first of such experiments. The resulting model
 was called GPT—Generative Pretrained Transformer. It was this model that would
-undergo iteration after iteration of scaling over the next few years. OpenAI's
-series of GPT models, Anthropic's Claude, Google's Gemini models are all,
-fundamentally, massively scaled transformers.
+one day become ChatGPT. OpenAI's series of GPTs, Anthropic's Claude, Google's Gemini models are all,
+essentially, massively scaled transformers.
 
 And that's how we arrived here. Dwarkesh Patel, the host of a popular podcast on
-AI calls the period from 2019 to 2025 _the Scaling Era_. Now that we could, it
-was time to finally put exponentialism to the test.
+AI calls the period from 2019 to 2025 _the Scaling Era_. In the early 2020s the
+sense was that now that we could, it was time to finally put exponentialism to the test.
 
-# Bigger, Faster... Smarter?
-
-The capacity of learning in an artificial neural network (on which most modern
+The capacity of learning in an ANN (on which most modern
 AI models are based) is measured in _parameters_—a bunch of adjustable numbers,
 like knobs and dials, which when carefully tuned, trains the network for a given
 task. The more knobs, the more tunable the network becomes, and the better it
@@ -402,7 +411,7 @@ can hyperconnected, massive networks of artificial neurons be grown to match
 human intelligence? They certainly lend themselves to scaling, but how far can
 we stretch this approximation?
 
-Even Yann LeCun, one of the champions of deep learning,
+Yann LeCun, one of the champions of deep learning,
 [doubts](https://youtu.be/4__gg83s_Do) that scaling LLMs alone will get us to
 human-level intelligence[^11]. But another pioneer of scaling, and co-founder of
 OpenAI, Ilya Sutskever, appears to be religiously committed to the idea. [Hao
@@ -421,7 +430,7 @@ podcast[^12],
 > want to learn. You have to understand this. The models just want to learn. It
 > was a bit like a Zen koan. I listened to this and I became enlightened.
 
-![](images/twitter_sutskever.png)
+{{< twitter user="ilyasut" id="1491554478243258368">}}
 
 Perhaps, this kind of religious fervour is necessary to drive a movement,
 anything less would not do. But I wonder if it couldn't have been done without
@@ -433,7 +442,7 @@ about how seriously he takes scaling laws, he admits[^14] that there's a
 fundamental gap between the accuracy of models predicated on scaling laws and
 the emergence of actual reasoning capability.
 
-And as of today, the music seems to have stopped.
+As of today, however, there is reason to believe that the music might have stopped.
 
 In November 2024, Sutskever reportedly [told
 Reuters](https://www.reuters.com/technology/artificial-intelligence/openai-rivals-seek-new-path-smarter-ai-current-methods-hit-limitations-2024-11-11/)
@@ -452,6 +461,10 @@ famous line,
 > It is difficult to get a man to understand something when his salary depends
 > on his not understanding it.
 
+Take this tweet, for example, by someone who sells AI courses:
+
+{{< twitter user="Austen" id="1899485989518631104" >}}
+
 Already in the fall of 2025, GPT-5 released to lukewarm reviews. What people
 were led to believe would be a vindication of scaling turned out to be not
 significantly better than its predecessors[^15]. Meta [delayed the
@@ -460,55 +473,52 @@ of their AI model named "Behemoth" or "Llama 4", citing scaling limitations.
 xAI's grok series of models, too, [saw delayed releases and disappointing
 results](https://grokaimodel.com/grok-3-5/).
 
-Nadella and Huang seem just to be putting a positive spin on all of it - not to
+Nadella and Huang seem just to be putting a positive spin on all of it—not to
 mention the multiple times Sam Altman has turned on a dime after the release of
 GPT-5.
 
-In short, it's worth asking whether LLMs today are as good as they're going to
-be for a long, long time.
+In short, it's worth asking whether we're seeing the tail-end of exponentialism.
+For all we know, LLMs today are as good as they're going to be for a long, long time.
 
-# Not With a Bang
+# Not With a Bang, But With Slop
 
-In August 2025, in the Rajya Sabha, Aam Aadmi Party MP Raghav Chadha [demanded
+In August, in the Rajya Sabha, Aam Aadmi Party MP Raghav Chadha [demanded
 free access to generative AI tools](https://www.youtube.com/watch?v=rWeSb7-NBD0)
 for all Indians. Undeterred by the question of who will pay for them, social
-    media hailed Chadha's demand as revolutionary. It was called "bold",
-    "heroic", "a crucial step towards digital democracy" and a way to wrest the
-    AI revolution away from Silicon Valley. The irony of how any of this will
-    happen by purchasing subscriptions from companies already in Silicon Valley
-    is lost on LinkedIn's 'Top Voices'. Influencers who would otherwise balk at
-    affirmative action or public welfare schemes loved the idea of free AI
-    subscriptions. As much as Chadha's own party has been criticised for
-    appeasement and "freebies", his proposal on AI subscriptions was unanimously
-    applauded. 
+media hailed Chadha's demand as revolutionary. It was called "bold", "heroic",
+"a crucial step towards digital democracy" and a way to wrest the AI revolution
+away from Silicon Valley. The irony of how any of this will happen by purchasing
+subscriptions from companies already in Silicon Valley is lost on LinkedIn's
+'Top Voices'. Influencers who would otherwise balk at affirmative action or
+public welfare schemes loved the idea of free AI subscriptions. As much as
+Chadha's own party has been criticised for appeasement and "freebies", his
+proposal on AI subscriptions was unanimously applauded. 
 
 Notably, an [earlier speech](https://www.youtube.com/watch?v=awqpznqqV4Y) of
-Chadha from March 2025, one in which he highlights the need for infrastructure
+Chadha from March, one in which he highlights the need for infrastructure
 and funding needed for indigenous AI research, went relatively unnoticed. In
 India, where fewer than 10% of households own a laptop or a computer[^16] and
-internet usage is concentrated among younger, urban, educated and wealthy
-Indians[^17], the economic utility of free ChatGPT or Gemini subscriptions is
-dubious.
+(even with smartphones and mobile data) internet usage is concentrated among
+younger, urban, educated and wealthy Indians[^17], the economic utility of free
+ChatGPT or Gemini subscriptions is dubious.
 
 It is not only this kind of collective, misty-eyed delusion that obfuscates the
 promise of AI. Even the most earnest estimates of AI's economic impact are
 dubious. OpenAI's own charter defines AGI as "highly autonomous systems that
 outperform humans at most economically valuable work"; but we don't have
 consensus, even between aligned parties, on what constitutes economically
-valuable work or outperforming humans. For instance, Hinton famously said in
+valuable work or outperforming humans. Hinton famously said in
 2016 that we should [stop training radiologists](https://youtu.be/2HMPRXstSvQ)
-because it was "completely
-
-obvious" that deep learning would be able to outperform them in a decade. If
-that had happened, it would have been a good example of both AI outperforming
-humans as well as creating economic value. Today, however, the field of
-radiology is thriving; in no small part because they have managed to integrate
-AI tools. Hinton has acknowledged his error. But many in the community who've
-made similar erroneous predictions show barely a soft backpedal—insisting
-instead that AI was always meant to be a companion. This pattern shows up
-distressingly often—claim that AI will replace humans at something or the other,
-and when it turns out that there's no real _replacement_, insist that it was
-never meant in that sense.
+because it was "completely obvious" that deep learning would be able to
+outperform them in a decade. If that had happened, it would have been a good
+example of both AI outperforming humans as well as creating economic value.
+Today, however, the field of radiology is thriving; in no small part because
+they have managed to integrate AI tools. Hinton has acknowledged his error. But
+many in the community who've made similar erroneous predictions show barely a
+soft backpedal—insisting instead that AI was always meant to be a companion.
+This pattern shows up distressingly often—claim that AI will replace humans at
+something or the other, and when it turns out that there's no real
+_replacement_, insist that it was never meant in that sense.
 
 At the root of this confusion is the fact that terms like AI, AGI, autonomous
 systems, superintelligence, etc. are all ill-defined. They all refer to a very
@@ -522,32 +532,87 @@ measure AI progress—he said that he was "almost tempted to reject the question
 entirely" because it was so ill-posed. He admits that there will always be jobs
 that are "amenable to automation sooner or later", but that there's no
 interpretation of "AI" or "work" that leads us to a clear and significant
-economic impact.
+economic impact. He also says that self-driving cars are "nowhere near done",
+and getting them to be economically feasible will be hard.
 
 To his credit, Karpathy has refined his outlook to adjust to reality. Only three
 years ago, he was having a _very_ different conversation with Lex Fridman. He
 said he was bullish on our ability to build AGIs. Three years later he admits
 (to Dwarkesh Patel) that he gets triggered by the noise about AI on social
-media, and that AI agents are slop. At the end of the Fridman interview, he
+media, and that AI agents are slop. Earlier, he said that he thinks of aging as
+a disease; but he'd rather chase AGI and let the AGI solve the problems of
+aging. Today, he admits that there's no magical generalization.
+
+At the end of the Fridman interview, he
 predicts (correctly) that the cost of content creation will fall, and excitedly
 muses what would happen when we can generate art on demand, and when there's
 infinite of it. Today we have arrived at Studio Ghibli-style image generation.
 All it has done is generate some short-lived amusement, and a whole lot of
-long-term consternation. On-demand video generators show us fake videos of house
-cats chasing lions away and stuff that need not have been faked at all, like
-news anchors polishing politicians' boots.
+long-term consternation. All on-demand video generators have shown us are fake
+videos of house cats chasing lions and stuff that need not have been faked at
+all, like news anchors polishing politicians' boots.
 
-_Slop._
+For years, we've been sold nothing short of the transformation of civilization.
+AGI, they said, would cure cancer, fix the climate, free us from work and usher
+in an era of unprecedented prosperity. All of this is perpetually around the
+corner; has been for years. It is an extraordinary mismatch: the loftiest
+ambitions in the history of technology, followed by outputs that collapse under
+the gentlest scrutiny. As Karen Hao shows, the scaling doctrine now resembles an
+arms race more than a scientific project, and its results—despite the
+marketing—are looking more like diminishing returns.
 
---- https://youtu.be/ibQ2nmeP-7A?t=720
+And if there is a lesson here, it is the same one that we keep rediscovering:
+every time intelligence is reduced to a technical problem, the technology
+eventually reveals its limits. We ought to remember that
+intelligence requires judgment. And judgment begins with refusing to fall in
+love with your own legend.
+
+---
+
+![](https://ifunny.co/picture/tech-enthusiasts-my-entire-house-is-smart-tech-workers-the-dALVGhYn8)
+
+I'm finishing this piece on a Sunday afternoon. Tomorrow when I go to work, I'm
+going to have to deal with many problems which are, by popular AI narrative,
+solved. I'm going to be writing code with an LLM. I'm going to review my
+colleagues' code with an LLM. I'm going to tweak ML models which can comprehend
+images and language—which I shouldn't really have to do because both problems
+are handily addressed by generative AI. Indeed, every once in a while, my
+colleagues and I ponder over why AI hasn't yet taken our jobs.
+
+The truth is that AI isn't nearly as ubiquitous, inexpensive or reliable as
+we're led to believe. By refusing to let more of it into our workflows, we're
+supposedly doomed to forever lag behind the cutting edge. But we're okay with
+that, especially if being on the cutting edge means ceding control, agency and
+privacy (ours and that of our users). The power-hungry GPUs which
+state-of-the-art AI models need are a far cry from the consumer-grade hardware
+used by my customers. I could, of course, expose cutting-edge AI functionality
+to my users over the internet, but the latency and storage costs alone would
+kill the profit. Like self-driving cars, it's yet to reach the doorstep.
+And until that happens, there's plenty of room at the bottom.
+
+If all that makes us Luddites, we'll happily reclaim the term.
+
+> Those who resist the imposition of technology are disparaged as technophobes
+> behind the times or incompetent, sometimes even Luddites. But in fact,
+> Luddites is exactly the right term, even as those using it as an insult don't
+> realize it. In the tradition of the original Luddites, writers, actors,
+> hotline workers, visual artists and crowd workers alike show us that
+> automation is not a suitable replacement for their labor. We don't have to
+> accept a reorganization of the workplace that puts automation at the center
+> with devalued human workers propping it up.
+>
+> —Emily Bender & Alex Hanna, _The AI Con_[^18]
 
 
-61 87 94 111 112 131
-
-
-
----  <!--Footnotes-->
-[^weiz]: https://dl.acm.org/doi/10.1145/365153.365168
+[^aiterm]: The term "AI" is not very strictly defined. Any and everything that
+is concerned with automation, language, intelligence, robotics, etc can be
+called AI. It does not refer to a specific, or even coherent set of
+technologies. There are countless fields of study which are considered relevant
+within the field of AI.
+[^weiz]: Joseph Weizenbaum, [_ELIZA—A Computer Program for the Study of Natural Language Communication Between Man and Machine_](https://dl.acm.org/doi/10.1145/365153.365168)
+[^housel]: Morgan Housel, *Same as Ever*. (Harriman House, 2023), p. 47.
+[^postman]: Neil Postman, *Technopoly: The Surrender of Culture to Technology*
+    (Vintage Books, 1993), p. 112
 [^1]: Mark Rowlands, *The Happiness of Dogs: Why the Unexamined Life is Most
 Worth Living* (Granta, 2024), p. 78
 [^2]: It would take me a while to learn that elegance and simplicity are
@@ -585,3 +650,5 @@ outperformed by other OpenAI models, according to
 2025): https://www.dataforindia.com/computers/
 [^17]: _Access to phones and the internet_ by Abhishek Waghmare, Data For India
 (February 2024): https://www.dataforindia.com/comm-tech/
+[^18]: Emily M. Bender & Alex Hanna, *The AI Con: How to Fight Big Tech's Hype
+    and Create the Future We Want* (The Bodley Head, 2025), p. 66
