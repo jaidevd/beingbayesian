@@ -4,3 +4,11 @@
 *.webp filter=lfs diff=lfs merge=lfs -text
 03-90-hr-workweek/ICATUS-2016.xlsx filter=lfs diff=lfs merge=lfs -text
 03-90-hr-workweek/NIC_2008.xlsx filter=lfs diff=lfs merge=lfs -text
+06-public-welfare/data/baskets-sources.parquet filter=lfs diff=lfs merge=lfs -text
+06-public-welfare/data/hh_details.parquet filter=lfs diff=lfs merge=lfs -text
+06-public-welfare/data/hh-procurement.parquet filter=lfs diff=lfs merge=lfs -text
+06-public-welfare/data/01-ce-cereals-pulses-sugar-salt.parquet filter=lfs diff=lfs merge=lfs -text
+06-public-welfare/data/02-ce-other-foods.parquet filter=lfs diff=lfs merge=lfs -text
+06-public-welfare/data/03-ce-processed-food.parquet filter=lfs diff=lfs merge=lfs -text
+06-public-welfare/data/04-ce-energy-utilities.parquet filter=lfs diff=lfs merge=lfs -text
+06-public-welfare/data/baskets-consumption-value.parquet filter=lfs diff=lfs merge=lfs -text
