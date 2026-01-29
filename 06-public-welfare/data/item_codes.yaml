@@ -1,243 +1,243 @@
 FOOD:
 
-  # Cereals & cereal products (last 30 days)
-  - [12, 61]  # rice - free (PMGKAY / state schemes)
-  - [12, 62]  # wheat/atta - free
-  - [12, 70]  # coarse grains - free
-  - [12, 101]  # rice - PDS
-  - [12, 102]  # rice - other sources
-  - [12, 103]  # chira
-  - [12, 105]  # muri
-  - [12, 106]  # other rice products (khoi, lawa, etc.)
-  - [12, 107]  # wheat/atta - PDS
-  - [12, 108]  # wheat/atta - other sources
-  - [12, 110]  # maida
-  - [12, 111]  # suji/rawa
-  - [12, 112]  # vermicelli (sewai)
-  - [12, 114]  # other wheat products
-  - [12, 1]  # coarse grains - PDS
-  - [12, 2]  # coarse grains - other sources
-  - [12, 122]  # other cereals & products
-  - [12, 139]  # cereal substitutes (tapioca, etc.)
+  CEREALS:
+    - [12, 61]  # rice - free (PMGKAY / state schemes)
+    - [12, 62]  # wheat/atta - free
+    - [12, 70]  # coarse grains - free
+    - [12, 101]  # rice - PDS
+    - [12, 102]  # rice - other sources
+    - [12, 103]  # chira
+    - [12, 105]  # muri
+    - [12, 106]  # other rice products (khoi, lawa, etc.)
+    - [12, 107]  # wheat/atta - PDS
+    - [12, 108]  # wheat/atta - other sources
+    - [12, 110]  # maida
+    - [12, 111]  # suji/rawa
+    - [12, 112]  # vermicelli (sewai)
+    - [12, 114]  # other wheat products
+    - [12, 1]  # coarse grains - PDS
+    - [12, 2]  # coarse grains - other sources
+    - [12, 122]  # other cereals & products
+    - [12, 139]  # cereal substitutes (tapioca, etc.)
 
-  # Pulses & pulse products (last 30 days)
-  - [12, 140]  # arhar/tur
-  - [12, 143]  # moong
-  - [12, 144]  # masur
-  - [12, 145]  # urd
-  - [12, 141]  # gram (split)
-  - [12, 142]  # gram (whole)
-  - [12, 146]  # peas/chickpeas
-  - [12, 148]  # other pulses
-  - [12, 150]  # besan / gram products
-  - [12, 152]  # other pulse products (soya chunks, etc.)
-  - [12, 158]  # pulses - PDS
-  - [12, 71]  # pulses - free
-  - [12, 72]  # gram - free
+  PULSES:
+    - [12, 140]  # arhar/tur
+    - [12, 143]  # moong
+    - [12, 144]  # masur
+    - [12, 145]  # urd
+    - [12, 141]  # gram (split)
+    - [12, 142]  # gram (whole)
+    - [12, 146]  # peas/chickpeas
+    - [12, 148]  # other pulses
+    - [12, 150]  # besan / gram products
+    - [12, 152]  # other pulse products (soya chunks, etc.)
+    - [12, 158]  # pulses - PDS
+    - [12, 71]  # pulses - free
+    - [12, 72]  # gram - free
 
-  # Sugar & salt (last 30 days)
-  - [12, 73]  # salt - free
-  - [12, 74]  # sugar - free
-  - [12, 178]  # salt - PDS
-  - [12, 170]  # salt - other sources
-  - [12, 171]  # sugar - PDS
-  - [12, 172]  # sugar - other sources
-  - [12, 173]  # jaggery (gur)
-  - [12, 174]  # candy, misri
-  - [12, 175]  # honey
+  SUGAR_SALT:
+    - [12, 73]  # salt - free
+    - [12, 74]  # sugar - free
+    - [12, 178]  # salt - PDS
+    - [12, 170]  # salt - other sources
+    - [12, 171]  # sugar - PDS
+    - [12, 172]  # sugar - other sources
+    - [12, 173]  # jaggery (gur)
+    - [12, 174]  # candy, misri
+    - [12, 175]  # honey
 
-  # Milk & milk products (last 7 days)
-  - [52, 160]  # milk (liquid)
-  - [52, 162]  # milk powder / condensed milk
-  - [52, 163]  # curd / yogurt
-  - [52, 164]  # ghee
-  - [52, 165]  # butter
-  - [52, 166]  # ice cream
-  - [52, 3]  # paneer
-  - [52, 4]  # prepared sweets
-  - [52, 5]  # cheese
-  - [52, 92]  # other milk products (lassi, buttermilk, etc.)
+  DAIRY:
+    - [52, 160]  # milk (liquid)
+    - [52, 162]  # milk powder / condensed milk
+    - [52, 163]  # curd / yogurt
+    - [52, 164]  # ghee
+    - [52, 165]  # butter
+    - [52, 166]  # ice cream
+    - [52, 3]  # paneer
+    - [52, 4]  # prepared sweets
+    - [52, 5]  # cheese
+    - [52, 92]  # other milk products (lassi, buttermilk, etc.)
 
-  # Vegetables (last 7 days)
-  - [52, 200]  # potato
-  - [52, 201]  # onion
-  - [52, 202]  # tomato
-  - [52, 203]  # brinjal
-  - [52, 204]  # radish
-  - [52, 205]  # carrot
-  - [52, 206]  # leafy vegetables (palak, etc.)
-  - [52, 207]  # green chillies
-  - [52, 208]  # lady's finger
-  - [52, 210]  # parwal/kundru
-  - [52, 211]  # cauliflower
-  - [52, 212]  # cabbage
-  - [52, 213]  # gourd/pumpkin
-  - [52, 214]  # peas
-  - [52, 215]  # beans/barbati
-  - [52, 216]  # lemon
-  - [52, 217]  # other vegetables
+  VEGETABLES:
+    - [52, 200]  # potato
+    - [52, 201]  # onion
+    - [52, 202]  # tomato
+    - [52, 203]  # brinjal
+    - [52, 204]  # radish
+    - [52, 205]  # carrot
+    - [52, 206]  # leafy vegetables (palak, etc.)
+    - [52, 207]  # green chillies
+    - [52, 208]  # lady's finger
+    - [52, 210]  # parwal/kundru
+    - [52, 211]  # cauliflower
+    - [52, 212]  # cabbage
+    - [52, 213]  # gourd/pumpkin
+    - [52, 214]  # peas
+    - [52, 215]  # beans/barbati
+    - [52, 216]  # lemon
+    - [52, 217]  # other vegetables
 
-  # Fruits – fresh (last 7 days)
-  - [52, 220]  # banana
-  - [52, 222]  # watermelon
-  - [52, 224]  # coconut
-  - [52, 225]  # green coconut
-  - [52, 226]  # guava
-  - [52, 228]  # orange/sweet lime
-  - [52, 230]  # papaya
-  - [52, 231]  # mango
-  - [52, 232]  # kharbooza
-  - [52, 236]  # apple
-  - [52, 237]  # grapes
-  - [52, 93]  # other fresh fruits
+  FRUITS_FRESH:
+    - [52, 220]  # banana
+    - [52, 222]  # watermelon
+    - [52, 224]  # coconut
+    - [52, 225]  # green coconut
+    - [52, 226]  # guava
+    - [52, 228]  # orange/sweet lime
+    - [52, 230]  # papaya
+    - [52, 231]  # mango
+    - [52, 232]  # kharbooza
+    - [52, 236]  # apple
+    - [52, 237]  # grapes
+    - [52, 93]  # other fresh fruits
 
-  # [52, Fruits – dry (last 7 days)
-  - [52, 240]  # coconut (copra)
-  - [52, 241]  # groundnut
-  - [52, 242]  # dates
-  - [52, 243]  # cashew nut
-  - [52, 245]  # almonds, pistachio, walnut, etc.
-  - [52, 246]  # raisins/kishmish
-  - [52, 94]  # other dry fruits
+  FRUITS_DRY:
+    - [52, 240]  # coconut (copra)
+    - [52, 241]  # groundnut
+    - [52, 242]  # dates
+    - [52, 243]  # cashew nut
+    - [52, 245]  # almonds, pistachio, walnut, etc.
+    - [52, 246]  # raisins/kishmish
+    - [52, 94]  # other dry fruits
 
-  # Egg, fish & meat (last 7 days)
-  - [52, 190]  # eggs
-  - [52, 191]  # fish/prawn
-  - [52, 192]  # goat meat/mutton
-  - [52, 193]  # beef/buffalo meat
-  - [52, 194]  # pork
-  - [52, 195]  # chicken
-  - [52, 196]  # other meat/seafood
+  EGGS_FISH_MEAT:
+    - [52, 190]  # eggs
+    - [52, 191]  # fish/prawn
+    - [52, 192]  # goat meat/mutton
+    - [52, 193]  # beef/buffalo meat
+    - [52, 194]  # pork
+    - [52, 195]  # chicken
+    - [52, 196]  # other meat/seafood
 
-  # Edible oil (last 7 days)
-  - [52, 181]  # mustard oil
-  - [52, 182]  # groundnut oil
-  - [52, 183]  # coconut oil
-  - [52, 184]  # refined oil (sunflower, soyabean, palm, etc.)
-  - [52, 188]  # edible oil - PDS
-  - [52, 95]  # other edible oils (vanaspati, margarine, etc.)
-  - [52, 75]  # edible oil - free
+  OIL:
+    - [52, 181]  # mustard oil
+    - [52, 182]  # groundnut oil
+    - [52, 183]  # coconut oil
+    - [52, 184]  # refined oil (sunflower, soyabean, palm, etc.)
+    - [52, 188]  # edible oil - PDS
+    - [52, 95]  # other edible oils (vanaspati, margarine, etc.)
+    - [52, 75]  # edible oil - free
 
-  # Spices (last 7 days)
-  - [52, 250]  # ginger
-  - [52, 251]  # garlic
-  - [52, 252]  # cumin (jeera)
-  - [52, 253]  # coriander (dhania)
-  - [52, 254]  # turmeric
-  - [52, 255]  # black pepper
-  - [52, 256]  # dry chillies
-  - [52, 257]  # tamarind
-  - [52, 258]  # curry powder
-  - [52, 260]  # oilseeds
-  - [52, 261]  # other spices
-  - [52, 263]  # poppy seeds
+  SPICES:
+    - [52, 250]  # ginger
+    - [52, 251]  # garlic
+    - [52, 252]  # cumin (jeera)
+    - [52, 253]  # coriander (dhania)
+    - [52, 254]  # turmeric
+    - [52, 255]  # black pepper
+    - [52, 256]  # dry chillies
+    - [52, 257]  # tamarind
+    - [52, 258]  # curry powder
+    - [52, 260]  # oilseeds
+    - [52, 261]  # other spices
+    - [52, 263]  # poppy seeds
 
-  # Beverages (last 7 days)
-  - [52, 270]  # tea (cups)
-  - [52, 271]  # tea leaves
-  - [52, 272]  # coffee (cups)
-  - [52, 273]  # coffee powder
-  - [52, 274]  # mineral water
-  - [52, 11]  # soda drinks
-  - [52, 275]  # bottled/canned cold beverages
-  - [52, 276]  # fruit juice, sugarcane juice, etc.
-  - [52, 278]  # other beverages (health drinks, cocoa, etc.)
+  BEVERAGES:
+    - [52, 270]  # tea (cups)
+    - [52, 271]  # tea leaves
+    - [52, 272]  # coffee (cups)
+    - [52, 273]  # coffee powder
+    - [52, 274]  # mineral water
+    - [52, 11]  # soda drinks
+    - [52, 275]  # bottled/canned cold beverages
+    - [52, 276]  # fruit juice, sugarcane juice, etc.
+    - [52, 278]  # other beverages (health drinks, cocoa, etc.)
 
-  # Served processed food (last 7 days)
-  - [52, 76]  # cooked meals - subsidized
-  - [52, 280]  # cooked meals - purchased
-  - [52, 281]  # cooked meals - free at workplace
-  - [52, 282]  # cooked meals - assistance
-  - [52, 283]  # cooked snacks
-  - [52, 284]  # other served processed food
+  COOKED_MEALS:
+    - [52, 76]  # cooked meals - subsidized
+    - [52, 280]  # cooked meals - purchased
+    - [52, 281]  # cooked meals - free at workplace
+    - [52, 282]  # cooked meals - assistance
+    - [52, 283]  # cooked snacks
+    - [52, 284]  # other served processed food
 
-  # Packaged processed food (last 7 days)
-  - [52, 12]  # breakfast cereals
-  - [52, 161]  # baby food
-  - [52, 290]  # cake, pastry
-  - [52, 13]  # biscuits
-  - [52, 291]  # chocolates
-  - [52, 292]  # namkeen, bhujia, mixture
-  - [52, 293]  # chips, wafers, puffs
-  - [52, 294]  # pickles
-  - [52, 295]  # sauce, jam, jelly, mayonnaise
-  - [52, 113]  # bread (bakery)
-  - [52, 14]  # health supplements
-  - [52, 15]  # noodles
-  - [52, 296]  # other packaged processed food
+  PROCESSED_FOOD:
+    - [52, 12]  # breakfast cereals
+    - [52, 161]  # baby food
+    - [52, 290]  # cake, pastry
+    - [52, 13]  # biscuits
+    - [52, 291]  # chocolates
+    - [52, 292]  # namkeen, bhujia, mixture
+    - [52, 293]  # chips, wafers, puffs
+    - [52, 294]  # pickles
+    - [52, 295]  # sauce, jam, jelly, mayonnaise
+    - [52, 113]  # bread (bakery)
+    - [52, 14]  # health supplements
+    - [52, 15]  # noodles
+    - [52, 296]  # other packaged processed food
 
 ASSETS:
 
-  # Transport assets
-  - 600  # bicycle
-  - 601  # motorcycle / scooter
-  - 602  # motor car / jeep / van
-  - 603  # tyres & tubes
-  - 604  # other transport equipment
+  TRANSPORT:
+    - 600  # bicycle
+    - 601  # motorcycle / scooter
+    - 602  # motor car / jeep / van
+    - 603  # tyres & tubes
+    - 604  # other transport equipment
 
-  # Information & communication assets
-  - 623  # mobile handset
-  - 624  # landline telephone instrument
-  - 622  # PC / laptop / tablet
-  - 560  # television
-  - 562  # CD/DVD/pen-drive/external hard disk
-  - 564  # other recreation electronics (radio, home theatre, etc.)
+  ELECTRONICS:
+    - 623  # mobile handset
+    - 624  # landline telephone instrument
+    - 622  # PC / laptop / tablet
+    - 560  # television
+    - 562  # CD/DVD/pen-drive/external hard disk
+    - 564  # other recreation electronics (radio, home theatre, etc.)
 
-  # Major household appliances
-  - 588  # refrigerator / freezer
-  - 585  # washing machine
-  - 581  # air conditioner
-  - 44  # air cooler
-  - 580  # electric fan
-  - 582  # inverter / generator / stabilizer
-  - 590  # water purifier
-  - 586  # stove / gas burner / induction
-  - 48  # mixer / grinder / juicer / food processor
-  - 587  # pressure cooker / pressure pan
+  APPLIANCES:
+    - 588  # refrigerator / freezer
+    - 585  # washing machine
+    - 581  # air conditioner
+    - 44  # air cooler
+    - 580  # electric fan
+    - 582  # inverter / generator / stabilizer
+    - 590  # water purifier
+    - 586  # stove / gas burner / induction
+    - 48  # mixer / grinder / juicer / food processor
+    - 587  # pressure cooker / pressure pan
 
-  # Furniture & fixtures
-  - 550  # bedstead
-  - 551  # almirah / dressing table
-  - 552  # chair / stool / bench / table
-  - 557  # sofa / couch / other furniture
-  - 555  # carpet / daree / floor mat
-  - 553  # suitcase / trunk / trolley bag
+  FURNITURE:
+    - 550  # bedstead
+    - 551  # almirah / dressing table
+    - 552  # chair / stool / bench / table
+    - 557  # sofa / couch / other furniture
+    - 555  # carpet / daree / floor mat
+    - 553  # suitcase / trunk / trolley bag
 
-  # Cooking, storage & utensils (asset-like durables)
-  - 570  # stainless steel utensils
-  - 571  # other metal utensils / non-stick cookware
-  - 572  # casseroles / thermos / flask
-  - 573  # other crockery & utensils
+  KITCHENWARE:
+    - 570  # stainless steel utensils
+    - 571  # other metal utensils / non-stick cookware
+    - 572  # casseroles / thermos / flask
+    - 573  # other crockery & utensils
 
-  # Housing-related assets
-  - 632  # residential building & land (repairs)
-  - 630  # bathroom & sanitary equipment
-  - 631  # plugs, switches & electrical fittings
+  HOUSING:
+    - 632  # residential building & land (repairs)
+    - 630  # bathroom & sanitary equipment
+    - 631  # plugs, switches & electrical fittings
 
-  # Personal durable assets
-  - 620  # clock / watch / smartwatch / fitness tracker
-  - 440  # spectacles / goggles / contact lenses
-  - 441  # umbrella / raincoat / helmet
-  - 554  # backpacks / handbags / vanity bags
-  - 35  # headphones / earphones / bluetooth devices
+  PERSONAL ITEMS:
+    - 620  # clock / watch / smartwatch / fitness tracker
+    - 440  # spectacles / goggles / contact lenses
+    - 441  # umbrella / raincoat / helmet
+    - 554  # backpacks / handbags / vanity bags
+    - 35  # headphones / earphones / bluetooth devices
 
-  # Medical equipment (household assets)
-  - 40  # wheelchair
-  - 42  # nebulizer
-  - 610  # hearing aids & orthopaedic equipment
-  - 611  # other medical equipment (BP monitor, etc.)
+  MEDICAL_AIDS:
+    - 40  # wheelchair
+    - 42  # nebulizer
+    - 610  # hearing aids & orthopaedic equipment
+    - 611  # other medical equipment (BP monitor, etc.)
 
-  # Productive & recreational assets
-  - 36  # exercise equipment
-  - 432  # sports goods & toys
-  - 563  # musical instruments
-  - 561  # camera & photographic equipment
+  SPORTS_MUSICAL:
+    - 36  # exercise equipment
+    - 432  # sports goods & toys
+    - 563  # musical instruments
+    - 561  # camera & photographic equipment
 
-  # Jewellery & stores of value
-  - 640  # gold/diamond/platinum jewellery
-  - 641  # silver jewellery
-  - 642  # precious stones / pearls
-  - 643  # artificial jewellery
+  JEWELLERY:
+    - 640  # gold/diamond/platinum jewellery
+    - 641  # silver jewellery
+    - 642  # precious stones / pearls
+    - 643  # artificial jewellery
 
 EDUCATION:
   - 405  # tuition & other fees (school, college, etc.)
@@ -247,19 +247,20 @@ EDUCATION:
   - 404  # stationery & photocopying
   - 408  # other educational expenses (online courses, library fees, etc.)
 
-HEALTH_HOSP:
-  - 410  # medicine (hospitalisation)
-  - 412  # doctor's / surgeon's fee (hospitalisation)
-  - 411  # X-ray, ECG, pathological test, etc. (hospitalisation)
-  - 413  # hospital & nursing home charges
-  - 414  # other medical expenses (hospitalisation)
+HEALTH:
+  HOSP:
+    - 410  # medicine (hospitalisation)
+    - 412  # doctor's / surgeon's fee (hospitalisation)
+    - 411  # X-ray, ECG, pathological test, etc. (hospitalisation)
+    - 413  # hospital & nursing home charges
+    - 414  # other medical expenses (hospitalisation)
 
-HEALTH_NOHOSP:
-  - 420  # medicine (non-hospitalisation)
-  - 422  # doctor's / surgeon's fee (non-hospitalisation)
-  - 421  # X-ray, ECG, pathological test, etc. (non-hospitalisation)
-  - 423  # family planning devices
-  - 424  # other medical expenses (non-hospitalisation)
+  NOHOSP:
+    - 420  # medicine (non-hospitalisation)
+    - 422  # doctor's / surgeon's fee (non-hospitalisation)
+    - 421  # X-ray, ECG, pathological test, etc. (non-hospitalisation)
+    - 423  # family planning devices
+    - 424  # other medical expenses (non-hospitalisation)
 
 UTILITIES:
   - 332  # electricity (std unit)
