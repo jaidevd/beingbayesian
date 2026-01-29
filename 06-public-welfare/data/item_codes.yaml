@@ -247,13 +247,14 @@ EDUCATION:
   - 404  # stationery & photocopying
   - 408  # other educational expenses (online courses, library fees, etc.)
 
-HEALTH:
+HEALTH_HOSP:
   - 410  # medicine (hospitalisation)
   - 412  # doctor's / surgeon's fee (hospitalisation)
   - 411  # X-ray, ECG, pathological test, etc. (hospitalisation)
   - 413  # hospital & nursing home charges
   - 414  # other medical expenses (hospitalisation)
 
+HEALTH_NOHOSP:
   - 420  # medicine (non-hospitalisation)
   - 422  # doctor's / surgeon's fee (non-hospitalisation)
   - 421  # X-ray, ECG, pathological test, etc. (non-hospitalisation)
@@ -267,3 +268,22 @@ UTILITIES:
   - 334  # kerosene, pds
   - 335  # kerosene other sources
   - 96   # other fuel
+
+INTOXICANTS:
+  - 300
+  - 301
+  - 302
+  - 310
+  - 311
+  - 316
+  - 312
+  - 314
+  - 315
+  - 313
+  - 317
+  - 322
+  - 324
+  - 323
+  - 321
+  - 320
+  - 325
