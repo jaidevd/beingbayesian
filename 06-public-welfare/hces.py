@@ -114,3 +114,37 @@ def propensity_score_match(df, num_cols, cat_cols, treat_col="treat", pscore_bin
         ).astype(str)
 
     return xdf
+
+
+def treatment_effects(
+    df,
+    outcome_cols,
+    support_col="support",
+    treat_col="treat",
+    group_cols=("label", "treat"),
+    mult_col="multiplier",
+    per_capita=False,
+    household_size_col="family_size",
+    retbins=None
+):
+    xdf = df.copy()
+    xdf[treat_col] = xdf[treat_col].astype(int)
+
+    if per_capita:
+        xdf[outcome_cols] = xdf[outcome_cols].div(xdf[household_size_col], axis=0)
+
+    ydf = compare(
+        xdf[xdf[support_col]],
+        list(group_cols),
+        outcome_cols,
+        mult_col=mult_col,
+    )
+    vals = ydf.xs(1, level=treat_col) - ydf.xs(0, level=treat_col)
+    pc = vals / ydf.xs(0, level=treat_col)
+    effect = pd.concat([vals.round(), pc.round(2)], axis=0, keys=["values", "percentage"])
+    if retbins is None:
+        return effect
+    else:
+        # return only the bins specified
+        ix = effect.index.get_level_values("label").isin(retbins)
+        return effect[ix]
