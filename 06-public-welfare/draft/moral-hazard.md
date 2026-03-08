@@ -46,16 +46,16 @@ does suggest that we need some nuance. People's worries about recepients of
 welfare becoming freeloaders often pop up in public discourse, but often without
 the slightest nuance. Examples range from news anchors exasperatedly asking how
 long the middle classes can be expected to subsidize the poor; to the chronic
-criticism of pre-election "revdis", to tech bros
+criticism of pre-election "revdis", to entrepreneurs
 claiming that the gig economy will finally free the poor from handouts.
 
-The simplest explanation for why this is such a bone of contention that welfare
+The simplest explanation for why this is such a bone of contention is that welfare
 _in general_ doesn't seem to work, much less for a country like ours. The
 implementation of a welfare scheme must navigate the labyrinth of social,
 cultural and systemic barriers to make its results visible. Abhijit Banerjee and
 Esther Duflo wrote an entire book, _Poor Economics_, showing that there's no silver
 bullet to solve poverty. As such, large, nationwide results are often disappointing.
-But with a little nuance, and if we know where to look, we can see small
-victories.
+But with a little nuance, and if we know where to look, we can see small, but
+interesting effects.
 
 [^1]: S Rukmini Page 101
