@@ -1,0 +1,85 @@
+{
+  "id": "kitchen-time-by-gender",
+  "source": {
+    "notebook": "03-90-hr-workweek/analysis.ipynb",
+    "parent_figure": "The Great Indian Kitchen (left panel)",
+    "dataset": "Time Use Survey 2024 (India), activity codes 31x"
+  },
+  "chart": {
+    "type": "grouped_bar_horizontal",
+    "title": "Gender in the Kitchen",
+    "background_color": "papayawhip",
+    "axes": {
+      "x": {
+        "label": "Hours Per Week"
+      },
+      "y": {
+        "label": "Cooking Activities"
+      }
+    },
+    "series": [
+      {
+        "name": "female",
+        "color": "teal"
+      },
+      {
+        "name": "male",
+        "color": "maroon"
+      }
+    ],
+    "bar_alpha": 0.8,
+    "grid": {
+      "axis": "x",
+      "color": "gray",
+      "linewidth": 0.3,
+      "linestyle": "dashed"
+    },
+    "spines_hidden": [
+      "top",
+      "right"
+    ]
+  },
+  "metric": {
+    "name": "Average weekly hours on cooking activities",
+    "unit": "hours per week",
+    "population": "White-collar (NIC white-collar) regular salaried/wage workers, aged 15-60",
+    "weighting": "Survey multiplier-weighted mean per gender (transgender excluded)",
+    "definition": "Daily minutes on TUS activity codes 311-319 summed per person, scaled to weekly (x7/60), averaged within gender with survey weights."
+  },
+  "data": {
+    "categories": [
+      "Preparing Meals / Snacks",
+      "Serving",
+      "Cleaning Up After",
+      "Storing / Preserving",
+      "Other"
+    ],
+    "values": [
+      {
+        "activity": "Preparing Meals / Snacks",
+        "female": 10.2168,
+        "male": 0.8159
+      },
+      {
+        "activity": "Serving",
+        "female": 1.3823,
+        "male": 0.0148
+      },
+      {
+        "activity": "Cleaning Up After",
+        "female": 3.0105,
+        "male": 0.1469
+      },
+      {
+        "activity": "Storing / Preserving",
+        "female": 0.1239,
+        "male": 0.0085
+      },
+      {
+        "activity": "Other",
+        "female": 0.4897,
+        "male": 0.025
+      }
+    ]
+  }
+}

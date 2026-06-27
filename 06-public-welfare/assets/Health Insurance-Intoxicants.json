@@ -1,0 +1,72 @@
+{
+  "id": "health-insurance-intoxicants",
+  "source": {
+    "notebook": "06-public-welfare/intoxicants.ipynb",
+    "image": "06-public-welfare/assets/Health Insurance-Intoxicants.png",
+    "dataset": "HCES 2023-24 (Household Consumption Expenditure Survey), Section 12 consumption files"
+  },
+  "chart": {
+    "type": "dumbbell",
+    "title": "Do beneficiaries of health insurance spend more on intoxicants?",
+    "subtitle": null,
+    "background_color": "papayawhip",
+    "axes": {
+      "x": {
+        "label": "Beneficiaries - non-beneficiaries monthly spending gap (Rs. per adult)",
+        "limits": [-15.2, 15.2],
+        "reference_line": {"value": 0, "style": "dashed", "color": "black"}
+      },
+      "y": {
+        "label": null,
+        "encoding": "category (intoxicant item), ordered ascending by the maximum value across sectors (bottom = highest max)"
+      }
+    },
+    "encoding": {
+      "row": "intoxicant item",
+      "points_per_row": "one point per sector, connected by a grey line (the dumbbell)",
+      "connector": {"color": "0.75", "linewidth": 2}
+    },
+    "series": [
+      {"name": "rural", "color": "maroon"},
+      {"name": "urban", "color": "teal"}
+    ],
+    "legend": {"title": "Sector", "location": "lower right"},
+    "fonts": {"family": "Lora", "title_weight": "bold", "ytick_weight": "bold", "ytick_size": 8}
+  },
+  "metric": {
+    "name": "Beneficiary - non-beneficiary monthly spending gap",
+    "unit": "Rupees per adult per month",
+    "definition": "Per-adult monthly expenditure of health-insurance beneficiary households minus that of comparable non-beneficiary households, by sector. Adults = family_size - n_children. Weekly values converted to monthly via *52/12. Positive = beneficiaries spend more.",
+    "treatment": "Household is a beneficiary if is_benefit_healthscheme == 1 OR is_hhmem_pmjay == 1.",
+    "matching": "Propensity-score matching on num_cols=[family_size, n_children, n_elderly] and cat_cols=[sector, nss_region, employed_annual, max_income_from, hoh_religion, caste]; restricted to pscore bins D and E (closest-matched, highest-propensity strata).",
+    "weighting": "Survey multiplier-weighted means (hces.compare)."
+  },
+  "data": {
+    "categories": [
+      "Foreign Liquor/Wine",
+      "Other Tobacco Products",
+      "Beer",
+      "Paan",
+      "Leaf Tobacco",
+      "Toddy",
+      "Gutkha",
+      "Cigarettes",
+      "Other Intoxicants",
+      "Bidi",
+      "Country Liquor"
+    ],
+    "values": [
+      {"item": "Country Liquor",         "rural": 12.702, "urban": 10.365},
+      {"item": "Bidi",                   "rural": 12.607, "urban": 5.088},
+      {"item": "Other Intoxicants",      "rural": -0.246, "urban": 6.430},
+      {"item": "Cigarettes",             "rural": 2.316,  "urban": -2.188},
+      {"item": "Gutkha",                 "rural": -3.510, "urban": 1.863},
+      {"item": "Toddy",                  "rural": -2.155, "urban": 1.672},
+      {"item": "Leaf Tobacco",           "rural": -2.755, "urban": 0.670},
+      {"item": "Paan",                   "rural": -0.528, "urban": -8.880},
+      {"item": "Beer",                   "rural": -2.904, "urban": -13.899},
+      {"item": "Other Tobacco Products", "rural": -4.826, "urban": -7.268},
+      {"item": "Foreign Liquor/Wine",    "rural": -9.906, "urban": -7.957}
+    ]
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "id": "health-insurance-intoxicants-panels",
+  "chart": {
+    "type": "dumbbell",
+    "panels": [
+      "rural",
+      "urban"
+    ],
+    "series": [
+      {
+        "name": "Not insured",
+        "color": "maroon"
+      },
+      {
+        "name": "Insured",
+        "color": "teal"
+      }
+    ]
+  },
+  "row_order": [
+    "Other Intoxicants",
+    "Toddy",
+    "Leaf Tobacco",
+    "Other Tobacco Products",
+    "Bidi",
+    "Gutkha",
+    "Beer",
+    "Paan",
+    "Country Liquor",
+    "Cigarettes",
+    "Foreign Liquor/Wine"
+  ],
+  "data": {
+    "rural": [
+      {
+        "item": "Other Intoxicants",
+        "not_insured": 2.9323,
+        "insured": 2.6858
+      },
+      {
+        "item": "Toddy",
+        "not_insured": 9.6769,
+        "insured": 7.5223
+      },
+      {
+        "item": "Leaf Tobacco",
+        "not_insured": 12.7318,
+        "insured": 9.9766
+      },
+      {
+        "item": "Other Tobacco Products",
+        "not_insured": 11.1457,
+        "insured": 6.3197
+      },
+      {
+        "item": "Bidi",
+        "not_insured": 17.9388,
+        "insured": 30.5455
+      },
+      {
+        "item": "Gutkha",
+        "not_insured": 43.9985,
+        "insured": 40.4881
+      },
+      {
+        "item": "Beer",
+        "not_insured": 27.0233,
+        "insured": 24.1196
+      },
+      {
+        "item": "Paan",
+        "not_insured": 39.3776,
+        "insured": 38.8498
+      },
+      {
+        "item": "Country Liquor",
+        "not_insured": 38.6622,
+        "insured": 51.3637
+      },
+      {
+        "item": "Cigarettes",
+        "not_insured": 21.8033,
+        "insured": 24.1197
+      },
+      {
+        "item": "Foreign Liquor/Wine",
+        "not_insured": 70.3713,
+        "insured": 60.4656
+      }
+    ],
+    "urban": [
+      {
+        "item": "Other Intoxicants",
+        "not_insured": 0.6169,
+        "insured": 7.0468
+      },
+      {
+        "item": "Toddy",
+        "not_insured": 2.7073,
+        "insured": 4.3795
+      },
+      {
+        "item": "Leaf Tobacco",
+        "not_insured": 7.0616,
+        "insured": 7.7317
+      },
+      {
+        "item": "Other Tobacco Products",
+        "not_insured": 16.5089,
+        "insured": 9.2413
+      },
+      {
+        "item": "Bidi",
+        "not_insured": 13.4798,
+        "insured": 18.5681
+      },
+      {
+        "item": "Gutkha",
+        "not_insured": 44.1968,
+        "insured": 46.0595
+      },
+      {
+        "item": "Beer",
+        "not_insured": 46.7333,
+        "insured": 32.8345
+      },
+      {
+        "item": "Paan",
+        "not_insured": 47.1714,
+        "insured": 38.2913
+      },
+      {
+        "item": "Country Liquor",
+        "not_insured": 19.5309,
+        "insured": 29.8959
+      },
+      {
+        "item": "Cigarettes",
+        "not_insured": 57.9141,
+        "insured": 55.7265
+      },
+      {
+        "item": "Foreign Liquor/Wine",
+        "not_insured": 83.1645,
+        "insured": 75.2079
+      }
+    ]
+  }
+}
