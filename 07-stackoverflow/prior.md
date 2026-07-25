@@ -1,4 +1,3 @@
-![](https://imgs.xkcd.com/comics/wisdom_of_the_ancients.png)
 
 > In the beginning... was the command line.
 
@@ -27,9 +26,9 @@ certainly heavily biased towards the command line. But I don't judge those who
 are not. There are better programmers who are not particularly invested in the
 command line experience, but they'd still know their way around it. Secondly,
 while getting the good at the command line takes years, getting started is not
-all that hard. What really exasperates me, however, are those who doggedly avoid
-the command line in favour of GUIs, and _still_ end up fumbling around, wasting
-time and ultimately making mistakes.
+all that hard. What really exasperates me, however, are those who doggedly
+avoid the command line in favour of GUIs, and _still_ end up fumbling
+around, wasting time and ultimately making mistakes.
 
 I recently encountered an intern doing something similarly exasperating. He'd
 been asked to debug program. After repeated attempts, the variety of bugfixes
@@ -54,24 +53,73 @@ asking. The other two, while not as silly, are still the desperate attempts of
 someone who doesn't know how to perform a good web search. And then there are my
 answers. Far less embarassing, but still answers to precisely those questions
 that a person like the past me would have asked. In fact, I was precisely
-someone who deserved to have their job taken away by AI.
+someone who deserved to have their job taken away by AI. Even today, there are
+enough such people around in workplaces that it feels like AI is just around the
+corner, ready to blindside the naive knowledge worker.
 
-Many developers have very interesting Stackoverflow stories. It's an institution
-that's hallowed and controversial at the same time. For no small number of
-programmers, their reputation on Stackoverflow has translated into real
-professional reputation, to the point that reputation-farming on Stackoverflow
-was even a valid strategy for career progress. On the other hand people also
-have stories about how the platform made them feel unwelcome, to the point of
-being positively toxic. I'm not proud to admit this, but it's not entirely
-impossible that I myself might have played some part in shaming an unsuspecting novice.
-But, all in all, Stackoverflow has been, for the better part of the last 20
-years, quite central to software engineering.
+Many developers have very interesting Stackoverflow stories. A friend once told
+me how during his internship he was tasked with a particularly difficult
+problem, and no matter how far and wide he looked on Stackoverflow, the only
+related questions he saw were from other interns before him who'd failed to fix
+the problem, and the only answers he saw were from his boss: the very person who
+gave him the problem in the first place.
+
+![](https://imgs.xkcd.com/comics/wisdom_of_the_ancients.png)
+
+It's an institution that's hallowed and controversial at the same time. For no
+small number of programmers, their reputation on Stackoverflow has translated
+into real professional reputation, to the point that reputation-farming on
+Stackoverflow was even a valid strategy for career progress. On the other hand
+people also have stories about how the platform made them feel unwelcome, to the
+point of being positively toxic. I'm not proud to admit this, but it's not
+entirely impossible that I myself might have played some part in shaming an
+unsuspecting novice. But, all in all, Stackoverflow has been, for the better
+part of the last 20 years, quite central to software engineering.
 
 
 ---
 
+What's fascinating about a platform like Stackoverflow is it's nonlinear
+dynamics. Even with my sparse set of questions and answers, I have a reputation
+of 3,144. This means[^3] that I'm at the 99.68th percentile. Only _a third of a
+percent of all Stackoverflow_ users have a higher reputation. But here's the
+kicker: there are nearly a hundred thousand of them! The highest reputation ever
+is at a million and half: three orders of magnitude higher from where I am.
+Even if I were so inclined, scaling that peak is going to take me multiple lifetimes.
+
+But, once we are no longer overwhelmed by the sheer magnitude of things, the
+pattern here is surprisingly common: the Power Law distribution. In every
+socioeconomic system, influence and
+reputation are almost always highly concentrated in a vanishingly small fraction of the
+population. In wealth and income distribution, this is exactly what we refer to
+when we say that the rich keep getting richer.
+
+It's not hard, then, for LLMs to destroy the astronomically long tail.
+
+<!--- self note: two views of long tails: how you found them hard to deal with
+yourself in the PlotCaptions project, but AI could have destroyed it, if you'd
+let it. Has AI destroyed the long-tail of reputations (by users)? Worth checking
+out. Would there be a credible pre- and post-ChatGPT artifact there?
+
+But here we've got to be cautious: When we say that AI destroys the long tail,
+do we mean that:
+
+  * it makes mechanically and logistically addressing the long tail easier?
+    We're referring here to the sheer volume of information that AI can gobble
+    up[^^].
+  * or does it render ineffective / obsolete the very processes, the underlying
+    primal causes, that _create_ the long tail.
+
+
+[^^]: Information getting gobbled up? Producing what? As per Cesar Hidalho,
+    would this gobbling up create info or destroy it?
+
+-->
+
+---
+
 [^1]: We're being told that that's about to change: AI can write all the code
-    you want, and programming is a job ripe for automation. We'll see about
-    that.
+you want, and programming is a job ripe for automation. We'll see about that.
 [^2]: Having someone looking over your shoulder as you write code is extremely
-    unnerving even to the most seasoned programmer.
+unnerving even to the most seasoned programmer.
+[^3]: Based on the official data explorer.
