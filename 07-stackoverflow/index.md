@@ -1,4 +1,4 @@
-> [In the beginning... was the command line.](https://people.cs.georgetown.edu/~clay/classes/spring2010/os/inthebeginning.pdf)
+> [In the beginning was the command line.](https://people.cs.georgetown.edu/~clay/classes/spring2010/os/inthebeginning.pdf)
 
 \- Neal Stephenson
 
@@ -8,14 +8,13 @@ use graphical user interfaces (GUIs) - things you point to and click
 on. Even as the means of interacting with a computer have grown easier, the
 ability to program them has become all the more specialized[^1].
 
-Nevertheless, for most living computer programmers, in the beginning
-there was indeed the command line. For better or for worse, skill at the command
-line remains, even today, the litmus test of a good programmer. I doubt if that
-is universally true. I've seen enough good programmers who manage fine without
-it. But I'd wager it's
-statistically true. Being dexterous at typing commands instead of navigating
-menus and dialogs is huge time saver. It's similar to the difference between
-touch-typing and hunt-and-peck typing.
+Nevertheless, for most living computer programmers, in the beginning there was
+indeed the command line. For better or for worse, skill at the command line
+remains, even today, the litmus test of a good programmer. I doubt if that is
+universally true. I've seen enough good programmers who manage fine without it.
+But I'd wager it's statistically true. Being dexterous at typing commands
+instead of navigating menus and dialogs is a huge time saver. It's similar to
+the difference between touch-typing and hunt-and-peck typing.
 
 I myself hate taking my hands off the keyboard while coding - so I'm
 certainly heavily biased towards the command line. But I don't judge those who
@@ -34,16 +33,15 @@ been significantly more efficient. Here, a distinction needs to be made between
 the reasoning skills needed to debug a program, and the dexterity needed to
 deploy the solution. My disappointment was directed solely at the latter. He
 kept clicking on the wrong thing in the wrong menu. Imagine teaching your
-tweenager newphew how to play Call of Duty. After he had killed his own teammates six
+tweenager nephew how to play Call of Duty. After he had killed his own teammates six
 times in a row, it took all my restraint and a glowering spouse to not snatch
 the controller away.
 
-At first, this intern was was gently
-nudged towards using the command line. Then he was encouraged, and finally
-sternly warned. He was made a full-time employee soon after, but didn't survive
-the probationary period. His peers were more productive by far, and decided that
-they'd rather invest in someone who wasn't avoiding learning an
-obviously high-RoI skill.
+At first, this intern was gently nudged towards using the command line. Then he
+was encouraged, and finally sternly warned. He was made a full-time employee
+soon after, but didn't survive the probationary period. His peers were more
+productive by far, and decided that they'd rather invest in someone who was
+interested in learning an obviously high-RoI skill.
 
 But as I write this, I realize that I myself was perhaps not so different when I
 was an intern, fourteen years ago. Just as one feels embarrassed looking at
@@ -72,7 +70,7 @@ It's an institution that's hallowed and controversial at the same time. For no
 small number of programmers, their reputation on Stack Overflow has translated
 into real professional reputation. For a period, reputation-farming on
 Stack Overflow was a perfectly valid strategy for career progress. On the other hand,
-people also have stories about how the platform made them feel unwelcome, to the
+people also have stories about how the platform spurned them, to the
 point of being positively toxic. I'm not proud to admit this, but it's not
 entirely impossible that I myself might have played some part in shaming an
 unsuspecting novice. But, all in all, Stack Overflow has been, for the better
@@ -110,7 +108,7 @@ magnitude higher than where I am. Even if I were so inclined, scaling that peak
 is going to take me multiple lifetimes.
 
 But no matter how large the data grows, the _information_ contained in it is
-concentrated in a tiny, concentrated manifold—much like the nucleus of an atom.
+concentrated in a tiny manifold—much like the nucleus of an atom.
 Once we are no longer overwhelmed by the sheer magnitude of things, the pattern
 here is surprisingly common: the Power Law distribution. In every socioeconomic
 system, influence and reputation are almost always highly concentrated in a
@@ -131,12 +129,12 @@ decline after the release of ChatGPT. There is indeed a steep drop in the number
 of questions asked since the end of 2022. The question, however, is whether that
 particular point in time had anything to do with the drop. Imagine, for
 instance, that the release of ChatGPT was _not_ annotated on the graph above.
-Then we could still see the drop, but we would be tempted to trace it all the
-way back to the peak of the COVID-19 pandemic (which is also annotated on the
+Then we could still see the drop, but we would be tempted to trace it back to
+the COVID-19 pandemic (which is also annotated on the
 graph). Would we then say that the pandemic, like so many other people and
 organizations, killed Stack Overflow too? If anything, that would be a more
-plausible explanation, especially since activity peaked drastically at the peak
-of the pandemic—the taller it stood, the harder it fell. The point is that
+plausible explanation, especially since activity peaked drastically during the
+pandemic—the taller it stood, the harder it fell. The point is that
 annotating graphs with events makes for really good storytelling, but it also
 leads the witness. So the simple antidote to this is to stop comparing data from
 before and after a fixed timestamp, and look at the trajectory as a whole. When
@@ -144,12 +142,12 @@ seen this way, even the pandemic appears as an inflection point.
 
 Moreover, ChatGPT wasn't the only disruption that happened after the pandemic.
 First, Stack Overflow was acquired by Prosus in June 2021. Around the same time,
-Github released their AI coding assistant, Copilot, which would certainly have
+GitHub released their AI coding assistant, Copilot, which would certainly have
 made asking _some_ questions on Stack Overflow pointless. Later in mid-2023,
 there were a series of layoffs, an AI moderation policy, and moderators went on
 strike. In 2024, Stack Overflow announced strategic partnerships with Google and
 OpenAI—which meant, at the very least, that partners did not have to scrape
-training data off Stack Overflow anymore, they could acquire it officially.
+training data off Stack Overflow anymore; they could acquire it officially.
 Ultimately, each of these events can be seen as a candidate explanation (albeit
 of varying strengths), and the "before and after" narrative ends up being
 entirely qualitative, no matter which disruption event we're looking
@@ -179,13 +177,13 @@ does not stand up to scrutiny.
 ![](assets/questions-time-series/saturation.png)
 
 Extrapolating from pre-ChatGPT trends, we can see that only a year after the
-release of ChatGPT, good questions were at only half their expected volume. By 2025, they
-were at 7% of where they would have been. So even if users were gradually
-running out of good questions, that process cannot explain what happened next.
-Around the release of ChatGPT, the series breaks sharply from a trend that had
-held for years. This calls for further refinement: if asking 
-good questions didn't help the survival of activity, then perhaps we need to
-look at what these presumably good questions were _about_.
+release of ChatGPT, good questions were at only half their expected volume. By
+2025, they were at 7% of where they would have been. So even if users had fewer
+good questions, that cannot explain what happened next. Around the release of
+ChatGPT, the series breaks sharply from a trend that had held for years. This
+calls for further refinement: if asking good questions didn't help the survival
+of activity, then perhaps we need to look at what these presumably good
+questions were _about_.
 
 Short of analyzing the textual content of questions and answers (which would be
 exceptionally rewarding, but prohibitively expensive for me), the best place to
@@ -239,9 +237,9 @@ discourse does *not* mean. He distinguished the accidental difficulties of
 programming—the machinery needed to express and manipulate software—from its
 essential difficulties: deciding what a system should do and managing the
 complexity inherent in it. Stack Overflow became a vast public repository for
-overcoming a great deal of the accidental difficulties. This means that even
-though traffic fell to a tenth of its previous volumne, this does not
-automatically mean that software engineering is an order of magnitude easier
+overcoming a great deal of the accidental difficulties. So even
+though traffic fell to a tenth of its previous volume, it doesn't mean that
+software engineering is an order of magnitude easier
 than it was before ChatGPT. LLMs or coding agents do little to attack the
 _essential_ difficulties of programming. [Brooks
 writes](https://jaidevd.com/posts/no-silver-bullet),
@@ -273,7 +271,7 @@ of the decay making its way through the electron cloud and reaching the nucleus.
 The community has always been extremely unequal (long-tailed Pareto
 distributions): a tiny elite atop a huge casual base. The top 1% often produced
 anywhere between one-third and two-thirds of all answers. But the exodus was
-across not just reputation, but also by experience. Everyone, from first-timers
+across not just reputation, but also across experience. Everyone, from first-timers
 through the most seasoned veterans (100+ posts) fell by more than 90%. This alone invalidates the idea that ChatGPT removed only novices.
 
 But alongside the concentrated core, there was another vulnerability that got exploited: Stack
@@ -294,14 +292,14 @@ What do we learn from this? Why would something like Stack Overflow work in the
 first place? And why would it fall apart?
 
 The first question is harder to answer. I think that people are often [motivated
-by unreasonable things](https://youtu.be/5aH2Ppjpcho). There aren't
-many ways of explaining why, for decades since the internet became mainstream, millions
-of people shared knowledge for free. A lot of that content took hours to
-produce, not to mention all the effort involved in editing it and moderating the
-community. None of this is exactly rational behaviour.
+by unreasonable things](https://youtu.be/5aH2Ppjpcho). There aren't many ways of
+explaining why, for decades, millions of people shared knowledge for free. A lot
+of that content took hours to produce, not to mention all the effort involved in
+editing it and moderating the community. None of this is exactly rational
+behaviour.
 
 But money wasn't the only currency. Daniel Pink[^11] divides the motivations for
-doing difficult wor for free into autonomy, mastery and purpose. The digital
+doing difficult work for free into autonomy, mastery and purpose. The digital
 commons offered all three. You could choose where to participate, demonstrate
 your skill, acquire a reputation and most crucially, have a shared purpose.
 The digital knowledge commons turned individual autonomy,
@@ -322,12 +320,12 @@ trust to make advice from an anonymous stranger useful—the toxicity
 notwithstanding. And Stack Overflow has forever had the best SEO. Google made that one interaction available to the next million programmers with the same
 problem.
 
-All of this what makes the role of AI generated answers rather paradoxical.
+All of this makes the role of AI generated answers rather paradoxical.
 
 On the one hand we have low-cost peer-to-peer links, but on the other hand, LLMs
 have established _even_ cheaper links between a programmer and
 the accumulated output of the network. And that, too, is a very awkward thought
-because ultimately, the accuumulated knowledge of an LLM is not, after all, a
+because ultimately, the accumulated knowledge of an LLM is not, after all, a
 network. So the question remains, what do we lose when we replace a network with
 a single, albeit much stronger, node? How long do links last when they're not
 between two nodes of a large, distributed network?
@@ -341,7 +339,7 @@ The questions that remained received fewer answers and waited longer for them.
 A weaker service gives future askers still less reason to come back. What had
 been a virtuous cycle could run equally well in reverse.
 
-This distinction also resolves a puzzle about the long tail. AI is spectacularly
+Brooks' distinction also resolves a puzzle about the long tail. AI is spectacularly
 good at dealing with long tails mechanically: it can ingest amounts of text that
 no person could hope to read and retrieve obscure fragments of it on demand.
 But there is another healthy sense in which a long tail exists. It is the consequence of
@@ -373,14 +371,14 @@ small core. All of that made the viral claim that ChatGPT had suddenly
 
 But the data is unequivocal. The decay has reached the nucleus.
 
-That still does not mean that AI has solved programming. Fred Brooks's 40-year-old
-distinction survives remarkably well. Tools can remove enormous amounts of the
-accidental difficulty of software—remembering syntax, finding an API,
-translating an intention into code—without eliminating its essential
+That still does not mean that AI has solved programming. Fred Brooks's
+40-year-old distinction survives remarkably well. Tools can remove enormous
+amounts of the accidental difficulty of software—remembering syntax, finding an
+API, translating an intention into code—without eliminating its essential
 difficulty: deciding what the software ought to do, understanding the world it
-inhabits, and managing the complexity of the thing itself. In other words, the disappearance of
-90% of Stack Overflow's traffic does not mean that software engineering became
-90% easier.
+inhabits, and managing the complexity of the thing itself. In other words, the
+disappearance of 90% of Stack Overflow's traffic isn't equivalent to, or even
+correlated with, software engineering becoming 90% easier.
 
 It means something more specific, and perhaps more consequential. Stack Overflow
 built a commons in which the act of solving one person's problem also produced
