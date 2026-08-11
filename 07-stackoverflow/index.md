@@ -54,7 +54,7 @@ someone who doesn't know how to use Google well enough[^3]. And then there are m
 answers. Far less embarrassing, but still answers to precisely those questions
 that a person like the past me would have asked. In fact, I was exactly
 someone who deserved to have their job taken away by AI. Even today, there are
-enough such people around in workplaces that it feels like AI is just around the
+enough such people in workplaces that it feels like AI is just around the
 corner, ready to blindside the naive knowledge worker.
 
 Many developers have very interesting Stack Overflow stories. A friend once told
@@ -98,14 +98,14 @@ Stack Overflow. On the other hand, the data dumps are a treasure. Every
 question, every answer, every edit and everything there is to know about every
 user lies buried somewhere in the half-a-terabyte archive.
 
-And like every large social network, what is fascinating about Stack Overflow is
+And like every social network, what is fascinating about Stack Overflow is
 the sheer nonlinearity of it. For example, even with my sparse set of questions
 and answers, I have a reputation of 3,144. This means that I'm at the
 99.68th percentile. Only _a third of a percent of all Stack Overflow_ users have
 a higher reputation. But here's the kicker: there are nearly a hundred thousand
 of them! The highest reputation ever is at a million and a half: three orders of
 magnitude higher than where I am. Even if I were so inclined, scaling that peak
-is going to take me multiple lifetimes.
+would take me multiple lifetimes.
 
 But no matter how large the data grows, the _information_ contained in it is
 concentrated in a tiny manifold—much like the nucleus of an atom.
@@ -113,14 +113,10 @@ Once we are no longer overwhelmed by the sheer magnitude of things, the pattern
 here is surprisingly common: the Power Law distribution. In every socioeconomic
 system, influence and reputation are almost always highly concentrated in a
 vanishingly small fraction of the population. In wealth and income distribution,
-this is exactly what we refer to when we say that the rich keep getting richer.
+this is what we mean when we say that the rich keep getting richer.
 So when people say that ChatGPT and other LLMs destroyed Stack Overflow, it's
 worth asking whether it was the nucleus that was destroyed, or the cloud of
 possibilities around it.
-
-It's not hard to imagine that generative AI could indeed destroy the
-astronomically long tail. But could it also destroy the nucleus, and in doing
-so, _properly_ kill Stack Overflow?
 
 ![](assets/annotated-ts.webp)
 
