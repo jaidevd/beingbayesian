@@ -38,7 +38,7 @@ tweenager newphew how to play Call of Duty. After he had killed his own teammate
 times in a row, it took all my restraint and a glowering spouse to not snatch
 the controller away.
 
-At first, this intenr was was gently
+At first, this intern was was gently
 nudged towards using the command line. Then he was encouraged, and finally
 sternly warned. He was made a full-time employee soon after, but didn't survive
 the probationary period. His peers were more productive by far, and decided that
@@ -52,7 +52,7 @@ embarrassing is my Stack Overflow profile. I've asked a grand total of five
 questions; two of which have been deleted. One of the remaining three is
 outright embarrassing - the kind of question that today I would fire myself for
 asking. The other two, while not as silly, are still the desperate attempts of
-someone who doesn't know how to use Google well enough[^lmgtfy]. And then there are my
+someone who doesn't know how to use Google well enough[^3]. And then there are my
 answers. Far less embarrassing, but still answers to precisely those questions
 that a person like the past me would have asked. In fact, I was exactly
 someone who deserved to have their job taken away by AI. Even today, there are
@@ -82,7 +82,7 @@ And then, earlier this year, I saw posts like these go viral on social media.
 
 ![](https://x.com/pmddomingos/status/2010833505207415075)
 
-As transformative[^3] as LLMs have been, claims that ChatGPT has 'killed' or
+As transformative[^4] as LLMs have been, claims that ChatGPT has 'killed' or
 'destroyed' Stack Overflow seem quite overblown—not least because they are viral
 and loud in the first place, but also because a reduced volume of transactions
 by itself is hardly a good measure of the health of that platform.
@@ -102,7 +102,7 @@ user lies buried somewhere in the half-a-terabyte archive.
 
 And like every large social network, what is fascinating about Stack Overflow is
 the sheer nonlinearity of it. For example, even with my sparse set of questions
-and answers, I have a reputation of 3,144. This means[^4] that I'm at the
+and answers, I have a reputation of 3,144. This means that I'm at the
 99.68th percentile. Only _a third of a percent of all Stack Overflow_ users have
 a higher reputation. But here's the kicker: there are nearly a hundred thousand
 of them! The highest reputation ever is at a million and a half: three orders of
@@ -123,6 +123,8 @@ possibilities around it.
 It's not hard to imagine that generative AI could indeed destroy the
 astronomically long tail. But could it also destroy the nucleus, and in doing
 so, _properly_ kill Stack Overflow?
+
+![](assets/annotated-ts.webp)
 
 At the outset, let's acknowledge that monthly activity on Stack Overflow _did_
 decline after the release of ChatGPT. There is indeed a steep drop in the number
@@ -191,7 +193,7 @@ look for the "about" is the tags which users and editors attach to questions.
 The researcher Nadia Eghbal mentions a classification of software tools into
 frameworks, languages, libraries and web and application servers. She used this
 taxonomy in the context of open source software projects on
-GitHub[^roadsbridges], but the same can be extended to Stack Overflow tags. This
+GitHub[^6], but the same can be extended to Stack Overflow tags. This
 helps us understand _what_ was affected most.
 
 ![](assets/tag_heatmap.png)
@@ -204,7 +206,7 @@ hardest, more than frameworks and languages. Some frameworks did gain traffic
 temporarily, but those were, unsurprisingly, LLM frameworks themselves.
 
 An explanation for this near-universal collapse comes from a study by Robert
-DeLine[^deline]. He studied the kinds of questions programmers actually ask
+DeLine[^7]. He studied the kinds of questions programmers actually ask
 while working, some of which are general and portable: how to use an API, what a
 function does, how to express some operation in a language. Others are intensely
 contextual: why a particular piece of code exists, what state caused a failure, what
@@ -224,7 +226,7 @@ do not need the programmer to locate the canonical question, discover the right
 vocabulary, or translate their problem into somebody else's. The slightly larger
 collapse in libraries fits this interpretation: questions of the form “how do I
 use this API?” are among the easiest to detach from local context. But more
-crucially, the effect extends far beyond libraries. Mark Guzdial wrote about a
+crucially, the effect extends far beyond libraries. Mark Guzdial[^8] wrote about a
 study where the researchers found that people are surprisingly capable of
 describing programming procedures; the
 difficulty was not in the expression, but in navigating the abstractions
@@ -258,7 +260,7 @@ we have seen _what_ changed and _when_ it changed, we must also ask _who_ change
 
 # The Who By Numbers
 
-It has been a mass exodus. Askers, answerers and editors[^usertypes] all
+It has been a mass exodus. Askers, answerers and editors[^10] all
 returned less and less often. After ChatGPT, they did not simply have lower
 individual activity—there was instead a very conspicuous absence. I would have
 thought that casual users would be the first to leave (which did happen), and
@@ -275,7 +277,8 @@ across not just reputation, but also by experience. Everyone, from first-timers
 through the most seasoned veterans (100+ posts) fell by more than 90%. This alone invalidates the idea that ChatGPT removed only novices.
 
 But alongside the concentrated core, there was another vulnerability that got exploited: Stack
-Overflow, by many accounts, made newcomers feel quite unwelcome[^10].
+Overflow, by many accounts, [made newcomers feel quite
+unwelcome](https://youtu.be/N7v0yvdkIHg).
 
 ![](assets/community/hostility.png)
 
@@ -297,14 +300,14 @@ of people shared knowledge for free. A lot of that content took hours to
 produce, not to mention all the effort involved in editing it and moderating the
 community. None of this is exactly rational behaviour.
 
-But money wasn't the only currency. Daniel Pink divides the motivations for
+But money wasn't the only currency. Daniel Pink[^11] divides the motivations for
 doing difficult wor for free into autonomy, mastery and purpose. The digital
 commons offered all three. You could choose where to participate, demonstrate
 your skill, acquire a reputation and most crucially, have a shared purpose.
 The digital knowledge commons turned individual autonomy,
-mastery and purpose into a public good[^coasepenguin]. And it did so at an unprecedented scale.
+mastery and purpose into a public good[^12]. And it did so at an unprecedented scale.
 
-César Hidalgo offers many useful ways of thinking about why this matters. An
+César Hidalgo[^13] offers many useful ways of thinking about why this matters. An
 individual cannot possess the knowledge and knowhow required to build a 
 moderately complicated software system. Knowledge therefore has to be spread
 across people. What determines, more than anything else, how much knowledge a group can collectively
@@ -394,13 +397,30 @@ The harder question is who will bother to write the next answer down.
 you want, and programming is a job ripe for automation. We'll see about that.
 [^2]: Having someone looking over your shoulder as you write code is extremely
 unnerving even to the most seasoned programmer.
-[^3]: There are many not-so-modest views of how transformative genAI is—from
+[^3]: There's also a website, [Let Me Google
+    That](https://letmegooglethat.com/?q=how+do+I+fix+a+remote+URL+in+git),
+    which gently mocks users who "don't show their work".
+[^4]: There are many not-so-modest views of how transformative genAI is—from
     simply making everything we know obsolete to curing cancer, solving
     climate change and ushering in an era of abundance.
-[^4]: Based on the official data explorer.
 [^5]: Specifically, questions here are scored by their net upvote tally (upvotes
     minus downvotes) and then filtered by whether they remained in the top
     quartile of all questions asked in the same year.
-[^usertypes]: defined by the predominant activity over a user's lifetime on the
+[^6]: Nadia Eghbal, [Roads and Bridges: The Unseen Labor Behind Our
+    Digital
+    Infrastructure](https://www.fordfoundation.org/learning/library/research-reports/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/)
+[^7]: Robert DeLine, "Code Talkers," in *Making Software*, ed. Andy Oram
+    and Greg Wilson (O'Reilly, 2010).
+[^8]: Mark Guzdial, "Why Is It So Hard to Learn to Program?" in *Making
+    Software*, ed. Andy Oram and Greg Wilson (O'Reilly, 2010).
+[^9]: In the short history of _Being Bayesian_, this is the first time my
+    prior assumptions have been properly falsified.
+[^10]: defined by the predominant activity over a user's lifetime on the
     platform.
-[^10]: That one YouTube video.
+[^11]: Daniel H. Pink, *Drive: The Surprising Truth About What Motivates
+    Us* (Riverhead Books, 2009).
+[^12]: Yochai Benkler, [Coase's Penguin, or, Linux and The Nature of
+    the Firm](https://yalelawjournal.org/article/coases-penguin-or-linux-and-the-nature-of-the-firm),
+    Yale Law Journal, 2002.
+[^13]: César Hidalgo, *Why Information Grows: The Origin of Order, from
+    Atoms to Economies* (Penguin, 2015).
