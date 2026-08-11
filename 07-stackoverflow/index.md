@@ -254,8 +254,6 @@ consider. Stack Overflow isn't just the questions and answers, it's also a
 community. It's not just a knowledge repository, it's a social network. Just as
 we have seen _what_ changed and _when_ it changed, we must also ask _who_ changed.
 
----
-
 # The Who By Numbers
 
 It has been a mass exodus. Askers, answerers and editors[^10] all
@@ -388,8 +386,6 @@ that commons without participating in it.
 So, did ChatGPT kill Stack Overflow? It would seem so.
 
 The harder question is who will bother to write the next answer down.
-
----
 
 [^1]: We're being told that that's about to change: AI can write all the code
 you want, and programming is a job ripe for automation. We'll see about that.
