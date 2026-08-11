@@ -179,3 +179,9 @@ PLFS_Data_2023-24/
 **/*.xlsx
 **/*.txt
 **/data/*.parquet
+
+# 07-stackoverflow generated intermediates
+07-stackoverflow/*.parquet
+07-stackoverflow/*.csv
+07-stackoverflow/*.npy
+07-stackoverflow/*.npz
