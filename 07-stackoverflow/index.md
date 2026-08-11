@@ -1,38 +1,29 @@
-Earlier this year, claims like these went viral all over LinkedIn:
-
-![](https://media.licdn.com/dms/image/v2/D5622AQGBvBHwQyZbXA/feedshare-shrink_1280/B56Z0_gr1lG8AM-/0/1774887026323?e=1787788800&v=beta&t=M1-ZOWjQPYthNYenOWRL7SWPCtBjjIfgiIh-iiKRpRc)
-
-Source: https://linkedin.com
-
-
-> In the beginning... was the command line.
+> [In the beginning... was the command line.](https://people.cs.georgetown.edu/~clay/classes/spring2010/os/inthebeginning.pdf)
 
 \- Neal Stephenson
 
 Well, not really. Before the command line was the punch card, and before that
 were the various knobs and dials and patch cords of early computers. Today we
-use graphical user interfaces (GUIs) - things you can see and point to and click
+use graphical user interfaces (GUIs) - things you point to and click
 on. Even as the means of interacting with a computer have grown easier, the
 ability to program them has become all the more specialized[^1].
 
-Nevertheless, for every currently living computer programmer, in the beginning
+Nevertheless, for most living computer programmers, in the beginning
 there was indeed the command line. For better or for worse, skill at the command
 line remains, even today, the litmus test of a good programmer. I doubt if that
-is universally true. I've seen enough good programmers who can't (or don't) use
-the command line, and prefer pointing and clicking. But I'd wager it's
+is universally true. I've seen enough good programmers who manage fine without
+it. But I'd wager it's
 statistically true. Being dexterous at typing commands instead of navigating
 menus and dialogs is huge time saver. It's similar to the difference between
-touch-typing and hunt-and-peck typing. Imagine trying to teach your nephew how
-to play Call of Duty: after he manages to kill his own teammates six times in a
-row, it takes all the restraint you can muster to not snatch the controller
-away.
+touch-typing and hunt-and-peck typing.
 
-I myself hate taking my hands off the keyboard towards the mouse - so I'm
+I myself hate taking my hands off the keyboard while coding - so I'm
 certainly heavily biased towards the command line. But I don't judge those who
 are not. There are better programmers who are not particularly invested in the
 command line experience, but they'd still know their way around it. Secondly,
 while getting good at the command line takes years, getting started is not
-all that hard. What really exasperates me, however, are those who doggedly
+all that hard; you only need to know a handful of commands to get most of your
+work done. What really exasperates me, however, are those who doggedly
 avoid the command line in favour of GUIs, and _still_ end up fumbling
 around, wasting time and ultimately making mistakes.
 
@@ -42,11 +33,16 @@ didn't work. Standing behind him[^2], I noticed many places where he could have
 been significantly more efficient. Here, a distinction needs to be made between
 the reasoning skills needed to debug a program, and the dexterity needed to
 deploy the solution. My disappointment was directed solely at the latter. He
-kept clicking on the wrong thing in the wrong menu. At first, he was gently
+kept clicking on the wrong thing in the wrong menu. Imagine teaching your
+tweenager newphew how to play Call of Duty. After he had killed his own teammates six
+times in a row, it took all my restraint and a glowering spouse to not snatch
+the controller away.
+
+At first, this intenr was was gently
 nudged towards using the command line. Then he was encouraged, and finally
 sternly warned. He was made a full-time employee soon after, but didn't survive
 the probationary period. His peers were more productive by far, and decided that
-they'd rather invest in someone who wasn't doggedly avoiding learning an
+they'd rather invest in someone who wasn't avoiding learning an
 obviously high-RoI skill.
 
 But as I write this, I realize that I myself was perhaps not so different when I
@@ -56,9 +52,9 @@ embarrassing is my Stack Overflow profile. I've asked a grand total of five
 questions; two of which have been deleted. One of the remaining three is
 outright embarrassing - the kind of question that today I would fire myself for
 asking. The other two, while not as silly, are still the desperate attempts of
-someone who doesn't know how to perform a good web search. And then there are my
+someone who doesn't know how to use Google well enough[^lmgtfy]. And then there are my
 answers. Far less embarrassing, but still answers to precisely those questions
-that a person like the past me would have asked. In fact, I was precisely
+that a person like the past me would have asked. In fact, I was exactly
 someone who deserved to have their job taken away by AI. Even today, there are
 enough such people around in workplaces that it feels like AI is just around the
 corner, ready to blindside the naive knowledge worker.
@@ -66,26 +62,30 @@ corner, ready to blindside the naive knowledge worker.
 Many developers have very interesting Stack Overflow stories. A friend once told
 me how during his internship he was tasked with a particularly difficult
 problem, and no matter how far and wide he looked on Stack Overflow, the only
-related questions he saw were from other interns before him who'd failed to fix
-the problem, and the only answers he saw were from his boss: the very person who
-gave him the problem in the first place.
+relevant questions he saw were from other interns before him who'd failed to
+solve the _same_ problem. And the only answers he saw were from his boss: the
+very person who gave him the assignment in the first place.
 
 ![](https://imgs.xkcd.com/comics/wisdom_of_the_ancients.png)
 
 It's an institution that's hallowed and controversial at the same time. For no
 small number of programmers, their reputation on Stack Overflow has translated
-into real professional reputation, to the point that reputation-farming on
-Stack Overflow was even a valid strategy for career progress. On the other hand
+into real professional reputation. For a period, reputation-farming on
+Stack Overflow was a perfectly valid strategy for career progress. On the other hand,
 people also have stories about how the platform made them feel unwelcome, to the
 point of being positively toxic. I'm not proud to admit this, but it's not
 entirely impossible that I myself might have played some part in shaming an
 unsuspecting novice. But, all in all, Stack Overflow has been, for the better
 part of the last 20 years, quite central to software engineering.
 
-So, as transformative[^3] as LLMs have been, claims that ChatGPT has 'killed' or
+And then, earlier this year, I saw posts like these go viral on social media.
+
+![](https://x.com/pmddomingos/status/2010833505207415075)
+
+As transformative[^3] as LLMs have been, claims that ChatGPT has 'killed' or
 'destroyed' Stack Overflow seem quite overblown—not least because they are viral
 and loud in the first place, but also because a reduced volume of transactions
-is by itself hardly good enough as a measure of the health of that platform.
+by itself is hardly a good measure of the health of that platform.
 Luckily, this is something for which data is readily available.
 
 ---
@@ -94,71 +94,70 @@ As a source of information, Stack Overflow is rich in more than one way: not
 only as a place where answers to popular programming questions are concentrated,
 but also as an organization that conducts annual user surveys, and regularly
 archives its own data in a publicly accessible, structured format. The survey
-data has long been seen as the pulse of the profession, but also, many suspect,
-has a strong self-selection bias—in that respondents are already more likely to be
-active on Stack Overflow. On the other hand, the data dumps are a treasure.
-Every question, every answer, every edit and everything there is to know about
-every user lies buried somewhere in the archive which is nearly half a terabyte.
+data has long been seen as the pulse of the profession. But it also has a strong
+self-selection bias—in that respondents are already more likely to be active on
+Stack Overflow. On the other hand, the data dumps are a treasure. Every
+question, every answer, every edit and everything there is to know about every
+user lies buried somewhere in the half-a-terabyte archive.
 
-And like every large social network, what is fascinating about it is the sheer
-nonlinearity of it. For example, even with my sparse set of questions and
-answers, I have a reputation of 3,144. This means[^4] that I'm at the 99.68th
-percentile. Only _a third of a percent of all Stack Overflow_ users have a higher
-reputation. But here's the kicker: there are nearly a hundred thousand of them!
-The highest reputation ever is at a million and a half: three orders of magnitude
-higher than where I am. Even if I were so inclined, scaling that peak is going
-to take me multiple lifetimes.
+And like every large social network, what is fascinating about Stack Overflow is
+the sheer nonlinearity of it. For example, even with my sparse set of questions
+and answers, I have a reputation of 3,144. This means[^4] that I'm at the
+99.68th percentile. Only _a third of a percent of all Stack Overflow_ users have
+a higher reputation. But here's the kicker: there are nearly a hundred thousand
+of them! The highest reputation ever is at a million and a half: three orders of
+magnitude higher than where I am. Even if I were so inclined, scaling that peak
+is going to take me multiple lifetimes.
 
-No matter how large the data grows, the _information_ contained in it is
-concentrated in a tiny manifold—much like the nucleus of an
-atom. Once we are no longer overwhelmed by the sheer magnitude of things, the
-pattern here is surprisingly common: the Power Law distribution. In every
-socioeconomic system, influence and reputation are almost always highly
-concentrated in a vanishingly small fraction of the population. In wealth and
-income distribution, this is exactly what we refer to when we say that the rich
-keep getting richer. So when people say that ChatGPT and other LLMs destroyed
-Stack Overflow, it's worth asking whether it was the nucleus that was destroyed,
-or the cloud of possibilities around it.
+But no matter how large the data grows, the _information_ contained in it is
+concentrated in a tiny, concentrated manifold—much like the nucleus of an atom.
+Once we are no longer overwhelmed by the sheer magnitude of things, the pattern
+here is surprisingly common: the Power Law distribution. In every socioeconomic
+system, influence and reputation are almost always highly concentrated in a
+vanishingly small fraction of the population. In wealth and income distribution,
+this is exactly what we refer to when we say that the rich keep getting richer.
+So when people say that ChatGPT and other LLMs destroyed Stack Overflow, it's
+worth asking whether it was the nucleus that was destroyed, or the cloud of
+possibilities around it.
 
 It's not hard to imagine that generative AI could indeed destroy the
 astronomically long tail. But could it also destroy the nucleus, and in doing
 so, _properly_ kill Stack Overflow?
 
 At the outset, let's acknowledge that monthly activity on Stack Overflow _did_
-decline. There is indeed a steep drop in the number of questions asked since the
-end of 2022. The question, however, is whether that particular point in time had
-anything to do with the drop. Imagine, for instance, that the release of ChatGPT
-was _not_ annotated on the graph. Then we could still see the drop, but we would be
-tempted to trace it all the way back to the peak of the COVID-19 pandemic (which
-is also annotated on the graph). Would we then say that the pandemic, like so
-many other people and organizations, killed Stack Overflow too? If anything,
-that would be a more plausible explanation, especially since activity peaked
-drastically at the peak of the pandemic—the taller it stood, the harder it fell.
-The point is that annotating graphs with events makes for really good
-storytelling, but it also leads the witness. So the simple antidote to this is
-to stop comparing data from before and after a fixed timestamp, and look at the
-trajectory as a whole. When seen this way, even the pandemic appears as an
-inflection point.
+decline after the release of ChatGPT. There is indeed a steep drop in the number
+of questions asked since the end of 2022. The question, however, is whether that
+particular point in time had anything to do with the drop. Imagine, for
+instance, that the release of ChatGPT was _not_ annotated on the graph above.
+Then we could still see the drop, but we would be tempted to trace it all the
+way back to the peak of the COVID-19 pandemic (which is also annotated on the
+graph). Would we then say that the pandemic, like so many other people and
+organizations, killed Stack Overflow too? If anything, that would be a more
+plausible explanation, especially since activity peaked drastically at the peak
+of the pandemic—the taller it stood, the harder it fell. The point is that
+annotating graphs with events makes for really good storytelling, but it also
+leads the witness. So the simple antidote to this is to stop comparing data from
+before and after a fixed timestamp, and look at the trajectory as a whole. When
+seen this way, even the pandemic appears as an inflection point.
 
 Moreover, ChatGPT wasn't the only disruption that happened after the pandemic.
 First, Stack Overflow was acquired by Prosus in June 2021. Around the same time,
 Github released their AI coding assistant, Copilot, which would certainly have
 made asking _some_ questions on Stack Overflow pointless. Later in mid-2023,
 there were a series of layoffs, an AI moderation policy, and moderators went on
-strike. In 2024, Stack Overflow announced strategic partnerships with
-Google and OpenAI—which meant, at the very least, that partners did not have to
-scrape training data off Stack Overflow anymore, they could acquire it
-officially. Ultimately, each of these events can be seen as a candidate explanation (albeit
-of varying strengths), and the "before
-and after" narrative ends up being entirely qualitative, no matter which
-disruption event we're looking at—including ChatGPT. The more interesting
-possibility is that we're looking at a much longer trend that predates
-all these disruptions, and that there are factors that aren't visible
-through monthly activity.
+strike. In 2024, Stack Overflow announced strategic partnerships with Google and
+OpenAI—which meant, at the very least, that partners did not have to scrape
+training data off Stack Overflow anymore, they could acquire it officially.
+Ultimately, each of these events can be seen as a candidate explanation (albeit
+of varying strengths), and the "before and after" narrative ends up being
+entirely qualitative, no matter which disruption event we're looking
+at—including ChatGPT. The more interesting possibility is that we're looking at
+a much longer trend that predates all these disruptions, and that there are
+factors that aren't visible through monthly activity.
 
 # Substitute for Another Guy
 
-Six months ago, in an interview with Nilay Patel of The Verge, Stack Overflow
+Six months ago, in an [interview](https://www.youtube.com/watch?v=0Km9YTMGIhk) with Nilay Patel of The Verge, Stack Overflow
 CEO Prashanth Chandrasekar said that the decline was primarily in simpler
 questions—more complex and advanced questions continue to be asked just as much,
 since LLMs are only as good as the available knowledge. This gives us a good
