@@ -110,6 +110,10 @@
     table.synth td.loud { color: var(--muted); font-style: italic; }
     table.synth td.honest { font-family: var(--font-display); font-style: italic; color: var(--text); }
     table.synth td.honest strong { color: var(--accent); font-style: normal; }
+    .acr { font-family: var(--font-mono); font-weight: 600; color: var(--accent); font-size: 1.15em; letter-spacing: 0.02em; }
+    .stack-badge { display: inline-block; font-family: var(--font-mono); font-size: 0.62em; font-weight: 600;
+                   color: var(--accent); background: var(--paper); border: 1px solid var(--hair);
+                   border-radius: 999px; padding: 0.3em 0.9em; margin: 0 0.2em; }
 
     .qr-cta { display: flex; flex-direction: column; align-items: center; gap: 0.35em; margin-top: 0.9em; }
     .qr-cta .url { font-family: var(--font-mono); font-size: 1.2rem; font-weight: 700; color: var(--accent); }
@@ -172,7 +176,10 @@
   <p class="center" style="margin-top:0.8em; font-size:1.15em; font-family:var(--font-display); font-style:italic;">
     Armed with this data and a Jupyter notebook, we can dismantle even the loudest stories.
   </p>
-  <aside class="notes">This talk isn't a statistics lecture. It's an argument that good-faith, reproducible, open-data analysis is civic infrastructure &mdash; and that exercising it is our civic duty. And it turns out the tools we already love &mdash; pandas, Jupyter, matplotlib, the whole FOSS stack &mdash; are exactly what this job needs.</aside>
+  <p class="center" style="margin-top:0.9em;">
+    <span class="stack-badge">Jupyter</span><span class="stack-badge">pandas</span><span class="stack-badge">matplotlib</span><span class="stack-badge">statsmodels</span><span class="stack-badge">git</span>
+  </p>
+  <aside class="notes">This talk isn't a statistics lecture. It's an argument that good-faith, reproducible, open-data analysis is civic infrastructure &mdash; and that exercising it is our civic duty. And it turns out the tools we already love &mdash; Jupyter, pandas, matplotlib, statsmodels, git &mdash; are the entire stack this job needs. Nothing proprietary, nothing exotic.</aside>
 </section>
 
 <section>
@@ -359,17 +366,80 @@
   <aside class="notes">Step back and the pattern repeats: a confident, specific, viral claim, and underneath it, once you actually pull the microdata, something smaller, stranger, or simply unanswerable. None of these took more than a public dataset and a notebook.</aside>
 </section>
 
+<!-- ===================== ACT 5B — DATA SOURCES ===================== -->
+
 <section>
-  <h2 class="center">The friction isn't the file format</h2>
+  <h2 class="center">Meet the alphabet soup</h2>
+  <p class="center" style="font-size:0.9em; margin-top:-0.1em;">HCES, PLFS, TUS &mdash; three names that kept coming back. They're not three different things.</p>
+  <table class="synth">
+    <thead><tr><th>Survey</th><th>What it measures</th><th>Where it showed up</th></tr></thead>
+    <tbody>
+      <tr><td class="claim"><span class="acr">HCES</span><br>Household Consumption Expenditure Survey</td><td style="font-size:1.05em;">what households spend, and on what</td><td style="font-size:1.05em;">kirana stores &middot; welfare &amp; vice</td></tr>
+      <tr><td class="claim"><span class="acr">PLFS</span><br>Periodic Labour Force Survey</td><td style="font-size:1.05em;">who works, how, and for how much</td><td style="font-size:1.05em;">gig economy</td></tr>
+      <tr><td class="claim"><span class="acr">TUS</span><br>Time Use Survey</td><td style="font-size:1.05em;">how a day is actually spent, minute by minute</td><td style="font-size:1.05em;">90-hour week</td></tr>
+    </tbody>
+  </table>
+  <p class="center muted" style="margin-top:0.7em;">All three are run by the same apparatus &mdash; India's National Sample Survey system, under the Ministry of Statistics (MoSPI) &mdash; and all three are free to download.</p>
+  <aside class="notes">Every one of these four case studies leaned on a government survey with an acronym, and it's worth pulling those acronyms apart, because they all come from the same place: MoSPI's National Sample Survey apparatus. HCES tells you what people spend money on. PLFS tells you who's working and how. TUS tells you what people actually do with their day. Different questions, same machinery.</aside>
+</section>
+
+<section>
+  <h2 class="center">They all share one shape</h2>
   <div class="flow">
-    <div class="flow-box"><span class="t">Raw microdata</span><span class="m">separate household, person &amp; item-level tables, full of cryptic numeric codes</span></div>
+    <div class="flow-box"><span class="t">Household file</span><span class="m">one row per household &mdash; location, assets, income bracket</span></div>
     <div class="flow-arrow">&rarr;</div>
-    <div class="flow-box mid"><span class="t">Decode &amp; stitch</span><span class="m">government code books, joining across units, choosing the right level of analysis</span></div>
+    <div class="flow-box mid"><span class="t">Person file</span><span class="m">one row per person &mdash; age, education, an occupation <em>code</em></span></div>
     <div class="flow-arrow">&rarr;</div>
-    <div class="flow-box out"><span class="t">One honest number</span><span class="m">a single, nationally-representative, denormalized table</span></div>
+    <div class="flow-box out"><span class="t">Item / activity file</span><span class="m">one row per thing bought or minute logged</span></div>
   </div>
-  <p class="center" style="margin-top:0.8em; font-size:1.02em;">Publish the <strong>cleaned data</strong> and the <strong>code</strong> that produced it &mdash; so the next person doesn't start from the raw dump.</p>
-  <aside class="notes">This is the unglamorous, reusable part of every essay. The data always arrives as disconnected tables of codes you have to decode and stitch together before any of it means a thing. Every essay in the newsletter ships with the cleaned, denormalized data and the code, precisely so nobody after me has to redo that stitching from scratch.</aside>
+  <p class="center muted" style="margin-top:0.4em;">Joined by a household &amp; person ID &mdash; and every code in every file means nothing without a separate codebook.</p>
+  <table class="metrics big" style="margin-top:0.5em;">
+    <tbody>
+      <tr class="hl"><td>NIC industry code <strong>62</strong>, in the TUS person file</td><td>&ldquo;Computer programming, consultancy and related activities&rdquo;</td></tr>
+    </tbody>
+  </table>
+  <p class="center" style="margin-top:0.4em; font-size:0.95em;">The friction isn't the file format &mdash; it's usually a plain CSV. It's <strong>translation</strong>.</p>
+  <aside class="notes">Every one of these surveys ships as several linked files, not one tidy spreadsheet: a household file, a person file, sometimes an item or activity file, joined by ID columns. And every interesting column is a number that means nothing on its own. To find "salaried white-collar workers" for the 90-hour-week essay, I needed the National Industrial Classification codebook just to know that industry code 62 means computer programming. The format is never the problem. The government's own vocabulary is.</aside>
+</section>
+
+<section>
+  <h2 class="center">Pick the wrong unit, get the wrong story</h2>
+  <p class="center muted" style="margin-top:-0.1em;">Every file lets you collapse it to a household, a person, or an item &mdash; and each choice gives a different, equally &ldquo;correct&rdquo; number.</p>
+  <table class="metrics big" style="margin-top:0.5em;">
+    <tbody>
+      <tr><td>Kirana stores &mdash; collapsed to <strong>household</strong></td><td><strong>7%</strong> of households shop online</td></tr>
+      <tr><td>Welfare &amp; vice &mdash; collapsed to <strong>per adult</strong></td><td>&#8377;2/month more, <strong>per adult</strong> &mdash; not per household</td></tr>
+      <tr><td>90-hour week &mdash; collapsed to <strong>person</strong></td><td>56 vs 48.6 hours, <strong>per person</strong> per week</td></tr>
+    </tbody>
+  </table>
+  <p class="center" style="margin-top:0.6em; font-size:1em;">Average the intoxicant spend per household instead of per adult, and bigger, poorer households look like bigger spenders for no reason but their size.</p>
+  <aside class="notes">The layout tells you what unit each file is at. It never tells you what unit your <em>question</em> is at, and that's a judgment call every single time. The welfare essay compares spend per adult, deliberately, because household size correlates with income and would confound an insured-vs-uninsured comparison if I'd used household totals. Pick the wrong level to collapse at and you get a number that's arithmetically correct and substantively wrong.</aside>
+</section>
+
+<section>
+  <h2 class="center">The weight nobody warns you about</h2>
+  <p style="max-width:88%; margin:0.6em auto; font-size:1.02em;">
+    These are large, multi-stage, stratified samples &mdash; not a simple random draw.
+    Every row carries a survey weight, usually a column literally called
+    <code style="font-family:var(--font-mono); background:var(--paper); padding:0.05em 0.4em; border-radius:3px;">multiplier</code>,
+    recording how many real households or people that one response stands in for, nationally.
+  </p>
+  <p class="gut-check"><span class="tag">The mistake</span> Skip the multiplier, and thirty survey rows can outweigh thirty million real households.</p>
+  <p class="posterior-line" style="margin-top:0.7em; font-size:1.15em;">Every number in this talk &mdash; 7% online shoppers, &#8377;2 a month, 56 hours a week &mdash; is a <strong>multiplier-weighted</strong> estimate, never a raw average.</p>
+  <aside class="notes">This is the single most common way a well-meaning FOSS person gets NSS data wrong: they load the file, call .mean() on a column, and get a number that looks plausible and is nowhere near the truth. Every sampled household in HCES literally carries a weight describing its importance in the overall survey, and every figure the government itself publishes is a weighted metric. If you don't multiply by that weight, you haven't computed a national estimate — you've computed the average of whoever happened to get sampled near you.</aside>
+</section>
+
+<section>
+  <h2 class="center">Getting comfortable, one habit at a time</h2>
+  <ul class="release" style="max-width:88%; font-size:0.92em;">
+    <li>Download the <strong>trio together</strong>: unit-level data, the &ldquo;layout&rdquo; (data dictionary), and the summary report &mdash; from MoSPI's own portal, never the data alone</li>
+    <li>Read the <strong>layout before the data</strong> &mdash; find the unit of each file and the columns that join them</li>
+    <li>Apply the <strong>multiplier</strong> before you compute anything &mdash; a raw mean is not a national estimate</li>
+    <li>Sanity-check your topline number against the survey's <strong>own published report</strong> before trusting any deeper cut</li>
+    <li>Build <strong>one reusable decode-and-stitch script</strong> per survey, and publish it with the cleaned data &mdash; so future-you never redoes that translation from scratch</li>
+  </ul>
+  <p class="center" style="margin-top:0.7em; font-size:1.0em;">None of this is hard. It's just never taught &mdash; and once you've done it, &ldquo;according to NSS data&rdquo; stops being a hand-wave.</p>
+  <aside class="notes">None of this requires a statistics degree. It's five boring habits: get the data, the layout and the report together; read the layout first; always weight; check your number against the government's own summary before you go further; and write the decoding step once, as code, so it's done forever. Do this once per survey and every headline that cites "NSS data" becomes something you can actually go check yourself.</aside>
 </section>
 
 <section>
