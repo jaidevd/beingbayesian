@@ -115,6 +115,15 @@
                    color: var(--accent); background: var(--paper); border: 1px solid var(--hair);
                    border-radius: 999px; padding: 0.3em 0.9em; margin: 0 0.2em; }
 
+    /* real code, shown as real code — a deliberate contrast against the warm paper */
+    .code-block { max-width: 84%; margin: 0.6em auto 0; border-radius: 6px; overflow: hidden;
+                  box-shadow: 0 3px 18px rgba(42,26,22,0.16); }
+    .code-block pre { margin: 0; width: 100%; box-shadow: none; }
+    .code-block pre code { font-family: var(--font-mono) !important; font-size: 0.56em !important;
+                            line-height: 1.55 !important; padding: 0.85em 1.05em !important; max-height: none !important; }
+    .code-label { text-align: center; font-family: var(--font-sans); font-size: 0.55em; color: var(--muted);
+                  text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.35em; }
+
     .qr-cta { display: flex; flex-direction: column; align-items: center; gap: 0.35em; margin-top: 0.9em; }
     .qr-cta .url { font-family: var(--font-mono); font-size: 1.2rem; font-weight: 700; color: var(--accent); }
     .qr-cta .sub { font-family: var(--font-sans); font-size: 0.85rem; color: var(--muted); }
@@ -324,16 +333,16 @@
 
 <section>
   <h2 class="center">Check the same households, not two trend lines</h2>
-  <img class="chart-hero" src="assets/06-health-insurance-intoxicants-panels.png" alt="Chart: per-capita intoxicant spend, insured vs not-insured, rural and urban">
-  <table class="metrics big" style="margin-top:0.2em;">
+  <img class="chart-hero" style="max-height:390px !important;" src="assets/06-health-insurance-intoxicants-panels.png" alt="Chart: per-capita intoxicant spend, insured vs not-insured, rural and urban">
+  <table class="metrics big" style="margin-top:0.15em;">
     <tbody>
       <tr><td>Urban PMJAY/scheme beneficiaries vs. non-beneficiaries</td><td>spend <strong>&#8377;2/month more</strong> on gutkha</td></tr>
       <tr><td>Rural beneficiaries vs. non-beneficiaries</td><td>spend <strong>&#8377;4/month less</strong></td></tr>
       <tr class="hl"><td>Entire spread across every group in the chart</td><td>&plusmn;<strong>&#8377;15</strong></td></tr>
     </tbody>
   </table>
-  <p class="src-note">HCES, insured vs. uninsured households, direct comparison</p>
-  <aside class="notes">Instead of two national trend lines, I compared insured and uninsured households directly, split rural and urban. Urban beneficiaries spend about two rupees a month more on gutkha than urban non-beneficiaries. Rural beneficiaries actually spend four rupees less than rural non-beneficiaries. The entire chart, top to bottom, spans about fifteen rupees.</aside>
+  <p class="src-note" style="margin-top:0.35em;">HCES, propensity-score matched on household size, caste, religion &amp; region &mdash; not a raw comparison</p>
+  <aside class="notes">Instead of two national trend lines, I compared insured and uninsured households directly, split rural and urban. But not a naive comparison: households are first matched by propensity score on things like size, caste, religion and region, trimmed to common support, then compared within matched strata &mdash; the same rigor you'd want turned on any of the loud claims we started with. Urban beneficiaries spend about two rupees a month more on gutkha than urban non-beneficiaries. Rural beneficiaries actually spend four rupees less than rural non-beneficiaries. The entire chart, top to bottom, spans about fifteen rupees.</aside>
 </section>
 
 <section>
@@ -395,11 +404,12 @@
   <p class="center muted" style="margin-top:0.4em;">Joined by a household &amp; person ID &mdash; and every code in every file means nothing without a separate codebook.</p>
   <table class="metrics big" style="margin-top:0.5em;">
     <tbody>
-      <tr class="hl"><td>NIC industry code <strong>62</strong>, in the TUS person file</td><td>&ldquo;Computer programming, consultancy and related activities&rdquo;</td></tr>
+      <tr><td>NIC industry code <strong>62</strong>, in the TUS person file</td><td>&ldquo;Computer programming, consultancy and related activities&rdquo;</td></tr>
+      <tr class="hl"><td>HCES cereals item code <strong>129</strong>, in the item file</td><td>a hidden subtotal, not a real item &mdash; skip it and every food total silently doubles</td></tr>
     </tbody>
   </table>
-  <p class="center" style="margin-top:0.4em; font-size:0.95em;">The friction isn't the file format &mdash; it's usually a plain CSV. It's <strong>translation</strong>.</p>
-  <aside class="notes">Every one of these surveys ships as several linked files, not one tidy spreadsheet: a household file, a person file, sometimes an item or activity file, joined by ID columns. And every interesting column is a number that means nothing on its own. To find "salaried white-collar workers" for the 90-hour-week essay, I needed the National Industrial Classification codebook just to know that industry code 62 means computer programming. The format is never the problem. The government's own vocabulary is.</aside>
+  <p class="center" style="margin-top:0.4em; font-size:0.95em;">The friction isn't the file format &mdash; it's usually a plain CSV. It's <strong>translation</strong>, and the codebook doesn't warn you about its own landmines.</p>
+  <aside class="notes">Every one of these surveys ships as several linked files, not one tidy spreadsheet: a household file, a person file, sometimes an item or activity file, joined by ID columns. And every interesting column is a number that means nothing on its own. To find "salaried white-collar workers" for the 90-hour-week essay, I needed the National Industrial Classification codebook just to know that industry code 62 means computer programming. That's translation. But some codes are worse than untranslated — HCES sneaks a subtotal into the middle of every item list, coded like any other item. Forget to drop code 129 before summing the cereals columns and you've silently double-counted every household's grain spend. The format is never the problem. The government's own vocabulary is, and sometimes it's actively booby-trapped.</aside>
 </section>
 
 <section>
@@ -413,20 +423,31 @@
     </tbody>
   </table>
   <p class="center" style="margin-top:0.6em; font-size:1em;">Average the intoxicant spend per household instead of per adult, and bigger, poorer households look like bigger spenders for no reason but their size.</p>
-  <aside class="notes">The layout tells you what unit each file is at. It never tells you what unit your <em>question</em> is at, and that's a judgment call every single time. The welfare essay compares spend per adult, deliberately, because household size correlates with income and would confound an insured-vs-uninsured comparison if I'd used household totals. Pick the wrong level to collapse at and you get a number that's arithmetically correct and substantively wrong.</aside>
+  <p class="gut-check" style="margin-top:0.9em;"><span class="tag">Second trap</span> The same file doesn't even agree with itself on a calendar.</p>
+  <p class="posterior-note" style="margin-top:0.4em;">Some HCES sections report a week of spending, others a month, in the same file. Add them as-is and you're adding incompatible units &mdash; every weekly-recall item gets rescaled &times;52/12 before it can sit next to a monthly one.</p>
+  <aside class="notes">The layout tells you what unit each file is at. It never tells you what unit your <em>question</em> is at, and that's a judgment call every single time. The welfare essay compares spend per adult, deliberately, because household size correlates with income and would confound an insured-vs-uninsured comparison if I'd used household totals. Pick the wrong level to collapse at and you get a number that's arithmetically correct and substantively wrong. And there's a second, sneakier version of the same problem: HCES asks about some items over the last week and others over the last month, in the same questionnaire. Milk and vegetables are weekly recall; most of the rest is monthly. Add a weekly figure to a monthly one without rescaling and you've silently mixed two different units of time.</aside>
 </section>
 
 <section>
   <h2 class="center">The weight nobody warns you about</h2>
-  <p style="max-width:88%; margin:0.6em auto; font-size:1.02em;">
+  <p style="max-width:88%; margin:0.5em auto; font-size:1.02em;">
     These are large, multi-stage, stratified samples &mdash; not a simple random draw.
-    Every row carries a survey weight, usually a column literally called
-    <code style="font-family:var(--font-mono); background:var(--paper); padding:0.05em 0.4em; border-radius:3px;">multiplier</code>,
+    Every row carries a survey weight, usually called
+    <code style="font-family:var(--font-mono); background:var(--paper); padding:0.05em 0.4em; border-radius:3px;">multiplier</code>
+    (sometimes shortened to <code style="font-family:var(--font-mono); background:var(--paper); padding:0.05em 0.4em; border-radius:3px;">mult</code>),
     recording how many real households or people that one response stands in for, nationally.
   </p>
-  <p class="gut-check"><span class="tag">The mistake</span> Skip the multiplier, and thirty survey rows can outweigh thirty million real households.</p>
-  <p class="posterior-line" style="margin-top:0.7em; font-size:1.15em;">Every number in this talk &mdash; 7% online shoppers, &#8377;2 a month, 56 hours a week &mdash; is a <strong>multiplier-weighted</strong> estimate, never a raw average.</p>
-  <aside class="notes">This is the single most common way a well-meaning FOSS person gets NSS data wrong: they load the file, call .mean() on a column, and get a number that looks plausible and is nowhere near the truth. Every sampled household in HCES literally carries a weight describing its importance in the overall survey, and every figure the government itself publishes is a weighted metric. If you don't multiply by that weight, you haven't computed a national estimate — you've computed the average of whoever happened to get sampled near you.</aside>
+  <div class="code-block">
+    <p class="code-label">the same weighted-mean idiom, hand-rolled or reused, in every essay in this talk</p>
+    <pre><code class="language-python" data-trim>def compare(df, group_cols, agg_cols, mult_col="multiplier"):
+    return df.groupby(group_cols).apply(
+        lambda x: (x[agg_cols] * x[mult_col].values.reshape(-1, 1)).sum(axis=0)
+        / x[mult_col].sum()
+    )</code></pre>
+  </div>
+  <p class="gut-check" style="margin-top:0.5em;"><span class="tag">The mistake</span> Skip the multiplier, and thirty survey rows can outweigh thirty million real households.</p>
+  <p class="posterior-line" style="margin-top:0.5em; font-size:1.05em;">Every number in this talk is a <strong>multiplier-weighted</strong> estimate, never a raw average.</p>
+  <aside class="notes">This is the single most common way a well-meaning FOSS person gets NSS data wrong: they load the file, call .mean() on a column, and get a number that looks plausible and is nowhere near the truth. Every sampled household in HCES literally carries a weight describing its importance in the overall survey, and every figure the government itself publishes is a weighted metric. This exact function lives in hces.py and gets imported by five different welfare notebooks; the workweek essay hand-rolls the identical line inline, just with a column called "mult" instead of "multiplier" — same idiom, sum of value times weight, over sum of weight. If you don't multiply by that weight, you haven't computed a national estimate — you've computed the average of whoever happened to get sampled near you.</aside>
 </section>
 
 <section>
@@ -436,7 +457,7 @@
     <li>Read the <strong>layout before the data</strong> &mdash; find the unit of each file and the columns that join them</li>
     <li>Apply the <strong>multiplier</strong> before you compute anything &mdash; a raw mean is not a national estimate</li>
     <li>Sanity-check your topline number against the survey's <strong>own published report</strong> before trusting any deeper cut</li>
-    <li>Build <strong>one reusable decode-and-stitch script</strong> per survey, and publish it with the cleaned data &mdash; so future-you never redoes that translation from scratch</li>
+    <li>Build <strong>one reusable decode-and-stitch script</strong> per survey, and publish it with the cleaned data &mdash; so future-you never redoes that translation from scratch <span class="muted">(one <code style="font-family:var(--font-mono);">hces.py</code>, imported by five different welfare notebooks in this repo)</span></li>
   </ul>
   <p class="center" style="margin-top:0.7em; font-size:1.0em;">None of this is hard. It's just never taught &mdash; and once you've done it, &ldquo;according to NSS data&rdquo; stops being a hand-wave.</p>
   <aside class="notes">None of this requires a statistics degree. It's five boring habits: get the data, the layout and the report together; read the layout first; always weight; check your number against the government's own summary before you go further; and write the decoding step once, as code, so it's done forever. Do this once per survey and every headline that cites "NSS data" becomes something you can actually go check yourself.</aside>
