@@ -124,6 +124,19 @@
     .code-label { text-align: center; font-family: var(--font-sans); font-size: 0.55em; color: var(--muted);
                   text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 0.35em; }
 
+    /* the honest git-log timeline */
+    .timeline { max-width: 92%; margin: 0.7em auto 0; border-left: 2px solid var(--hair); padding-left: 1.2em; }
+    .timeline .tl-row { position: relative; margin: 0.5em 0; }
+    .timeline .tl-row::before { content: ""; position: absolute; left: -1.63em; top: 0.3em;
+                                 width: 9px; height: 9px; border-radius: 50%; background: var(--accent); }
+    .timeline .tl-date { font-family: var(--font-mono); font-size: 0.55em; color: var(--muted);
+                          display: inline-block; width: 4.2em; vertical-align: top; }
+    .timeline .tl-msg { font-family: var(--font-display); font-size: 0.86em; display: inline-block; width: calc(100% - 4.4em); }
+    .timeline .tl-msg .sub { display: block; font-size: 0.78em; color: var(--muted); font-style: italic; margin-top: 0.1em; }
+    .timeline .tl-row.crisis::before { background: var(--accent-2); }
+    .timeline .tl-row.crisis .tl-msg { color: var(--accent-2); font-weight: 600; }
+    .timeline .tl-row.crisis .tl-msg .sub { color: var(--accent-2); opacity: 0.75; font-weight: 400; }
+
     .qr-cta { display: flex; flex-direction: column; align-items: center; gap: 0.35em; margin-top: 0.9em; }
     .qr-cta .url { font-family: var(--font-mono); font-size: 1.2rem; font-weight: 700; color: var(--accent); }
     .qr-cta .sub { font-family: var(--font-sans); font-size: 0.85rem; color: var(--muted); }
@@ -356,6 +369,46 @@
   <img class="chart-hero" src="assets/06-lpg-subsidy-education.png" alt="Chart: education spending per student, LPG subsidy beneficiary vs non-beneficiary households">
   <p class="posterior-line" style="margin-top:0.5em; font-size:1.1em;">LPG-subsidy households spend nearly <strong>&#8377;60 more</strong> on education per student &mdash; and two-thirds of that goes straight into private coaching.</p>
   <aside class="notes">While the headline claim about vice spending falls apart, a genuine welfare effect was sitting one tab over, on a subsidy nobody was even arguing about. An LPG subsidy meant for cooking gas quietly turns into a child's tuition fee. That's the kind of finding no headline thinks to go looking for.</aside>
+</section>
+
+<!-- ===================== ACT 4B — THE GIT LOG DOESN'T CLEAN UP ===================== -->
+
+<section>
+  <h2 class="center">Every posterior in this talk reads clean.</h2>
+  <p class="center" style="margin-top:-0.15em; font-size:1.1em; font-family:var(--font-display); font-style:italic;">The git history doesn't. This is the actual timeline behind the two findings you just saw.</p>
+  <div class="timeline">
+    <div class="tl-row"><span class="tl-date">Jan 15</span><span class="tl-msg">Work begins on welfare indicators</span></div>
+    <div class="tl-row crisis"><span class="tl-date">Jan 29</span><span class="tl-msg">&ldquo;The total failure of health analysis&rdquo;<span class="sub">&ldquo;Absolutely nothing useful so far.&rdquo;</span></span></div>
+    <div class="tl-row crisis"><span class="tl-date">Jan 30</span><span class="tl-msg">&ldquo;Isolate cohorts that show a good effect&rdquo;<span class="sub">collect only the cohorts where the welfare effect appears, and characterize those</span></span></div>
+    <div class="tl-row crisis"><span class="tl-date">Feb 5</span><span class="tl-msg">&ldquo;Giving up&rdquo;<span class="sub">~13,000 lines deleted across 12 notebooks, in one commit</span></span></div>
+    <div class="tl-row"><span class="tl-date">Feb 9</span><span class="tl-msg">&ldquo;Results: compare means of cohorts&rdquo;<span class="sub">the simple version &mdash; also statistically significant</span></span></div>
+    <div class="tl-row"><span class="tl-date">Feb 23</span><span class="tl-msg">&ldquo;Propensity score matching&rdquo;<span class="sub">rigor, added back in properly</span></span></div>
+    <div class="tl-row"><span class="tl-date">Mar 8</span><span class="tl-msg">The essay is published</span></div>
+  </div>
+  <aside class="notes">I want to be honest about what this actually looked like, because it's not what the last two slides made it look like. This is the real commit history of the welfare essay, dates and all. Two weeks in, a commit literally titled "the total failure of health analysis." The next day, an attempt to rescue it by isolating the cohorts where the effect happened to show up — which, if you know what that is, is cherry-picking with extra steps. And then, a week later, a commit called "Giving up" that deletes thirteen thousand lines across twelve notebooks in one shot.</aside>
+</section>
+
+<section>
+  <h2 class="center">In the author's own words</h2>
+  <div class="code-block" style="max-width:92%;">
+    <p class="code-label">git log &mdash; 06-public-welfare</p>
+    <pre><code class="language-plaintext" data-trim>commit f936e61   2026-01-29
+The total failure of health analysis
+
+    Absolutely nothing useful so far.
+
+commit eec7240   2026-02-05
+Giving up
+
+    I'm making it all too confusing. The task is simple. When an
+    aid intervention happens, what changes and for whom? [...]
+    I'll take a break and come back. If it's too complex to code,
+    it will be too complex to understand and write about.
+    Keep it simple.</code></pre>
+  </div>
+  <p class="posterior-line" style="margin-top:0.6em; font-size:1.05em;">Four days later: the simple version. Two weeks after that: propensity-score matching, done properly. The &ldquo;rounding error&rdquo; two slides ago survived exactly this.</p>
+  <p class="posterior-note">Not every claim fights this hard &mdash; the kirana-stores essay, the first one, went from initial commit to finished charts in five clean days. This one took seven weeks, including a week where the author simply walked away.</p>
+  <aside class="notes">"If it's too complex to code, it will be too complex to understand and write about. Keep it simple." That line is doing a lot of work — it's the same idea as carrying an insight the last mile, except aimed inward, at your own analysis, before you even get to the writing. Four days after giving up, the simple version showed up and it held. Two and a half weeks later, propensity score matching went back in, properly this time. The two-rupee finding and the LPG-subsidy finding you saw a few slides ago both came out the other end of this. And for contrast: the kirana-stores essay, the very first one in this newsletter, went from first commit to finished charts in five days flat, no crisis at all. Some claims fight back. Some don't. You don't know which until you're in it.</aside>
 </section>
 
 <!-- ===================== ACT 5 — SYNTHESIS & METHOD ===================== -->
