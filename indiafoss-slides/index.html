@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Being Bayesian — Stress-Testing India's Loudest Stories</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/monokai.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ---- indiafoss talk layout (theme tokens + base type live in style.css) ---- */
+    .reveal section { text-align: left; }
+    .reveal h2.q { text-align: center; margin-bottom: 0.2em; }
+    .center { text-align: center; }
+
+    .epigraph {
+      font-family: var(--font-display); font-style: italic;
+      max-width: 82%; margin: 1.1em auto 0; color: var(--text);
+      line-height: 1.5; font-size: 1.05em;
+    }
+
+    /* chart panel lifted on the paper, as in every essay */
+    .reveal section:has(.chart-hero) { text-align: center; }
+    .chart-hero {
+      width: auto !important; height: auto !important;
+      max-width: 92%; max-height: 470px !important; object-fit: contain;
+      background: var(--paper); border: 1px solid var(--hair); border-radius: 5px;
+      box-shadow: 0 3px 18px rgba(42,26,22,0.12);
+      display: inline-block; margin: 0.2em auto;
+    }
+    .chart-hero.small { max-height: 340px !important; }
+    .src-note { text-align: center; font-family: var(--font-mono); font-size: 0.58em;
+                color: var(--muted); margin-top: 0.4em; }
+
+    /* the loud claim — a quote pulled from a headline, LinkedIn post, or op-ed */
+    .claim-card {
+      background: var(--paper); border-left: 4px solid var(--muted);
+      border-radius: 0 6px 6px 0; padding: 0.85em 1.15em;
+      font-family: var(--font-display); font-style: italic; font-size: 1.18em;
+      line-height: 1.45; margin: 0.7em auto; max-width: 88%; color: var(--text);
+    }
+    .claim-card .src {
+      display: block; margin-top: 0.5em; font-family: var(--font-sans); font-style: normal;
+      font-size: 0.5em; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted);
+    }
+
+    /* the gut-check — a sniff test, no data yet */
+    .gut-check {
+      text-align: center; font-family: var(--font-sans); font-size: 0.85em;
+      font-weight: 600; color: var(--accent-3); margin-top: 0.9em;
+    }
+    .gut-check .tag {
+      text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85em;
+      border-bottom: 1px dashed var(--accent-3); padding-bottom: 0.1em; margin-right: 0.4em;
+    }
+
+    /* the posterior — the belief that actually moved */
+    .posterior-line {
+      text-align: center; font-family: var(--font-display); font-size: 1.35em;
+      line-height: 1.5; max-width: 88%; margin: 0.6em auto; color: var(--text);
+    }
+    .posterior-line strong { color: var(--accent); font-weight: 600; }
+    .posterior-note {
+      text-align: center; font-size: 0.82em; color: var(--muted);
+      max-width: 82%; margin: 0.6em auto 0;
+    }
+
+    .bignum { font-family: var(--font-display); font-size: 1.7em; font-weight: 600; color: var(--accent); line-height: 1.1; }
+    .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1em; }
+    .cols4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 0.8em; }
+    .statgrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1em; text-align: center; margin: 0.8em 0; }
+    .statgrid .muted { font-size: 0.62em; }
+
+    /* five-step method flow */
+    .flow5 { display: flex; align-items: stretch; justify-content: center; gap: 0.5em; margin: 0.9em 0 0.4em; flex-wrap: nowrap; }
+    .flow5 .flow-box { flex: 1; background: var(--paper); border: 1.5px solid var(--text); border-radius: 6px;
+                padding: 0.55em 0.4em; text-align: center; min-width: 0; }
+    .flow5 .flow-box .t { font-family: var(--font-display); font-weight: 600; font-size: 0.92em; display: block; }
+    .flow5 .flow-box .m { font-size: 0.56em; color: var(--muted); display: block; margin-top: 0.25em; line-height: 1.3; }
+    .flow5 .flow-box.trig { border-color: var(--accent-3); }
+    .flow5 .flow-box.skep { border-style: dashed; border-color: var(--muted); }
+    .flow5 .flow-box.inv { border-color: var(--accent-2); }
+    .flow5 .flow-box.post { border-color: var(--accent); border-width: 2px; }
+    .flow5-arrow { display: flex; align-items: center; color: var(--accent-3); font-size: 1.3em; }
+
+    /* generic three-stage pipeline (used for the data-friction slide) */
+    .flow { display: flex; align-items: stretch; justify-content: center; gap: 0.6em; margin: 0.9em 0; flex-wrap: nowrap; }
+    .flow-box { flex: 1; background: var(--paper); border: 1.5px solid var(--text); border-radius: 6px;
+                padding: 0.7em 0.9em; text-align: center; min-width: 0; }
+    .flow-box .t { font-family: var(--font-display); font-weight: 600; font-size: 1em; display: block; }
+    .flow-box .m { font-size: 0.62em; color: var(--muted); display: block; margin-top: 0.3em; line-height: 1.35; }
+    .flow-box.mid { border-color: var(--accent-2); }
+    .flow-box.out { border-color: var(--accent); border-width: 2px; }
+    .flow-arrow { display: flex; align-items: center; color: var(--accent-3); font-size: 1.5em; }
+
+    /* case-study header rows */
+    .case-title { display: flex; align-items: baseline; gap: 0.6em; }
+
+    /* synthesis table */
+    table.synth { border-collapse: collapse; width: 100%; margin: 0.6em auto; font-size: 0.62em; }
+    table.synth th, table.synth td { padding: 0.5em 0.7em; border-bottom: 1px solid var(--hair); text-align: left; vertical-align: top; }
+    table.synth th { font-family: var(--font-sans); text-transform: uppercase; letter-spacing: 0.05em;
+                     font-size: 0.9em; color: var(--accent); border-bottom: 2px solid var(--accent); }
+    table.synth td.claim { font-weight: 600; }
+    table.synth td.loud { color: var(--muted); font-style: italic; }
+    table.synth td.honest { font-family: var(--font-display); font-style: italic; color: var(--text); }
+    table.synth td.honest strong { color: var(--accent); font-style: normal; }
+
+    .qr-cta { display: flex; flex-direction: column; align-items: center; gap: 0.35em; margin-top: 0.9em; }
+    .qr-cta .url { font-family: var(--font-mono); font-size: 1.2rem; font-weight: 700; color: var(--accent); }
+    .qr-cta .sub { font-family: var(--font-sans); font-size: 0.85rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ===================== TITLE ===================== -->
+<section data-state="title">
+  <img src="assets/sisyphus.svg" alt="Line drawing of Sisyphus pushing a boulder uphill"
+       style="position:absolute; right:1.25rem; top:0; transform:translateY(calc(-100% - 0.5rem)); height:175px; opacity:0.9; margin:0; pointer-events:none;">
+  <h1>Being Bayesian<span class="caret"></span></h1>
+  <h3>Stress-Testing India's Loudest Stories with Open Data and FOSS</h3>
+  <p class="epigraph">
+    Every day, social media, the news and even the government sell you loud
+    stories. This talk is about the unglamorous discipline of checking them
+    anyway &mdash; with public microdata, a Jupyter notebook, and the FOSS stack.
+  </p>
+  <p style="margin-top:1.3em; font-family:var(--font-sans); font-size:1.2em; font-weight:600; color:var(--text);">Jaidev Deshpande &nbsp;&middot;&nbsp; <a href="https://beingbayesian.in" style="color:var(--accent);">beingbayesian.in</a></p>
+  <p style="margin-top:0.7em; font-family:var(--font-sans); font-size:1.25em; font-weight:700; color:var(--accent-3);">IndiaFOSS 2026</p>
+  <aside class="notes">Hi, I'm Jaidev. For the last two years I've written a newsletter called Being Bayesian, where I take apart popular, confidently-stated claims about the Indian economy and society using the country's own public microdata. Today I want to walk you through that process, four times, on four claims you've probably already heard this year.</aside>
+</section>
+
+<!-- ===================== ACT 1 — THE PROBLEM ===================== -->
+
+<section>
+  <h2 class="center">You've heard these already this year</h2>
+  <div style="max-width:78%; margin:0.6em auto 0;">
+    <p class="claim-card">&ldquo;Quick commerce is killing kirana stores.&rdquo;</p>
+    <p class="claim-card">&ldquo;Gig work is liberating India's poor and uneducated.&rdquo;</p>
+    <p class="claim-card">&ldquo;The only way to make it in this market is a 90-hour week.&rdquo;</p>
+    <p class="claim-card">&ldquo;Welfare is making people lazy &mdash; and wasteful.&rdquo;</p>
+  </div>
+  <p class="center" style="margin-top:0.7em; font-weight:600;">Confident. Specific. Loud. And almost never checked.</p>
+  <aside class="notes">Digital transformation experts say quick commerce is killing kirana stores. Startup bros say gig work is liberating India's poor and uneducated. Captains of industry say the only way to make it is a 90-hour week. Influencers-turned-economists say welfare is making people lazy. Every one of these is stated with total confidence, and almost nobody checks it against anything.</aside>
+</section>
+
+<section>
+  <p class="center" style="margin-bottom:0.2em;"><span class="stage-tag">The problem</span></p>
+  <blockquote class="quote center" style="margin:0.4em auto; max-width:82%;">
+    &ldquo;The amount of energy needed to refute bullshit is an order of magnitude
+    bigger than that needed to produce it.&rdquo;
+    <footer style="text-align:center;">&mdash; Alberto Brandolini, the Bullshit Asymmetry Principle</footer>
+  </blockquote>
+  <p class="center" style="margin-top:0.8em; font-size:1.1em;">Fighting misinformation isn't just hard. It's <strong>Sisyphean</strong>.</p>
+  <aside class="notes">The programmer Alberto Brandolini coined this: the energy needed to refute bullshit is an order of magnitude bigger than the energy needed to produce it. No one person wins against the flood of clickbait, virality and tiny attention spans. You're pushing a boulder up a hill that resets every day.</aside>
+</section>
+
+<section>
+  <h2 class="center">Being Sisyphus is the job &mdash; and FOSS is the leverage</h2>
+  <p style="max-width:86%; margin:0.6em auto; font-size:1.02em;">
+    As open-data and FOSS people, we're uniquely positioned to do this. India
+    quietly publishes some of the richest microdata in the world &mdash; the
+    National Sample Survey, PLFS, HCES, the Time Use Survey &mdash; and that's
+    only a fraction of what's out there.
+  </p>
+  <p class="center" style="margin-top:0.8em; font-size:1.15em; font-family:var(--font-display); font-style:italic;">
+    Armed with this data and a Jupyter notebook, we can dismantle even the loudest stories.
+  </p>
+  <aside class="notes">This talk isn't a statistics lecture. It's an argument that good-faith, reproducible, open-data analysis is civic infrastructure &mdash; and that exercising it is our civic duty. And it turns out the tools we already love &mdash; pandas, Jupyter, matplotlib, the whole FOSS stack &mdash; are exactly what this job needs.</aside>
+</section>
+
+<section>
+  <h2 class="center">A process, run the same way every time</h2>
+  <div class="flow5">
+    <div class="flow-box"><span class="t">Prior</span><span class="m">the belief everyone already shares</span></div>
+    <div class="flow5-arrow">&rarr;</div>
+    <div class="flow-box trig"><span class="t">Trigger</span><span class="m">the specific claim you're reacting to</span></div>
+    <div class="flow5-arrow">&rarr;</div>
+    <div class="flow-box skep"><span class="t">Skepticism</span><span class="m">a back-of-envelope sniff test &mdash; no data yet</span></div>
+    <div class="flow5-arrow">&rarr;</div>
+    <div class="flow-box inv"><span class="t">Investigation</span><span class="m">the microdata, decoded and stitched together</span></div>
+    <div class="flow5-arrow">&rarr;</div>
+    <div class="flow-box post"><span class="t">Posterior</span><span class="m">a belief that has honestly moved</span></div>
+  </div>
+  <p class="center muted" style="margin-top:0.9em;">Four claims. Let's run it four times.</p>
+  <aside class="notes">Here's the storytelling framework I reuse on every dubious claim. Surround the reader in the Prior everyone shares. Slip in the Trigger you're reacting to. Apply plain Skepticism &mdash; a sniff test, before you've opened a single dataset. Then the Investigation. And land on a Posterior that genuinely shifts your worldview, or admits it can't.</aside>
+</section>
+
+<!-- ===================== CASE 1 — KIRANA STORES ===================== -->
+
+<section>
+  <span class="stage-tag">Case 1 &middot; Retail</span>
+  <h2>Quick commerce is killing kirana stores</h2>
+  <p class="claim-card">&ldquo;About 2,00,000 kirana stores have shut down in the last year because of predatory e-commerce practices.&rdquo;
+    <span class="src">AICPDF (traders' federation), widely reshared as breaking, shocking data</span></p>
+  <p class="gut-check"><span class="tag">Gut check</span> 200,000 sounds huge. Huge compared to what?</p>
+  <aside class="notes">This one came from a trade federation and went everywhere on social media with SHOCKING DATA energy. Before opening a dataset: 200,000 is a big number in isolation. But India doesn't have a small number of kirana stores. Let's find out how big.</aside>
+</section>
+
+<section>
+  <h2 class="center">India has about 13 million kirana stores</h2>
+  <img class="chart-hero small" src="assets/01-online-grocery-shopping.png" alt="Chart: share of Indian households that shop for groceries online vs offline">
+  <table class="metrics big" style="margin-top:0.4em;">
+    <tbody>
+      <tr><td>200,000 closures against ~13M kirana stores</td><td><strong>1.5%</strong> national closure rate</td></tr>
+      <tr><td>&hellip; even limited to metro India alone</td><td><strong>5%</strong></td></tr>
+      <tr class="hl"><td>Households that shop online for groceries at all</td><td><strong>7%</strong> &mdash; 93% stay offline</td></tr>
+      <tr><td>&hellip; even inside urban India specifically</td><td><strong>83%</strong> still don't shop online</td></tr>
+      <tr><td>Historical base rate: Amazon/Flipkart-era, COVID lockdown surge</td><td>displaced only <strong>1&ndash;2%</strong>, then <strong>~0.5%</strong></td></tr>
+    </tbody>
+  </table>
+  <p class="src-note">HCES 2023&ndash;24</p>
+  <aside class="notes">India has roughly thirteen million kirana stores. Two hundred thousand closures against that base is a 1.5% closure rate nationally, 5% if you only count metros. And only 7% of Indian households shop online for groceries at all &mdash; 93% never do. Even in urban India specifically, 83% of households don't shop online. This isn't new either: Amazon and Flipkart's big retail push only ever displaced 1 to 2% of local stores, and even the COVID lockdown e-commerce surge only got to about half a percent.</aside>
+</section>
+
+<section>
+  <h2 class="center">The real rival isn't Blinkit</h2>
+  <p class="posterior-line">E-commerce can reach <strong>at most 7%</strong> of Indian households &mdash; kirana's real rival is infrastructure, education and income inequality, not quick commerce.</p>
+  <p class="posterior-note">Who actually shops online is basically a map of urban privilege: having piped cooking gas at home makes a household 4&times; more likely to be an online grocery shopper; going from a graduate to a postgraduate degree doubles the odds. The closures may be real &mdash; the cause on offer wildly overstates its reach.</p>
+  <aside class="notes">So the posterior here isn't "the closures didn't happen" &mdash; kirana stores do close, for lots of reasons. It's that the specific mechanism being blamed can, structurally, only ever touch 7% of households. And that 7% isn't randomly distributed &mdash; it's piped gas, postgraduate degrees, urban Tier-1 addresses. The story blames a phone app for what's actually an infrastructure and inequality problem.</aside>
+</section>
+
+<!-- ===================== CASE 2 — GIG ECONOMY ===================== -->
+
+<section>
+  <span class="stage-tag">Case 2 &middot; Labour</span>
+  <h2>Gig work liberates India's poor and uneducated</h2>
+  <p class="claim-card">&ldquo;Workers who once faced barriers like lack of education or technical skills now earn &#8377;15,000 to &#8377;45,000 or even more.&rdquo;
+    <span class="src">the platform-economy narrative, echoing NITI Aayog's own optimistic framing</span></p>
+  <p class="gut-check"><span class="tag">Gut check</span> Where do we even find &ldquo;gig workers&rdquo; in a labour survey?</p>
+  <aside class="notes">This is the LinkedIn-influencer-as-amateur-economist claim: platforms have liberated people once locked out by lack of education, and here are the numbers to prove it. Before we even reach for PLFS: does the phrase "gig worker" mean anything to India's official labour classification?</aside>
+</section>
+
+<section>
+  <h2 class="center">PLFS has exactly four kinds of worker</h2>
+  <img class="chart-hero small" src="assets/02-plfs-glance.png" alt="Chart: the Indian labour force at a glance, split into employment categories">
+  <table class="metrics big" style="margin-top:0.2em;">
+    <tbody>
+      <tr><td>PLFS categories</td><td>self-employed &middot; regular wage/salaried &middot; casual labour &middot; not in workforce</td></tr>
+      <tr class="hl"><td>A &ldquo;gig worker&rdquo; box</td><td><strong>does not exist</strong> &mdash; they scatter across all four</td></tr>
+      <tr><td>Apply NITI Aayog's own 2022 proxy filter (urban, age 18&ndash;45, bottom 75th pctile of spend)</td><td>the &#8377;15,000 floor <strong>holds up</strong> &mdash; the &#8377;45,000 ceiling <strong>doesn't</strong></td></tr>
+      <tr><td>Among men in that filtered population</td><td><strong>no meaningful income gain</strong> from more education</td></tr>
+    </tbody>
+  </table>
+  <aside class="notes">PLFS sorts every worker into one of four buckets, and none of them is "gig worker." So I did the next best thing: took NITI Aayog's own 2022 proxy definition &mdash; urban, 18 to 45, bottom three-quarters of per-capita spend &mdash; and applied it to the actual PLFS microdata. The 15,000-rupee floor of the claim holds up fine. The 45,000 ceiling doesn't. And within that filtered population, men see no real income bump from more education &mdash; which quietly undercuts the "liberation" framing on its own terms.</aside>
+</section>
+
+<section>
+  <h2 class="center">You can't check a claim about a category that doesn't exist</h2>
+  <p class="posterior-line">You can't even <strong>count</strong> India's gig workers &mdash; the surveys have no box to put them in, so the &ldquo;liberation&rdquo; story can never be checked against the workers it claims to describe.</p>
+  <p class="posterior-note">Sometimes the most honest &mdash; and most powerful &mdash; finding is that the data simply cannot answer the question. That itself should give anyone celebrating this liberation some pause.</p>
+  <aside class="notes">This is the case where knowing when to stop matters as much as the investigation itself. I can't hand you a clean number for the gig economy's true reach or true pay, because the government's own instrument has no way to see it. That absence is the finding.</aside>
+</section>
+
+<!-- ===================== CASE 3 — 90-HOUR WORKWEEK ===================== -->
+
+<section>
+  <span class="stage-tag">Case 3 &middot; Work &amp; Care</span>
+  <h2>Just work 90 hours a week</h2>
+  <p class="claim-card">N R Narayana Murthy &mdash; 70 hrs/week &middot; S N Subrahmanyan &mdash; 90 hrs/week &middot; Bhavish Aggarwal &mdash; 140 hrs/week.
+    <span class="src">&ldquo;work&ndash;life balance is a western concept&rdquo;</span></p>
+  <p class="gut-check"><span class="tag">Gut check</span> What would 90 hours a week actually cost &mdash; in sleep, in family time?</p>
+  <aside class="notes">Three captains of industry, three escalating numbers, and the explicit dismissal of work-life balance as a foreign import. So: if a salaried, white-collar Indian actually worked 90 hours a week, what would have to give?</aside>
+</section>
+
+<section>
+  <h2 class="center">The hours are already unequal</h2>
+  <img class="chart-hero small" src="assets/03-kitchen.png" alt="Chart: weekly hours of unpaid kitchen work, women vs men">
+  <table class="metrics big" style="margin-top:0.2em;">
+    <tbody>
+      <tr><td>Salaried, white-collar paid work</td><td>men <strong>~56</strong> hrs/wk &middot; women <strong>~48.6</strong> hrs/wk</td></tr>
+      <tr class="hl"><td>Unpaid domestic chores</td><td>women do <strong>4&times;</strong> as much as men</td></tr>
+      <tr><td>Even in this salaried cohort, men's kitchen time</td><td>barely <strong>1 hour a week</strong> &mdash; near-absent from serving/cleanup</td></tr>
+      <tr><td>Kitchen time by education &amp; marriage (women)</td><td>graduates ~12.5 hrs/wk, nearly doubling below graduate level; marriage alone adds ~10 hrs/wk</td></tr>
+    </tbody>
+  </table>
+  <p class="src-note">2024 Time Use Survey (ICATUS)</p>
+  <aside class="notes">Start with the baseline: salaried men already work about 56 hours a week, women about 48.6 &mdash; only an hour a day less, despite the perception gap. But women do four times the unpaid domestic work men do. And even in this cohort of salaried, supposedly-emancipated households, men spend barely an hour a week cooking, and are almost entirely absent from serving food or cleaning up after.</aside>
+</section>
+
+<section>
+  <h2 class="center">What would 90 hours actually cost?</h2>
+  <img class="chart-hero small" src="assets/03-remaining-time.png" alt="Chart: remaining weekly time budget after paid work and chores — sleep, TV, talking, self-care">
+  <table class="metrics big" style="margin-top:0.2em;">
+    <tbody>
+      <tr><td>Best case: both genders cap chores at 1 hr/day</td><td>women's ceiling rises to only <strong>~67 hrs/wk</strong></td></tr>
+      <tr><td>To reach 90, you'd have to cut</td><td>~1 hr sleep/night, all TV (10&ndash;12 hrs/wk), most talk &amp; text time (15 hrs/wk)</td></tr>
+      <tr class="hl"><td>Deficit still remaining after those cuts</td><td>women <strong>22 hrs</strong> &middot; men <strong>34 hrs</strong></td></tr>
+    </tbody>
+  </table>
+  <aside class="notes">Even in the most generous scenario &mdash; everyone caps chores at an hour a day &mdash; women's work-time ceiling only rises to 67 hours a week. Getting anyone to 90 means cutting an hour of sleep every single night, giving up television entirely, giving up most talking and texting with people you care about. And you're still 22 hours short for women, 34 for men.</aside>
+</section>
+
+<section>
+  <h2 class="center">Same ask, wildly different bill</h2>
+  <p class="posterior-line">A 90-hour week doesn't just cost sleep and Netflix. Because women already carry <strong>4&times;</strong> the unpaid work, the same &ldquo;ask&rdquo; costs men and women completely different things.</p>
+  <p class="posterior-note">Asking what a 90-hour week would cost a salaried Indian &mdash; in sleep, in family time, in the unpaid care work women already shoulder &mdash; settles the argument far better than any motivational LinkedIn post.</p>
+  <aside class="notes">This is the essay where the honest posterior isn't a single number &mdash; it's that "just work more" is not a gender-neutral instruction. The 90-hour week was proposed as a universal grind; the data says it's actually two very different asks wearing the same headline.</aside>
+</section>
+
+<!-- ===================== CASE 4 — PUBLIC WELFARE ===================== -->
+
+<section>
+  <span class="stage-tag">Case 4 &middot; Welfare</span>
+  <h2>Welfare makes people lazy &mdash; and wasteful</h2>
+  <p class="claim-card">Poorest 40% of households spend <strong>4%</strong> of their budget on paan/gutkha/tobacco vs. only <strong>2.5%</strong> on education &mdash; intoxicant spend up 33% in a decade &mdash; set beside rising Ayushman Bharat (PMJAY) enrolment.
+    <span class="src">Economic Advisory Council to the PM, op-ed using HCES data &mdash; the &ldquo;moral hazard&rdquo; framing</span></p>
+  <p class="gut-check"><span class="tag">Gut check</span> Are the households getting insurance the <em>same</em> ones spending more on gutkha?</p>
+  <aside class="notes">Two of the Prime Minister's own economic advisors wrote this: government spending on health insurance is up, spending on intoxicants is up, therefore moral hazard &mdash; people take more risks because they feel insured. The hole is immediate: two things rising together doesn't mean one causes the other. Are we even looking at the same households?</aside>
+</section>
+
+<section>
+  <h2 class="center">Check the same households, not two trend lines</h2>
+  <img class="chart-hero" src="assets/06-health-insurance-intoxicants-panels.png" alt="Chart: per-capita intoxicant spend, insured vs not-insured, rural and urban">
+  <table class="metrics big" style="margin-top:0.2em;">
+    <tbody>
+      <tr><td>Urban PMJAY/scheme beneficiaries vs. non-beneficiaries</td><td>spend <strong>&#8377;2/month more</strong> on gutkha</td></tr>
+      <tr><td>Rural beneficiaries vs. non-beneficiaries</td><td>spend <strong>&#8377;4/month less</strong></td></tr>
+      <tr class="hl"><td>Entire spread across every group in the chart</td><td>&plusmn;<strong>&#8377;15</strong></td></tr>
+    </tbody>
+  </table>
+  <p class="src-note">HCES, insured vs. uninsured households, direct comparison</p>
+  <aside class="notes">Instead of two national trend lines, I compared insured and uninsured households directly, split rural and urban. Urban beneficiaries spend about two rupees a month more on gutkha than urban non-beneficiaries. Rural beneficiaries actually spend four rupees less than rural non-beneficiaries. The entire chart, top to bottom, spans about fifteen rupees.</aside>
+</section>
+
+<section>
+  <h2 class="center">Not a scandal. A rounding error.</h2>
+  <p class="posterior-line">Free healthcare buys the average household <strong>two rupees</strong> more gutkha a month. Moral hazard, measured &mdash; and it isn't there.</p>
+  <aside class="notes">This is the dreaded link between public healthcare and "wasteful" vice spending, and it comes down to a difference of about two rupees a month. That's the posterior: the claim was directionally testable, we tested it, and it evaporates.</aside>
+</section>
+
+<section>
+  <h2 class="center">But welfare's real effects hide where headlines don't look</h2>
+  <img class="chart-hero" src="assets/06-lpg-subsidy-education.png" alt="Chart: education spending per student, LPG subsidy beneficiary vs non-beneficiary households">
+  <p class="posterior-line" style="margin-top:0.5em; font-size:1.1em;">LPG-subsidy households spend nearly <strong>&#8377;60 more</strong> on education per student &mdash; and two-thirds of that goes straight into private coaching.</p>
+  <aside class="notes">While the headline claim about vice spending falls apart, a genuine welfare effect was sitting one tab over, on a subsidy nobody was even arguing about. An LPG subsidy meant for cooking gas quietly turns into a child's tuition fee. That's the kind of finding no headline thinks to go looking for.</aside>
+</section>
+
+<!-- ===================== ACT 5 — SYNTHESIS & METHOD ===================== -->
+
+<section>
+  <h2 class="center">Same shape, four claims</h2>
+  <table class="synth">
+    <thead><tr><th>Claim</th><th>What we were told</th><th>What the data says</th></tr></thead>
+    <tbody>
+      <tr><td class="claim">Kirana stores</td><td class="loud">Quick commerce is killing them.</td><td class="honest">E-commerce reaches <strong>&le;7%</strong> of households &mdash; the real rival is infrastructure and inequality.</td></tr>
+      <tr><td class="claim">Gig economy</td><td class="loud">Platforms liberate the poor and uneducated.</td><td class="honest">There's <strong>no survey category</strong> for a gig worker &mdash; the claim can't even be checked.</td></tr>
+      <tr><td class="claim">90-hour week</td><td class="loud">Just work harder. Balance is a Western idea.</td><td class="honest">The same ask costs women <strong>4&times;</strong> more unpaid work to begin with.</td></tr>
+      <tr><td class="claim">Welfare &amp; vice</td><td class="loud">Free healthcare breeds moral hazard.</td><td class="honest">The gap is <strong>&#8377;2</strong> a month &mdash; the real effect was hiding in an LPG subsidy.</td></tr>
+    </tbody>
+  </table>
+  <p class="center muted" style="margin-top:0.6em;">Four different domains. The same pattern: a loud, confidently-stated prior, and a quieter, more complicated posterior underneath it.</p>
+  <aside class="notes">Step back and the pattern repeats: a confident, specific, viral claim, and underneath it, once you actually pull the microdata, something smaller, stranger, or simply unanswerable. None of these took more than a public dataset and a notebook.</aside>
+</section>
+
+<section>
+  <h2 class="center">The friction isn't the file format</h2>
+  <div class="flow">
+    <div class="flow-box"><span class="t">Raw microdata</span><span class="m">separate household, person &amp; item-level tables, full of cryptic numeric codes</span></div>
+    <div class="flow-arrow">&rarr;</div>
+    <div class="flow-box mid"><span class="t">Decode &amp; stitch</span><span class="m">government code books, joining across units, choosing the right level of analysis</span></div>
+    <div class="flow-arrow">&rarr;</div>
+    <div class="flow-box out"><span class="t">One honest number</span><span class="m">a single, nationally-representative, denormalized table</span></div>
+  </div>
+  <p class="center" style="margin-top:0.8em; font-size:1.02em;">Publish the <strong>cleaned data</strong> and the <strong>code</strong> that produced it &mdash; so the next person doesn't start from the raw dump.</p>
+  <aside class="notes">This is the unglamorous, reusable part of every essay. The data always arrives as disconnected tables of codes you have to decode and stitch together before any of it means a thing. Every essay in the newsletter ships with the cleaned, denormalized data and the code, precisely so nobody after me has to redo that stitching from scratch.</aside>
+</section>
+
+<section>
+  <h2 class="center">The knack, not just the tech</h2>
+  <div class="two-col" style="margin-top:0.6em;">
+    <div>
+      <h4 style="color:var(--accent);">Before you reach for data</h4>
+      <ul class="release" style="font-size:0.88em;">
+        <li>Extend the benefit of the doubt <strong>first</strong> &mdash; Hanlon's razor</li>
+        <li>Then hold your own analysis to the same merciless standard you're demanding of theirs</li>
+        <li>If you're not sure of something, don't say it</li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="color:var(--accent-3);">Knowing when to stop</h4>
+      <ul class="release" style="font-size:0.88em;">
+        <li>Sometimes the most honest finding is that the data <strong>cannot answer</strong> the question</li>
+        <li>The gig-worker case: absence of a category is itself the finding</li>
+        <li>A non-result is still a result &mdash; say so plainly</li>
+      </ul>
+    </div>
+  </div>
+  <aside class="notes">The tech gets you the number. The knack is a temperament: extend good faith before you open the notebook, then be just as merciless with your own numbers as you are with theirs. And sometimes &mdash; like with gig workers &mdash; the honest answer is that the question can't be answered with what we have.</aside>
+</section>
+
+<section>
+  <h2 class="center">Numbers alone don't move anyone</h2>
+  <p style="max-width:86%; margin:0.6em auto; font-size:1.02em;">
+    A p-value never changed anyone's mind. Carrying an insight the last mile &mdash;
+    from analysis to <em>impression</em> &mdash; means pairing cold, careful numbers
+    with a sincere, human story.
+  </p>
+  <div class="two-col" style="margin-top:0.5em;">
+    <div>
+      <h4 style="color:var(--accent);">Do</h4>
+      <ul class="release" style="font-size:0.85em;">
+        <li>Ground the number in a concrete, human cost &mdash; an hour of sleep, a rupee of gutkha, a tuition fee</li>
+        <li>Show your work: publish the data and the code</li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="color:var(--accent-2);">Don't</h4>
+      <ul class="release dont" style="font-size:0.85em;">
+        <li>Stop at the abstract percentage and assume it lands</li>
+        <li>Mistake a confident headline for a checked one</li>
+      </ul>
+    </div>
+  </div>
+  <aside class="notes">"Women do 4x the unpaid work" is a statistic. "Men spend barely an hour a week in the kitchen, and are absent from cleanup entirely" is an image people carry out of the room. That last mile &mdash; from the number to the impression &mdash; is where the real debunking happens.</aside>
+</section>
+
+<!-- ===================== CLOSING ===================== -->
+
+<section data-state="closing">
+  <img src="assets/sisyphus.svg" alt="Line drawing of Sisyphus pushing a boulder uphill"
+       style="height:150px; opacity:0.9; margin-bottom:0.4em;">
+  <h1>A debunking you can't reproduce is just another opinion.</h1>
+  <p class="lead center" style="margin:0.6em auto 0; max-width:80%;">Every essay ships with the cleaned data and the code that produced it &mdash; not as a footnote, but as the point.</p>
+  <div class="qr-cta">
+    <span class="url">beingbayesian.in</span>
+    <span class="sub">newsletter, essays, and the full reproducible code for every claim in this talk</span>
+  </div>
+  <aside class="notes">Being a Sisyphus is exhausting, but it's also the only honest response to a world this loud. Every essay I write comes with its data and its code attached, because a debunking you can't reproduce is just another opinion. Thank you.</aside>
+</section>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+  // Speaker notes are authored as Markdown inside each <aside class="notes">.
+  // Render them to HTML before Reveal reads them (reveal's own markdown plugin skips notes).
+  document.querySelectorAll('aside.notes').forEach(function (el) {
+    var raw = el.textContent.replace(/^\n/, '').replace(/\s+$/, '');
+    if (!raw) return;
+    var lines = raw.split('\n');
+    var widths = lines.filter(function (l) { return l.trim(); })
+                      .map(function (l) { return l.match(/^ */)[0].length; });
+    var pad = widths.length ? Math.min.apply(null, widths) : 0;
+    el.innerHTML = marked.parse(lines.map(function (l) { return l.slice(pad); }).join('\n'));
+  });
+  Reveal.initialize({
+    hash: true,
+    slideNumber: 'c/t',
+    transition: 'slide',
+    width: 1280,
+    height: 760,
+    margin: 0.06,
+    minScale: 0.2,
+    maxScale: 2.0,
+    plugins: [RevealNotes, RevealHighlight],
+  });
+</script>
+</body>
+</html>
