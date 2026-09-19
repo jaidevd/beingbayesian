@@ -249,6 +249,13 @@
 </section>
 
 <section>
+  <h2 class="center">The 7% isn't evenly distributed</h2>
+  <img class="chart-hero" src="assets/01-hces-range-chart.png" alt="Dumbbell chart: likelihood of shopping online online by sector, education, ration card, cooking fuel, PMGKY status and caste">
+  <p class="posterior-note" style="margin-top:0.3em;">A cut of the notebook that never made the published essay &mdash; the same six-way breakdown, unused because the district map told a tighter story.</p>
+  <aside class="notes">This chart never made it into the published piece &mdash; the district map won out because it was a cleaner, single image. But it's worth showing, because it answers the question the essay leaves open: who exactly is the 7%? Only 3% of Scheduled Tribe households shop online, against 27% of upper-caste ones &mdash; a nine-times gap, the starkest line in the whole dataset. Households without a ration card are eight times more likely to shop online than the poorest, PHH-card-holding ones. And households that had benefited from PMGKY &mdash; a COVID-era food security scheme &mdash; were four times less likely to shop online than non-beneficiaries. That last one is worth sitting with: this essay is from March last year. The idea that welfare-scheme status predicts consumption behaviour didn't become this newsletter's whole subject until the welfare essay, ten months later. The thread was already here, in a chart that got cut.</aside>
+</section>
+
+<section>
   <h2 class="center">The real rival isn't Blinkit</h2>
   <p class="posterior-line">E-commerce can reach <strong>at most 7%</strong> of Indian households &mdash; kirana's real rival is infrastructure, education and income inequality, not quick commerce.</p>
   <p class="posterior-note">Who actually shops online is basically a map of urban privilege: having piped cooking gas at home makes a household 4&times; more likely to be an online grocery shopper; going from a graduate to a postgraduate degree doubles the odds. The closures may be real &mdash; the cause on offer wildly overstates its reach.</p>
@@ -278,6 +285,13 @@
     </tbody>
   </table>
   <aside class="notes">PLFS sorts every worker into one of four buckets, and none of them is "gig worker." So I did the next best thing: took NITI Aayog's own 2022 proxy definition &mdash; urban, 18 to 45, bottom three-quarters of per-capita spend &mdash; and applied it to the actual PLFS microdata. The 15,000-rupee floor of the claim holds up fine. The 45,000 ceiling doesn't. And within that filtered population, men see no real income bump from more education &mdash; which quietly undercuts the "liberation" framing on its own terms.</aside>
+</section>
+
+<section>
+  <h2 class="center">Ask for one number, get half a story</h2>
+  <img class="chart-hero" src="assets/02-education-income-gender.png" alt="Line chart: average monthly income by education level, men and women, split by casual/salaried/self-employed">
+  <p class="posterior-note" style="margin-top:0.3em;">The published essay only ever reports the men's panel. The women's panel was computed &mdash; and never quoted.</p>
+  <aside class="notes">This is the chart's own caption, straight from the notebook: for men, higher education pays off only by a small margin. It helps women significantly &mdash; a salaried woman with no schooling earns about 6,600 rupees a month; a salaried graduate woman earns about 14,900, more than double. But she's still earning about 24% less than a salaried male graduate, who's at about 19,600. The essay's "no meaningful income gain from education" line is true for men. It's the opposite of true for women, and that half of the finding just never got written down.</aside>
 </section>
 
 <section>
@@ -371,6 +385,20 @@
   <aside class="notes">While the headline claim about vice spending falls apart, a genuine welfare effect was sitting one tab over, on a subsidy nobody was even arguing about. An LPG subsidy meant for cooking gas quietly turns into a child's tuition fee. That's the kind of finding no headline thinks to go looking for.</aside>
 </section>
 
+<section>
+  <h2 class="center">It's not one story. It's five, pulling different ways.</h2>
+  <img class="chart-hero small" src="assets/06-free-electricity-education.png" alt="Bar chart: difference in education budget between free-electricity beneficiaries and non-beneficiaries, coaching down, fees up">
+  <table class="metrics big" style="margin-top:0.3em;">
+    <tbody>
+      <tr class="hl"><td>LPG Subsidy &rarr; Education</td><td>+&#8377;59 total &mdash; <strong>+&#8377;41 to coaching</strong> (published)</td></tr>
+      <tr><td>Health Insurance &rarr; Education</td><td>&minus;&#8377;44 total, but <strong>+&#8377;54 to coaching</strong> &mdash; hidden by fees falling &minus;&#8377;74 (never published)</td></tr>
+      <tr><td>Free Electricity &rarr; Education</td><td>+&#8377;74 total, but <strong>&minus;&#8377;70 from coaching</strong>, +&#8377;99 to fees &mdash; the opposite direction entirely</td></tr>
+    </tbody>
+  </table>
+  <p class="posterior-note" style="margin-top:0.4em;">Run the same test on all five welfare schemes and you don't get one clean story &mdash; you get three different answers to &ldquo;where does the money go,&rdquo; and the essay only had room to tell one of them.</p>
+  <aside class="notes">The published essay makes the LPG finding sound like the general shape of how welfare works &mdash; a subsidy frees up cash, some of it drifts into coaching. But I ran the identical propensity-score-matched comparison on all five schemes this essay analysed, and it isn't one shape. Health insurance shows an even bigger coaching shift than LPG &mdash; fifty-four rupees, more than LPG's forty-one &mdash; except the overall education total is negative, because formal school fees dropped even more. And free electricity does the opposite of everything else: fees go up by ninety-nine rupees, coaching goes down by seventy. Three different subsidies, three different relationships with a family's coaching budget. The essay picked the cleanest one to tell. The other two are just as real, and they complicate the story instead of completing it. As a small bonus that didn't fit anywhere: midday-meal households spend 145 rupees more on ready-to-eat food at home, even after subtracting the value of the meals eaten at school &mdash; the single largest food-category effect in the entire five-scheme dataset, and nobody's written a sentence about it yet.</aside>
+</section>
+
 <!-- ===================== ACT 4B — THE GIT LOG DOESN'T CLEAN UP ===================== -->
 
 <section>
@@ -409,6 +437,17 @@ Giving up
   <p class="posterior-line" style="margin-top:0.6em; font-size:1.05em;">Four days later: the simple version. Two weeks after that: propensity-score matching, done properly. The &ldquo;rounding error&rdquo; two slides ago survived exactly this.</p>
   <p class="posterior-note">Not every claim fights this hard &mdash; the kirana-stores essay, the first one, went from initial commit to finished charts in five clean days. This one took seven weeks, including a week where the author simply walked away.</p>
   <aside class="notes">"If it's too complex to code, it will be too complex to understand and write about. Keep it simple." That line is doing a lot of work — it's the same idea as carrying an insight the last mile, except aimed inward, at your own analysis, before you even get to the writing. Four days after giving up, the simple version showed up and it held. Two and a half weeks later, propensity score matching went back in, properly this time. The two-rupee finding and the LPG-subsidy finding you saw a few slides ago both came out the other end of this. And for contrast: the kirana-stores essay, the very first one in this newsletter, went from first commit to finished charts in five days flat, no crisis at all. Some claims fight back. Some don't. You don't know which until you're in it.</aside>
+</section>
+
+<section>
+  <h2 class="center">Not the only near-miss</h2>
+  <p style="max-width:88%; margin:0.6em auto; font-size:1.02em;">
+    A completely different essay &mdash; not even about Indian microdata &mdash; nearly published a false trend for the same reason: not enough time had passed to test it.
+  </p>
+  <p class="gut-check"><span class="tag">The bug</span> A &ldquo;good question&rdquo; metric counted how often a post got referenced <em>later</em> &mdash; but a 2013 question has twelve years to get referenced; a 2024 one has one.</p>
+  <p class="posterior-line" style="margin-top:0.6em; font-size:1.1em;">13.7% of old posts looked &ldquo;good&rdquo; by that measure, vs. 0.9% of new ones &mdash; a decade-long death spiral that was mostly just <strong>time</strong>, not decline.</p>
+  <p class="posterior-note">Caught before publication, and replaced with an age-fair version. Two essays, two different datasets, the exact same species of near-miss.</p>
+  <aside class="notes">This is from the Stack Overflow essay, a different case entirely from the four in this talk, but worth a beat because it's the same lesson learned twice. The first version of a "genuine question" metric counted how many times a question got referenced by later posts. Obviously a question from 2013 has had twelve years to accumulate references; a question from 2024 has had one. That alone manufactured what looked like a steep, decade-long decline in question quality, well before ChatGPT existed. It got caught, and rebuilt as an age-fair comparison. I'm mentioning it because the welfare essay's crisis wasn't a one-off personality quirk — it's what actually happens, more than once, when you hold your own numbers to the standard you'd hold anyone else's to.</aside>
 </section>
 
 <!-- ===================== ACT 5 — SYNTHESIS & METHOD ===================== -->
@@ -537,6 +576,15 @@ Giving up
     </div>
   </div>
   <aside class="notes">The tech gets you the number. The knack is a temperament: extend good faith before you open the notebook, then be just as merciless with your own numbers as you are with theirs. And sometimes &mdash; like with gig workers &mdash; the honest answer is that the question can't be answered with what we have.</aside>
+</section>
+
+<section>
+  <h2 class="center">A confession, found while building this talk</h2>
+  <p class="claim-card">&ldquo;People of all religions, castes, educational backgrounds, ages and genders find decent representation in the sample. Of these, some are more indicative&hellip; than others, <em>as we shall see.</em>&rdquo;
+    <span class="src">the 90-hour-week essay, on its own caste &amp; religion breakdown</span></p>
+  <p class="posterior-line" style="margin-top:0.6em; font-size:1.1em;">We never see it. The caste and religion cut is merged into the data and then never appears in a single chart, table, or number &mdash; in the essay or the notebook behind it.</p>
+  <p class="posterior-note">Merciless standards apply to the talk about merciless standards, too. This didn't get fixed by rewriting the essay &mdash; it got fixed by saying so, here, out loud.</p>
+  <aside class="notes">I found this while pulling material for this exact talk, which felt like the right kind of uncomfortable. The essay promises a payoff it doesn't deliver. Nothing in the notebook backs it up either &mdash; religion and caste get merged into the household covariates and then just sit there, unused. The honest move isn't to quietly patch the essay before anyone notices. It's to put it on a slide in front of a room of people who work with open data for a living, because that's exactly the standard I'd apply to anyone else's claim.</aside>
 </section>
 
 <section>
