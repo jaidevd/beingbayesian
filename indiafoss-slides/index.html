@@ -140,6 +140,25 @@
     .qr-cta { display: flex; flex-direction: column; align-items: center; gap: 0.35em; margin-top: 0.9em; }
     .qr-cta .url { font-family: var(--font-mono); font-size: 1.2rem; font-weight: 700; color: var(--accent); }
     .qr-cta .sub { font-family: var(--font-sans); font-size: 0.85rem; color: var(--muted); }
+
+    /* live-poll exercise — QR is a placeholder until the real forms exist */
+    .poll-block { display: flex; align-items: center; justify-content: center; gap: 1.6em; margin: 0.8em auto 0; }
+    .qr-placeholder { width: 140px; height: 140px; flex: 0 0 auto; border: 3px dashed var(--muted);
+                       border-radius: 10px; background: var(--paper); color: var(--muted);
+                       display: flex; align-items: center; justify-content: center; }
+    .qr-placeholder svg { width: 58%; height: 58%; }
+    .qr-meta { text-align: left; }
+    .qr-meta .qr-label { display: block; font-family: var(--font-mono); font-size: 0.68em; font-weight: 700;
+                          color: var(--accent); letter-spacing: 0.04em; margin-bottom: 0.25em; }
+    .qr-meta .qr-url { display: block; font-family: var(--font-mono); font-size: 0.62em; color: var(--muted); }
+    .poll-questions { max-width: 92%; margin: 0.7em auto 0; font-size: 0.78em; }
+    .poll-questions li { margin: 0.35em 0; }
+    .poll-questions .bins { color: var(--muted); font-size: 0.85em; }
+    .chart-placeholder { max-width: 90%; height: 350px; margin: 0.7em auto 0; border: 3px dashed var(--muted);
+                          border-radius: 8px; background: var(--paper); display: flex; flex-direction: column;
+                          align-items: center; justify-content: center; gap: 0.5em; color: var(--muted); }
+    .chart-placeholder .cp-title { font-family: var(--font-mono); font-size: 0.8em; font-weight: 700; letter-spacing: 0.04em; }
+    .chart-placeholder .cp-sub { font-family: var(--font-sans); font-size: 0.68em; max-width: 70%; text-align: center; }
   </style>
 </head>
 <body>
@@ -221,6 +240,36 @@
   <aside class="notes">Here's the storytelling framework I reuse on every dubious claim. Surround the reader in the Prior everyone shares. Slip in the Trigger you're reacting to. Apply plain Skepticism &mdash; a sniff test, before you've opened a single dataset. Then the Investigation. And land on a Posterior that genuinely shifts your worldview, or admits it can't.</aside>
 </section>
 
+<!-- ===================== LIVE EXERCISE — PRIOR ===================== -->
+
+<section>
+  <h2 class="center">Before we start: where do you stand?</h2>
+  <p class="center muted" style="margin-top:-0.1em;">Four claims. Answer honestly &mdash; nobody's grading you, and nobody can see who said what.</p>
+  <ol class="poll-questions">
+    <li><strong>Online groceries</strong> &mdash; what % of Indian households shop online for groceries? <span class="bins">(0&ndash;5% &middot; 5&ndash;15% &middot; 15&ndash;30% &middot; 30%+)</span></li>
+    <li><strong>Health insurance &amp; vice</strong> &mdash; how much more does an insured household spend on gutkha than an uninsured one, per month? <span class="bins">(&#8377;0&ndash;5 &middot; &#8377;5&ndash;20 &middot; &#8377;20&ndash;50 &middot; &#8377;50+)</span></li>
+    <li><strong>The 90-hour week</strong> &mdash; to hit 90 hours, how much sleep would you need to cut, per night? <span class="bins">(0&ndash;30 min &middot; 30&ndash;60 min &middot; 1&ndash;2 hrs &middot; 2 hrs+)</span></li>
+    <li><strong>Gig work</strong> &mdash; &ldquo;gig work is lifting India's poor out of poverty&rdquo;: agree or disagree (1&ndash;5), and how confident are you (1&ndash;5)?</li>
+  </ol>
+  <div class="poll-block">
+    <div class="qr-placeholder">
+      <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6">
+        <rect x="6" y="6" width="28" height="28" rx="3"/><rect x="14" y="14" width="12" height="12" rx="2" fill="currentColor" stroke="none"/>
+        <rect x="66" y="6" width="28" height="28" rx="3"/><rect x="74" y="14" width="12" height="12" rx="2" fill="currentColor" stroke="none"/>
+        <rect x="6" y="66" width="28" height="28" rx="3"/><rect x="14" y="74" width="12" height="12" rx="2" fill="currentColor" stroke="none"/>
+        <rect x="66" y="70" width="10" height="10" fill="currentColor" stroke="none"/><rect x="82" y="70" width="10" height="10" fill="currentColor" stroke="none"/>
+        <rect x="70" y="86" width="10" height="10" fill="currentColor" stroke="none"/><rect x="86" y="86" width="10" height="10" fill="currentColor" stroke="none"/>
+      </svg>
+    </div>
+    <div class="qr-meta">
+      <span class="qr-label">FORM A &middot; YOUR PRIOR</span>
+      <span class="qr-url">[QR &amp; link pending]</span>
+      <span class="qr-url">~60 seconds, anonymous</span>
+    </div>
+  </div>
+  <aside class="notes">Scan this now, before anything else. Same four claims we're about to spend the next twenty minutes on. Nobody's identity is attached to an answer &mdash; we only care about the shape of the room, not who said what, which is exactly how every survey in this talk works too.</aside>
+</section>
+
 <!-- ===================== CASE 1 — KIRANA STORES ===================== -->
 
 <section>
@@ -299,6 +348,36 @@
   <p class="posterior-line">You can't even <strong>count</strong> India's gig workers &mdash; the surveys have no box to put them in, so the &ldquo;liberation&rdquo; story can never be checked against the workers it claims to describe.</p>
   <p class="posterior-note">Sometimes the most honest &mdash; and most powerful &mdash; finding is that the data simply cannot answer the question. That itself should give anyone celebrating this liberation some pause.</p>
   <aside class="notes">This is the case where knowing when to stop matters as much as the investigation itself. I can't hand you a clean number for the gig economy's true reach or true pay, because the government's own instrument has no way to see it. That absence is the finding.</aside>
+</section>
+
+<!-- ===================== LIVE EXERCISE — MID-TALK UPDATE ===================== -->
+
+<section>
+  <h2 class="center">Halfway through &mdash; has anything moved?</h2>
+  <p class="center muted" style="margin-top:-0.1em;">Same four claims. Answer again &mdash; you've now seen two investigations, not four. Updating on partial evidence is still Bayesian.</p>
+  <ol class="poll-questions">
+    <li>Online groceries &mdash; % of households shopping online</li>
+    <li>Health insurance &amp; vice &mdash; extra monthly gutkha spend, insured vs. not</li>
+    <li>The 90-hour week &mdash; sleep you'd need to cut, per night</li>
+    <li>Gig work &mdash; agreement (1&ndash;5) and confidence (1&ndash;5)</li>
+  </ol>
+  <div class="poll-block">
+    <div class="qr-placeholder">
+      <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6">
+        <rect x="6" y="6" width="28" height="28" rx="3"/><rect x="14" y="14" width="12" height="12" rx="2" fill="currentColor" stroke="none"/>
+        <rect x="66" y="6" width="28" height="28" rx="3"/><rect x="74" y="14" width="12" height="12" rx="2" fill="currentColor" stroke="none"/>
+        <rect x="6" y="66" width="28" height="28" rx="3"/><rect x="14" y="74" width="12" height="12" rx="2" fill="currentColor" stroke="none"/>
+        <rect x="66" y="70" width="10" height="10" fill="currentColor" stroke="none"/><rect x="82" y="70" width="10" height="10" fill="currentColor" stroke="none"/>
+        <rect x="70" y="86" width="10" height="10" fill="currentColor" stroke="none"/><rect x="86" y="86" width="10" height="10" fill="currentColor" stroke="none"/>
+      </svg>
+    </div>
+    <div class="qr-meta">
+      <span class="qr-label">FORM B &middot; YOUR POSTERIOR (SO FAR)</span>
+      <span class="qr-url">[QR &amp; link pending]</span>
+      <span class="qr-url">a fresh, separate form &mdash; not an edit</span>
+    </div>
+  </div>
+  <aside class="notes">Different form, not an edit of the first one &mdash; we're comparing the shape of the room before and after, not tracking any one person. Two down, two to go. If your answer to the first two hasn't moved at all, that's a real data point too.</aside>
 </section>
 
 <!-- ===================== CASE 3 — 90-HOUR WORKWEEK ===================== -->
@@ -465,6 +544,18 @@ Giving up
   </table>
   <p class="center muted" style="margin-top:0.6em;">Four different domains. The same pattern: a loud, confidently-stated prior, and a quieter, more complicated posterior underneath it.</p>
   <aside class="notes">Step back and the pattern repeats: a confident, specific, viral claim, and underneath it, once you actually pull the microdata, something smaller, stranger, or simply unanswerable. None of these took more than a public dataset and a notebook.</aside>
+</section>
+
+<!-- ===================== LIVE EXERCISE — REVEAL ===================== -->
+
+<section>
+  <h2 class="center">Not just our posteriors. Yours too.</h2>
+  <div class="chart-placeholder">
+    <span class="cp-title">LIVE RESULTS &mdash; FORM A vs. FORM B, PER CLAIM</span>
+    <span class="cp-sub">Built right before this slide, from the room's own two forms &mdash; not a screenshot of Google Forms' own charts, the same house style as every other chart in this talk.</span>
+  </div>
+  <p class="posterior-note" style="margin-top:0.5em;">This is an aggregate shift, not a matched before/after per person &mdash; the same thing every weighted survey in this talk actually measures.</p>
+  <aside class="notes">This slide gets filled in live, right before the talk or during setup, once Form A and Form B have enough responses. Pull both into a Sheet, run the same weighted-comparison habit this whole talk has been arguing for, and drop the chart in here. If the room's own prior and posterior land anywhere near the newsletter's, that's the whole talk in one image. If they don't, that's an even better slide.</aside>
 </section>
 
 <!-- ===================== ACT 5B — DATA SOURCES ===================== -->
