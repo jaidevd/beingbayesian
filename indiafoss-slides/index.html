@@ -238,7 +238,8 @@
   </div>
   <p class="center muted" style="margin-top:0.9em;">Four claims. Let's run it four times.</p>
   <p class="posterior-note" style="margin-top:0.6em; font-size:0.85em;">The Skepticism step is just three questions, every time: <strong>who is telling me this? how do they know it? what are they trying to sell me?</strong></p>
-  <aside class="notes">Here's the storytelling framework I reuse on every dubious claim. Surround the reader in the Prior everyone shares. Slip in the Trigger you're reacting to. Apply plain Skepticism &mdash; a sniff test, before you've opened a single dataset. Then the Investigation. And land on a Posterior that genuinely shifts your worldview, or admits it can't. And if you want the Skepticism step distilled to something you can actually carry out of this room: who's telling me this, how do they know it, and what are they trying to sell me. Three questions, works on almost anything.</aside>
+  <p class="center muted" style="margin-top:0.5em; font-size:0.72em; font-style:italic;">It's a template, not a religion. If it makes the work harder instead of easier, drop it.</p>
+  <aside class="notes">Here's the storytelling framework I reuse on every dubious claim. Surround the reader in the Prior everyone shares. Slip in the Trigger you're reacting to. Apply plain Skepticism &mdash; a sniff test, before you've opened a single dataset. Then the Investigation. And land on a Posterior that genuinely shifts your worldview, or admits it can't. And if you want the Skepticism step distilled to something you can actually carry out of this room: who's telling me this, how do they know it, and what are they trying to sell me. Three questions, works on almost anything. I wrote this framework down the day after I launched the newsletter, before I'd used it on a single real claim &mdash; it's held up across two years, but it's still just scaffolding. The day it makes the work harder instead of easier, I'll drop it.</aside>
 </section>
 
 <!-- ===================== LIVE EXERCISE — PRIOR ===================== -->
@@ -639,6 +640,7 @@ Giving up
   <ul class="release" style="max-width:88%; font-size:0.92em;">
     <li>Download the <strong>trio together</strong>: unit-level data, the &ldquo;layout&rdquo; (data dictionary), and the summary report &mdash; from MoSPI's own portal, never the data alone</li>
     <li>Read the <strong>layout before the data</strong> &mdash; find the unit of each file and the columns that join them</li>
+    <li>Only decode the <strong>tables your question actually needs</strong> &mdash; a survey has hundreds of columns; annotating all of them is a hobby, not an analysis</li>
     <li>Apply the <strong>multiplier</strong> before you compute anything &mdash; a raw mean is not a national estimate</li>
     <li>Sanity-check your topline number against the survey's <strong>own published report</strong> before trusting any deeper cut</li>
     <li>Build <strong>one reusable decode-and-stitch script</strong> per survey, and publish it with the cleaned data &mdash; so future-you never redoes that translation from scratch <span class="muted">(one <code style="font-family:var(--font-mono);">hces.py</code>, imported by five different welfare notebooks in this repo)</span></li>
@@ -677,7 +679,8 @@ Giving up
       <h4 style="color:var(--accent);">Before you reach for data</h4>
       <ul class="release" style="font-size:0.88em;">
         <li>Extend the benefit of the doubt <strong>first</strong> &mdash; Hanlon's razor</li>
-        <li>Then hold your own analysis to the same merciless standard you're demanding of theirs</li>
+        <li>Then hold your own analysis to the same merciless standard &mdash; the more brutal your attack, the more exposed you are to a counter-attack</li>
+        <li>Write the investigation <strong>cold and bland</strong>: facts don't have feelings. The human story comes later, on purpose</li>
         <li>If you're not sure of something, don't say it</li>
       </ul>
     </div>
@@ -694,7 +697,7 @@ Giving up
     &ldquo;Look for causes, not villains. Look for systems, not heroes.&rdquo;
     <footer style="text-align:center;">&mdash; Hans Rosling</footer>
   </blockquote>
-  <aside class="notes">The tech gets you the number. The knack is a temperament: extend good faith before you open the notebook, then be just as merciless with your own numbers as you are with theirs. And sometimes &mdash; like with gig workers &mdash; the honest answer is that the question can't be answered with what we have. Rosling put this better than I can: look for causes, not villains; look for systems, not heroes. That's the kirana story in one sentence &mdash; the point was never to put Blinkit on trial, it was to find the actual system, infrastructure and inequality, doing the work a villain got blamed for.</aside>
+  <aside class="notes">The tech gets you the number. The knack is a temperament: extend good faith before you open the notebook, then be just as merciless with your own numbers as you are with theirs. The reason isn't just ethics, it's tactical: the more brutal your attack on someone else's claim, the more exposed you are if you've made the same mistake. Exceptional claims need exceptional evidence, and that applies to you too. That's also why the investigation itself gets written cold and bland, on purpose &mdash; facts don't have feelings, and mixing in the human angle too early is how you talk yourself into believing a number before you've checked it. The feelings come after the checking, not during. And sometimes &mdash; like with gig workers &mdash; the honest answer is that the question can't be answered with what we have. Rosling put the rest better than I can: look for causes, not villains; look for systems, not heroes. That's the kirana story in one sentence &mdash; the point was never to put Blinkit on trial, it was to find the actual system, infrastructure and inequality, doing the work a villain got blamed for.</aside>
 </section>
 
 <section>
@@ -713,6 +716,7 @@ Giving up
     from analysis to <em>impression</em> &mdash; means pairing cold, careful numbers
     with a sincere, human story.
   </p>
+  <p class="posterior-line" style="margin-top:0.5em; font-size:1.02em;">The trick: tell one more story, the opposite of the one you opened with. Everyone already knows Daniel LaRusso's story. Tell Johnny Lawrence's.</p>
   <div class="two-col" style="margin-top:0.5em;">
     <div>
       <h4 style="color:var(--accent);">Do</h4>
@@ -729,7 +733,7 @@ Giving up
       </ul>
     </div>
   </div>
-  <aside class="notes">"Women do 4x the unpaid work" is a statistic. "Men spend barely an hour a week in the kitchen, and are absent from cleanup entirely" is an image people carry out of the room. That last mile &mdash; from the number to the impression &mdash; is where the real debunking happens.</aside>
+  <aside class="notes">"Women do 4x the unpaid work" is a statistic. "Men spend barely an hour a week in the kitchen, and are absent from cleanup entirely" is an image people carry out of the room. That last mile &mdash; from the number to the impression &mdash; is where the real debunking happens. Here's a trick for it: the prior you opened with is a story everyone already knows and roots for &mdash; it's Daniel LaRusso's story, the underdog, the version everyone's heard. The posterior needs its own story, and it should be the opposite one. Not more data. The story of the kid on the other side of the mat, the one nobody bothered to ask about. That's Johnny Lawrence's story. Cobra Kai worked as a show because it finally told it. Same move, every time you want a number to actually stick.</aside>
 </section>
 
 <!-- ===================== CLOSING ===================== -->
