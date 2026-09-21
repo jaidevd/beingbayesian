@@ -18,12 +18,6 @@
     .reveal h2.q { text-align: center; margin-bottom: 0.2em; }
     .center { text-align: center; }
 
-    .epigraph {
-      font-family: var(--font-display); font-style: italic;
-      max-width: 82%; margin: 1.1em auto 0; color: var(--text);
-      line-height: 1.5; font-size: 1.05em;
-    }
-
     /* chart panel lifted on the paper, as in every essay */
     .reveal section:has(.chart-hero) { text-align: center; }
     .chart-hero {
@@ -71,10 +65,6 @@
     }
 
     .bignum { font-family: var(--font-display); font-size: 1.7em; font-weight: 600; color: var(--accent); line-height: 1.1; }
-    .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1em; }
-    .cols4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 0.8em; }
-    .statgrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1em; text-align: center; margin: 0.8em 0; }
-    .statgrid .muted { font-size: 0.62em; }
 
     /* five-step method flow */
     .flow5 { display: flex; align-items: stretch; justify-content: center; gap: 0.5em; margin: 0.9em 0 0.4em; flex-wrap: nowrap; }
@@ -88,7 +78,7 @@
     .flow5 .flow-box.post { border-color: var(--accent); border-width: 2px; }
     .flow5-arrow { display: flex; align-items: center; color: var(--accent-3); font-size: 1.3em; }
 
-    /* generic three-stage pipeline (used for the data-friction slide) */
+    /* generic pipeline (sampling / file-structure diagrams) */
     .flow { display: flex; align-items: stretch; justify-content: center; gap: 0.6em; margin: 0.9em 0; flex-wrap: nowrap; }
     .flow-box { flex: 1; background: var(--paper); border: 1.5px solid var(--text); border-radius: 6px;
                 padding: 0.7em 0.9em; text-align: center; min-width: 0; }
@@ -97,9 +87,6 @@
     .flow-box.mid { border-color: var(--accent-2); }
     .flow-box.out { border-color: var(--accent); border-width: 2px; }
     .flow-arrow { display: flex; align-items: center; color: var(--accent-3); font-size: 1.5em; }
-
-    /* case-study header rows */
-    .case-title { display: flex; align-items: baseline; gap: 0.6em; }
 
     /* synthesis table */
     table.synth { border-collapse: collapse; width: 100%; margin: 0.6em auto; font-size: 0.62em; }
@@ -110,7 +97,6 @@
     table.synth td.loud { color: var(--muted); font-style: italic; }
     table.synth td.honest { font-family: var(--font-display); font-style: italic; color: var(--text); }
     table.synth td.honest strong { color: var(--accent); font-style: normal; }
-    .acr { font-family: var(--font-mono); font-weight: 600; color: var(--accent); font-size: 1.15em; letter-spacing: 0.02em; }
     .stack-badge { display: inline-block; font-family: var(--font-mono); font-size: 0.62em; font-weight: 600;
                    color: var(--accent); background: var(--paper); border: 1px solid var(--hair);
                    border-radius: 999px; padding: 0.3em 0.9em; margin: 0 0.2em; }
@@ -141,24 +127,29 @@
     .qr-cta .url { font-family: var(--font-mono); font-size: 1.2rem; font-weight: 700; color: var(--accent); }
     .qr-cta .sub { font-family: var(--font-sans); font-size: 0.85rem; color: var(--muted); }
 
-    /* live-poll exercise — QR is a placeholder until the real forms exist */
-    .poll-block { display: flex; align-items: center; justify-content: center; gap: 1.6em; margin: 0.8em auto 0; }
-    .qr-placeholder { width: 140px; height: 140px; flex: 0 0 auto; border: 3px dashed var(--muted);
-                       border-radius: 10px; background: var(--paper); color: var(--muted);
-                       display: flex; align-items: center; justify-content: center; }
+    /* QR placeholder — pending the real forms */
+    .qr-placeholder { border: 3px dashed var(--muted); border-radius: 10px; background: var(--paper);
+                       color: var(--muted); display: flex; align-items: center; justify-content: center; }
     .qr-placeholder svg { width: 58%; height: 58%; }
-    .qr-meta { text-align: left; }
-    .qr-meta .qr-label { display: block; font-family: var(--font-mono); font-size: 0.68em; font-weight: 700;
-                          color: var(--accent); letter-spacing: 0.04em; margin-bottom: 0.25em; }
-    .qr-meta .qr-url { display: block; font-family: var(--font-mono); font-size: 0.62em; color: var(--muted); }
-    .poll-questions { max-width: 92%; margin: 0.7em auto 0; font-size: 0.78em; }
-    .poll-questions li { margin: 0.35em 0; }
-    .poll-questions .bins { color: var(--muted); font-size: 0.85em; }
-    .chart-placeholder { max-width: 90%; height: 350px; margin: 0.7em auto 0; border: 3px dashed var(--muted);
+    .chart-placeholder { max-width: 90%; height: 340px; margin: 0.7em auto 0; border: 3px dashed var(--muted);
                           border-radius: 8px; background: var(--paper); display: flex; flex-direction: column;
                           align-items: center; justify-content: center; gap: 0.5em; color: var(--muted); }
     .chart-placeholder .cp-title { font-family: var(--font-mono); font-size: 0.8em; font-weight: 700; letter-spacing: 0.04em; }
     .chart-placeholder .cp-sub { font-family: var(--font-sans); font-size: 0.68em; max-width: 70%; text-align: center; }
+
+    /* one-question-per-slide quiz format */
+    .quiz-eyebrow { text-align: center; font-family: var(--font-mono); font-size: 0.68em; letter-spacing: 0.1em;
+                    color: var(--accent-3); text-transform: uppercase; margin-bottom: 0.9em; }
+    .quiz-q { font-family: var(--font-display); font-size: 1.65em; line-height: 1.4; text-align: center;
+              max-width: 84%; margin: 0 auto; }
+    .quiz-q strong { color: var(--accent); }
+    .quiz-bins { text-align: center; font-family: var(--font-mono); font-size: 0.78em; color: var(--muted); margin-top: 0.7em; }
+    .quiz-qr { display: flex; align-items: center; justify-content: center; gap: 0.9em; margin-top: 1.6em; }
+    .quiz-qr .qr-placeholder { width: 92px; height: 92px; flex: 0 0 auto; }
+    .quiz-qr .qr-meta { text-align: left; font-family: var(--font-mono); font-size: 0.62em; color: var(--muted); }
+    .quiz-qr .qr-meta strong { display: block; color: var(--accent); font-size: 1.05em; letter-spacing: 0.03em; }
+    .quiz-tbd { text-align: center; border: 3px dashed var(--muted); border-radius: 10px; padding: 1.8em;
+                max-width: 70%; margin: 0.5em auto; font-family: var(--font-mono); color: var(--muted); font-size: 0.85em; }
   </style>
 </head>
 <body>
@@ -169,91 +160,20 @@
 <section data-state="title">
   <img src="assets/sisyphus.svg" alt="Line drawing of Sisyphus pushing a boulder uphill"
        style="position:absolute; right:1.25rem; top:0; transform:translateY(calc(-100% - 0.5rem)); height:175px; opacity:0.9; margin:0; pointer-events:none;">
-  <h1>Being Bayesian<span class="caret"></span></h1>
+  <h1>Being Bayesian</h1>
   <h3>Stress-Testing India's Loudest Stories with Open Data and FOSS</h3>
-  <p class="epigraph">
-    Every day, social media, the news and even the government sell you loud
-    stories. This talk is about the unglamorous discipline of checking them
-    anyway &mdash; with public microdata, a Jupyter notebook, and the FOSS stack.
-  </p>
   <p style="margin-top:1.3em; font-family:var(--font-sans); font-size:1.2em; font-weight:600; color:var(--text);">Jaidev Deshpande &nbsp;&middot;&nbsp; <a href="https://beingbayesian.in" style="color:var(--accent);">beingbayesian.in</a></p>
   <p style="margin-top:0.7em; font-family:var(--font-sans); font-size:1.25em; font-weight:700; color:var(--accent-3);">IndiaFOSS 2026</p>
-  <aside class="notes">Hi, I'm Jaidev. For the last two years I've written a newsletter called Being Bayesian, where I take apart popular, confidently-stated claims about the Indian economy and society using the country's own public microdata. Today I want to walk you through that process, four times, on four claims you've probably already heard this year.</aside>
+  <aside class="notes">Hi, I'm Jaidev. For the last two years I've written a newsletter called Being Bayesian, where I take apart popular, confidently-stated claims about the Indian economy and society using the country's own public microdata. Before I tell you anything about that — I want to test you on three of them.</aside>
 </section>
 
-<!-- ===================== ACT 1 — THE PROBLEM ===================== -->
+<!-- ===================== LIVE EXERCISE — PRIOR (one question per slide) ===================== -->
 
 <section>
-  <h2 class="center">You've heard these already this year</h2>
-  <div style="max-width:78%; margin:0.6em auto 0;">
-    <p class="claim-card">&ldquo;Quick commerce is killing kirana stores.&rdquo;</p>
-    <p class="claim-card">&ldquo;Gig work is liberating India's poor and uneducated.&rdquo;</p>
-    <p class="claim-card">&ldquo;The only way to make it in this market is a 90-hour week.&rdquo;</p>
-    <p class="claim-card">&ldquo;Welfare is making people lazy &mdash; and wasteful.&rdquo;</p>
-  </div>
-  <p class="center" style="margin-top:0.7em; font-weight:600;">Confident. Specific. Loud. And almost never checked.</p>
-  <aside class="notes">Digital transformation experts say quick commerce is killing kirana stores. Startup bros say gig work is liberating India's poor and uneducated. Captains of industry say the only way to make it is a 90-hour week. Influencers-turned-economists say welfare is making people lazy. Every one of these is stated with total confidence, and almost nobody checks it against anything.</aside>
-</section>
-
-<section>
-  <p class="center" style="margin-bottom:0.2em;"><span class="stage-tag">The problem</span></p>
-  <blockquote class="quote center" style="margin:0.4em auto; max-width:82%;">
-    &ldquo;The amount of energy needed to refute bullshit is an order of magnitude
-    bigger than that needed to produce it.&rdquo;
-    <footer style="text-align:center;">&mdash; Alberto Brandolini, the Bullshit Asymmetry Principle</footer>
-  </blockquote>
-  <p class="center" style="margin-top:0.8em; font-size:1.1em;">Fighting misinformation isn't just hard. It's <strong>Sisyphean</strong>.</p>
-  <aside class="notes">The programmer Alberto Brandolini coined this: the energy needed to refute bullshit is an order of magnitude bigger than the energy needed to produce it. No one person wins against the flood of clickbait, virality and tiny attention spans. You're pushing a boulder up a hill that resets every day.</aside>
-</section>
-
-<section>
-  <h2 class="center">Being Sisyphus is the job &mdash; and FOSS is the leverage</h2>
-  <p style="max-width:86%; margin:0.6em auto; font-size:1.02em;">
-    As open-data and FOSS people, we're uniquely positioned to do this. India
-    quietly publishes some of the richest microdata in the world &mdash; the
-    National Sample Survey, PLFS, HCES, the Time Use Survey &mdash; and that's
-    only a fraction of what's out there.
-  </p>
-  <p class="center" style="margin-top:0.8em; font-size:1.15em; font-family:var(--font-display); font-style:italic;">
-    Armed with this data and a Jupyter notebook, we can dismantle even the loudest stories.
-  </p>
-  <p class="center" style="margin-top:0.9em;">
-    <span class="stack-badge">Jupyter</span><span class="stack-badge">pandas</span><span class="stack-badge">matplotlib</span><span class="stack-badge">statsmodels</span><span class="stack-badge">git</span>
-  </p>
-  <aside class="notes">This talk isn't a statistics lecture. It's an argument that good-faith, reproducible, open-data analysis is civic infrastructure &mdash; and that exercising it is our civic duty. And it turns out the tools we already love &mdash; Jupyter, pandas, matplotlib, statsmodels, git &mdash; are the entire stack this job needs. Nothing proprietary, nothing exotic.</aside>
-</section>
-
-<section>
-  <h2 class="center">A process, run the same way every time</h2>
-  <div class="flow5">
-    <div class="flow-box"><span class="t">Prior</span><span class="m">the belief everyone already shares</span></div>
-    <div class="flow5-arrow">&rarr;</div>
-    <div class="flow-box trig"><span class="t">Trigger</span><span class="m">the specific claim you're reacting to</span></div>
-    <div class="flow5-arrow">&rarr;</div>
-    <div class="flow-box skep"><span class="t">Skepticism</span><span class="m">a back-of-envelope sniff test &mdash; no data yet</span></div>
-    <div class="flow5-arrow">&rarr;</div>
-    <div class="flow-box inv"><span class="t">Investigation</span><span class="m">the microdata, decoded and stitched together</span></div>
-    <div class="flow5-arrow">&rarr;</div>
-    <div class="flow-box post"><span class="t">Posterior</span><span class="m">a belief that has honestly moved</span></div>
-  </div>
-  <p class="center muted" style="margin-top:0.9em;">Four claims. Let's run it four times.</p>
-  <p class="posterior-note" style="margin-top:0.6em; font-size:0.85em;">The Skepticism step is just three questions, every time: <strong>who is telling me this? how do they know it? what are they trying to sell me?</strong></p>
-  <p class="center muted" style="margin-top:0.5em; font-size:0.72em; font-style:italic;">It's a template, not a religion. If it makes the work harder instead of easier, drop it.</p>
-  <aside class="notes">Here's the storytelling framework I reuse on every dubious claim. Surround the reader in the Prior everyone shares. Slip in the Trigger you're reacting to. Apply plain Skepticism &mdash; a sniff test, before you've opened a single dataset. Then the Investigation. And land on a Posterior that genuinely shifts your worldview, or admits it can't. And if you want the Skepticism step distilled to something you can actually carry out of this room: who's telling me this, how do they know it, and what are they trying to sell me. Three questions, works on almost anything. I wrote this framework down the day after I launched the newsletter, before I'd used it on a single real claim &mdash; it's held up across two years, but it's still just scaffolding. The day it makes the work harder instead of easier, I'll drop it.</aside>
-</section>
-
-<!-- ===================== LIVE EXERCISE — PRIOR ===================== -->
-
-<section>
-  <h2 class="center">Before we start: where do you stand?</h2>
-  <p class="center muted" style="margin-top:-0.1em;">Four claims. Answer honestly &mdash; nobody's grading you, and nobody can see who said what.</p>
-  <ol class="poll-questions">
-    <li><strong>Online groceries</strong> &mdash; what % of Indian households shop online for groceries? <span class="bins">(0&ndash;5% &middot; 5&ndash;15% &middot; 15&ndash;30% &middot; 30%+)</span></li>
-    <li><strong>Health insurance &amp; vice</strong> &mdash; how much more does an insured household spend on gutkha than an uninsured one, per month? <span class="bins">(&#8377;0&ndash;5 &middot; &#8377;5&ndash;20 &middot; &#8377;20&ndash;50 &middot; &#8377;50+)</span></li>
-    <li><strong>The 90-hour week</strong> &mdash; to hit 90 hours, how much sleep would you need to cut, per night? <span class="bins">(0&ndash;30 min &middot; 30&ndash;60 min &middot; 1&ndash;2 hrs &middot; 2 hrs+)</span></li>
-    <li><strong>Gig work</strong> &mdash; &ldquo;gig work is lifting India's poor out of poverty&rdquo;: agree or disagree (1&ndash;5), and how confident are you (1&ndash;5)?</li>
-  </ol>
-  <div class="poll-block">
+  <p class="quiz-eyebrow">Claim 1 of 3 &middot; Your Prior</p>
+  <p class="quiz-q">What % of Indian households shop online for <strong>groceries</strong>?</p>
+  <p class="quiz-bins">0&ndash;5% &middot; 5&ndash;15% &middot; 15&ndash;30% &middot; 30%+</p>
+  <div class="quiz-qr">
     <div class="qr-placeholder">
       <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6">
         <rect x="6" y="6" width="28" height="28" rx="3"/><rect x="14" y="14" width="12" height="12" rx="2" fill="currentColor" stroke="none"/>
@@ -263,13 +183,83 @@
         <rect x="70" y="86" width="10" height="10" fill="currentColor" stroke="none"/><rect x="86" y="86" width="10" height="10" fill="currentColor" stroke="none"/>
       </svg>
     </div>
-    <div class="qr-meta">
-      <span class="qr-label">FORM A &middot; YOUR PRIOR</span>
-      <span class="qr-url">[QR &amp; link pending]</span>
-      <span class="qr-url">~60 seconds, anonymous</span>
-    </div>
+    <div class="qr-meta"><strong>[QR pending]</strong>anonymous &middot; ~15 sec</div>
   </div>
-  <aside class="notes">Scan this now, before anything else. Same four claims we're about to spend the next twenty minutes on. Nobody's identity is attached to an answer &mdash; we only care about the shape of the room, not who said what, which is exactly how every survey in this talk works too. This isn't a new idea, by the way &mdash; Hans Rosling ran the same experiment for years, asking audiences basic multiple-choice questions about the state of the world. People did worse than chimps picking bananas at random, because our instincts about the world are systematically, not randomly, wrong. Let's find out if we do any better.</aside>
+  <aside class="notes">Scan this now, no name attached, we only care about the shape of the room. Three claims, one question each. Answer with your gut. This isn't a new idea — Hans Rosling ran the same experiment for years, asking audiences basic multiple-choice questions about the state of the world, and people scored worse than chimps picking bananas at random. Our instincts are systematically, not randomly, wrong. Let's see if we do any better.</aside>
+</section>
+
+<section>
+  <p class="quiz-eyebrow">Claim 2 of 3 &middot; Your Prior</p>
+  <p class="quiz-q">How much <strong>more</strong> does an <strong>insured</strong> household spend on gutkha than an uninsured one, per month?</p>
+  <p class="quiz-bins">&#8377;0&ndash;5 &middot; &#8377;5&ndash;20 &middot; &#8377;20&ndash;50 &middot; &#8377;50+</p>
+  <div class="quiz-qr">
+    <div class="qr-placeholder">
+      <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6">
+        <rect x="6" y="6" width="28" height="28" rx="3"/><rect x="14" y="14" width="12" height="12" rx="2" fill="currentColor" stroke="none"/>
+        <rect x="66" y="6" width="28" height="28" rx="3"/><rect x="74" y="14" width="12" height="12" rx="2" fill="currentColor" stroke="none"/>
+        <rect x="6" y="66" width="28" height="28" rx="3"/><rect x="14" y="74" width="12" height="12" rx="2" fill="currentColor" stroke="none"/>
+        <rect x="66" y="70" width="10" height="10" fill="currentColor" stroke="none"/><rect x="82" y="70" width="10" height="10" fill="currentColor" stroke="none"/>
+        <rect x="70" y="86" width="10" height="10" fill="currentColor" stroke="none"/><rect x="86" y="86" width="10" height="10" fill="currentColor" stroke="none"/>
+      </svg>
+    </div>
+    <div class="qr-meta"><strong>[QR pending]</strong>same form, next question</div>
+  </div>
+  <aside class="notes">This is the "moral hazard" claim — free healthcare emboldening vice spending. Guess the gap.</aside>
+</section>
+
+<section>
+  <p class="quiz-eyebrow">Claim 3 of 3 &middot; Your Prior</p>
+  <div class="quiz-tbd">CLAIM TBD &mdash; a tax / middle-class / welfare-burden question goes here</div>
+  <div class="quiz-qr">
+    <div class="qr-placeholder">
+      <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6">
+        <rect x="6" y="6" width="28" height="28" rx="3"/><rect x="14" y="14" width="12" height="12" rx="2" fill="currentColor" stroke="none"/>
+        <rect x="66" y="6" width="28" height="28" rx="3"/><rect x="74" y="14" width="12" height="12" rx="2" fill="currentColor" stroke="none"/>
+        <rect x="6" y="66" width="28" height="28" rx="3"/><rect x="14" y="74" width="12" height="12" rx="2" fill="currentColor" stroke="none"/>
+        <rect x="66" y="70" width="10" height="10" fill="currentColor" stroke="none"/><rect x="82" y="70" width="10" height="10" fill="currentColor" stroke="none"/>
+        <rect x="70" y="86" width="10" height="10" fill="currentColor" stroke="none"/><rect x="86" y="86" width="10" height="10" fill="currentColor" stroke="none"/>
+      </svg>
+    </div>
+    <div class="qr-meta"><strong>[QR pending]</strong>same form, last question</div>
+  </div>
+  <aside class="notes">Not finalized yet — needs a specific, checkable claim about tax burden and the middle class, with real HCES/PLFS numbers behind it before this talk is given.</aside>
+</section>
+
+<!-- ===================== ACT 1 — THE PROBLEM ===================== -->
+
+<section>
+  <blockquote class="quote center" style="margin:0.4em auto; max-width:82%;">
+    &ldquo;The amount of energy needed to refute bullshit is an order of magnitude
+    bigger than that needed to produce it.&rdquo;
+    <footer style="text-align:center;">&mdash; Alberto Brandolini, the Bullshit Asymmetry Principle</footer>
+  </blockquote>
+  <p class="center" style="margin-top:0.8em; font-size:1.1em;">Fighting misinformation isn't just hard. It's <strong>Sisyphean</strong>.</p>
+  <aside class="notes">Digital transformation experts say quick commerce is killing kirana stores. Startup bros say gig work is liberating India's poor and uneducated. Captains of industry say the only way to make it is a 90-hour week. Influencers-turned-economists say welfare is making people lazy — and you just guessed at three of these yourself. Every one of these is stated with total confidence, and almost nobody checks it. Brandolini's law: the energy needed to refute bullshit is an order of magnitude bigger than the energy needed to produce it. You're pushing a boulder up a hill that resets every day.</aside>
+</section>
+
+<section>
+  <p class="center" style="font-family:var(--font-display); font-size:1.2em; font-style:italic; max-width:84%; margin:0.6em auto;">Armed with public microdata and a Jupyter notebook, we can dismantle even the loudest stories.</p>
+  <p class="center" style="margin-top:0.9em;">
+    <span class="stack-badge">Jupyter</span><span class="stack-badge">pandas</span><span class="stack-badge">matplotlib</span><span class="stack-badge">statsmodels</span><span class="stack-badge">git</span>
+  </p>
+  <aside class="notes">As open-data and FOSS people, we're uniquely positioned to do this. India quietly publishes some of the richest microdata in the world — NSS, PLFS, HCES, the Time Use Survey — and that's only a fraction of what's out there. This talk isn't a statistics lecture. It's an argument that good-faith, reproducible, open-data analysis is civic infrastructure, and exercising it is our civic duty. And the tools for it are ones we already love — nothing proprietary, nothing exotic.</aside>
+</section>
+
+<section>
+  <h2 class="center">A process, run the same way every time</h2>
+  <div class="flow5">
+    <div class="flow-box"><span class="t">Prior</span><span class="m">&ldquo;quick commerce is killing kirana&rdquo;</span></div>
+    <div class="flow5-arrow">&rarr;</div>
+    <div class="flow-box trig"><span class="t">Trigger</span><span class="m">AICPDF: 2,00,000 stores shut</span></div>
+    <div class="flow5-arrow">&rarr;</div>
+    <div class="flow-box skep"><span class="t">Skepticism</span><span class="m">200,000 &mdash; compared to what?</span></div>
+    <div class="flow5-arrow">&rarr;</div>
+    <div class="flow-box inv"><span class="t">Investigation</span><span class="m">HCES: only 7% shop online</span></div>
+    <div class="flow5-arrow">&rarr;</div>
+    <div class="flow-box post"><span class="t">Posterior</span><span class="m">the real rival is infrastructure</span></div>
+  </div>
+  <p class="center muted" style="margin-top:0.9em;">Four claims. Let's run it four times.</p>
+  <aside class="notes">Here's the storytelling framework I reuse on every dubious claim, illustrated with the kirana case we're about to open. Surround the reader in the Prior everyone shares. Slip in the Trigger you're reacting to. Apply plain Skepticism — a sniff test, before you've opened a single dataset. Then the Investigation. And land on a Posterior that genuinely shifts your worldview, or admits it can't. Skepticism, distilled: who's telling me this, how do they know it, what are they trying to sell me. It's a template, not a religion — I wrote it down the day after launching the newsletter, before I'd used it on a single real claim. The day it makes the work harder instead of easier, I'll drop it.</aside>
 </section>
 
 <!-- ===================== CASE 1 — KIRANA STORES ===================== -->
@@ -296,21 +286,19 @@
     </tbody>
   </table>
   <p class="src-note">HCES 2023&ndash;24</p>
-  <aside class="notes">India has roughly thirteen million kirana stores. Two hundred thousand closures against that base is a 1.5% closure rate nationally, 5% if you only count metros. And only 7% of Indian households shop online for groceries at all &mdash; 93% never do. Even in urban India specifically, 83% of households don't shop online. This isn't new either: Amazon and Flipkart's big retail push only ever displaced 1 to 2% of local stores, and even the COVID lockdown e-commerce surge only got to about half a percent.</aside>
+  <aside class="notes">India has roughly thirteen million kirana stores. Two hundred thousand closures against that base is a 1.5% closure rate nationally, 5% if you only count metros. And only 7% of Indian households shop online for groceries at all — 93% never do. Even in urban India specifically, 83% of households don't shop online. This isn't new either: Amazon and Flipkart's big retail push only ever displaced 1 to 2% of local stores, and even the COVID lockdown e-commerce surge only got to about half a percent.</aside>
 </section>
 
 <section>
   <h2 class="center">The 7% isn't evenly distributed</h2>
-  <img class="chart-hero" src="assets/01-hces-range-chart.png" alt="Dumbbell chart: likelihood of shopping online online by sector, education, ration card, cooking fuel, PMGKY status and caste">
-  <p class="posterior-note" style="margin-top:0.3em;">A cut of the notebook that never made the published essay &mdash; the same six-way breakdown, unused because the district map told a tighter story.</p>
-  <aside class="notes">This chart never made it into the published piece &mdash; the district map won out because it was a cleaner, single image. But it's worth showing, because it answers the question the essay leaves open: who exactly is the 7%? Only 3% of Scheduled Tribe households shop online, against 27% of upper-caste ones &mdash; a nine-times gap, the starkest line in the whole dataset. Households without a ration card are eight times more likely to shop online than the poorest, PHH-card-holding ones. And households that had benefited from PMGKY &mdash; a COVID-era food security scheme &mdash; were four times less likely to shop online than non-beneficiaries. That last one is worth sitting with: this essay is from March last year. The idea that welfare-scheme status predicts consumption behaviour didn't become this newsletter's whole subject until the welfare essay, ten months later. The thread was already here, in a chart that got cut.</aside>
+  <img class="chart-hero" src="assets/01-hces-range-chart.png" alt="Dumbbell chart: likelihood of shopping online by sector, education, ration card, cooking fuel, PMGKY status and caste">
+  <aside class="notes">This chart never made it into the published piece — the district map won out because it was a cleaner, single image. But it answers who exactly the 7% is. Only 3% of Scheduled Tribe households shop online, against 27% of upper-caste ones — a nine-times gap, the starkest line in the dataset. Households without a ration card are eight times more likely to shop online than the poorest, PHH-card-holding ones. And households that had benefited from PMGKY, a COVID-era food security scheme, were four times less likely to shop online than non-beneficiaries. This essay is from March last year — the idea that welfare-scheme status predicts consumption behaviour didn't become this newsletter's whole subject until the welfare essay, ten months later. The thread was already here, in a chart that got cut.</aside>
 </section>
 
 <section>
   <h2 class="center">The real rival isn't Blinkit</h2>
   <p class="posterior-line">E-commerce can reach <strong>at most 7%</strong> of Indian households &mdash; kirana's real rival is infrastructure, education and income inequality, not quick commerce.</p>
-  <p class="posterior-note">Who actually shops online is basically a map of urban privilege: having piped cooking gas at home makes a household 4&times; more likely to be an online grocery shopper; going from a graduate to a postgraduate degree doubles the odds. The closures may be real &mdash; the cause on offer wildly overstates its reach.</p>
-  <aside class="notes">So the posterior here isn't "the closures didn't happen" &mdash; kirana stores do close, for lots of reasons. It's that the specific mechanism being blamed can, structurally, only ever touch 7% of households. And that 7% isn't randomly distributed &mdash; it's piped gas, postgraduate degrees, urban Tier-1 addresses. The story blames a phone app for what's actually an infrastructure and inequality problem.</aside>
+  <aside class="notes">The posterior isn't "the closures didn't happen" — kirana stores do close, for lots of reasons. It's that the specific mechanism being blamed can, structurally, only ever touch 7% of households, and that 7% isn't randomly distributed: piped gas at home makes a household 4x more likely to be an online shopper, a postgraduate degree doubles the odds. The story blames a phone app for what's actually an infrastructure and inequality problem.</aside>
 </section>
 
 <!-- ===================== CASE 2 — GIG ECONOMY ===================== -->
@@ -335,35 +323,28 @@
       <tr><td>Among men in that filtered population</td><td><strong>no meaningful income gain</strong> from more education</td></tr>
     </tbody>
   </table>
-  <aside class="notes">PLFS sorts every worker into one of four buckets, and none of them is "gig worker." So I did the next best thing: took NITI Aayog's own 2022 proxy definition &mdash; urban, 18 to 45, bottom three-quarters of per-capita spend &mdash; and applied it to the actual PLFS microdata. The 15,000-rupee floor of the claim holds up fine. The 45,000 ceiling doesn't. And within that filtered population, men see no real income bump from more education &mdash; which quietly undercuts the "liberation" framing on its own terms.</aside>
+  <aside class="notes">PLFS sorts every worker into one of four buckets, and none of them is "gig worker." So I did the next best thing: took NITI Aayog's own 2022 proxy definition — urban, 18 to 45, bottom three-quarters of per-capita spend — and applied it to the actual PLFS microdata. The 15,000-rupee floor of the claim holds up fine. The 45,000 ceiling doesn't. And within that filtered population, men see no real income bump from more education — which quietly undercuts the "liberation" framing on its own terms.</aside>
 </section>
 
 <section>
   <h2 class="center">Ask for one number, get half a story</h2>
   <img class="chart-hero" src="assets/02-education-income-gender.png" alt="Line chart: average monthly income by education level, men and women, split by casual/salaried/self-employed">
   <p class="posterior-note" style="margin-top:0.3em;">The published essay only ever reports the men's panel. The women's panel was computed &mdash; and never quoted.</p>
-  <aside class="notes">This is the chart's own caption, straight from the notebook: for men, higher education pays off only by a small margin. It helps women significantly &mdash; a salaried woman with no schooling earns about 6,600 rupees a month; a salaried graduate woman earns about 14,900, more than double. But she's still earning about 24% less than a salaried male graduate, who's at about 19,600. The essay's "no meaningful income gain from education" line is true for men. It's the opposite of true for women, and that half of the finding just never got written down.</aside>
+  <aside class="notes">This is the chart's own caption, straight from the notebook: for men, higher education pays off only by a small margin. It helps women significantly — a salaried woman with no schooling earns about 6,600 rupees a month; a salaried graduate woman earns about 14,900, more than double. But she's still earning about 24% less than a salaried male graduate, who's at about 19,600. The essay's "no meaningful income gain from education" line is true for men. It's the opposite of true for women, and that half of the finding just never got written down.</aside>
 </section>
 
 <section>
   <h2 class="center">You can't check a claim about a category that doesn't exist</h2>
-  <p class="posterior-line">You can't even <strong>count</strong> India's gig workers &mdash; the surveys have no box to put them in, so the &ldquo;liberation&rdquo; story can never be checked against the workers it claims to describe.</p>
-  <p class="posterior-note">Sometimes the most honest &mdash; and most powerful &mdash; finding is that the data simply cannot answer the question. That itself should give anyone celebrating this liberation some pause.</p>
-  <aside class="notes">This is the case where knowing when to stop matters as much as the investigation itself. I can't hand you a clean number for the gig economy's true reach or true pay, because the government's own instrument has no way to see it. That absence is the finding.</aside>
+  <p class="posterior-line">You can't even <strong>count</strong> India's gig workers &mdash; the surveys have no box to put them in.</p>
+  <aside class="notes">This is the case where knowing when to stop matters as much as the investigation itself. I can't hand you a clean number for the gig economy's true reach or true pay, because the government's own instrument has no way to see it. That absence is the finding — and it should give anyone celebrating this liberation some pause. Sometimes the most honest, most powerful finding is that the data simply cannot answer the question.</aside>
 </section>
 
 <!-- ===================== LIVE EXERCISE — MID-TALK UPDATE ===================== -->
 
 <section>
-  <h2 class="center">Halfway through &mdash; has anything moved?</h2>
-  <p class="center muted" style="margin-top:-0.1em;">Same four claims. Answer again &mdash; you've now seen two investigations, not four. Updating on partial evidence is still Bayesian.</p>
-  <ol class="poll-questions">
-    <li>Online groceries &mdash; % of households shopping online</li>
-    <li>Health insurance &amp; vice &mdash; extra monthly gutkha spend, insured vs. not</li>
-    <li>The 90-hour week &mdash; sleep you'd need to cut, per night</li>
-    <li>Gig work &mdash; agreement (1&ndash;5) and confidence (1&ndash;5)</li>
-  </ol>
-  <div class="poll-block">
+  <p class="quiz-eyebrow">Claim 1 of 3 &middot; Update</p>
+  <p class="quiz-q">Online groceries &mdash; has your number moved?</p>
+  <div class="quiz-qr">
     <div class="qr-placeholder">
       <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6">
         <rect x="6" y="6" width="28" height="28" rx="3"/><rect x="14" y="14" width="12" height="12" rx="2" fill="currentColor" stroke="none"/>
@@ -373,13 +354,45 @@
         <rect x="70" y="86" width="10" height="10" fill="currentColor" stroke="none"/><rect x="86" y="86" width="10" height="10" fill="currentColor" stroke="none"/>
       </svg>
     </div>
-    <div class="qr-meta">
-      <span class="qr-label">FORM B &middot; YOUR POSTERIOR (SO FAR)</span>
-      <span class="qr-url">[QR &amp; link pending]</span>
-      <span class="qr-url">a fresh, separate form &mdash; not an edit</span>
-    </div>
+    <div class="qr-meta"><strong>[QR pending]</strong>a fresh form, not an edit</div>
   </div>
-  <aside class="notes">Different form, not an edit of the first one &mdash; we're comparing the shape of the room before and after, not tracking any one person. Two down, two to go. If your answer to the first two hasn't moved at all, that's a real data point too.</aside>
+  <aside class="notes">A separate form, not an edit of the first one — we're comparing the shape of the room before and after, not tracking any one person, which is exactly what a weighted survey measures too. You've seen the groceries claim investigated in full; the other two are still open. Update on whatever you've actually absorbed — that's still Bayesian, even if it isn't a matched dataset.</aside>
+</section>
+
+<section>
+  <p class="quiz-eyebrow">Claim 2 of 3 &middot; Update</p>
+  <p class="quiz-q">Health insurance &amp; gutkha &mdash; has your number moved?</p>
+  <div class="quiz-qr">
+    <div class="qr-placeholder">
+      <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6">
+        <rect x="6" y="6" width="28" height="28" rx="3"/><rect x="14" y="14" width="12" height="12" rx="2" fill="currentColor" stroke="none"/>
+        <rect x="66" y="6" width="28" height="28" rx="3"/><rect x="74" y="14" width="12" height="12" rx="2" fill="currentColor" stroke="none"/>
+        <rect x="6" y="66" width="28" height="28" rx="3"/><rect x="14" y="74" width="12" height="12" rx="2" fill="currentColor" stroke="none"/>
+        <rect x="66" y="70" width="10" height="10" fill="currentColor" stroke="none"/><rect x="82" y="70" width="10" height="10" fill="currentColor" stroke="none"/>
+        <rect x="70" y="86" width="10" height="10" fill="currentColor" stroke="none"/><rect x="86" y="86" width="10" height="10" fill="currentColor" stroke="none"/>
+      </svg>
+    </div>
+    <div class="qr-meta"><strong>[QR pending]</strong>same form, next question</div>
+  </div>
+  <aside class="notes">This one's still uninvestigated at this point in the talk — that's fine, and worth saying out loud. Not moving is a legitimate answer.</aside>
+</section>
+
+<section>
+  <p class="quiz-eyebrow">Claim 3 of 3 &middot; Update</p>
+  <div class="quiz-tbd">CLAIM TBD &mdash; update on the tax / welfare question</div>
+  <div class="quiz-qr">
+    <div class="qr-placeholder">
+      <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6">
+        <rect x="6" y="6" width="28" height="28" rx="3"/><rect x="14" y="14" width="12" height="12" rx="2" fill="currentColor" stroke="none"/>
+        <rect x="66" y="6" width="28" height="28" rx="3"/><rect x="74" y="14" width="12" height="12" rx="2" fill="currentColor" stroke="none"/>
+        <rect x="6" y="66" width="28" height="28" rx="3"/><rect x="14" y="74" width="12" height="12" rx="2" fill="currentColor" stroke="none"/>
+        <rect x="66" y="70" width="10" height="10" fill="currentColor" stroke="none"/><rect x="82" y="70" width="10" height="10" fill="currentColor" stroke="none"/>
+        <rect x="70" y="86" width="10" height="10" fill="currentColor" stroke="none"/><rect x="86" y="86" width="10" height="10" fill="currentColor" stroke="none"/>
+      </svg>
+    </div>
+    <div class="qr-meta"><strong>[QR pending]</strong>same form, last question</div>
+  </div>
+  <aside class="notes">Pending the claim itself being finalized.</aside>
 </section>
 
 <!-- ===================== CASE 3 — 90-HOUR WORKWEEK ===================== -->
@@ -405,7 +418,7 @@
     </tbody>
   </table>
   <p class="src-note">2024 Time Use Survey (ICATUS)</p>
-  <aside class="notes">Start with the baseline: salaried men already work about 56 hours a week, women about 48.6 &mdash; only an hour a day less, despite the perception gap. But women do four times the unpaid domestic work men do. And even in this cohort of salaried, supposedly-emancipated households, men spend barely an hour a week cooking, and are almost entirely absent from serving food or cleaning up after.</aside>
+  <aside class="notes">Start with the baseline: salaried men already work about 56 hours a week, women about 48.6 — only an hour a day less, despite the perception gap. But women do four times the unpaid domestic work men do. And even in this cohort of salaried, supposedly-emancipated households, men spend barely an hour a week cooking, and are almost entirely absent from serving food or cleaning up after.</aside>
 </section>
 
 <section>
@@ -418,14 +431,13 @@
       <tr class="hl"><td>Deficit still remaining after those cuts</td><td>women <strong>22 hrs</strong> &middot; men <strong>34 hrs</strong></td></tr>
     </tbody>
   </table>
-  <aside class="notes">Even in the most generous scenario &mdash; everyone caps chores at an hour a day &mdash; women's work-time ceiling only rises to 67 hours a week. Getting anyone to 90 means cutting an hour of sleep every single night, giving up television entirely, giving up most talking and texting with people you care about. And you're still 22 hours short for women, 34 for men.</aside>
+  <aside class="notes">Even in the most generous scenario — everyone caps chores at an hour a day — women's work-time ceiling only rises to 67 hours a week. Getting anyone to 90 means cutting an hour of sleep every single night, giving up television entirely, giving up most talking and texting with people you care about. And you're still 22 hours short for women, 34 for men.</aside>
 </section>
 
 <section>
   <h2 class="center">Same ask, wildly different bill</h2>
   <p class="posterior-line">A 90-hour week doesn't just cost sleep and Netflix. Because women already carry <strong>4&times;</strong> the unpaid work, the same &ldquo;ask&rdquo; costs men and women completely different things.</p>
-  <p class="posterior-note">Asking what a 90-hour week would cost a salaried Indian &mdash; in sleep, in family time, in the unpaid care work women already shoulder &mdash; settles the argument far better than any motivational LinkedIn post.</p>
-  <aside class="notes">This is the essay where the honest posterior isn't a single number &mdash; it's that "just work more" is not a gender-neutral instruction. The 90-hour week was proposed as a universal grind; the data says it's actually two very different asks wearing the same headline.</aside>
+  <aside class="notes">This is the essay where the honest posterior isn't a single number — it's that "just work more" is not a gender-neutral instruction. The 90-hour week was proposed as a universal grind; the data says it's actually two very different asks wearing the same headline. Asking what it would cost a salaried Indian — in sleep, in family time, in the unpaid care work women already shoulder — settles the argument far better than any motivational LinkedIn post.</aside>
 </section>
 
 <!-- ===================== CASE 4 — PUBLIC WELFARE ===================== -->
@@ -436,7 +448,7 @@
   <p class="claim-card">Poorest 40% of households spend <strong>4%</strong> of their budget on paan/gutkha/tobacco vs. only <strong>2.5%</strong> on education &mdash; intoxicant spend up 33% in a decade &mdash; set beside rising Ayushman Bharat (PMJAY) enrolment.
     <span class="src">Economic Advisory Council to the PM, op-ed using HCES data &mdash; the &ldquo;moral hazard&rdquo; framing</span></p>
   <p class="gut-check"><span class="tag">Gut check</span> Are the households getting insurance the <em>same</em> ones spending more on gutkha?</p>
-  <aside class="notes">Two of the Prime Minister's own economic advisors wrote this: government spending on health insurance is up, spending on intoxicants is up, therefore moral hazard &mdash; people take more risks because they feel insured. The hole is immediate: two things rising together doesn't mean one causes the other. Are we even looking at the same households?</aside>
+  <aside class="notes">Two of the Prime Minister's own economic advisors wrote this: government spending on health insurance is up, spending on intoxicants is up, therefore moral hazard — people take more risks because they feel insured. The hole is immediate: two things rising together doesn't mean one causes the other. Are we even looking at the same households?</aside>
 </section>
 
 <section>
@@ -450,7 +462,7 @@
     </tbody>
   </table>
   <p class="src-note" style="margin-top:0.35em;">HCES, propensity-score matched on household size, caste, religion &amp; region &mdash; not a raw comparison</p>
-  <aside class="notes">Instead of two national trend lines, I compared insured and uninsured households directly, split rural and urban. But not a naive comparison: households are first matched by propensity score on things like size, caste, religion and region, trimmed to common support, then compared within matched strata &mdash; the same rigor you'd want turned on any of the loud claims we started with. Urban beneficiaries spend about two rupees a month more on gutkha than urban non-beneficiaries. Rural beneficiaries actually spend four rupees less than rural non-beneficiaries. The entire chart, top to bottom, spans about fifteen rupees.</aside>
+  <aside class="notes">Instead of two national trend lines, I compared insured and uninsured households directly, split rural and urban. But not a naive comparison: households are first matched by propensity score on things like size, caste, religion and region, trimmed to common support, then compared within matched strata — the same rigor you'd want turned on any of the loud claims we started with. Urban beneficiaries spend about two rupees a month more on gutkha than urban non-beneficiaries. Rural beneficiaries actually spend four rupees less than rural non-beneficiaries. The entire chart, top to bottom, spans about fifteen rupees.</aside>
 </section>
 
 <section>
@@ -476,8 +488,7 @@
       <tr><td>Free Electricity &rarr; Education</td><td>+&#8377;74 total, but <strong>&minus;&#8377;70 from coaching</strong>, +&#8377;99 to fees &mdash; the opposite direction entirely</td></tr>
     </tbody>
   </table>
-  <p class="posterior-note" style="margin-top:0.4em;">Run the same test on all five welfare schemes and you don't get one clean story &mdash; you get three different answers to &ldquo;where does the money go,&rdquo; and the essay only had room to tell one of them.</p>
-  <aside class="notes">The published essay makes the LPG finding sound like the general shape of how welfare works &mdash; a subsidy frees up cash, some of it drifts into coaching. But I ran the identical propensity-score-matched comparison on all five schemes this essay analysed, and it isn't one shape. Health insurance shows an even bigger coaching shift than LPG &mdash; fifty-four rupees, more than LPG's forty-one &mdash; except the overall education total is negative, because formal school fees dropped even more. And free electricity does the opposite of everything else: fees go up by ninety-nine rupees, coaching goes down by seventy. Three different subsidies, three different relationships with a family's coaching budget. The essay picked the cleanest one to tell. The other two are just as real, and they complicate the story instead of completing it. As a small bonus that didn't fit anywhere: midday-meal households spend 145 rupees more on ready-to-eat food at home, even after subtracting the value of the meals eaten at school &mdash; the single largest food-category effect in the entire five-scheme dataset, and nobody's written a sentence about it yet.</aside>
+  <aside class="notes">The published essay makes the LPG finding sound like the general shape of how welfare works — a subsidy frees up cash, some of it drifts into coaching. But I ran the identical propensity-score-matched comparison on all five schemes this essay analysed, and it isn't one shape. Health insurance shows an even bigger coaching shift than LPG — fifty-four rupees, more than LPG's forty-one — except the overall education total is negative, because formal school fees dropped even more. And free electricity does the opposite of everything else: fees go up by ninety-nine rupees, coaching goes down by seventy. The essay picked the cleanest one to tell. The other two are just as real, and they complicate the story instead of completing it. Small bonus that didn't fit anywhere: midday-meal households spend 145 rupees more on ready-to-eat food at home, even after subtracting the value of meals eaten at school — the single largest food-category effect in the entire five-scheme dataset, and nobody's written a sentence about it yet.</aside>
 </section>
 
 <!-- ===================== ACT 4B — THE GIT LOG DOESN'T CLEAN UP ===================== -->
@@ -515,20 +526,15 @@ Giving up
     it will be too complex to understand and write about.
     Keep it simple.</code></pre>
   </div>
-  <p class="posterior-line" style="margin-top:0.6em; font-size:1.05em;">Four days later: the simple version. Two weeks after that: propensity-score matching, done properly. The &ldquo;rounding error&rdquo; two slides ago survived exactly this.</p>
-  <p class="posterior-note">Not every claim fights this hard &mdash; the kirana-stores essay, the first one, went from initial commit to finished charts in five clean days. This one took seven weeks, including a week where the author simply walked away.</p>
-  <aside class="notes">"If it's too complex to code, it will be too complex to understand and write about. Keep it simple." That line is doing a lot of work — it's the same idea as carrying an insight the last mile, except aimed inward, at your own analysis, before you even get to the writing. Four days after giving up, the simple version showed up and it held. Two and a half weeks later, propensity score matching went back in, properly this time. The two-rupee finding and the LPG-subsidy finding you saw a few slides ago both came out the other end of this. And for contrast: the kirana-stores essay, the very first one in this newsletter, went from first commit to finished charts in five days flat, no crisis at all. Some claims fight back. Some don't. You don't know which until you're in it.</aside>
+  <p class="posterior-line" style="margin-top:0.6em; font-size:1.05em;">Four days later: the simple version. Two weeks after that: propensity-score matching, done properly.</p>
+  <aside class="notes">"If it's too complex to code, it will be too complex to understand and write about. Keep it simple." That's the same idea as carrying an insight the last mile, except aimed inward, at your own analysis, before you even get to the writing. Four days after giving up, the simple version showed up and it held. Two and a half weeks later, propensity score matching went back in, properly this time. The two-rupee finding and the LPG-subsidy finding you saw a few slides ago both came out the other end of this. For contrast: the kirana-stores essay, the very first one in this newsletter, went from first commit to finished charts in five days flat, no crisis at all. Some claims fight back. Some don't. You don't know which until you're in it.</aside>
 </section>
 
 <section>
   <h2 class="center">Not the only near-miss</h2>
-  <p style="max-width:88%; margin:0.6em auto; font-size:1.02em;">
-    A completely different essay &mdash; not even about Indian microdata &mdash; nearly published a false trend for the same reason: not enough time had passed to test it.
-  </p>
   <p class="gut-check"><span class="tag">The bug</span> A &ldquo;good question&rdquo; metric counted how often a post got referenced <em>later</em> &mdash; but a 2013 question has twelve years to get referenced; a 2024 one has one.</p>
   <p class="posterior-line" style="margin-top:0.6em; font-size:1.1em;">13.7% of old posts looked &ldquo;good&rdquo; by that measure, vs. 0.9% of new ones &mdash; a decade-long death spiral that was mostly just <strong>time</strong>, not decline.</p>
-  <p class="posterior-note">Caught before publication, and replaced with an age-fair version. Two essays, two different datasets, the exact same species of near-miss.</p>
-  <aside class="notes">This is from the Stack Overflow essay, a different case entirely from the four in this talk, but worth a beat because it's the same lesson learned twice. The first version of a "genuine question" metric counted how many times a question got referenced by later posts. Obviously a question from 2013 has had twelve years to accumulate references; a question from 2024 has had one. That alone manufactured what looked like a steep, decade-long decline in question quality, well before ChatGPT existed. It got caught, and rebuilt as an age-fair comparison. I'm mentioning it because the welfare essay's crisis wasn't a one-off personality quirk — it's what actually happens, more than once, when you hold your own numbers to the standard you'd hold anyone else's to.</aside>
+  <aside class="notes">This is from the Stack Overflow essay, a different case entirely from the four in this talk, but worth a beat because it's the same lesson learned twice. The first version of a "genuine question" metric counted how many times a question got referenced by later posts — obviously a question from 2013 has had twelve years to accumulate references, a question from 2024 has had one. That alone manufactured what looked like a steep, decade-long decline in question quality, well before ChatGPT existed. It got caught, and rebuilt as an age-fair comparison. I'm mentioning it because the welfare essay's crisis wasn't a one-off personality quirk — it's what actually happens, more than once, when you hold your own numbers to the standard you'd hold anyone else's to.</aside>
 </section>
 
 <!-- ===================== ACT 5 — SYNTHESIS & METHOD ===================== -->
@@ -544,7 +550,7 @@ Giving up
       <tr><td class="claim">Welfare &amp; vice</td><td class="loud">Free healthcare breeds moral hazard.</td><td class="honest">The gap is <strong>&#8377;2</strong> a month &mdash; the real effect was hiding in an LPG subsidy.</td></tr>
     </tbody>
   </table>
-  <p class="center muted" style="margin-top:0.6em;">Four different domains. The same pattern: a loud, confidently-stated prior, and a quieter, more complicated posterior underneath it.</p>
+  <p class="center muted" style="margin-top:0.6em;">The same pattern, four different domains: a loud, confidently-stated prior, and a quieter, more complicated posterior underneath it.</p>
   <aside class="notes">Step back and the pattern repeats: a confident, specific, viral claim, and underneath it, once you actually pull the microdata, something smaller, stranger, or simply unanswerable. None of these took more than a public dataset and a notebook.</aside>
 </section>
 
@@ -553,53 +559,43 @@ Giving up
 <section>
   <h2 class="center">Not just our posteriors. Yours too.</h2>
   <div class="chart-placeholder">
-    <span class="cp-title">LIVE RESULTS &mdash; FORM A vs. FORM B, PER CLAIM</span>
-    <span class="cp-sub">Built right before this slide, from the room's own two forms &mdash; not a screenshot of Google Forms' own charts, the same house style as every other chart in this talk.</span>
+    <span class="cp-title">LIVE RESULTS &mdash; PRIOR vs. UPDATE, PER CLAIM</span>
+    <span class="cp-sub">Built right before this slide, from the room's own two forms &mdash; house style, not a Google Forms screenshot.</span>
   </div>
-  <p class="posterior-note" style="margin-top:0.5em;">This is an aggregate shift, not a matched before/after per person &mdash; the same thing every weighted survey in this talk actually measures.</p>
-  <aside class="notes">This slide gets filled in live, right before the talk or during setup, once Form A and Form B have enough responses. Pull both into a Sheet, run the same weighted-comparison habit this whole talk has been arguing for, and drop the chart in here. If the room's own prior and posterior land anywhere near the newsletter's, that's the whole talk in one image. If they don't, that's an even better slide.</aside>
+  <aside class="notes">This slide gets filled in live, once both forms have enough responses. Pull both into a Sheet, run the same weighted-comparison habit this whole talk has been arguing for, and drop the chart in here. It's an aggregate shift, not a matched before/after per person — the same thing every weighted survey in this talk actually measures. If the room's own shift lands anywhere near the newsletter's, that's the whole talk in one image.</aside>
 </section>
 
 <!-- ===================== ACT 5B — DATA SOURCES ===================== -->
 
 <section>
-  <h2 class="center">Meet the alphabet soup</h2>
-  <p class="center" style="font-size:0.9em; margin-top:-0.1em;">HCES, PLFS, TUS &mdash; three names that kept coming back. They're not three different things.</p>
-  <table class="synth">
-    <thead><tr><th>Survey</th><th>What it measures</th><th>Where it showed up</th></tr></thead>
+  <h2 class="center">The survey isn't one file. It's dozens.</h2>
+  <table class="metrics big" style="margin-top:0.3em;">
     <tbody>
-      <tr><td class="claim"><span class="acr">HCES</span><br>Household Consumption Expenditure Survey</td><td style="font-size:1.05em;">what households spend, and on what</td><td style="font-size:1.05em;">kirana stores &middot; welfare &amp; vice</td></tr>
-      <tr><td class="claim"><span class="acr">PLFS</span><br>Periodic Labour Force Survey</td><td style="font-size:1.05em;">who works, how, and for how much</td><td style="font-size:1.05em;">gig economy</td></tr>
-      <tr><td class="claim"><span class="acr">TUS</span><br>Time Use Survey</td><td style="font-size:1.05em;">how a day is actually spent, minute by minute</td><td style="font-size:1.05em;">90-hour week</td></tr>
+      <tr><td>sec-1-<strong>HCQ</strong></td><td>state, district, sector of the household</td></tr>
+      <tr><td>sec-5.1-<strong>FDQ</strong></td><td>cereals &mdash; recall: last month</td></tr>
+      <tr><td>sec-6.2-<strong>FDQ</strong></td><td>vegetables &mdash; recall: last week</td></tr>
+      <tr><td>sec-10.1-<strong>CSQ</strong></td><td>education &mdash; recall: last year</td></tr>
+      <tr class="hl"><td>sec-12.2-<strong>CSQ</strong></td><td>tobacco &mdash; recall: last week</td></tr>
     </tbody>
   </table>
-  <p class="center muted" style="margin-top:0.7em;">All three are run by the same apparatus &mdash; India's National Sample Survey system, under the Ministry of Statistics (MoSPI) &mdash; and all three are free to download.</p>
-  <aside class="notes">Every one of these four case studies leaned on a government survey with an acronym, and it's worth pulling those acronyms apart, because they all come from the same place: MoSPI's National Sample Survey apparatus. HCES tells you what people spend money on. PLFS tells you who's working and how. TUS tells you what people actually do with their day. Different questions, same machinery.</aside>
+  <p class="center" style="margin-top:0.5em; font-size:0.95em;">HCQ / FDQ / CSQ / DGQ are the four actual questionnaire booklets fielded. Every section is its own file &mdash; joined back to the rest by one column: <strong>hhid</strong>.</p>
+  <aside class="notes">This is what HCES actually looks like on disk — not a clean "household file, person file, item file," which isn't real. It's dozens of small tables, one per section of the actual paper questionnaire, and the recall period is baked into which section an item lives in, not into the survey as a whole — that's why cereals are asked about monthly and tobacco weekly, in the same household's file. HCQ is household characteristics, FDQ is food items, CSQ is consumables and services, DGQ is durable goods. Every single one of these tables carries a household ID column, hhid, and that's the only thing that lets you stitch them back into one household's story.</aside>
 </section>
 
 <section>
-  <h2 class="center">They all share one shape</h2>
-  <div class="flow">
-    <div class="flow-box"><span class="t">Household file</span><span class="m">one row per household &mdash; location, assets, income bracket</span></div>
-    <div class="flow-arrow">&rarr;</div>
-    <div class="flow-box mid"><span class="t">Person file</span><span class="m">one row per person &mdash; age, education, an occupation <em>code</em></span></div>
-    <div class="flow-arrow">&rarr;</div>
-    <div class="flow-box out"><span class="t">Item / activity file</span><span class="m">one row per thing bought or minute logged</span></div>
-  </div>
-  <p class="center muted" style="margin-top:0.4em;">Joined by a household &amp; person ID &mdash; and every code in every file means nothing without a separate codebook.</p>
-  <table class="metrics big" style="margin-top:0.5em;">
+  <h2 class="center">NSS doesn't sample randomly. It samples carefully.</h2>
+  <table class="metrics big" style="margin-top:0.3em;">
     <tbody>
-      <tr><td>NIC industry code <strong>62</strong>, in the TUS person file</td><td>&ldquo;Computer programming, consultancy and related activities&rdquo;</td></tr>
-      <tr class="hl"><td>HCES cereals item code <strong>129</strong>, in the item file</td><td>a hidden subtotal, not a real item &mdash; skip it and every food total silently doubles</td></tr>
+      <tr><td>Stage 1 &mdash; pick a village / urban block (<strong>First Stage Unit</strong>)</td><td>simple random, no replacement</td></tr>
+      <tr class="hl"><td>Stage 2 &mdash; split its households into <strong>3 wealth tiers</strong> first, then pick 18</td><td>simple random, within each tier</td></tr>
     </tbody>
   </table>
-  <p class="center" style="margin-top:0.4em; font-size:0.95em;">The friction isn't the file format &mdash; it's usually a plain CSV. It's <strong>translation</strong>, and the codebook doesn't warn you about its own landmines.</p>
-  <aside class="notes">Every one of these surveys ships as several linked files, not one tidy spreadsheet: a household file, a person file, sometimes an item or activity file, joined by ID columns. And every interesting column is a number that means nothing on its own. To find "salaried white-collar workers" for the 90-hour-week essay, I needed the National Industrial Classification codebook just to know that industry code 62 means computer programming. That's translation. But some codes are worse than untranslated — HCES sneaks a subtotal into the middle of every item list, coded like any other item. Forget to drop code 129 before summing the cereals columns and you've silently double-counted every household's grain spend. The format is never the problem. The government's own vocabulary is, and sometimes it's actively booby-trapped.</aside>
+  <p class="center" style="margin-top:0.6em; font-size:0.95em;">The wealth split &mdash; by land value in villages, car ownership in cities &mdash; exists because rich households are numerically rare. A plain random draw would barely catch any. NSS finds them on purpose.</p>
+  <aside class="notes">This is straight from HCES's own methodology document. Multi-stage stratified sampling: First Stage Units are villages or urban blocks, picked by simple random sampling without replacement. Within each selected block, households get split into three second-stage strata by an affluence proxy — land possessed in rural areas, four-wheeler ownership and value in urban areas — the richest slice, a middle slice, and everyone else — and then 18 households are drawn, deliberately, from all three. That's the only reason a national estimate can say anything sensible about rich households at all: they're such a small share of the population that a naive random sample would barely include them. On top of that, the whole survey year is split into 10 rolling three-month panels so no single season dominates, and each household is visited up to three separate times to fill the different questionnaires.</aside>
 </section>
 
 <section>
   <h2 class="center">Pick the wrong unit, get the wrong story</h2>
-  <p class="center muted" style="margin-top:-0.1em;">Every file lets you collapse it to a household, a person, or an item &mdash; and each choice gives a different, equally &ldquo;correct&rdquo; number.</p>
   <table class="metrics big" style="margin-top:0.5em;">
     <tbody>
       <tr><td>Kirana stores &mdash; collapsed to <strong>household</strong></td><td><strong>7%</strong> of households shop online</td></tr>
@@ -607,21 +603,12 @@ Giving up
       <tr><td>90-hour week &mdash; collapsed to <strong>person</strong></td><td>56 vs 48.6 hours, <strong>per person</strong> per week</td></tr>
     </tbody>
   </table>
-  <p class="center" style="margin-top:0.6em; font-size:1em;">Average the intoxicant spend per household instead of per adult, and bigger, poorer households look like bigger spenders for no reason but their size.</p>
   <p class="gut-check" style="margin-top:0.9em;"><span class="tag">Second trap</span> The same file doesn't even agree with itself on a calendar.</p>
-  <p class="posterior-note" style="margin-top:0.4em;">Some HCES sections report a week of spending, others a month, in the same file. Add them as-is and you're adding incompatible units &mdash; every weekly-recall item gets rescaled &times;52/12 before it can sit next to a monthly one.</p>
-  <aside class="notes">The layout tells you what unit each file is at. It never tells you what unit your <em>question</em> is at, and that's a judgment call every single time. The welfare essay compares spend per adult, deliberately, because household size correlates with income and would confound an insured-vs-uninsured comparison if I'd used household totals. Pick the wrong level to collapse at and you get a number that's arithmetically correct and substantively wrong. And there's a second, sneakier version of the same problem: HCES asks about some items over the last week and others over the last month, in the same questionnaire. Milk and vegetables are weekly recall; most of the rest is monthly. Add a weekly figure to a monthly one without rescaling and you've silently mixed two different units of time.</aside>
+  <aside class="notes">Every file lets you collapse it to a household, a person, or an item, and each choice gives a different, equally "correct" number. Average the intoxicant spend per household instead of per adult, and bigger, poorer households look like bigger spenders for no reason but their size — the welfare essay uses per-adult on purpose, because household size correlates with income and would confound the comparison otherwise. Second, sneakier trap: some HCES sections report a week of spending, others a month, in the same survey — milk and vegetables are weekly recall, most of the rest is monthly. Add a weekly figure to a monthly one without rescaling by 52/12 and you've silently mixed two different units of time.</aside>
 </section>
 
 <section>
   <h2 class="center">The weight nobody warns you about</h2>
-  <p style="max-width:88%; margin:0.5em auto; font-size:1.02em;">
-    These are large, multi-stage, stratified samples &mdash; not a simple random draw.
-    Every row carries a survey weight, usually called
-    <code style="font-family:var(--font-mono); background:var(--paper); padding:0.05em 0.4em; border-radius:3px;">multiplier</code>
-    (sometimes shortened to <code style="font-family:var(--font-mono); background:var(--paper); padding:0.05em 0.4em; border-radius:3px;">mult</code>),
-    recording how many real households or people that one response stands in for, nationally.
-  </p>
   <div class="code-block">
     <p class="code-label">the same weighted-mean idiom, hand-rolled or reused, in every essay in this talk</p>
     <pre><code class="language-python" data-trim>def compare(df, group_cols, agg_cols, mult_col="multiplier"):
@@ -631,22 +618,20 @@ Giving up
     )</code></pre>
   </div>
   <p class="gut-check" style="margin-top:0.5em;"><span class="tag">The mistake</span> Skip the multiplier, and thirty survey rows can outweigh thirty million real households.</p>
-  <p class="posterior-line" style="margin-top:0.5em; font-size:1.05em;">Every number in this talk is a <strong>multiplier-weighted</strong> estimate, never a raw average.</p>
-  <aside class="notes">This is the single most common way a well-meaning FOSS person gets NSS data wrong: they load the file, call .mean() on a column, and get a number that looks plausible and is nowhere near the truth. Every sampled household in HCES literally carries a weight describing its importance in the overall survey, and every figure the government itself publishes is a weighted metric. This exact function lives in hces.py and gets imported by five different welfare notebooks; the workweek essay hand-rolls the identical line inline, just with a column called "mult" instead of "multiplier" — same idiom, sum of value times weight, over sum of weight. If you don't multiply by that weight, you haven't computed a national estimate — you've computed the average of whoever happened to get sampled near you.</aside>
+  <aside class="notes">Every row in these surveys carries a weight, usually called "multiplier," sometimes shortened to "mult" — recording how many real households or people that one response stands in for nationally. This is the single most common way a well-meaning FOSS person gets NSS data wrong: load the file, call .mean() on a column, and get a number that looks plausible and is nowhere near the truth. This exact function lives in hces.py and gets imported by five different welfare notebooks; the workweek essay hand-rolls the identical line inline. Every number in this talk is a multiplier-weighted estimate, never a raw average.</aside>
 </section>
 
 <section>
   <h2 class="center">Getting comfortable, one habit at a time</h2>
   <ul class="release" style="max-width:88%; font-size:0.92em;">
-    <li>Download the <strong>trio together</strong>: unit-level data, the &ldquo;layout&rdquo; (data dictionary), and the summary report &mdash; from MoSPI's own portal, never the data alone</li>
-    <li>Read the <strong>layout before the data</strong> &mdash; find the unit of each file and the columns that join them</li>
-    <li>Only decode the <strong>tables your question actually needs</strong> &mdash; a survey has hundreds of columns; annotating all of them is a hobby, not an analysis</li>
-    <li>Apply the <strong>multiplier</strong> before you compute anything &mdash; a raw mean is not a national estimate</li>
-    <li>Sanity-check your topline number against the survey's <strong>own published report</strong> before trusting any deeper cut</li>
-    <li>Build <strong>one reusable decode-and-stitch script</strong> per survey, and publish it with the cleaned data &mdash; so future-you never redoes that translation from scratch <span class="muted">(one <code style="font-family:var(--font-mono);">hces.py</code>, imported by five different welfare notebooks in this repo)</span></li>
+    <li>Download data + <strong>layout</strong> + summary report together &mdash; never the data alone</li>
+    <li>Read the layout <strong>before</strong> the data</li>
+    <li>Decode only the <strong>tables your question needs</strong></li>
+    <li>Apply the <strong>multiplier</strong> before you compute anything</li>
+    <li>Sanity-check against the survey's <strong>own published report</strong></li>
+    <li>Build <strong>one reusable script</strong> per survey, publish it with the cleaned data</li>
   </ul>
-  <p class="center" style="margin-top:0.7em; font-size:1.0em;">None of this is hard. It's just never taught &mdash; and once you've done it, &ldquo;according to NSS data&rdquo; stops being a hand-wave.</p>
-  <aside class="notes">None of this requires a statistics degree. It's five boring habits: get the data, the layout and the report together; read the layout first; always weight; check your number against the government's own summary before you go further; and write the decoding step once, as code, so it's done forever. Do this once per survey and every headline that cites "NSS data" becomes something you can actually go check yourself.</aside>
+  <aside class="notes">None of this requires a statistics degree. Download the trio together from MoSPI's own portal: unit-level data, the layout (data dictionary), and the summary report. Read the layout first — find the unit of each file and the columns that join them. Only decode the tables your actual question needs; a survey has hundreds of columns, annotating all of them is a hobby, not an analysis. Apply the multiplier before you compute anything — a raw mean is not a national estimate. Sanity-check your topline number against the survey's own published report before trusting any deeper cut. And build one reusable decode-and-stitch script per survey — in this repo, one hces.py gets imported by five different welfare notebooks. Do this once per survey and "according to NSS data" stops being a hand-wave.</aside>
 </section>
 
 <!-- ===================== A FEW MORE WAYS DATA LIES ===================== -->
@@ -661,15 +646,14 @@ Giving up
       <tr class="hl"><td><strong>Bad interpretation</strong> &mdash; the numbers are fine, the reading isn't</td><td>&ldquo;health insurance causes vice spending&rdquo; &mdash; correlation, presented as cause</td></tr>
     </tbody>
   </table>
-  <p class="center" style="margin-top:0.6em; font-size:0.95em;">Every claim in this talk failed on one of these three. Rarely on the math.</p>
-  <aside class="notes">This is a useful sorting bin for any claim you're skeptical of, not just these four. Bad data: something's wrong before you even open the file. Bad knowledge: the file is fine, but you don't know what its columns actually mean or measure. Bad interpretation: everything upstream was done correctly, and the conclusion is still wrong. This same trap shows up outside NSS data too &mdash; a well-known Canadian survey on youth and marijuana quotes "44.8% used it in their life," "29.2% in the last year," and "11% met criteria for dependency" side by side, as if they're the same kind of number. They're not; they're three different time windows and definitions wearing the same units.</aside>
+  <aside class="notes">This is a useful sorting bin for any claim you're skeptical of, not just these four. Bad data: something's wrong before you even open the file — HCES sneaks a subtotal into the middle of every item list, coded like any other item; forget to drop it and every food total silently doubles. Bad knowledge: the file is fine, but you don't know what its columns actually mean or measure. Bad interpretation: everything upstream was done correctly, and the conclusion is still wrong. Every claim in this talk failed on one of these three, rarely on the math. This same trap shows up outside NSS data too — a well-known Canadian survey on youth and marijuana quotes "44.8% used it in their life," "29.2% in the last year," and "11% met criteria for dependency" side by side, as if they're the same kind of number. They're not.</aside>
 </section>
 
 <section>
   <h2 class="center">Even honest, correctly-weighted data can trick you</h2>
   <img class="chart-hero" src="assets/collider-bias.png" alt="Two scatter plots: attractiveness vs niceness, zero correlation overall, strong negative correlation within a restricted subset">
-  <p class="posterior-note" style="margin-top:0.4em;">Restrict a genuinely uncorrelated population to any subset defined by a combined threshold, and a correlation appears that was never there. The technical name is <strong>collider bias</strong> &mdash; and it needs no bad data, no bad code, no bad intent.</p>
-  <aside class="notes">Attractiveness and niceness are drawn with zero relationship to each other, by construction. But look only at people above some combined bar of "attractive enough or nice enough to date," and a strong negative correlation appears out of nowhere &mdash; because within that slice, being weaker on one trait almost requires being stronger on the other just to clear the bar. Nobody lied, nobody miscoded anything. The same caution applies to charts as much as samples: a truncated y-axis or a 3D pie chart can manufacture an effect on data that's otherwise completely honest. The lesson isn't "don't trust data" &mdash; it's "ask what was excluded before you trust a correlation."</aside>
+  <p class="posterior-note" style="margin-top:0.4em;">The technical name is <strong>collider bias</strong> &mdash; and it needs no bad data, no bad code, no bad intent.</p>
+  <aside class="notes">Attractiveness and niceness are drawn with zero relationship to each other, by construction. But look only at people above some combined bar of "attractive enough or nice enough to date," and a strong negative correlation appears out of nowhere — because within that slice, being weaker on one trait almost requires being stronger on the other just to clear the bar. Nobody lied, nobody miscoded anything. The same caution applies to charts as much as samples — a truncated y-axis or a 3D pie chart can manufacture an effect on data that's otherwise completely honest. The lesson isn't "don't trust data," it's "ask what was excluded before you trust a correlation."</aside>
 </section>
 
 <section>
@@ -679,15 +663,14 @@ Giving up
       <h4 style="color:var(--accent);">Before you reach for data</h4>
       <ul class="release" style="font-size:0.88em;">
         <li>Extend the benefit of the doubt <strong>first</strong> &mdash; Hanlon's razor</li>
-        <li>Then hold your own analysis to the same merciless standard &mdash; the more brutal your attack, the more exposed you are to a counter-attack</li>
-        <li>Write the investigation <strong>cold and bland</strong>: facts don't have feelings. The human story comes later, on purpose</li>
-        <li>If you're not sure of something, don't say it</li>
+        <li>Hold your own analysis to the <strong>same merciless standard</strong></li>
+        <li>Write the investigation <strong>cold and bland</strong> &mdash; the human story comes later, on purpose</li>
       </ul>
     </div>
     <div>
       <h4 style="color:var(--accent-3);">Knowing when to stop</h4>
       <ul class="release" style="font-size:0.88em;">
-        <li>Sometimes the most honest finding is that the data <strong>cannot answer</strong> the question</li>
+        <li>Sometimes the data <strong>cannot answer</strong> the question</li>
         <li>The gig-worker case: absence of a category is itself the finding</li>
         <li>A non-result is still a result &mdash; say so plainly</li>
       </ul>
@@ -697,31 +680,28 @@ Giving up
     &ldquo;Look for causes, not villains. Look for systems, not heroes.&rdquo;
     <footer style="text-align:center;">&mdash; Hans Rosling</footer>
   </blockquote>
-  <aside class="notes">The tech gets you the number. The knack is a temperament: extend good faith before you open the notebook, then be just as merciless with your own numbers as you are with theirs. The reason isn't just ethics, it's tactical: the more brutal your attack on someone else's claim, the more exposed you are if you've made the same mistake. Exceptional claims need exceptional evidence, and that applies to you too. That's also why the investigation itself gets written cold and bland, on purpose &mdash; facts don't have feelings, and mixing in the human angle too early is how you talk yourself into believing a number before you've checked it. The feelings come after the checking, not during. And sometimes &mdash; like with gig workers &mdash; the honest answer is that the question can't be answered with what we have. Rosling put the rest better than I can: look for causes, not villains; look for systems, not heroes. That's the kirana story in one sentence &mdash; the point was never to put Blinkit on trial, it was to find the actual system, infrastructure and inequality, doing the work a villain got blamed for.</aside>
+  <aside class="notes">The tech gets you the number. The knack is a temperament: extend good faith before you open the notebook, then be just as merciless with your own numbers as you are with theirs. The reason isn't just ethics, it's tactical — the more brutal your attack on someone else's claim, the more exposed you are if you've made the same mistake. That's also why the investigation gets written cold and bland, on purpose — facts don't have feelings, and mixing in the human angle too early is how you talk yourself into believing a number before you've checked it. If you're not sure of something, don't say it. And sometimes, like with gig workers, the honest answer is that the question can't be answered with what we have. Rosling put the rest better than I can — that's the kirana story in one sentence, the point was never to put Blinkit on trial, it was to find the actual system doing the work a villain got blamed for.</aside>
 </section>
 
 <section>
   <h2 class="center">A confession, found while building this talk</h2>
   <p class="claim-card">&ldquo;People of all religions, castes, educational backgrounds, ages and genders find decent representation in the sample. Of these, some are more indicative&hellip; than others, <em>as we shall see.</em>&rdquo;
     <span class="src">the 90-hour-week essay, on its own caste &amp; religion breakdown</span></p>
-  <p class="posterior-line" style="margin-top:0.6em; font-size:1.1em;">We never see it. The caste and religion cut is merged into the data and then never appears in a single chart, table, or number &mdash; in the essay or the notebook behind it.</p>
-  <p class="posterior-note">Merciless standards apply to the talk about merciless standards, too. This didn't get fixed by rewriting the essay &mdash; it got fixed by saying so, here, out loud.</p>
-  <aside class="notes">I found this while pulling material for this exact talk, which felt like the right kind of uncomfortable. The essay promises a payoff it doesn't deliver. Nothing in the notebook backs it up either &mdash; religion and caste get merged into the household covariates and then just sit there, unused. The honest move isn't to quietly patch the essay before anyone notices. It's to put it on a slide in front of a room of people who work with open data for a living, because that's exactly the standard I'd apply to anyone else's claim.</aside>
+  <p class="posterior-line" style="margin-top:0.6em; font-size:1.1em;">We never see it. It never appears in a single chart, table, or number &mdash; in the essay or the notebook behind it.</p>
+  <aside class="notes">I found this while pulling material for this exact talk, which felt like the right kind of uncomfortable. The essay promises a payoff it doesn't deliver. Nothing in the notebook backs it up either — religion and caste get merged into the household covariates and then just sit there, unused. Merciless standards apply to the talk about merciless standards, too. The honest move isn't to quietly patch the essay before anyone notices — it's to say so, here, out loud, in front of a room of people who work with open data for a living.</aside>
 </section>
 
 <section>
   <h2 class="center">Numbers alone don't move anyone</h2>
   <p style="max-width:86%; margin:0.6em auto; font-size:1.02em;">
-    A p-value never changed anyone's mind. Carrying an insight the last mile &mdash;
-    from analysis to <em>impression</em> &mdash; means pairing cold, careful numbers
-    with a sincere, human story.
+    A p-value never changed anyone's mind. Carrying an insight the last mile means pairing cold, careful numbers with a sincere, human story.
   </p>
   <p class="posterior-line" style="margin-top:0.5em; font-size:1.02em;">The trick: tell one more story, the opposite of the one you opened with. Everyone already knows Daniel LaRusso's story. Tell Johnny Lawrence's.</p>
   <div class="two-col" style="margin-top:0.5em;">
     <div>
       <h4 style="color:var(--accent);">Do</h4>
       <ul class="release" style="font-size:0.85em;">
-        <li>Ground the number in a concrete, human cost &mdash; an hour of sleep, a rupee of gutkha, a tuition fee</li>
+        <li>Ground the number in a concrete, human cost</li>
         <li>Show your work: publish the data and the code</li>
       </ul>
     </div>
@@ -733,7 +713,7 @@ Giving up
       </ul>
     </div>
   </div>
-  <aside class="notes">"Women do 4x the unpaid work" is a statistic. "Men spend barely an hour a week in the kitchen, and are absent from cleanup entirely" is an image people carry out of the room. That last mile &mdash; from the number to the impression &mdash; is where the real debunking happens. Here's a trick for it: the prior you opened with is a story everyone already knows and roots for &mdash; it's Daniel LaRusso's story, the underdog, the version everyone's heard. The posterior needs its own story, and it should be the opposite one. Not more data. The story of the kid on the other side of the mat, the one nobody bothered to ask about. That's Johnny Lawrence's story. Cobra Kai worked as a show because it finally told it. Same move, every time you want a number to actually stick.</aside>
+  <aside class="notes">"Women do 4x the unpaid work" is a statistic. "Men spend barely an hour a week in the kitchen, and are absent from cleanup entirely" is an image people carry out of the room. That last mile is where the real debunking happens. Here's a trick for it: the prior you opened with is a story everyone already knows and roots for — it's Daniel LaRusso's story, the underdog, the version everyone's heard. The posterior needs its own story, the opposite one — not more data. The story of the kid on the other side of the mat, the one nobody bothered to ask about. That's Johnny Lawrence's story. Cobra Kai worked as a show because it finally told it. Same move, every time you want a number to actually stick.</aside>
 </section>
 
 <!-- ===================== CLOSING ===================== -->
