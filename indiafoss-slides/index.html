@@ -237,7 +237,8 @@
     <div class="flow-box post"><span class="t">Posterior</span><span class="m">a belief that has honestly moved</span></div>
   </div>
   <p class="center muted" style="margin-top:0.9em;">Four claims. Let's run it four times.</p>
-  <aside class="notes">Here's the storytelling framework I reuse on every dubious claim. Surround the reader in the Prior everyone shares. Slip in the Trigger you're reacting to. Apply plain Skepticism &mdash; a sniff test, before you've opened a single dataset. Then the Investigation. And land on a Posterior that genuinely shifts your worldview, or admits it can't.</aside>
+  <p class="posterior-note" style="margin-top:0.6em; font-size:0.85em;">The Skepticism step is just three questions, every time: <strong>who is telling me this? how do they know it? what are they trying to sell me?</strong></p>
+  <aside class="notes">Here's the storytelling framework I reuse on every dubious claim. Surround the reader in the Prior everyone shares. Slip in the Trigger you're reacting to. Apply plain Skepticism &mdash; a sniff test, before you've opened a single dataset. Then the Investigation. And land on a Posterior that genuinely shifts your worldview, or admits it can't. And if you want the Skepticism step distilled to something you can actually carry out of this room: who's telling me this, how do they know it, and what are they trying to sell me. Three questions, works on almost anything.</aside>
 </section>
 
 <!-- ===================== LIVE EXERCISE — PRIOR ===================== -->
@@ -267,7 +268,7 @@
       <span class="qr-url">~60 seconds, anonymous</span>
     </div>
   </div>
-  <aside class="notes">Scan this now, before anything else. Same four claims we're about to spend the next twenty minutes on. Nobody's identity is attached to an answer &mdash; we only care about the shape of the room, not who said what, which is exactly how every survey in this talk works too.</aside>
+  <aside class="notes">Scan this now, before anything else. Same four claims we're about to spend the next twenty minutes on. Nobody's identity is attached to an answer &mdash; we only care about the shape of the room, not who said what, which is exactly how every survey in this talk works too. This isn't a new idea, by the way &mdash; Hans Rosling ran the same experiment for years, asking audiences basic multiple-choice questions about the state of the world. People did worse than chimps picking bananas at random, because our instincts about the world are systematically, not randomly, wrong. Let's find out if we do any better.</aside>
 </section>
 
 <!-- ===================== CASE 1 — KIRANA STORES ===================== -->
@@ -646,6 +647,29 @@ Giving up
   <aside class="notes">None of this requires a statistics degree. It's five boring habits: get the data, the layout and the report together; read the layout first; always weight; check your number against the government's own summary before you go further; and write the decoding step once, as code, so it's done forever. Do this once per survey and every headline that cites "NSS data" becomes something you can actually go check yourself.</aside>
 </section>
 
+<!-- ===================== A FEW MORE WAYS DATA LIES ===================== -->
+
+<section>
+  <h2 class="center">Three ways an analysis goes wrong</h2>
+  <p class="center muted" style="margin-top:-0.1em;">And it's rarely the arithmetic.</p>
+  <table class="metrics big" style="margin-top:0.5em;">
+    <tbody>
+      <tr><td><strong>Bad data</strong> &mdash; the numbers themselves are off</td><td>HCES's hidden subtotal code, hiding in the cereals list</td></tr>
+      <tr><td><strong>Bad knowledge</strong> &mdash; you don't know what the numbers measure</td><td>NIC industry code 62, or a weekly figure mistaken for a monthly one</td></tr>
+      <tr class="hl"><td><strong>Bad interpretation</strong> &mdash; the numbers are fine, the reading isn't</td><td>&ldquo;health insurance causes vice spending&rdquo; &mdash; correlation, presented as cause</td></tr>
+    </tbody>
+  </table>
+  <p class="center" style="margin-top:0.6em; font-size:0.95em;">Every claim in this talk failed on one of these three. Rarely on the math.</p>
+  <aside class="notes">This is a useful sorting bin for any claim you're skeptical of, not just these four. Bad data: something's wrong before you even open the file. Bad knowledge: the file is fine, but you don't know what its columns actually mean or measure. Bad interpretation: everything upstream was done correctly, and the conclusion is still wrong. This same trap shows up outside NSS data too &mdash; a well-known Canadian survey on youth and marijuana quotes "44.8% used it in their life," "29.2% in the last year," and "11% met criteria for dependency" side by side, as if they're the same kind of number. They're not; they're three different time windows and definitions wearing the same units.</aside>
+</section>
+
+<section>
+  <h2 class="center">Even honest, correctly-weighted data can trick you</h2>
+  <img class="chart-hero" src="assets/collider-bias.png" alt="Two scatter plots: attractiveness vs niceness, zero correlation overall, strong negative correlation within a restricted subset">
+  <p class="posterior-note" style="margin-top:0.4em;">Restrict a genuinely uncorrelated population to any subset defined by a combined threshold, and a correlation appears that was never there. The technical name is <strong>collider bias</strong> &mdash; and it needs no bad data, no bad code, no bad intent.</p>
+  <aside class="notes">Attractiveness and niceness are drawn with zero relationship to each other, by construction. But look only at people above some combined bar of "attractive enough or nice enough to date," and a strong negative correlation appears out of nowhere &mdash; because within that slice, being weaker on one trait almost requires being stronger on the other just to clear the bar. Nobody lied, nobody miscoded anything. The same caution applies to charts as much as samples: a truncated y-axis or a 3D pie chart can manufacture an effect on data that's otherwise completely honest. The lesson isn't "don't trust data" &mdash; it's "ask what was excluded before you trust a correlation."</aside>
+</section>
+
 <section>
   <h2 class="center">The knack, not just the tech</h2>
   <div class="two-col" style="margin-top:0.6em;">
@@ -666,7 +690,11 @@ Giving up
       </ul>
     </div>
   </div>
-  <aside class="notes">The tech gets you the number. The knack is a temperament: extend good faith before you open the notebook, then be just as merciless with your own numbers as you are with theirs. And sometimes &mdash; like with gig workers &mdash; the honest answer is that the question can't be answered with what we have.</aside>
+  <blockquote class="quote center" style="margin:0.7em auto 0; max-width:78%;">
+    &ldquo;Look for causes, not villains. Look for systems, not heroes.&rdquo;
+    <footer style="text-align:center;">&mdash; Hans Rosling</footer>
+  </blockquote>
+  <aside class="notes">The tech gets you the number. The knack is a temperament: extend good faith before you open the notebook, then be just as merciless with your own numbers as you are with theirs. And sometimes &mdash; like with gig workers &mdash; the honest answer is that the question can't be answered with what we have. Rosling put this better than I can: look for causes, not villains; look for systems, not heroes. That's the kirana story in one sentence &mdash; the point was never to put Blinkit on trial, it was to find the actual system, infrastructure and inequality, doing the work a villain got blamed for.</aside>
 </section>
 
 <section>
