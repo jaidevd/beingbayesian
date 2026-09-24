@@ -164,7 +164,59 @@
   <h3>Stress-Testing India's Loudest Stories with Open Data and FOSS</h3>
   <p style="margin-top:1.3em; font-family:var(--font-sans); font-size:1.2em; font-weight:600; color:var(--text);">Jaidev Deshpande &nbsp;&middot;&nbsp; <a href="https://beingbayesian.in" style="color:var(--accent);">beingbayesian.in</a></p>
   <p style="margin-top:0.7em; font-family:var(--font-sans); font-size:1.25em; font-weight:700; color:var(--accent-3);">IndiaFOSS 2026</p>
-  <aside class="notes">Hi, I'm Jaidev. For the last two years I've written a newsletter called Being Bayesian, where I take apart popular, confidently-stated claims about the Indian economy and society using the country's own public microdata. Before I tell you anything about that — I want to test you on three of them.</aside>
+  <aside class="notes">Hi, I'm Jaidev. For the last two years I've written a newsletter called Being Bayesian, where I take apart popular, confidently-stated claims about the Indian economy and society using the country's own public microdata. Before any of that — I want to ask you something else first.</aside>
+</section>
+
+<!-- ===================== COLD OPEN — THE WHATSAPP UNCLE ===================== -->
+
+<section>
+  <p class="center" style="font-family:var(--font-display); font-size:1.5em; line-height:1.5; max-width:88%; margin:0.6em auto;">You just read something outrageous. It was forwarded by an Indian man, online.</p>
+  <p class="posterior-line" style="margin-top:0.6em;">What's the probability he's your <strong>WhatsApp Uncle</strong>?</p>
+  <aside class="notes">Before the newsletter, before the four claims, I want to actually compute something with you. Not a vibe — an honest-to-god Bayesian posterior, the one and only time in this talk I'm going to do the actual math instead of just borrowing the vocabulary. Everyone knows this guy. Urban, older, extremely online, forwards you things at 7am. What's the actual probability that the outrageous thing you just read came from him, specifically?</aside>
+</section>
+
+<section>
+  <p class="gut-check"><span class="tag">Define terms</span> Uncle = 45 or older. &ldquo;LinkedIn-shaped&rdquo; = urban.</p>
+  <table class="metrics big" style="margin-top:0.6em;">
+    <tbody>
+      <tr><td>P(online) &mdash; age 15&ndash;29 / 30&ndash;44 / 45&ndash;59 / 60+</td><td><strong>88% / 76% / 43% / 19%</strong></td></tr>
+      <tr class="hl"><td>P(online) &mdash; rural / urban</td><td><strong>60% / 79%</strong></td></tr>
+    </tbody>
+  </table>
+  <p class="src-note">Data For India, 2023 &mdash; men</p>
+  <aside class="notes">This is the easy part, the part every hot take stops at: internet use collapses with age, and it's higher in cities. Both true. Neither one, by itself, is a probability that a specific outrageous forward came from an urban man over 45. That needs a flip — this is a likelihood, P(online given age), and what we actually want is P(age given online). That flip needs one more thing nobody usually bothers to go get.</aside>
+</section>
+
+<section>
+  <h2 class="center">The missing piece: how many Indian men are actually in each bucket?</h2>
+  <table class="metrics big" style="margin-top:0.5em;">
+    <tbody>
+      <tr><td>Age 15&ndash;29 / 30&ndash;44 / 45&ndash;59 / 60+</td><td><strong>35.0% / 29.4% / 20.9% / 14.7%</strong></td></tr>
+      <tr class="hl"><td>Rural / Urban</td><td><strong>68.9% / 31.1%</strong></td></tr>
+    </tbody>
+  </table>
+  <p class="src-note">PLFS 2023&ndash;24, survey-weighted, adult men only &mdash; not assumed, computed from the raw microdata</p>
+  <aside class="notes">Not a Census citation, not a guess — pulled fresh from the actual raw PLFS 2023-24 person-level file sitting in this repo, weighted by the real survey multiplier, exactly the habit the rest of this talk is going to spend twenty minutes convincing you to adopt. This is the prior: how India's adult male population is actually distributed by age and by rural/urban, before we condition on anything.</aside>
+</section>
+
+<section>
+  <p class="center" style="font-family:var(--font-mono); font-size:1.05em; color:var(--accent); margin:0.5em auto;">P(cohort&nbsp;|&nbsp;online) = P(online&nbsp;|&nbsp;cohort) &middot; P(cohort) / P(online)</p>
+  <p class="center muted" style="font-size:0.85em;">Predicted P(online) = <strong>64.9%</strong>. An independent survey says <strong>65.23%</strong>. Nobody planned that.</p>
+  <table class="metrics big" style="margin-top:0.6em;">
+    <tbody>
+      <tr><td>P(45+ | online)</td><td><strong>~18%</strong> &mdash; about 1 in 5.5</td></tr>
+      <tr><td>P(urban | online)</td><td><strong>~37%</strong></td></tr>
+      <tr class="hl"><td>P(45+ <em>and</em> urban | online)</td><td><strong>~7%</strong> &mdash; about 1 in 14</td></tr>
+    </tbody>
+  </table>
+  <p class="posterior-note">The last row assumes age and urban-ness don't interact &mdash; the same assumption every naive Bayes classifier makes, named out loud instead of hidden.</p>
+  <aside class="notes">Bayes' rule, stated plainly: the probability of the cohort given the evidence equals the probability of the evidence given the cohort, times the prior probability of the cohort, over the overall probability of the evidence. Plug in the age-only numbers and this predicts that 64.9% of adult Indian men are online — and a completely separate survey, one I haven't touched yet, independently reports 65.23% for the same figure. That's not a coincidence I engineered; that's what happens when a calculation is actually right. Flip it and you get: 18% of online Indian men are 45 or older. 37% are urban. Combine both, assuming they don't interact with each other, and about 7% — one in fourteen — of online Indian men are both. I'm naming that independence assumption on purpose, because pretending it away is exactly the kind of shortcut this whole talk is going to spend the next twenty minutes warning you about.</aside>
+</section>
+
+<section>
+  <p class="posterior-line">The WhatsApp Uncle is real. He's just <strong>rare</strong> &mdash; about 1 in 14, even among men who are already online.</p>
+  <p class="posterior-note">Loud and memorable isn't the same as common. That's the whole rest of this talk.</p>
+  <aside class="notes">He exists. He is not, statistically, the median outrageous forward — the median one probably came from someone under 45, and more likely rural than urban. He's just the one you remember, because he's loud and because he's annoying, which is exactly Brandolini's law and the availability heuristic doing what they always do. Every claim in the next twenty minutes is this same move: a loud, vivid story competing against a quieter, weighted, actually-computed number. Let's find out how you do against a few more of them.</aside>
 </section>
 
 <!-- ===================== LIVE EXERCISE — PRIOR (one question per slide) ===================== -->
