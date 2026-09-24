@@ -51,6 +51,32 @@ lives there instead).
    error); the genuine welfare effect was hiding in an unrelated LPG subsidy
    quietly funding private tuition.
 
+## The cold open (the one genuinely-Bayesian moment)
+
+Right after the title, before anything else: "you just read something
+outrageous, forwarded by an Indian man online — what's the probability
+he's your WhatsApp Uncle?" This is the only place in the entire talk that
+actually computes a posterior via Bayes' rule, on purpose, as a direct
+answer to the "is this really Bayesian?" question below. The likelihood
+(P(online) by age and by rural/urban) comes from three CSVs handed over
+mid-session ("Data For India," men's columns). The **prior** — population
+share of adult Indian men by age bracket and by sector — is computed fresh
+from the raw PLFS 2023-24 microdata already in this repo
+(`plfs/Datasets/perv1.dta`, weighted by the real `mult_perv1` survey
+multiplier), not assumed or externally cited. The predicted P(online) from
+that calculation (64.9%) lands within half a point of an independent
+figure from a different CSV (65.23%) — an unplanned cross-check, not
+engineered. Posterior: P(45+ | online) ≈ 18%, P(urban | online) ≈ 37%,
+P(both | online) ≈ 7% (combining the two assumes independence, which is
+named out loud on the slide rather than hidden — the same lesson as the
+collider-bias slide later in the deck). Punchline: the WhatsApp Uncle is
+real, just rare — loud and memorable isn't the same as common, which is
+the whole rest of the talk in miniature. If the age-bin boundaries, sector
+definitions, or the PLFS filter (`gender == '1'`, `age >= 15`) ever need
+recomputing, the exact one-off script that produced these numbers is not
+saved anywhere else — regenerate it from `plfs/Datasets/perv1.dta` and
+`plfs/perv1.map.yaml` following the same steps.
+
 Deliberately **excluded**: `04-stray-dogs` (raw data, zero analysis) and
 `05-ai-hype` (argument-driven, no primary dataset) — confirmed via explicit
 audit, not an oversight. `07-stackoverflow` is referenced once (a
@@ -60,7 +86,8 @@ this talk's whole thesis.
 
 ## Deck structure (current order)
 
-Title → 3-question audience quiz (Prior round, one question per slide) →
+Title → **the WhatsApp Uncle cold open** (5 slides — see below) → 3-question
+audience quiz (Prior round, one question per slide) →
 Brandolini's law → FOSS/Sisyphus framing → the 5-step process (annotated
 with a worked kirana example, not abstract labels) → Case 1 → Case 2 →
 quiz Update round → Case 3 → Case 4 → the welfare essay's real git history
@@ -110,13 +137,17 @@ quote) → an honest on-stage confession about a gap in a published essay →
   history of a essay's failed first attempt, on purpose — that honesty is
   load-bearing for the talk's argument, not incidental color. Don't sand it
   down without a good reason.
-- **"Being Bayesian" is a metaphor, not a technical claim.** Asked directly,
-  the honest answer is that nothing here computes an actual posterior
-  distribution or applies Bayes' theorem — the name describes a discipline
-  (state your prior, get real evidence, actually let it move you, publish
-  the update) borrowed from a real colloquial tradition (Julia Galef, Tetlock
-  superforecasters), not a statistical method. If asked to justify the name
-  technically, don't overclaim.
+- **"Being Bayesian" is a metaphor, not a technical claim — with one
+  deliberate exception.** Asked directly, the honest answer is that nothing
+  in the four case studies computes an actual posterior distribution or
+  applies Bayes' theorem — the name describes a discipline (state your
+  prior, get real evidence, actually let it move you, publish the update)
+  borrowed from a real colloquial tradition (Julia Galef, Tetlock
+  superforecasters), not a statistical method. The **cold open is the one
+  exception** — it's a real Bayes' rule calculation, on purpose, as a direct
+  answer to this exact question (see below). Don't blur that line elsewhere
+  in the deck; the honesty of "everywhere else this is a metaphor" is part
+  of what makes the cold open land.
 
 ## Open items
 
