@@ -8,7 +8,8 @@ intermediates there. Two inputs must also sit in `D`:
 
 - `D/nic-white-collar.yaml`: copy of `../03-90-hr-workweek/nic-white-collar.yaml`
 - `D/../conv/ICATUS-2016-Sheet1.csv`: the ICATUS-2016 workbook converted to CSV
-  (`soffice --headless --convert-to csv ICATUS-2016.xlsx`; openpyxl cannot read it)
+  (`soffice --headless --convert-to csv ICATUS-2016.xlsx`, then rename the output to
+  `ICATUS-2016-Sheet1.csv`; openpyxl cannot read the workbook)
 
 Run in this order (`python scripts/<name>.py D`):
 
@@ -30,3 +31,6 @@ exec from the other scripts). `q1.py`, `ind.py`, `wk.py`, `hh_off.py` print the
 exploratory tables behind the text of `results.md`.
 
 The CSVs in `assets/` are the outputs of steps 7-9, renamed with hyphens.
+
+Extra figure (not in `results.md` yet): `clock.py D OUT` writes `clock-faces.png`. It needs steps 1-5 only
+(it reads `P3.pkl` and `employer.parquet`).
