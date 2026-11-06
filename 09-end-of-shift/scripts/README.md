@@ -34,3 +34,6 @@ The CSVs in `assets/` are the outputs of steps 7-9, renamed with hyphens.
 
 Extra figure (not in `results.md` yet): `clock.py D OUT` writes `clock-faces.png`. It needs steps 1-5 only
 (it reads `P3.pkl` and `employer.parquet`).
+
+`calheat.py D OUT` writes `calendar-activity.png` (most time-consuming activity by day of week and survey quarter,
+same six cohorts as the clocks). It needs steps 1-5 and reads `sub_round` from the raw person file.
