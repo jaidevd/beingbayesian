@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit:ital@0;1&display=swap">
   <link rel="stylesheet" href="style.css">
   <style>
     /* ---- indiafoss talk layout (theme tokens + base type live in style.css) ---- */
@@ -155,6 +156,58 @@
     .reveal table.metrics.heat tr.gap td { height: 6px; padding: 0; }
     .quiz-tbd { text-align: center; border: 3px dashed var(--muted); border-radius: 10px; padding: 1.8em;
                 max-width: 70%; margin: 0.5em auto; font-family: var(--font-mono); color: var(--muted); font-size: 0.85em; }
+    /* influencer slides: fixed image panel on the left, quote on the right, same spot every time */
+    .influencer { display:grid; grid-template-columns:560px 1fr; gap:2.2em; align-items:center; height:560px; margin-top:0.3em; }
+    .influencer .media { width:560px; height:560px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; }
+    .influencer .media img { max-width:100%; max-height:100%; width:auto; height:auto; margin:0; object-fit:contain;
+                             border-radius:6px; border:1px solid var(--hair); box-shadow:0 3px 18px rgba(42,26,22,0.12); }
+    .influencer .media.stack img { width:330px; max-height:none; }
+    .influencer .claim-card { margin:0; max-width:none; font-size:1.15em; }
+    /* case slides: chart in a fixed panel on the left; claim pinned top-right, numbers pinned bottom-right */
+    .case { display:grid; grid-template-columns:700px 1fr; gap:1.6em; height:590px; margin-top:0.3em; }
+    .case .chart { width:700px; height:590px; display:flex; align-items:center; justify-content:center; }
+    .case .chart img { max-width:100%; max-height:100%; width:auto; height:auto; margin:0; object-fit:contain;
+                       background:var(--paper); border:1px solid var(--hair); border-radius:5px; box-shadow:0 3px 18px rgba(42,26,22,0.12); }
+    .case .side { display:flex; flex-direction:column; justify-content:space-between; min-width:0; }
+    .case .side .claim-card { margin:0; max-width:none; font-size:0.85em; }
+    .case .side .gut-check { text-align:left; margin-top:0.6em; }
+    .case .side h4 { color:var(--accent); margin:0 0 0.3em; }
+    .case .side table.metrics { margin:0; width:100%; }
+    .case .side .src-note { text-align:left; margin-top:0.4em; }
+    /* purvagraha thread: the essay's slides — typographic, sparse, no stage tags */
+    .dev { font-family:"Tiro Devanagari Sanskrit", var(--font-display); font-style:normal; }
+    .etym { display:flex; align-items:flex-end; justify-content:center; gap:0.7em; margin-top:0.4em; }
+    .etym .part { display:flex; flex-direction:column; align-items:center; }
+    .etym .part .dev { font-size:3.4em; line-height:1.15; color:var(--text); }
+    .etym .part.ins .dev { color:var(--accent); }
+    .etym .gloss { font-family:var(--font-sans); font-size:0.75em; text-transform:uppercase; letter-spacing:0.12em; color:var(--muted); }
+    .etym .part.ins .gloss { color:var(--accent); font-weight:600; }
+    .etym .plus { font-family:var(--font-display); font-size:2.2em; color:var(--muted); padding-bottom:0.9em; }
+    .etym-eq { text-align:center; font-family:var(--font-display); font-size:1.05em; color:var(--muted); margin:0.5em 0 0; }
+    .etym-eq .dev { font-size:1.35em; color:var(--text); }
+    .aside-line { text-align:center; font-family:var(--font-display); font-style:italic; font-size:1.05em; color:var(--muted); line-height:1.5; max-width:80%; margin:0 auto; }
+    .big-line { text-align:center; font-family:var(--font-display); font-size:2.4em; font-weight:600; color:var(--accent); line-height:1.2; margin:0.6em 0; }
+    /* bayesian-storytelling thread: per-case posteriors, the framework, show-your-work */
+    .story-ref { text-align:center; font-family:var(--font-display); font-size:1.5em; font-weight:600; margin:0.5em 0 0.2em; color:var(--text); }
+    .story-ref .by { display:block; font-family:var(--font-sans); font-weight:400; font-size:0.45em; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-top:0.2em; }
+    .repo-row { display:flex; justify-content:center; gap:1.2em; margin-top:0.8em; }
+    .repo-card { flex:0 1 44%; background:var(--paper); border:1px solid var(--hair); border-radius:8px; padding:0.8em 1em;
+                 box-shadow:0 3px 18px rgba(42,26,22,0.12); text-decoration:none; }
+    .repo-card .url { display:block; font-family:var(--font-mono); font-size:0.72em; font-weight:500; color:var(--accent); }
+    .repo-card .what { display:block; font-family:var(--font-sans); font-size:0.62em; color:var(--muted); margin-top:0.35em; line-height:1.4; }
+    /* worked example of the five steps */
+    table.steps { border-collapse:collapse; width:94%; margin:0.5em auto 0; font-size:0.72em; }
+    table.steps td { padding:0.45em 0.8em; border-bottom:1px solid var(--hair); vertical-align:top; text-align:left; line-height:1.4; }
+    table.steps td.step { font-family:var(--font-display); font-weight:600; white-space:nowrap; width:1%; color:var(--text); }
+    table.steps tr.trig td.step { color:var(--accent-3); }
+    table.steps tr.skep td.step { color:var(--muted); }
+    table.steps tr.inv td.step { color:var(--accent-2); }
+    table.steps tr.post td.step { color:var(--accent); }
+    table.steps tr.post td { font-family:var(--font-display); font-style:italic; border-bottom:none; }
+    /* git-log process slide: room for "Mon YYYY" dates */
+    .timeline .tl-date { width:5.8em; }
+    .timeline .tl-msg { width:calc(100% - 4.2em); }
+    .timeline .tl-row { margin:0.35em 0; }
   </style>
 </head>
 <body>
@@ -166,10 +219,9 @@
   <img src="assets/bb-logo.png" alt="The Being Bayesian logo: a figure pushing a boulder up a maroon bell curve, beside a taller teal bell curve"
        style="position:absolute; right:1.25rem; top:0; transform:translateY(calc(-100% - 0.5rem)); height:175px; opacity:0.9; margin:0; pointer-events:none;">
   <h1>Being Bayesian</h1>
-  <h3>Stress-Testing India's Loudest Stories with Open Data and FOSS</h3>
+  <h3>Stress-Testing India's Loudest Stories</h3>
   <p style="margin-top:1.3em; font-family:var(--font-sans); font-size:1.2em; font-weight:600; color:var(--text);">Jaidev Deshpande &nbsp;&middot;&nbsp; <a href="https://beingbayesian.in" style="color:var(--accent);">beingbayesian.in</a></p>
-  <p style="margin-top:0.7em; font-family:var(--font-sans); font-size:1.25em; font-weight:700; color:var(--accent-3);">IndiaFOSS 2026</p>
-  <aside class="notes">Hi, I'm Jaidev. For the last two years I've written a newsletter called Being Bayesian, where I take apart popular, confidently-stated claims about the Indian economy and society using the country's own public microdata. Before any of that — I want to ask you something else first.</aside>
+  <p style="margin-top:0.7em; font-family:var(--font-sans); font-size:1.25em; font-weight:700; color:var(--accent-3);">The 6% Club: Alumni Meet</p>
 </section>
 
 <section>
@@ -178,7 +230,6 @@
     <img src="assets/xkcd-duty-calls.png" alt="xkcd comic: a person refuses to come to bed, saying 'someone is wrong on the internet'" style="height:480px; margin:0;">
     <img src="assets/linkedin-lunatics.png" alt="Screenshot of the r/LinkedInLunatics subreddit header" style="width:640px; height:auto; margin:0; border-radius:6px; border:1px solid var(--hair); box-shadow:0 3px 18px rgba(42,26,22,0.12);">
   </div>
-  <aside class="notes">This is, genuinely, how it started. Someone wrong on the internet, and then a slow descent into r/LinkedInLunatics. Two years later, here we are.</aside>
 </section>
 
 <section>
@@ -189,7 +240,6 @@
            style="width:400px; height:400px; margin:0; padding:24px; background:#fff; border-radius:10px; box-shadow:0 3px 18px rgba(42,26,22,0.12); image-rendering:pixelated;">
     </a>
   </div>
-  <aside class="notes">Scan this now, no name attached; we only care about the shape of the room. Answer with your gut. This isn't a new idea: Hans Rosling ran the same experiment for years, asking audiences basic multiple-choice questions about the state of the world, and people scored worse than chimps picking bananas at random. Our instincts are systematically, not randomly, wrong. Let's see if we do any better.</aside>
 </section>
 
 <section>
@@ -214,7 +264,6 @@
     </tbody>
   </table>
   <p class="src-note">Shading compares the two groups within each pair, column by column &middot; Share of adults: PLFS 2023&ndash;24, survey-weighted microdata (income fifths are 20% by definition) &middot; Share of the online crowd: Bayes&rsquo; rule on PLFS shares and Data For India internet-use rates, 2023</p>
-  <aside class="notes">An opinion with no data behind it is really a request: trust me. And what you're trusting is the person's own experience, which is a sample of one life. So the question isn't whether the opinion is right. It's how much of India that one life can speak for. This is the one time in the talk I'll do the actual Bayesian maths instead of borrowing the vocabulary. Two ingredients. The first column is the prior: how India's adults are actually spread across these groups, computed from the raw PLFS microdata and weighted by the survey multiplier. What every hot take quotes is a different number: men, the young, the educated, city-dwellers and the rich are all far more likely to be online. That's P(online given who you are). Bayes' rule combines the two into the right-hand column, P(who you are given you're online): who's actually in the online crowd. Under-30s are a third of India's adults but half the crowd. Graduates are one adult in seven, and nearly one in four of the crowd. Every group that's already advantaged offline is over-represented online, before any algorithm gets involved.</aside>
 </section>
 
 <section>
@@ -223,59 +272,126 @@
     &ldquo;What can be asserted without evidence can also be dismissed without evidence.&rdquo;
     <footer style="text-align:center;">&mdash; Christopher Hitchens</footer>
   </blockquote>
-  <aside class="notes">Now take the typical influencer. The most generous definition I can give him is just two traits: a man, with a college degree, who's online. That's 8% of India's adults, about one in twelve. Define him by income instead of education, an online man in the richest fifth, and you get one in twelve again, from a completely different table. Add one more real trait, like his age, and it drops to one in nineteen or one in thirty-one, and that's even assuming every one of those men is online. I'm stopping at age on purpose. You can make anyone unrepresentative by piling on traits, so the headline is the kindest number, not the most dramatic one. His experience might be perfectly true for people like him. It just isn't evidence about the other eleven, and the further a claim is from people like him, rural women on welfare for instance, the less it's worth. An opinion with no data behind it shouldn't move you, however popular it looks. Dismissing it isn't the same as disproving it; it just means not updating.</aside>
+</section>
+
+<section>
+  <div class="etym">
+    <div class="part"><span class="dev">पूर्व</span><span class="gloss">prior</span></div>
+    <div class="plus">+</div>
+    <div class="part ins"><span class="dev">आग्रह</span><span class="gloss">insistence</span></div>
+  </div>
+  <p class="etym-eq"><span class="dev">पूर्वाग्रह</span> &nbsp;&middot;&nbsp; usually translated as <em>prejudice</em></p>
+  <p class="posterior-line" style="margin-top:0.9em;">A prior is harmless. It's the <strong>insistence</strong> that makes it loud.</p>
+  <p class="posterior-note">Push it past a moral line and it becomes <span class="dev">दुराग्रह</span>, or <span class="dev">हट्ट</span> in Marathi. English has no good word for either.</p>
 </section>
 
 <section>
   <span class="stage-tag">Influencer 1 of 4</span>
   <h2>The one who's trying to sell you something</h2>
-  <div style="display:grid; grid-template-columns:auto 1fr; gap:1.6em; align-items:center; margin-top:0.3em;">
-    <div style="display:flex; flex-direction:column; gap:0.6em;">
-      <img src="assets/01-shocking-data.jpg" alt="Social media post: 'SHOCKING DATA! Almost 2 Lakh Kirana Stores are forced to Shut down due to E Commerce apps!'"
-         style="width:350px; height:auto; margin:0; border-radius:6px; border:1px solid var(--hair); box-shadow:0 3px 18px rgba(42,26,22,0.12);">
-      <img src="assets/01-bridge-the-gap.png" alt="LinkedIn-style list: 'Here's how they can bridge the gap' with tech integration, omni-channel presence, customer experience, and training and upskilling"
-         style="width:350px; height:auto; margin:0; border-radius:6px; border:1px solid var(--hair); box-shadow:0 3px 18px rgba(42,26,22,0.12);">
+  <div class="influencer">
+    <div class="media stack">
+      <img src="assets/01-shocking-data.jpg" alt="Social media post: 'SHOCKING DATA! Almost 2 Lakh Kirana Stores are forced to Shut down due to E Commerce apps!'">
+      <img src="assets/01-bridge-the-gap.png" alt="LinkedIn-style list: 'Here's how they can bridge the gap' with tech integration, omni-channel presence, customer experience, and training and upskilling">
     </div>
-    <p class="claim-card" style="margin:0; font-size:0.85em;">&ldquo;Kirana stores are dying. Here's how they can bridge the gap.&rdquo;
+    <p class="claim-card">&ldquo;Kirana stores are dying. Here's how they can bridge the gap.&rdquo;
     <span class="src">A product, pitched as a ubiquitous, transformative solution &middot; Case 1: kirana stores</span></p>
   </div>
-  <aside class="notes">So who are these people with a one-in-twelve view of the country and a feed that tells them it's half? Four types, and you'll recognise every one. The seller has a product, and needs you to believe it's the answer to everything. First the panic, "shocking data, two lakh kirana stores shut down", then the pitch: here's how they can bridge the gap, tech integration, omni-channel presence, data analytics. The problem is always sized to fit the solution.</aside>
 </section>
 
 <section>
   <span class="stage-tag">Influencer 2 of 4</span>
   <h2>The jingoist</h2>
-  <div style="display:grid; grid-template-columns:auto 1fr; gap:1.4em; align-items:center; margin-top:0.2em;">
-    <img src="assets/02-delivery-rain.jpg" alt="A food-delivery rider in an orange raincoat, seen from behind, cycling through heavy rain in night-time city traffic"
-         style="height:590px; margin:0; border-radius:6px; border:1px solid var(--hair); box-shadow:0 3px 18px rgba(42,26,22,0.12);">
-    <p class="claim-card" style="margin:0; font-size:0.9em;">&ldquo;Leave our founders alone. It's not exploitation, it's <em>public service</em>!&rdquo;
+  <div class="influencer">
+    <div class="media"><img src="assets/02-delivery-rain.jpg" alt="A food-delivery rider in an orange raincoat, seen from behind, cycling through heavy rain in night-time city traffic"></div>
+    <p class="claim-card">&ldquo;Leave our founders alone. It's not exploitation, it's <em>public service</em>!&rdquo;
     <span class="src">Criticism of a business, recast as an attack on the nation &middot; Case 2: gig work</span></p>
   </div>
-  <aside class="notes">The jingoist takes any criticism of a business and turns it into an attack on the country. Gig platforms aren't employers under scrutiny; they're nation-builders, and asking what the workers actually earn is ingratitude.</aside>
 </section>
 
 <section>
   <span class="stage-tag">Influencer 3 of 4</span>
   <h2>The pointless contrarian</h2>
-  <div style="display:grid; grid-template-columns:auto 1fr; gap:1.4em; align-items:center; margin-top:0.2em;">
-    <img src="assets/03-twenty-hours-joker.png" alt="Still from a podcast interview, the speaker's face covered by a cartoon Joker mask, captioned 'I work 20 hours a day, seven days a week.'"
-         style="height:560px; margin:0; border-radius:6px; border:1px solid var(--hair); box-shadow:0 3px 18px rgba(42,26,22,0.12);">
-    <p class="claim-card" style="margin:0; font-size:0.9em;">&ldquo;Work-life balance is a western concept. I work 140 hours every week.&rdquo;
+  <div class="influencer">
+    <div class="media"><img src="assets/03-twenty-hours-joker.png" alt="Still from a podcast interview, the speaker's face covered by a cartoon Joker mask, captioned 'I work 20 hours a day, seven days a week.'"></div>
+    <p class="claim-card">&ldquo;Work-life balance is a western concept. I work 140 hours every week.&rdquo;
     <span class="src">Contrarian for its own sake &middot; Case 3: the 90-hour week</span></p>
   </div>
-  <aside class="notes">The pointless contrarian says the opposite of what everyone else says, because that's what gets attention. Work-life balance is a western concept; I work 140 hours a week. It's not an argument, it's a flex, and it only works if nobody asks what those hours would cost anyone else.</aside>
 </section>
 
 <section>
   <span class="stage-tag">Influencer 4 of 4</span>
   <h2>The bully</h2>
-  <div style="display:flex; align-items:center; justify-content:center; gap:1.6em; margin-top:0.3em;">
-    <p class="claim-card" style="margin:0; flex:1 1 0; font-size:0.9em;">&ldquo;I am heavily taxed. Income tax is the only kind of tax there is. It funds freebies, which makes people lazier. I get nothing.&rdquo;
-      <span class="src">Punching down, at the people with the least &middot; Case 4: welfare</span></p>
-    <img src="assets/cartman-poor.gif" alt="Eric Cartman from South Park declaring &#39;From this moment on, I am poor&#39;"
-         style="width:470px; flex:0 0 auto; margin:0; border-radius:8px; border:1px solid var(--hair); box-shadow:0 3px 18px rgba(42,26,22,0.12);">
+  <div class="influencer">
+    <div class="media"><img src="assets/cartman-poor.gif" alt="Eric Cartman from South Park declaring &#39;From this moment on, I am poor&#39;"></div>
+    <p class="claim-card">&ldquo;I am heavily taxed. Income tax is the only kind of tax there is. It funds freebies, which makes people lazier. I get nothing.&rdquo;
+    <span class="src">Punching down, at the people with the least &middot; Case 4: welfare</span></p>
   </div>
-  <aside class="notes">The bully punches down. He's heavily taxed, income tax is the only tax there is, it funds freebies, freebies make people lazier, and he gets nothing. It's always aimed at the people with the least, who are the least likely to be online to answer back. Four types, four claims, and in each case the person has a narrow view of the country and a reason to want it to be true. Let's see what the data says about each of them.</aside>
+</section>
+
+<section>
+  <h2 class="center">Don't laugh it off. Watch.</h2>
+  <p class="claim-card" style="max-width:70%; margin:0.3em auto 0;">&ldquo;Tomorrow, the sun will rise in the west.&rdquo;
+    <span class="src">a WhatsApp forward</span></p>
+  <svg viewBox="0 0 900 340" style="width:84%; max-width:900px; height:auto; display:block; margin:0.4em auto 0;" role="img" aria-label="A curve of belief that the sun will rise in the west, starting as a small but real possibility and shrinking towards zero over many days of sunrises in the east, without ever reaching zero.">
+    <line x1="80" y1="290" x2="860" y2="290" stroke="var(--muted)" stroke-width="1.2"/>
+    <line x1="80" y1="30" x2="80" y2="290" stroke="var(--muted)" stroke-width="1.2"/>
+    <path d="M80.0,40.0 L84.8,69.1 L89.5,92.1 L94.2,110.8 L99.0,126.2 L103.8,139.2 L108.5,150.3 L113.2,159.9 L118.0,168.2 L122.8,175.5 L127.5,182.0 L132.2,187.8 L137.0,193.1 L141.8,197.8 L146.5,202.0 L151.2,205.9 L156.0,209.5 L160.8,212.8 L165.5,215.8 L170.2,218.6 L175.0,221.2 L179.8,223.6 L184.5,225.8 L189.2,227.9 L194.0,229.9 L198.8,231.7 L203.5,233.5 L208.2,235.1 L213.0,236.6 L217.8,238.1 L222.5,239.5 L227.2,240.8 L232.0,242.0 L236.8,243.2 L241.5,244.3 L246.2,245.4 L251.0,246.4 L255.8,247.4 L260.5,248.3 L265.2,249.2 L270.0,250.1 L274.8,250.9 L279.5,251.7 L284.2,252.5 L289.0,253.2 L293.8,253.9 L298.5,254.6 L303.2,255.2 L308.0,255.8 L312.8,256.4 L317.5,257.0 L322.2,257.6 L327.0,258.1 L331.8,258.6 L336.5,259.2 L341.2,259.6 L346.0,260.1 L350.8,260.6 L355.5,261.0 L360.2,261.5 L365.0,261.9 L369.8,262.3 L374.5,262.7 L379.2,263.1 L384.0,263.5 L388.8,263.8 L393.5,264.2 L398.2,264.5 L403.0,264.9 L407.8,265.2 L412.5,265.5 L417.2,265.8 L422.0,266.1 L426.8,266.4 L431.5,266.7 L436.2,267.0 L441.0,267.3 L445.8,267.5 L450.5,267.8 L455.2,268.1 L460.0,268.3 L464.8,268.6 L469.5,268.8 L474.2,269.0 L479.0,269.3 L483.8,269.5 L488.5,269.7 L493.2,269.9 L498.0,270.1 L502.8,270.3 L507.5,270.5 L512.2,270.7 L517.0,270.9 L521.8,271.1 L526.5,271.3 L531.2,271.5 L536.0,271.7 L540.8,271.8 L545.5,272.0 L550.2,272.2 L555.0,272.3 L559.8,272.5 L564.5,272.7 L569.2,272.8 L574.0,273.0 L578.8,273.1 L583.5,273.3 L588.2,273.4 L593.0,273.6 L597.8,273.7 L602.5,273.8 L607.2,274.0 L612.0,274.1 L616.8,274.2 L621.5,274.4 L626.2,274.5 L631.0,274.6 L635.8,274.8 L640.5,274.9 L645.2,275.0 L650.0,275.1 L654.8,275.2 L659.5,275.3 L664.2,275.5 L669.0,275.6 L673.8,275.7 L678.5,275.8 L683.2,275.9 L688.0,276.0 L692.8,276.1 L697.5,276.2 L702.2,276.3 L707.0,276.4 L711.8,276.5 L716.5,276.6 L721.2,276.7 L726.0,276.8 L730.8,276.9 L735.5,277.0 L740.2,277.0 L745.0,277.1 L749.8,277.2 L754.5,277.3 L759.2,277.4 L764.0,277.5 L768.8,277.5 L773.5,277.6 L778.2,277.7 L783.0,277.8 L787.8,277.9 L792.5,277.9 L797.2,278.0 L802.0,278.1 L806.8,278.2 L811.5,278.2 L816.2,278.3 L821.0,278.4 L825.8,278.5 L830.5,278.5 L835.2,278.6 L840.0,278.7" fill="none" stroke="var(--accent)" stroke-width="3"/>
+    <circle cx="80" cy="40" r="6" fill="var(--accent)"/>
+    <text x="96" y="36" font-family="var(--font-display)" font-size="20" font-style="italic" fill="var(--text)">Outrageous, but allowed</text>
+    <text x="150" y="182" font-family="var(--font-display)" font-size="20" font-style="italic" fill="var(--text)">Highly improbable</text>
+    <text x="520" y="250" font-family="var(--font-display)" font-size="20" font-style="italic" fill="var(--accent)">Laughable</text>
+    <path d="M845,262 L845,276" stroke="var(--text)" stroke-width="1.2"/>
+    <text x="845" y="256" text-anchor="end" font-family="var(--font-sans)" font-size="15" fill="var(--muted)">never quite zero</text>
+    <text x="470" y="318" text-anchor="middle" font-family="var(--font-sans)" font-size="16" fill="var(--muted)">days spent watching the sun rise in the east</text>
+    <text x="60" y="160" text-anchor="middle" font-family="var(--font-sans)" font-size="16" fill="var(--muted)" transform="rotate(-90 60 160)">belief in the forward</text>
+  </svg>
+</section>
+
+<section>
+  <h2 class="center">A storytelling framework, not a statistical one</h2>
+  <div class="flow5">
+    <div class="flow-box"><span class="t">Prior</span><span class="m">surround the reader with your assumptions</span></div>
+    <div class="flow5-arrow">&rsaquo;</div>
+    <div class="flow-box trig"><span class="t">Trigger</span><span class="m">the fly in the ointment</span></div>
+    <div class="flow5-arrow">&rsaquo;</div>
+    <div class="flow-box skep"><span class="t">Skepticism</span><span class="m">back of the envelope; Hanlon's razor still applies</span></div>
+    <div class="flow5-arrow">&rsaquo;</div>
+    <div class="flow-box inv"><span class="t">Investigation</span><span class="m">data beyond reproach; no mercy</span></div>
+    <div class="flow5-arrow">&rsaquo;</div>
+    <div class="flow-box post"><span class="t">Posterior</span><span class="m">the opposite of the prior, and personal</span></div>
+  </div>
+  <blockquote class="quote center" style="margin:1.2em auto 0; max-width:74%; border-left:none; padding-left:0; font-size:0.85em;">
+    &ldquo;Remember that this is a template&hellip; If it makes things harder instead, drop it like a hot potato.&rdquo;
+    <footer style="text-align:center;">&mdash; <em>Bayesian Storytelling</em>, the day after the newsletter launched</footer>
+  </blockquote>
+</section>
+
+<section>
+  <span class="stage-tag">Unpublished &middot; planned 6 Nov 2026</span>
+  <h2>Before writing a word: <em>End of Shift</em></h2>
+  <table class="steps">
+    <tbody>
+      <tr><td class="step">Prior</td><td>Haven't I benefited from being a workaholic? On holiday, I uninstalled and reinstalled Slack. Twice.</td></tr>
+      <tr class="trig"><td class="step">Trigger</td><td>A minister who once lamented the exploitation of cheap labour, now advertising it abroad</td></tr>
+      <tr class="skep"><td class="step">Skepticism</td><td>Any exhortation to work longer hours, especially in India, smells of exploitation</td></tr>
+      <tr class="inv"><td class="step">Investigation</td><td>PLFS + Time Use Survey. Perez asks if snow-clearing can be sexist: can working late be? And who exactly are these ideal employees?</td></tr>
+      <tr class="post"><td class="step">Posterior</td><td>There's still a cost to being a workaholic; I'm just too privileged to feel it. Cookie used to respond when the keyboard went quiet in the evening. Now her walks happen at night.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2 class="center">The process, according to <code>git log</code></h2>
+  <div class="timeline">
+    <div class="tl-row"><span class="tl-date">Mar 2025</span><span class="tl-msg">Initial thoughts on the Trigger<span class="sub">a LinkedIn post, copied out and rebutted line by line, before any data</span></span></div>
+    <div class="tl-row"><span class="tl-date">Apr 2025</span><span class="tl-msg">Writing prompts<span class="sub">the monkeys at IIT Madras &middot; earbuds rolling off during takeoff &middot; &ldquo;you've got no skin in the game&rdquo;</span></span></div>
+    <div class="tl-row"><span class="tl-date">Apr 2025</span><span class="tl-msg">Add PERV1 data dictionary from claude<span class="sub">two days later: &ldquo;Schema fixes&rdquo;</span></span></div>
+    <div class="tl-row"><span class="tl-date">Jul 2025</span><span class="tl-msg">Start writing the cosmic ulcer prior<span class="sub">nine days before &ldquo;Start the notebook&rdquo;</span></span></div>
+    <div class="tl-row crisis"><span class="tl-date">Jan 2026</span><span class="tl-msg">The total failure of health analysis</span></div>
+    <div class="tl-row crisis"><span class="tl-date">Feb 2026</span><span class="tl-msg">Giving up<span class="sub">four days later: &ldquo;some differences show up in means of cohorts&rdquo;</span></span></div>
+    <div class="tl-row"><span class="tl-date">Aug 2026</span><span class="tl-msg">Rebuild storyboard around the actual prior</span></div>
+    <div class="tl-row"><span class="tl-date">Aug 2026</span><span class="tl-msg">Finish the draft!!!<span class="sub">next day: edits &middot; footnotes &middot; typos &middot; charts &middot; &ldquo;More edits, brevity&rdquo;</span></span></div>
+  </div>
 </section>
 
 <!-- ===================== CASE 1 — KIRANA STORES ===================== -->
@@ -283,26 +399,36 @@
 <section>
   <span class="stage-tag">Case 1 &middot; Retail</span>
   <h2>Quick commerce is killing kirana stores</h2>
-  <div style="display:grid; grid-template-columns:auto 1fr; gap:1.4em; align-items:center; margin-top:0.3em;">
-    <img class="chart-hero" style="max-height:540px !important; margin:0;" src="assets/01-online-grocery-shopping.png" alt="Map of India: online grocery shopping is concentrated in a few metros; half of it happens in 20 districts and about 15% in Delhi NCR alone">
-    <div>
-      <p class="claim-card" style="margin:0; font-size:0.95em;">&ldquo;About 2,00,000 kirana stores have shut down in the last year because of predatory e-commerce practices.&rdquo;
+  <div class="case">
+    <div class="chart"><img src="assets/01-online-grocery-shopping.png" alt="Map of India: online grocery shopping is concentrated in a few metros; half of it happens in 20 districts and about 15% in Delhi NCR alone"></div>
+    <div class="side">
+      <div class="top">
+        <p class="claim-card">&ldquo;About 2,00,000 kirana stores have shut down in the last year because of predatory e-commerce practices.&rdquo;
     <span class="src">AICPDF (traders' federation), widely reshared as breaking, shocking data</span></p>
-      <p class="gut-check" style="text-align:left; margin-top:0.5em;"><span class="tag">Gut check</span> 200,000 sounds huge. Huge compared to what?</p>
-      <h4 style="color:var(--accent); margin:0.7em 0 0;">India has about 13 million kirana stores</h4>
-      <table class="metrics small" style="margin:0.4em 0 0; width:100%;">
-    <tbody>
-      <tr><td>200,000 closures against ~13M kirana stores</td><td><strong>1.5%</strong> national closure rate</td></tr>
-      <tr><td>&hellip; even limited to metro India alone</td><td><strong>5%</strong></td></tr>
-      <tr class="hl"><td>Households that shop online for groceries at all</td><td><strong>7%</strong> &mdash; 93% stay offline</td></tr>
-      <tr><td>&hellip; even inside urban India specifically</td><td><strong>83%</strong> still don't shop online</td></tr>
-      <tr><td>Historical base rate: Amazon/Flipkart-era, COVID lockdown surge</td><td>displaced only <strong>1&ndash;2%</strong>, then <strong>~0.5%</strong></td></tr>
-    </tbody>
-  </table>
-      <p class="src-note" style="text-align:left;">HCES 2023&ndash;24</p>
+        <p class="gut-check"><span class="tag">Gut check</span> 200,000 sounds huge. Huge compared to what?</p>
+      </div>
+      <div class="bottom">
+        <h4>India has about 13 million kirana stores</h4>
+      <table class="metrics small">
+        <tbody>
+          <tr><td>200,000 closures against ~13M kirana stores</td><td><strong>1.5%</strong> national closure rate</td></tr>
+          <tr><td>&hellip; even limited to metro India alone</td><td><strong>5%</strong></td></tr>
+          <tr class="hl"><td>Households that shop online for groceries at all</td><td><strong>7%</strong> &mdash; 93% stay offline</td></tr>
+          <tr><td>&hellip; even inside urban India specifically</td><td><strong>83%</strong> still don't shop online</td></tr>
+          <tr><td>Historical base rate: Amazon/Flipkart-era, COVID lockdown surge</td><td>displaced only <strong>1&ndash;2%</strong>, then <strong>~0.5%</strong></td></tr>
+        </tbody>
+      </table>
+        <p class="src-note">HCES 2023&ndash;24</p>
+      </div>
     </div>
   </div>
-  <aside class="notes">This one came from a trade federation and went everywhere on social media with SHOCKING DATA energy. Before opening a dataset: 200,000 is a big number in isolation. But India doesn't have a small number of kirana stores. Let's find out how big. India has roughly thirteen million kirana stores. Two hundred thousand closures against that base is a 1.5% closure rate nationally, 5% if you only count metros. And only 7% of Indian households shop online for groceries at all — 93% never do. Even in urban India specifically, 83% of households don't shop online. This isn't new either: Amazon and Flipkart's big retail push only ever displaced 1 to 2% of local stores, and even the COVID lockdown e-commerce surge only got to about half a percent.</aside>
+</section>
+
+<section>
+  <span class="stage-tag">Case 1 &middot; Posterior</span>
+  <p class="story-ref">Half Ticket<span class="by">a Marathi film</span></p>
+  <p class="aside-line">Two kids from a jhuggi save for weeks to buy a pizza. It can't be delivered: their address has no house number and no street name. At the store, the guard throws them out.</p>
+  <p class="posterior-line" style="margin-top:1em;">&ldquo;I myself am squarely in the <strong>7%</strong>, and there's a whole world out there which I'll never see, no matter how hard I look.&rdquo;</p>
 </section>
 
 <!-- ===================== CASE 2 — GIG ECONOMY ===================== -->
@@ -310,10 +436,28 @@
 <section>
   <span class="stage-tag">Case 2 &middot; Labour</span>
   <h2>Gig work liberates India's poor and uneducated</h2>
-  <p class="claim-card" style="margin:0.2em auto 0; max-width:92%; font-size:0.85em;">&ldquo;Workers who once faced barriers like lack of education or technical skills now earn &#8377;15,000 to &#8377;45,000 or even more.&rdquo;
+  <div class="case">
+    <div class="chart"><img src="assets/02-education-income-gender.png" alt="Line chart: average monthly income by education level, men and women, split by casual/salaried/self-employed"></div>
+    <div class="side">
+      <div class="top">
+        <p class="claim-card">&ldquo;Workers who once faced barriers like lack of education or technical skills now earn &#8377;15,000 to &#8377;45,000 or even more.&rdquo;
     <span class="src">the platform-economy narrative, echoing NITI Aayog's own optimistic framing</span></p>
-  <img class="chart-hero" style="width:auto !important; height:430px !important; max-height:none !important; max-width:none; margin:0.5em auto 0; display:block;" src="assets/02-education-income-gender.png" alt="Line chart: average monthly income by education level, men and women, split by casual/salaried/self-employed">
-  <aside class="notes">This is the LinkedIn-influencer-as-amateur-economist claim: platforms have liberated people once locked out by lack of education, and here are the numbers to prove it. Before we even reach for PLFS: does the phrase "gig worker" mean anything to India's official labour classification? This is the chart's own caption, straight from the notebook: for men, higher education pays off only by a small margin. It helps women significantly — a salaried woman with no schooling earns about 6,600 rupees a month; a salaried graduate woman earns about 14,900, more than double. But she's still earning about 24% less than a salaried male graduate, who's at about 19,600. The essay's "no meaningful income gain from education" line is true for men. It's the opposite of true for women, and that half of the finding just never got written down.</aside>
+      </div>
+      <div class="bottom">
+        <p class="src-note">PLFS 2023&ndash;24, survey-weighted &middot; points based on fewer than 30 respondents are hidden</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="stage-tag">Case 2 &middot; Posterior</span>
+  <p class="story-ref">Trolling as a public service</p>
+  <blockquote class="quote center" style="margin:0.6em auto 0; max-width:80%; border-left:none; padding-left:0; font-size:0.9em;">
+    &ldquo;Who will repair the bridge if the troll's not there? He repairs it regularly with the sweat of his brow, solid work, first rate. It's cheaper to pay his toll.&rdquo;
+    <footer style="text-align:center;">&mdash; Andrzej Sapkowski, <em>The Last Wish</em></footer>
+  </blockquote>
+  <p class="posterior-line" style="margin-top:0.9em; font-size:1.1em;">We're not prepared for a world where <strong>satire</strong> is a better delivery mechanism for news.</p>
 </section>
 
 <!-- ===================== CASE 3 — 90-HOUR WORKWEEK ===================== -->
@@ -321,15 +465,31 @@
 <section>
   <span class="stage-tag">Case 3 &middot; Work &amp; Care</span>
   <h2>The 90-hr Workweek</h2>
-  <img class="chart-hero" style="width:auto !important; height:400px !important; max-height:none !important; max-width:none; margin:0.3em auto 0; display:block;" src="assets/03-remaining-time.png" alt="Chart: remaining weekly time budget after paid work and chores — sleep, TV, talking, self-care">
-  <table class="metrics small" style="margin:0.6em auto 0; width:88%;">
-    <tbody>
-      <tr><td>Best case: both genders cap chores at 1 hr/day</td><td>women's ceiling rises to only <strong>~67 hrs/wk</strong></td></tr>
-      <tr><td>To reach 90, you'd have to cut</td><td>~1 hr sleep/night, all TV (10&ndash;12 hrs/wk), most talk &amp; text time (15 hrs/wk)</td></tr>
-      <tr class="hl"><td>Deficit still remaining after those cuts</td><td>women <strong>22 hrs</strong> &middot; men <strong>34 hrs</strong></td></tr>
-    </tbody>
-  </table>
-  <aside class="notes">Three captains of industry, three escalating numbers, and the explicit dismissal of work-life balance as a foreign import. So: if a salaried, white-collar Indian actually worked 90 hours a week, what would have to give? Even in the most generous scenario — everyone caps chores at an hour a day — women's work-time ceiling only rises to 67 hours a week. Getting anyone to 90 means cutting an hour of sleep every single night, giving up television entirely, giving up most talking and texting with people you care about. And you're still 22 hours short for women, 34 for men.</aside>
+  <div class="case">
+    <div class="chart"><img src="assets/03-remaining-time.png" alt="Chart: remaining weekly time budget after paid work and chores — sleep, TV, talking, self-care"></div>
+    <div class="side">
+      <div class="top"></div>
+      <div class="bottom">
+      <table class="metrics small">
+        <tbody>
+          <tr><td>Best case: both genders cap chores at 1 hr/day</td><td>women's ceiling rises to only <strong>~67 hrs/wk</strong></td></tr>
+          <tr><td>To reach 90, you'd have to cut</td><td>~1 hr sleep/night, all TV (10&ndash;12 hrs/wk), most talk &amp; text time (15 hrs/wk)</td></tr>
+          <tr class="hl"><td>Deficit still remaining after those cuts</td><td>women <strong>22 hrs</strong> &middot; men <strong>34 hrs</strong></td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="stage-tag">Case 3 &middot; Posterior</span>
+  <blockquote class="quote center" style="margin:0.8em auto 0; max-width:80%; border-left:none; padding-left:0;">
+    &ldquo;The combination of a healthy body and a stable relationship with a self-reliant woman who takes zero shit from me or anyone else has made the continuity of my working life possible.&rdquo;
+    <footer style="text-align:center;">&mdash; Stephen King, <em>On Writing</em></footer>
+  </blockquote>
+  <p class="aside-line" style="margin-top:1em;">When people ask you to work ridiculously long hours, healthy bodies and stable relationships are exactly the things they want you to give up.</p>
+  <p class="big-line" style="font-size:1.8em;">It better be worth it.</p>
 </section>
 
 <!-- ===================== CASE 4 — PUBLIC WELFARE ===================== -->
@@ -337,23 +497,28 @@
 <section>
   <span class="stage-tag">Case 4 &middot; Welfare</span>
   <h2>Welfare makes people lazy &mdash; and wasteful</h2>
-  <img class="chart-hero" style="width:auto !important; height:360px !important; max-height:none !important; max-width:none; margin:0.3em auto 0; display:block;" src="assets/06-health-insurance-intoxicants-panels.png" alt="Chart: per-capita intoxicant spend, insured vs not-insured, rural and urban">
-  <table class="metrics small" style="margin:0.6em auto 0; width:88%;">
-    <tbody>
-      <tr><td>Urban PMJAY/scheme beneficiaries vs. non-beneficiaries</td><td>spend <strong>&#8377;2/month more</strong> on gutkha</td></tr>
-      <tr><td>Rural beneficiaries vs. non-beneficiaries</td><td>spend <strong>&#8377;4/month less</strong></td></tr>
-      <tr class="hl"><td>Entire spread across every group in the chart</td><td>&plusmn;<strong>&#8377;15</strong></td></tr>
-    </tbody>
-  </table>
-  <p class="src-note" style="margin-top:0.35em; text-align:center;">HCES, propensity-score matched on household size, caste, religion &amp; region &mdash; not a raw comparison</p>
-  <aside class="notes">Two of the Prime Minister's own economic advisors wrote this: government spending on health insurance is up, spending on intoxicants is up, therefore moral hazard — people take more risks because they feel insured. The hole is immediate: two things rising together doesn't mean one causes the other. Are we even looking at the same households? Instead of two national trend lines, I compared insured and uninsured households directly, split rural and urban. But not a naive comparison: households are first matched by propensity score on things like size, caste, religion and region, trimmed to common support, then compared within matched strata — the same rigor you'd want turned on any of the loud claims we started with. Urban beneficiaries spend about two rupees a month more on gutkha than urban non-beneficiaries. Rural beneficiaries actually spend four rupees less than rural non-beneficiaries. The entire chart, top to bottom, spans about fifteen rupees.</aside>
+  <div class="case">
+    <div class="chart"><img src="assets/06-health-insurance-intoxicants-panels.png" alt="Chart: per-capita intoxicant spend, insured vs not-insured, rural and urban"></div>
+    <div class="side">
+      <div class="top"></div>
+      <div class="bottom">
+      <table class="metrics small">
+        <tbody>
+          <tr><td>Urban PMJAY/scheme beneficiaries vs. non-beneficiaries</td><td>spend <strong>&#8377;2/month more</strong> on gutkha</td></tr>
+          <tr><td>Rural beneficiaries vs. non-beneficiaries</td><td>spend <strong>&#8377;4/month less</strong></td></tr>
+          <tr class="hl"><td>Entire spread across every group in the chart</td><td>&plusmn;<strong>&#8377;15</strong></td></tr>
+        </tbody>
+      </table>
+        <p class="src-note">HCES, propensity-score matched on household size, caste, religion &amp; region &mdash; not a raw comparison</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section>
   <h2 class="center">But welfare's real effects hide where headlines don't look</h2>
   <img class="chart-hero" src="assets/06-lpg-subsidy-education.png" alt="Chart: education spending per student, LPG subsidy beneficiary vs non-beneficiary households">
   <p class="posterior-line" style="margin-top:0.5em; font-size:1.1em;">LPG-subsidy households spend nearly <strong>&#8377;60 more</strong> on education per student &mdash; and two-thirds of that goes straight into private coaching.</p>
-  <aside class="notes">While the headline claim about vice spending falls apart, a genuine welfare effect was sitting one tab over, on a subsidy nobody was even arguing about. An LPG subsidy meant for cooking gas quietly turns into a child's tuition fee. That's the kind of finding no headline thinks to go looking for.</aside>
 </section>
 
 <section>
@@ -365,7 +530,25 @@
       <tr><td>Free Electricity &rarr; Education</td><td>+&#8377;74 total, but <strong>&minus;&#8377;70 from coaching</strong>, +&#8377;99 to fees &mdash; the opposite direction entirely</td></tr>
     </tbody>
   </table>
-  <aside class="notes">The published essay makes the LPG finding sound like the general shape of how welfare works — a subsidy frees up cash, some of it drifts into coaching. But I ran the identical propensity-score-matched comparison on all five schemes this essay analysed, and it isn't one shape. Health insurance shows an even bigger coaching shift than LPG — fifty-four rupees, more than LPG's forty-one — except the overall education total is negative, because formal school fees dropped even more. And free electricity does the opposite of everything else: fees go up by ninety-nine rupees, coaching goes down by seventy. The essay picked the cleanest one to tell. The other two are just as real, and they complicate the story instead of completing it. Small bonus that didn't fit anywhere: midday-meal households spend 145 rupees more on ready-to-eat food at home, even after subtracting the value of meals eaten at school — the single largest food-category effect in the entire five-scheme dataset, and nobody's written a sentence about it yet.</aside>
+</section>
+
+<section>
+  <span class="stage-tag">Case 4 &middot; Posterior</span>
+  <p class="aside-line" style="margin-top:0.8em;">A friend taught the children of migrant labourers on construction sites. By nightfall their parents' backs were in such pain that sleep was almost impossible. The only thing that could knock them out was alcohol, so that they could work the next day.</p>
+  <p class="posterior-line" style="margin-top:0.9em; font-size:1.1em;">When the budget loosens a little, people don't become extravagant. They make choices: better food, a little coaching for a child, a way to get through the night.</p>
+  <p class="big-line" style="font-size:1.9em;">Not cake, but something slightly better than bread.</p>
+</section>
+
+<section>
+  <h2 class="center">The investigation must be beyond reproach</h2>
+  <blockquote class="quote center" style="margin:0.6em auto 0; max-width:80%; border-left:none; padding-left:0;">
+    &ldquo;Exceptional claims need exceptional evidence. This applies to you too.&rdquo;
+  </blockquote>
+  <ul class="release" style="font-size:0.95em; margin:1em auto 0; max-width:70%;">
+    <li>If you're not confident about something, <strong>don't say it</strong></li>
+    <li>Get the smallest, most irrelevant bit wrong, and you <strong>lose credibility</strong></li>
+    <li>Ask for help and feedback; <strong>double-check</strong> everything</li>
+  </ul>
 </section>
 
 <!-- ===================== ACT 5B — DATA SOURCES ===================== -->
@@ -378,7 +561,6 @@
     <div class="flow-box mid"><span class="t">3 &middot; The Maths &amp; Stats</span></div>
     <div class="flow-box out"><span class="t">4 &middot; LLMs</span></div>
   </div>
-  <aside class="notes">Four claims, one process. Now the unglamorous, reusable part: what it actually takes, under the hood, to run that process on Indian open data.</aside>
 </section>
 
 <section>
@@ -409,7 +591,23 @@
         <span style="font-family:var(--font-mono); font-size:0.6em; color:var(--accent);">bharatviz.org</span>
       </a>
   </div>
-  <aside class="notes">Where the data comes from, and who helps you use it. The raw microdata lives on MoSPI's portal, microdata.gov.in: HCES behind the kirana and welfare cases, PLFS behind gig work and the cold open, the Time Use Survey behind the 90-hour week. Underneath it, a community that makes it usable: DataMeet, Data For India, Diagram Chasing and BharatViz.</aside>
+</section>
+
+<section>
+  <span class="stage-tag">Element 1 &middot; The data</span>
+  <h2 class="center">Show your work</h2>
+  <div class="repo-row">
+    <a class="repo-card" href="https://github.com/jaidevd/hces-2023-24" target="_blank" rel="noopener">
+      <span class="url">github.com/jaidevd/hces-2023-24</span>
+      <span class="what">HCES 2023&ndash;24 microdata, one Parquet file per questionnaire section</span>
+    </a>
+    <a class="repo-card" href="https://github.com/jaidevd/beingbayesian" target="_blank" rel="noopener">
+      <span class="url">github.com/jaidevd/beingbayesian</span>
+      <span class="what">The code and data behind every essay, and every chart in this talk</span>
+    </a>
+  </div>
+  <p class="posterior-line" style="margin-top:1.1em; font-size:1.1em;">The tweet announcing the cleaned data: <strong>10</strong> reposts &middot; <strong>69</strong> likes &middot; <strong>52</strong> bookmarks &middot; <strong>12</strong> new followers.</p>
+  <p class="posterior-note">More than the essays got. Build shareable, useful assets in the service of the larger work.</p>
 </section>
 
 <section>
@@ -418,7 +616,6 @@
     <img src="assets/survey-consumption-form.png" alt="Questionnaire page: quantity and value of cereals and cereal substitutes consumed by the household during the last 30 days, with item codes and a cereal sub-total row" style="position:absolute; left:4%; top:0; height:560px; width:auto; margin:0; border-radius:6px; border:1px solid var(--hair); box-shadow:0 3px 18px rgba(42,26,22,0.12);">
     <img src="assets/survey-time-diary.png" alt="Questionnaire page: particulars of activities for each household member aged 6 and above, from 4 AM the day before the interview to 4 AM on the day, recorded in half-hour slots with activity codes" style="position:absolute; right:2%; bottom:0; width:760px; height:auto; margin:0; z-index:2; border-radius:6px; border:1px solid var(--hair); box-shadow:0 3px 18px rgba(42,26,22,0.12); box-shadow:0 6px 28px rgba(42,26,22,0.28);">
   </div>
-  <aside class="notes">This is what the data actually looks like before it becomes a CSV: pages of a paper questionnaire. On the left, a household is asked about the quantity and value of every cereal it consumed in the last 30 days, item by item, each with a code, and split by where it came from: free, the ration shop, or elsewhere. Notice the row near the bottom: cereal sub-total, code 129. It sits in the same list, coded exactly like any other item. Forget to drop it and your cereal total silently doubles. And the 30 days is specific to this page; other pages ask about the last week or the last year. On the right, a time-use diary: for every household member aged six and over, every activity from 4 AM the day before to 4 AM on the day of the interview, in half-hour slots, up to three activities at once, each with an activity code. One person becomes dozens of rows. Every one of these design choices decides how you have to read the numbers.</aside>
 </section>
 
 <section>
@@ -455,7 +652,6 @@
       </svg>
     </div>
   </div>
-  <aside class="notes">Strip away the jargon and every analysis in this talk is the same move: split households into groups, compute each group's weighted average, and compare. The weighted average is the formula on the left. Each row's value is multiplied by its survey multiplier, how many real households that one row stands in for, and divided by the total weight. Then two questions. Statistical significance: is the gap bigger than chance? The two-sided t-test on the right asks whether the beneficiaries' average is genuinely different from the non-beneficiaries', in either direction. And numerical significance: even if it's real, does it matter? Two rupees a month is statistically detectable and practically a rounding error. The one other tool that matters a lot is ordinary least squares. Regress the outcome on a group indicator plus the things you want to hold fixed, household size, caste, region, and the coefficient on the indicator is the gap between the groups after those are accounted for. Weight it by the multiplier too; with survey data that's weighted least squares. Every row in these surveys carries a weight, usually called "multiplier," sometimes shortened to "mult" — recording how many real households or people that one response stands in for nationally. This is the single most common way a well-meaning FOSS person gets NSS data wrong: load the file, call .mean() on a column, and get a number that looks plausible and is nowhere near the truth. This exact function lives in hces.py and gets imported by five different welfare notebooks; the workweek essay hand-rolls the identical line inline. Every number in this talk is a multiplier-weighted estimate, never a raw average.</aside>
 </section>
 
 <section>
@@ -468,7 +664,6 @@
     <li>LLMs <em><strong>will</strong></em> hallucinate</li>
   </ul>
   <p class="gut-check" style="margin-top:1.1em;"><span class="tag">Pro-tip</span> Write unit tests</p>
-  <aside class="notes">Survey documentation runs to hundreds of pages. Almost everything is coded. Questionnaires are not linear. LLMs will hallucinate.</aside>
 </section>
 
 <section style="text-align:center;">
@@ -483,7 +678,24 @@
     &ldquo;One must imagine Sisyphus happy.&rdquo;
     <footer style="text-align:center;">&mdash; Albert Camus, <em>The Myth of Sisyphus</em></footer>
   </blockquote>
-  <aside class="notes">Brandolini's law: the energy needed to refute bullshit is an order of magnitude bigger than the energy needed to produce it. Doing this is pushing a boulder up a hill that resets every day. One must imagine Sisyphus happy.</aside>
+</section>
+
+<section>
+  <p class="aside-line">A better man would tell you that he writes to battle this malignancy.<br>If I were a romantic, I'd tell you that, too.</p>
+  <p class="big-line">But I just want to have fun.</p>
+  <p class="posterior-line" style="font-size:1.1em;">Not indignant. Not even derisive. Simply <strong>amused</strong> at the absurdity of it all.</p>
+</section>
+
+<section>
+  <blockquote class="quote center" style="margin:0.4em auto 0; max-width:80%; border-left:none; padding-left:0;">
+    &ldquo;When the facts change, I change my opinions. What do you do, Sir?&rdquo;
+    <footer style="text-align:center;">&mdash; attributed to Keynes (or Samuelson; nobody's quite sure)</footer>
+  </blockquote>
+  <blockquote class="quote center" style="margin:0.8em auto 0; max-width:74%; border-left:none; padding-left:0; font-size:0.8em;">
+    &ldquo;A foolish consistency is the hobgoblin of little minds.&rdquo;
+    <footer style="text-align:center;">&mdash; Ralph Waldo Emerson</footer>
+  </blockquote>
+  <p class="posterior-line" style="margin-top:1.1em;"><span class="dev">पूर्वाग्रह</span> can be immensely entertaining. And if you're lucky, your audience will <strong>laugh with you</strong>.</p>
 </section>
 
 <section style="text-align:center;">
@@ -492,7 +704,6 @@
     <img src="assets/beingbayesian-qr.png" alt="QR code linking to beingbayesian.in"
          style="display:block; width:360px; height:360px; margin:0.6em auto 0; border-radius:10px; box-shadow:0 3px 18px rgba(42,26,22,0.12); image-rendering:pixelated;">
   </a>
-  <aside class="notes">beingbayesian.in: the newsletter, the essays, and the data and code behind every claim in this talk. Thank you.</aside>
 </section>
 
 </div>
@@ -502,19 +713,7 @@
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/math/math.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
-  // Speaker notes are authored as Markdown inside each <aside class="notes">.
-  // Render them to HTML before Reveal reads them (reveal's own markdown plugin skips notes).
-  document.querySelectorAll('aside.notes').forEach(function (el) {
-    var raw = el.textContent.replace(/^\n/, '').replace(/\s+$/, '');
-    if (!raw) return;
-    var lines = raw.split('\n');
-    var widths = lines.filter(function (l) { return l.trim(); })
-                      .map(function (l) { return l.match(/^ */)[0].length; });
-    var pad = widths.length ? Math.min.apply(null, widths) : 0;
-    el.innerHTML = marked.parse(lines.map(function (l) { return l.slice(pad); }).join('\n'));
-  });
   Reveal.initialize({
     hash: true,
     slideNumber: 'c/t',
