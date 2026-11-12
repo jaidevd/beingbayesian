@@ -83,18 +83,6 @@
 
 
 
-    /* the honest git-log timeline */
-    .timeline { max-width: 92%; margin: 0.7em auto 0; border-left: 2px solid var(--hair); padding-left: 1.2em; }
-    .timeline .tl-row { position: relative; margin: 0.5em 0; }
-    .timeline .tl-row::before { content: ""; position: absolute; left: -1.63em; top: 0.3em;
-                                 width: 9px; height: 9px; border-radius: 50%; background: var(--accent); }
-    .timeline .tl-date { font-family: var(--font-mono); font-size: 0.55em; color: var(--muted);
-                          display: inline-block; width: 4.2em; vertical-align: top; }
-    .timeline .tl-msg { font-family: var(--font-display); font-size: 0.86em; display: inline-block; width: calc(100% - 4.4em); }
-    .timeline .tl-msg .sub { display: block; font-size: 0.78em; color: var(--muted); font-style: italic; margin-top: 0.1em; }
-    .timeline .tl-row.crisis::before { background: var(--accent-2); }
-    .timeline .tl-row.crisis .tl-msg { color: var(--accent-2); font-weight: 600; }
-    .timeline .tl-row.crisis .tl-msg .sub { color: var(--accent-2); opacity: 0.75; font-weight: 400; }
 
 
 
@@ -131,15 +119,30 @@
                  box-shadow:0 3px 18px rgba(42,26,22,0.12); text-decoration:none; }
     .repo-card .url { display:block; font-family:var(--font-mono); font-size:0.72em; font-weight:500; color:var(--accent); }
     .repo-card .what { display:block; font-family:var(--font-sans); font-size:0.62em; color:var(--muted); margin-top:0.35em; line-height:1.4; }
-    /* git-log process slide: room for "Mon YYYY" dates */
-    .timeline .tl-date { width:5.8em; }
-    .timeline .tl-msg { width:calc(100% - 4.2em); }
-    .timeline .tl-row { margin:0.35em 0; }
     /* alignment: content slides fill the frame so titles sit at the same height;
        typographic slides stay vertically centred by Reveal */
     .reveal .slides section.top { min-height:100%; box-sizing:border-box; }
     .reveal section.top > .stage-tag { display:table; margin-right:auto; }
     .reveal section.top > h2:not(.center) { text-align:left; }
+    /* framework step slides: the five steps as a header, the current one marked like a stage tag */
+    .steps-nav { display:flex; align-items:baseline; gap:0.55em; margin-bottom:0.6em; font-family:var(--font-sans);
+                 font-size:0.6em; letter-spacing:0.16em; text-transform:uppercase; font-weight:600; color:var(--muted); }
+    .steps-nav span { padding:0.15em 0 0.35em; }
+    .steps-nav .on { color:var(--accent); border-bottom:2px solid var(--accent); }
+    .steps-nav .sep { color:var(--hair); letter-spacing:0; }
+    .step-meta { font-family:var(--font-display); font-style:italic; color:var(--muted); margin:-0.2em 0 0.5em; }
+    .slide-placeholder { height:440px; border:3px dashed var(--muted); border-radius:10px; background:var(--paper);
+                         display:flex; align-items:center; justify-content:center;
+                         font-family:var(--font-mono); font-size:0.8em; color:var(--muted); }
+    .step-figure { margin:0.4em 0 0; text-align:center; }
+    .step-figure img { height:400px; width:auto; margin:0; border-radius:6px; border:1px solid var(--hair);
+                       box-shadow:0 3px 18px rgba(42,26,22,0.12); }
+    .step-figure figcaption { font-family:var(--font-display); font-style:italic; font-size:0.7em; color:var(--muted); margin-top:0.5em; }
+    .step-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.8em; align-items:center; margin-top:0.6em; }
+    .step-grid .step-figure { margin:0; }
+    .step-grid .step-figure img { width:auto; height:auto; max-width:100%; max-height:430px; }
+    .step-list { max-width:none; margin:0; font-size:0.78em; line-height:1.45; }
+    .step-list li { margin:0.55em 0; }
   </style>
 </head>
 <body>
@@ -463,16 +466,8 @@
   </blockquote>
 </section>
 
-<section style="text-align:center;">
-  <p style="font-family:var(--font-display); font-size:2.2em; font-weight:600; margin:0;"><a href="https://beingbayesian.in" style="color:var(--accent);">beingbayesian.in</a></p>
-  <a href="https://beingbayesian.in" target="_blank" rel="noopener">
-    <img src="assets/beingbayesian-qr.png" alt="QR code linking to beingbayesian.in"
-         style="display:block; width:360px; height:360px; margin:0.6em auto 0; border-radius:10px; box-shadow:0 3px 18px rgba(42,26,22,0.12); image-rendering:pixelated;">
-  </a>
-</section>
-
 <section class="top">
-  <h2 class="center">A storytelling framework, not a statistical one</h2>
+  <h2 class="center">The Storytelling Framework</h2>
   <div class="flow5">
     <div class="flow-box"><span class="t">Prior</span><span class="m">surround the reader with your assumptions</span></div>
     <div class="flow5-arrow">&rsaquo;</div>
@@ -491,17 +486,103 @@
 </section>
 
 <section class="top">
-  <h2 class="center">The process, according to <code>git log</code></h2>
-  <div class="timeline">
-    <div class="tl-row"><span class="tl-date">Mar 2025</span><span class="tl-msg">Initial thoughts on the Trigger<span class="sub">a LinkedIn post, copied out and rebutted line by line, before any data</span></span></div>
-    <div class="tl-row"><span class="tl-date">Apr 2025</span><span class="tl-msg">Writing prompts<span class="sub">the monkeys at IIT Madras &middot; earbuds rolling off during takeoff &middot; &ldquo;you've got no skin in the game&rdquo;</span></span></div>
-    <div class="tl-row"><span class="tl-date">Apr 2025</span><span class="tl-msg">Add PERV1 data dictionary from claude<span class="sub">two days later: &ldquo;Schema fixes&rdquo;</span></span></div>
-    <div class="tl-row"><span class="tl-date">Jul 2025</span><span class="tl-msg">Start writing the cosmic ulcer prior<span class="sub">nine days before &ldquo;Start the notebook&rdquo;</span></span></div>
-    <div class="tl-row crisis"><span class="tl-date">Jan 2026</span><span class="tl-msg">The total failure of health analysis</span></div>
-    <div class="tl-row crisis"><span class="tl-date">Feb 2026</span><span class="tl-msg">Giving up<span class="sub">four days later: &ldquo;some differences show up in means of cohorts&rdquo;</span></span></div>
-    <div class="tl-row"><span class="tl-date">Aug 2026</span><span class="tl-msg">Rebuild storyboard around the actual prior</span></div>
-    <div class="tl-row"><span class="tl-date">Aug 2026</span><span class="tl-msg">Finish the draft!!!<span class="sub">next day: edits &middot; footnotes &middot; typos &middot; charts &middot; &ldquo;More edits, brevity&rdquo;</span></span></div>
+  <div class="steps-nav"><span class="on">Prior</span><span class="sep">&rsaquo;</span><span>Trigger</span><span class="sep">&rsaquo;</span><span>Skepticism</span><span class="sep">&rsaquo;</span><span>Investigation</span><span class="sep">&rsaquo;</span><span>Posterior</span></div>
+  <h2>Prior</h2>
+  <p class="step-meta">Embed the reader in your experience - induce claustrophobia.</p>
+  <div class="step-grid">
+    <figure class="step-figure">
+      <img src="assets/the-mail.jpeg" alt="Phiz's engraving 'The Mail': a night coach halted on a misty road, its lamp lighting a cloaked man in a tricorn hat who faces a rider on horseback">
+      <figcaption>The Tale of Two Cities: Chapter 2 - The Mail</figcaption>
+    </figure>
+    <ul class="release step-list">
+      <li><strong>Kirana stores</strong> &middot; &ldquo;If my parents use Blinkit, <em>everyone</em> must.&rdquo;</li>
+      <li><strong>90-hour week</strong> &middot; &ldquo;I'm a proud workaholic. It's easy for me to work more than 90 hours a week.&rdquo;</li>
+      <li><strong>AI hype</strong> &middot; &ldquo;I'm blind to the magic of AI.&rdquo;</li>
+      <li><strong>Welfare</strong> &middot; &ldquo;Everyone thinks about saving the same way.&rdquo;</li>
+      <li><strong>Stack Overflow</strong> &middot; &ldquo;ChatGPT certainly didn't kill Stack Overflow.&rdquo;</li>
+    </ul>
   </div>
+</section>
+
+<section class="top">
+  <div class="steps-nav"><span>Prior</span><span class="sep">&rsaquo;</span><span class="on">Trigger</span><span class="sep">&rsaquo;</span><span>Skepticism</span><span class="sep">&rsaquo;</span><span>Investigation</span><span class="sep">&rsaquo;</span><span>Posterior</span></div>
+  <h2>Trigger</h2>
+  <p class="step-meta">the fly in the ointment</p>
+  <div class="step-grid">
+    <figure class="step-figure">
+      <img src="assets/marie-antoinette.jpg" alt="Élisabeth Vigée Le Brun's 1783 portrait of Marie Antoinette in a blue-grey silk gown and feathered headdress, holding a pink rose">
+      <figcaption>&ldquo;Let them eat cake.&rdquo; &mdash; Vigée Le Brun, <em>Marie Antoinette with a Rose</em>, 1783</figcaption>
+    </figure>
+    <ul class="release step-list">
+      <li><strong>Kirana stores</strong> &middot; &ldquo;SHOCKING DATA! Almost 2 Lakh Kirana Stores are forced to Shut down due to E Commerce apps!&rdquo;</li>
+      <li><strong>90-hour week</strong> &middot; &ldquo;How long can you stare at your wife?&rdquo; Work 90 hours a week, through weekends.</li>
+      <li><strong>AI hype</strong> &middot; &ldquo;The AI Revolution: The Road to Superintelligence&rdquo; &mdash; Tim Urban, <em>Wait But Why</em></li>
+      <li><strong>Welfare</strong> &middot; &ldquo;&hellip;the interaction between rising tobacco use and expanding public healthcare coverage.&rdquo;</li>
+      <li><strong>Stack Overflow</strong> &middot; Viral posts declaring that ChatGPT has &lsquo;killed&rsquo; Stack Overflow.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="top">
+  <div class="steps-nav"><span>Prior</span><span class="sep">&rsaquo;</span><span>Trigger</span><span class="sep">&rsaquo;</span><span class="on">Skepticism</span><span class="sep">&rsaquo;</span><span>Investigation</span><span class="sep">&rsaquo;</span><span>Posterior</span></div>
+  <h2>Skepticism</h2>
+  <p class="step-meta">back of the envelope; Hanlon's razor still applies</p>
+  <div class="step-grid">
+    <figure class="step-figure">
+      <img src="assets/fry.gif" alt="Fry from Futurama squinting suspiciously">
+    </figure>
+    <ul class="release step-list">
+      <li><strong>Kirana stores</strong> &middot; &ldquo;When a less-than-sincere sale is coupled with clickbait, there's always something interesting under the hood.&rdquo;</li>
+      <li><strong>90-hour week</strong> &middot; &ldquo;Leisure isn't a western concept. It's in Article 43 of the Constitution.&rdquo;</li>
+      <li><strong>AI hype</strong> &middot; &ldquo;The world breaks every decade or so anyway. What's different <em>this</em> time?&rdquo;</li>
+      <li><strong>Welfare</strong> &middot; &ldquo;The article simply juxtaposes two trends, assumes an interaction and invokes moral hazard.&rdquo;</li>
+      <li><strong>Stack Overflow</strong> &middot; &ldquo;Take the ChatGPT label off the graph, and you'd blame the pandemic instead.&rdquo;</li>
+    </ul>
+  </div>
+</section>
+
+<section class="top">
+  <div class="steps-nav"><span>Prior</span><span class="sep">&rsaquo;</span><span>Trigger</span><span class="sep">&rsaquo;</span><span>Skepticism</span><span class="sep">&rsaquo;</span><span class="on">Investigation</span><span class="sep">&rsaquo;</span><span>Posterior</span></div>
+  <h2>Investigation</h2>
+  <p class="step-meta">data beyond reproach; no mercy</p>
+  <div class="step-grid">
+    <figure class="step-figure">
+      <img src="assets/snoopy.jpg" alt="Snoopy dressed as Sherlock Holmes in a deerstalker and cape, peering through a magnifying glass">
+    </figure>
+    <ul class="release step-list">
+      <li><strong>Kirana stores</strong> &middot; HCES 2023&ndash;24: only <strong>7%</strong> of households buy groceries online at all.</li>
+      <li><strong>90-hour week</strong> &middot; Time Use Survey: give up an hour of sleep a night, all TV and most conversation, and you're still <strong>22&ndash;34 hours</strong> short.</li>
+      <li><strong>AI hype</strong> &middot; The history of AI hype, and the bet behind every GPT: can sheer <strong>scale</strong> produce intelligence?</li>
+      <li><strong>Welfare</strong> &middot; Propensity-score matched HCES households: the intoxicants gap is a couple of <strong>rupees a month</strong>.</li>
+      <li><strong>Stack Overflow</strong> &middot; 60 million posts from the full data dump: ChatGPT <em>does</em> appear to have killed it.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="top">
+  <div class="steps-nav"><span>Prior</span><span class="sep">&rsaquo;</span><span>Trigger</span><span class="sep">&rsaquo;</span><span>Skepticism</span><span class="sep">&rsaquo;</span><span>Investigation</span><span class="sep">&rsaquo;</span><span class="on">Posterior</span></div>
+  <h2>Posterior</h2>
+  <p class="step-meta">Johnny Lawrence has an interesting story, too.</p>
+  <div class="step-grid">
+    <figure class="step-figure">
+      <img src="assets/cobra-kai.avif" alt="Cobra Kai poster: Johnny Lawrence in a black headband and Daniel LaRusso in a rising-sun hachimaki, side by side in white karate gis">
+    </figure>
+    <ul class="release step-list">
+      <li><strong>Kirana stores</strong> &middot; &ldquo;I myself am squarely in the 7%, and there's a whole world out there which I'll never see.&rdquo;</li>
+      <li><strong>90-hour week</strong> &middot; &ldquo;Healthy bodies and stable relationships are exactly the kinds of things they want you to give up. It better be worth it.&rdquo;</li>
+      <li><strong>AI hype</strong> &middot; &ldquo;If all that makes us Luddites, we'll happily reclaim the term.&rdquo;</li>
+      <li><strong>Welfare</strong> &middot; &ldquo;Not cake, but something slightly better than bread.&rdquo;</li>
+      <li><strong>Stack Overflow</strong> &middot; &ldquo;The harder question is who will bother to write the next answer down.&rdquo;</li>
+    </ul>
+  </div>
+</section>
+
+<section style="text-align:center;">
+  <p style="font-family:var(--font-display); font-size:2.2em; font-weight:600; margin:0;"><a href="https://beingbayesian.in" style="color:var(--accent);">beingbayesian.in</a></p>
+  <a href="https://beingbayesian.in" target="_blank" rel="noopener">
+    <img src="assets/beingbayesian-qr.png" alt="QR code linking to beingbayesian.in"
+         style="display:block; width:360px; height:360px; margin:0.6em auto 0; border-radius:10px; box-shadow:0 3px 18px rgba(42,26,22,0.12); image-rendering:pixelated;">
+  </a>
 </section>
 
 </div>
