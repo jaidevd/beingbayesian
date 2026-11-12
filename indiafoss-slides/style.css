@@ -56,28 +56,17 @@ html, body, .reveal-viewport { background: var(--ground); }
 .reveal ul, .reveal ol { margin: 0.3em 0; padding-left: 1.2em; }
 .reveal li { margin: 0.25em 0; line-height: 1.4; }
 .reveal li::marker { color: var(--accent); }
-.reveal .big { font-size: 1.1em; }
-.reveal .muted { color: var(--muted); font-size: 0.78em; }
 .reveal strong { color: var(--text); font-weight: 600; }
 .reveal em { font-style: italic; }
 .reveal a, .reveal a:hover { color: var(--accent); }
 
-/* Title + closing — the deck's two quiet, full-bleed moments */
-[data-state="title"], [data-state="closing"] { text-align: center; }
+/* Title slide */
+[data-state="title"] { text-align: center; }
 [data-state="title"] h1 {
   font-size: 3.1em; margin-bottom: 0.1em; letter-spacing: -0.02em;
 }
 [data-state="title"] h3 { margin-top: 0; font-style: italic; }
-[data-state="closing"] h1 { font-size: 2.4em; }
 
-/* The prior-cursor — a recurring identity mark, blinking on the claim being tested */
-.caret {
-  display: inline-block; width: 0.5ch; height: 0.92em; background: var(--accent);
-  margin-left: 0.12em; vertical-align: -0.06em;
-  animation: caret-blink 1.05s steps(1) infinite;
-}
-@keyframes caret-blink { 50% { opacity: 0; } }
-@media (prefers-reduced-motion: reduce) { .caret { animation: none; } }
 
 /* Eyebrow / stage tag — Prior / Trigger / Skepticism / Investigation / Posterior */
 .stage-tag {
@@ -118,20 +107,11 @@ html, body, .reveal-viewport { background: var(--ground); }
   text-align: left; font-family: var(--font-sans);
 }
 .reveal table.metrics tr.hl td { background: var(--maroon-tint); color: var(--text); }
-.reveal table.metrics.big { font-size: 0.82em; }
 .reveal table.metrics.small { font-size: 0.65em; }
 
-/* Finding card */
-.finding {
-  background: var(--paper); padding: 0.85em 1.2em; border-radius: 4px;
-  border-top: 3px solid var(--accent); border-left: 1px solid var(--hair);
-  border-right: 1px solid var(--hair); border-bottom: 1px solid var(--hair);
-  margin: 0.6em auto; max-width: 90%;
-}
-.finding p { margin: 0.3em 0; }
 
 /* Release / list blocks */
-.upcoming, .release {
+.release {
   text-align: left; max-width: 78%; margin: 0.5em auto;
   font-size: 0.9em; line-height: 1.6; list-style: none; padding-left: 0;
 }
@@ -140,7 +120,6 @@ html, body, .reveal-viewport { background: var(--ground); }
   content: "▏"; color: var(--accent); position: absolute; left: 0;
 }
 
-.hl-text, .kicker { color: var(--accent-3); font-weight: 600; }
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5em; text-align: left; }
 
 /* Progress bar + slide number in the accent */
