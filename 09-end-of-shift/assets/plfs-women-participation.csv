@@ -1,0 +1,109 @@
+block,year,sex,group,item,value,n
+"A headline, age 15+",2023-24,men,all,lf_upss,78.8,159720
+"A headline, age 15+",2023-24,men,all,lf_ups,77.2,159720
+"A headline, age 15+",2023-24,men,all,wk_upss,76.3,159720
+"A headline, age 15+",2023-24,men,all,regular wage as % of all,18.8,159720
+"A headline, age 15+",2023-24,men,rural,lf_upss,80.3,89872
+"A headline, age 15+",2023-24,men,rural,lf_ups,78.2,89872
+"A headline, age 15+",2023-24,men,rural,wk_upss,78.1,89872
+"A headline, age 15+",2023-24,men,rural,regular wage as % of all,12.2,89872
+"A headline, age 15+",2023-24,men,urban,lf_upss,75.6,69848
+"A headline, age 15+",2023-24,men,urban,lf_ups,74.8,69848
+"A headline, age 15+",2023-24,men,urban,wk_upss,72.3,69848
+"A headline, age 15+",2023-24,men,urban,regular wage as % of all,33.6,69848
+"A headline, age 15+",2023-24,women,all,lf_upss,41.7,160042
+"A headline, age 15+",2023-24,women,all,lf_ups,30.8,160042
+"A headline, age 15+",2023-24,women,all,wk_upss,40.3,160042
+"A headline, age 15+",2023-24,women,all,regular wage as % of all,6.2,160042
+"A headline, age 15+",2023-24,women,rural,lf_upss,47.6,90920
+"A headline, age 15+",2023-24,women,rural,lf_ups,33.6,90920
+"A headline, age 15+",2023-24,women,rural,wk_upss,46.5,90920
+"A headline, age 15+",2023-24,women,rural,regular wage as % of all,3.5,90920
+"A headline, age 15+",2023-24,women,urban,lf_upss,28.0,69122
+"A headline, age 15+",2023-24,women,urban,lf_ups,24.3,69122
+"A headline, age 15+",2023-24,women,urban,wk_upss,26.0,69122
+"A headline, age 15+",2023-24,women,urban,regular wage as % of all,12.5,69122
+"A headline, age 15+",2025,men,all,lf_upss,79.1,442500
+"A headline, age 15+",2025,men,all,lf_ups,78.0,442500
+"A headline, age 15+",2025,men,all,wk_upss,76.6,442500
+"A headline, age 15+",2025,men,all,regular wage as % of all,20.1,442500
+"A headline, age 15+",2025,men,rural,lf_upss,80.5,244719
+"A headline, age 15+",2025,men,rural,lf_ups,79.2,244719
+"A headline, age 15+",2025,men,rural,wk_upss,78.4,244719
+"A headline, age 15+",2025,men,rural,regular wage as % of all,13.2,244719
+"A headline, age 15+",2025,men,urban,lf_upss,76.2,197781
+"A headline, age 15+",2025,men,urban,lf_ups,75.5,197781
+"A headline, age 15+",2025,men,urban,wk_upss,73.0,197781
+"A headline, age 15+",2025,men,urban,regular wage as % of all,33.7,197781
+"A headline, age 15+",2025,women,all,lf_upss,40.0,448732
+"A headline, age 15+",2025,women,all,lf_ups,33.3,448732
+"A headline, age 15+",2025,women,all,wk_upss,38.8,448732
+"A headline, age 15+",2025,women,all,regular wage as % of all,6.9,448732
+"A headline, age 15+",2025,women,rural,lf_upss,45.9,251453
+"A headline, age 15+",2025,women,rural,lf_ups,37.3,251453
+"A headline, age 15+",2025,women,rural,wk_upss,44.9,251453
+"A headline, age 15+",2025,women,rural,regular wage as % of all,4.0,251453
+"A headline, age 15+",2025,women,urban,lf_upss,27.7,197279
+"A headline, age 15+",2025,women,urban,lf_ups,24.7,197279
+"A headline, age 15+",2025,women,urban,wk_upss,25.9,197279
+"A headline, age 15+",2025,women,urban,regular wage as % of all,12.8,197279
+"B women/men by group (2025, UPSS LFPR %)",2025,men,education (age 25-59),not literate / no schooling,94.6,27338
+"B women/men by group (2025, UPSS LFPR %)",2025,men,education (age 25-59),below secondary,97.8,90914
+"B women/men by group (2025, UPSS LFPR %)",2025,men,education (age 25-59),secondary,97.7,43478
+"B women/men by group (2025, UPSS LFPR %)",2025,men,education (age 25-59),higher secondary,97.3,37807
+"B women/men by group (2025, UPSS LFPR %)",2025,men,education (age 25-59),diploma/certificate,98.2,6349
+"B women/men by group (2025, UPSS LFPR %)",2025,men,education (age 25-59),graduate+,96.9,60318
+"B women/men by group (2025, UPSS LFPR %)",2025,men,age band,15-19,25.2,59044
+"B women/men by group (2025, UPSS LFPR %)",2025,men,age band,20-24,76.7,53959
+"B women/men by group (2025, UPSS LFPR %)",2025,men,age band,25-29,96.1,48945
+"B women/men by group (2025, UPSS LFPR %)",2025,men,age band,30-34,98.5,41866
+"B women/men by group (2025, UPSS LFPR %)",2025,men,age band,35-44,98.6,78063
+"B women/men by group (2025, UPSS LFPR %)",2025,men,age band,45-59,95.7,97330
+"B women/men by group (2025, UPSS LFPR %)",2025,men,age band,60+,53.8,63293
+"B women/men by group (2025, UPSS LFPR %)",2025,men,marital status (age 25-59),married,98.1,220307
+"B women/men by group (2025, UPSS LFPR %)",2025,men,marital status (age 25-59),never married,92.2,40092
+"B women/men by group (2025, UPSS LFPR %)",2025,men,marital status (age 25-59),widowed / divorced,91.6,5805
+"B women/men by group (2025, UPSS LFPR %)",2025,men,sector (age 25-59),rural,97.5,144689
+"B women/men by group (2025, UPSS LFPR %)",2025,men,sector (age 25-59),urban,96.4,121515
+"C employed (UPS) by type, % of employed",2025,men,all,regular wage,26.7,325296
+"C employed (UPS) by type, % of employed",2025,men,all,casual labour,21.7,325296
+"C employed (UPS) by type, % of employed",2025,men,all,own account / employer,43.3,325296
+"C employed (UPS) by type, % of employed",2025,men,all,unpaid family helper,8.3,325296
+"B women/men by group (2025, UPSS LFPR %)",2025,women,education (age 25-59),not literate / no schooling,61.1,68493
+"B women/men by group (2025, UPSS LFPR %)",2025,women,education (age 25-59),below secondary,52.5,94802
+"B women/men by group (2025, UPSS LFPR %)",2025,women,education (age 25-59),secondary,41.9,34302
+"B women/men by group (2025, UPSS LFPR %)",2025,women,education (age 25-59),higher secondary,38.9,29416
+"B women/men by group (2025, UPSS LFPR %)",2025,women,education (age 25-59),diploma/certificate,56.8,2164
+"B women/men by group (2025, UPSS LFPR %)",2025,women,education (age 25-59),graduate+,44.7,46873
+"B women/men by group (2025, UPSS LFPR %)",2025,women,age band,15-19,10.2,54339
+"B women/men by group (2025, UPSS LFPR %)",2025,women,age band,20-24,31.4,53522
+"B women/men by group (2025, UPSS LFPR %)",2025,women,age band,25-29,41.0,48797
+"B women/men by group (2025, UPSS LFPR %)",2025,women,age band,30-34,49.3,41934
+"B women/men by group (2025, UPSS LFPR %)",2025,women,age band,35-44,57.6,88436
+"B women/men by group (2025, UPSS LFPR %)",2025,women,age band,45-59,52.5,96883
+"B women/men by group (2025, UPSS LFPR %)",2025,women,age band,60+,21.4,64821
+"B women/men by group (2025, UPSS LFPR %)",2025,women,marital status (age 25-59),married,49.8,239315
+"B women/men by group (2025, UPSS LFPR %)",2025,women,marital status (age 25-59),never married,61.7,13960
+"B women/men by group (2025, UPSS LFPR %)",2025,women,marital status (age 25-59),widowed / divorced,64.3,22775
+"B women/men by group (2025, UPSS LFPR %)",2025,women,sector (age 25-59),rural,59.6,152408
+"B women/men by group (2025, UPSS LFPR %)",2025,women,sector (age 25-59),urban,35.3,123642
+"C employed (UPS) by type, % of employed",2025,women,all,regular wage,21.4,135368
+"C employed (UPS) by type, % of employed",2025,women,all,casual labour,17.9,135368
+"C employed (UPS) by type, % of employed",2025,women,all,own account / employer,36.2,135368
+"C employed (UPS) by type, % of employed",2025,women,all,unpaid family helper,24.5,135368
+"D why in domestic duties, age 15-59 (% of group)",2025,women,all,lacked training/qualification/age,0.7,164539
+"D why in domestic duties, age 15-59 (% of group)",2025,women,all,no work at a convenient location,1.1,164539
+"D why in domestic duties, age 15-59 (% of group)",2025,women,all,health/age,3.0,164539
+"D why in domestic duties, age 15-59 (% of group)",2025,women,all,wants to continue study,0.0,164539
+"D why in domestic duties, age 15-59 (% of group)",2025,women,all,social reasons,4.6,164539
+"D why in domestic duties, age 15-59 (% of group)",2025,women,all,financially well-off,0.9,164539
+"D why in domestic duties, age 15-59 (% of group)",2025,women,all,child care / home making,85.8,164539
+"D why in domestic duties, age 15-59 (% of group)",2025,women,all,others,3.8,164539
+"D why in domestic duties, age 15-59 (% of group)",2025,men,all,lacked training/qualification/age,7.0,1619
+"D why in domestic duties, age 15-59 (% of group)",2025,men,all,no work at a convenient location,3.5,1619
+"D why in domestic duties, age 15-59 (% of group)",2025,men,all,health/age,31.4,1619
+"D why in domestic duties, age 15-59 (% of group)",2025,men,all,wants to continue study,0.0,1619
+"D why in domestic duties, age 15-59 (% of group)",2025,men,all,social reasons,3.8,1619
+"D why in domestic duties, age 15-59 (% of group)",2025,men,all,financially well-off,2.5,1619
+"D why in domestic duties, age 15-59 (% of group)",2025,men,all,child care / home making,29.2,1619
+"D why in domestic duties, age 15-59 (% of group)",2025,men,all,others,22.6,1619

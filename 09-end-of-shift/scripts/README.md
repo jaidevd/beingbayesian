@@ -42,3 +42,20 @@ same six cohorts as the clocks). It needs steps 1-5 and reads `sub_round` from t
 
 Note: run each script to completion. Piping a script into `head` kills it early (SIGPIPE) and can leave a stale
 intermediate file, e.g. `P3.pkl`, which every later step reads.
+
+## PLFS and household analyses (not in `results.md` yet)
+
+These use other inputs and are independent of steps 1-10 above, except `spouse.py`, which needs `P3.pkl`.
+
+- `plfs_profile.py <cperv12025.csv> <out.csv>`: profile of the "ideal worker" cohort (age 18-34, graduate or above) in the PLFS 2025
+  person file: usual status, occupation, industry, employer, earnings, contract, leave, social security, hours and days worked.
+  Writes `assets/plfs-ideal-cohort.csv`.
+- `plfs_women.py <cperv12025.csv> <perv1.dta> <out.csv>`: women's labour force participation, 2023-24 against 2025, by sector, age,
+  education and marital status, plus the stated reason for domestic duties. Writes `assets/plfs-women-participation.csv`.
+- `spouse.py <TUS clean dir> <P3.pkl> <out.csv>`: salaried men linked to their wives in the same TUS household (housework, care,
+  paid work and leisure, with cluster-bootstrap intervals). Writes `assets/spouse-housework.csv`. `spouse_chart.py <csv> <png>`
+  draws `assets/ideal-worker-day.png`.
+
+The PLFS 2025 file (`Data_in_CSV.zip`, with no data layout) is not in the repo. The scripts assume the 2023-24 coding for education,
+enterprise type, contract, paid leave and social security; value distributions match. PLFS gives hours for each of the last
+seven days but not the weekday, so "worked all 7 days" is the closest measure of weekend work.

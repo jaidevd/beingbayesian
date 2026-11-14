@@ -1,0 +1,81 @@
+group,n,metric,estimate,lo95,hi95
+all salaried men with a wife (work day),21225,wife on domestic duties only (%),76.4,75.5,77.3
+all salaried men with a wife (work day),21225,wife regular salaried (%),13.7,12.9,14.7
+all salaried men with a wife (work day),21225,"husband paid work, day",470.4,468.1,472.8
+all salaried men with a wife (work day),21225,"wife paid work, day",73.9,70.9,77.5
+all salaried men with a wife (work day),21225,"husband housework, day",14.7,14.0,15.4
+all salaried men with a wife (work day),21225,"wife housework, day",348.9,346.3,352.1
+all salaried men with a wife (work day),21225,"husband care, day",23.7,22.8,24.6
+all salaried men with a wife (work day),21225,"wife care, day",80.0,78.0,82.1
+all salaried men with a wife (work day),21225,"husband leisure, day",113.0,111.3,114.6
+all salaried men with a wife (work day),21225,"wife leisure, day",138.0,135.7,140.1
+all salaried men with a wife (work day),21225,"husband housework, 5pm-midnight",6.9,6.5,7.4
+all salaried men with a wife (work day),21225,"wife housework, 5pm-midnight",118.2,117.0,119.5
+all salaried men with a wife (work day),21225,"husband paid work, 5pm-midnight",85.4,83.9,87.1
+all salaried men with a wife (work day),21225,"wife paid work, 5pm-midnight",9.8,9.1,10.7
+all salaried men with a wife (work day),21225,"husband leisure, 5pm-midnight",76.1,74.8,77.2
+all salaried men with a wife (work day),21225,"wife leisure, 5pm-midnight",57.9,56.8,58.9
+knowledge work,2119,wife on domestic duties only (%),70.8,67.4,73.3
+knowledge work,2119,wife regular salaried (%),24.5,21.9,27.5
+knowledge work,2119,"husband paid work, day",445.8,440.3,450.5
+knowledge work,2119,"wife paid work, day",98.1,88.2,108.9
+knowledge work,2119,"husband housework, day",12.2,10.7,13.8
+knowledge work,2119,"wife housework, day",309.6,298.7,318.0
+knowledge work,2119,"husband care, day",30.3,27.5,33.9
+knowledge work,2119,"wife care, day",90.9,85.6,96.9
+knowledge work,2119,"husband leisure, day",123.4,118.5,127.8
+knowledge work,2119,"wife leisure, day",147.5,141.1,153.9
+knowledge work,2119,"husband housework, 5pm-midnight",5.4,4.5,6.3
+knowledge work,2119,"wife housework, 5pm-midnight",109.6,106.2,112.5
+knowledge work,2119,"husband paid work, 5pm-midnight",82.5,78.8,86.3
+knowledge work,2119,"wife paid work, 5pm-midnight",14.3,12.3,16.5
+knowledge work,2119,"husband leisure, 5pm-midnight",84.9,80.4,88.2
+knowledge work,2119,"wife leisure, 5pm-midnight",69.0,64.4,73.1
+blue-collar,9582,wife on domestic duties only (%),78.1,76.5,79.3
+blue-collar,9582,wife regular salaried (%),11.3,10.2,12.8
+blue-collar,9582,"husband paid work, day",498.7,495.8,501.4
+blue-collar,9582,"wife paid work, day",69.3,64.5,75.4
+blue-collar,9582,"husband housework, day",12.7,11.8,13.7
+blue-collar,9582,"wife housework, day",356.0,352.3,360.4
+blue-collar,9582,"husband care, day",22.2,20.9,23.4
+blue-collar,9582,"wife care, day",83.3,80.0,86.4
+blue-collar,9582,"husband leisure, day",98.3,96.2,100.2
+blue-collar,9582,"wife leisure, day",132.7,130.0,135.7
+blue-collar,9582,"husband housework, 5pm-midnight",5.6,5.0,6.5
+blue-collar,9582,"wife housework, 5pm-midnight",120.3,118.5,122.0
+blue-collar,9582,"husband paid work, 5pm-midnight",100.8,98.6,103.0
+blue-collar,9582,"wife paid work, 5pm-midnight",10.4,9.4,11.9
+blue-collar,9582,"husband leisure, 5pm-midnight",67.2,65.4,68.8
+blue-collar,9582,"wife leisure, 5pm-midnight",55.2,53.8,56.6
+wife on domestic duties only,16308,wife on domestic duties only (%),100.0,100.0,100.0
+wife on domestic duties only,16308,wife regular salaried (%),0.0,0.0,0.0
+wife on domestic duties only,16308,"husband paid work, day",468.9,466.5,471.8
+wife on domestic duties only,16308,"wife paid work, day",4.2,3.6,5.0
+wife on domestic duties only,16308,"husband housework, day",13.7,12.9,14.3
+wife on domestic duties only,16308,"wife housework, day",381.3,378.6,384.2
+wife on domestic duties only,16308,"husband care, day",25.7,24.7,26.8
+wife on domestic duties only,16308,"wife care, day",92.2,89.7,94.5
+wife on domestic duties only,16308,"husband leisure, day",111.9,110.1,113.7
+wife on domestic duties only,16308,"wife leisure, day",153.1,150.6,155.7
+wife on domestic duties only,16308,"husband housework, 5pm-midnight",6.3,5.9,6.8
+wife on domestic duties only,16308,"wife housework, 5pm-midnight",124.2,122.8,125.6
+wife on domestic duties only,16308,"husband paid work, 5pm-midnight",85.0,83.5,86.8
+wife on domestic duties only,16308,"wife paid work, 5pm-midnight",0.9,0.6,1.1
+wife on domestic duties only,16308,"husband leisure, 5pm-midnight",75.5,74.2,76.6
+wife on domestic duties only,16308,"wife leisure, 5pm-midnight",59.5,58.2,60.7
+wife regular salaried,2817,wife on domestic duties only (%),0.0,0.0,0.0
+wife regular salaried,2817,wife regular salaried (%),100.0,100.0,100.0
+wife regular salaried,2817,"husband paid work, day",462.1,455.6,468.6
+wife regular salaried,2817,"wife paid work, day",362.2,355.3,370.1
+wife regular salaried,2817,"husband housework, day",20.3,18.2,22.3
+wife regular salaried,2817,"wife housework, day",209.2,203.0,215.3
+wife regular salaried,2817,"husband care, day",18.3,16.4,20.2
+wife regular salaried,2817,"wife care, day",33.6,30.6,36.5
+wife regular salaried,2817,"husband leisure, day",125.7,121.5,129.6
+wife regular salaried,2817,"wife leisure, day",82.9,78.9,86.5
+wife regular salaried,2817,"husband housework, 5pm-midnight",10.8,9.0,12.8
+wife regular salaried,2817,"wife housework, 5pm-midnight",94.8,91.9,97.4
+wife regular salaried,2817,"husband paid work, 5pm-midnight",80.3,76.4,83.9
+wife regular salaried,2817,"wife paid work, 5pm-midnight",42.2,39.0,45.8
+wife regular salaried,2817,"husband leisure, 5pm-midnight",84.9,81.6,88.0
+wife regular salaried,2817,"wife leisure, 5pm-midnight",55.9,53.0,58.9

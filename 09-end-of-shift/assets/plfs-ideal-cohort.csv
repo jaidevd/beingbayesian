@@ -1,0 +1,251 @@
+block,group,sex,item,value
+A usual status (% of cohort),age 18-34,men,regular wage/salaried,25.8
+A usual status (% of cohort),age 18-34,men,self-employed / unpaid family,31.5
+A usual status (% of cohort),age 18-34,men,casual labour,18.4
+A usual status (% of cohort),age 18-34,men,unemployed,6.4
+A usual status (% of cohort),age 18-34,men,student,16.0
+A usual status (% of cohort),age 18-34,men,domestic duties,0.3
+A usual status (% of cohort),age 18-34,men,other not working,1.6
+A usual status (% of cohort),age 18-34,men,labour force participation,82.1
+A usual status (% of cohort),age 18-34,women,regular wage/salaried,7.5
+A usual status (% of cohort),age 18-34,women,self-employed / unpaid family,15.4
+A usual status (% of cohort),age 18-34,women,casual labour,4.7
+A usual status (% of cohort),age 18-34,women,unemployed,3.3
+A usual status (% of cohort),age 18-34,women,student,14.6
+A usual status (% of cohort),age 18-34,women,domestic duties,53.1
+A usual status (% of cohort),age 18-34,women,other not working,1.4
+A usual status (% of cohort),age 18-34,women,labour force participation,30.9
+A usual status (% of cohort),"age 18-34, graduate+",men,regular wage/salaried,40.2
+A usual status (% of cohort),"age 18-34, graduate+",men,self-employed / unpaid family,31.4
+A usual status (% of cohort),"age 18-34, graduate+",men,casual labour,2.7
+A usual status (% of cohort),"age 18-34, graduate+",men,unemployed,14.4
+A usual status (% of cohort),"age 18-34, graduate+",men,student,10.1
+A usual status (% of cohort),"age 18-34, graduate+",men,domestic duties,0.2
+A usual status (% of cohort),"age 18-34, graduate+",men,other not working,0.9
+A usual status (% of cohort),"age 18-34, graduate+",men,labour force participation,88.8
+A usual status (% of cohort),"age 18-34, graduate+",women,regular wage/salaried,18.9
+A usual status (% of cohort),"age 18-34, graduate+",women,self-employed / unpaid family,9.6
+A usual status (% of cohort),"age 18-34, graduate+",women,casual labour,0.6
+A usual status (% of cohort),"age 18-34, graduate+",women,unemployed,11.5
+A usual status (% of cohort),"age 18-34, graduate+",women,student,13.2
+A usual status (% of cohort),"age 18-34, graduate+",women,domestic duties,45.1
+A usual status (% of cohort),"age 18-34, graduate+",women,other not working,1.1
+A usual status (% of cohort),"age 18-34, graduate+",women,labour force participation,40.6
+B who they are,"regular wage, age 18-34 graduate+",men,"employer: public (govt, PSU, autonomous)",21.6
+B who they are,"regular wage, age 18-34 graduate+",men,employer: proprietary / partnership,27.1
+B who they are,"regular wage, age 18-34 graduate+",men,employer: private company,46.9
+B who they are,"regular wage, age 18-34 graduate+",men,"employer: other (co-op, trust, households)",4.4
+B who they are,"regular wage, age 18-34 graduate+",men,occupation: clerical,16.0
+B who they are,"regular wage, age 18-34 graduate+",men,occupation: elementary,3.6
+B who they are,"regular wage, age 18-34 graduate+",men,occupation: service & sales,13.5
+B who they are,"regular wage, age 18-34 graduate+",men,occupation: professionals,36.5
+B who they are,"regular wage, age 18-34 graduate+",men,occupation: technicians & associate prof.,12.3
+B who they are,"regular wage, age 18-34 graduate+",men,occupation: craft trades,4.8
+B who they are,"regular wage, age 18-34 graduate+",men,occupation: plant & machine operators,4.2
+B who they are,"regular wage, age 18-34 graduate+",men,occupation: managers,8.8
+B who they are,"regular wage, age 18-34 graduate+",men,occupation: skilled agriculture,0.3
+B who they are,"regular wage, age 18-34 graduate+",men,industry: public administration,6.9
+B who they are,"regular wage, age 18-34 graduate+",men,industry: other,9.7
+B who they are,"regular wage, age 18-34 graduate+",men,industry: education,9.5
+B who they are,"regular wage, age 18-34 graduate+",men,industry: finance & insurance,11.5
+B who they are,"regular wage, age 18-34 graduate+",men,industry: manufacturing,15.6
+B who they are,"regular wage, age 18-34 graduate+",men,industry: trade,12.9
+B who they are,"regular wage, age 18-34 graduate+",men,industry: health & social work,4.6
+B who they are,"regular wage, age 18-34 graduate+",men,"industry: real estate, professional & admin services",7.7
+B who they are,"regular wage, age 18-34 graduate+",men,"industry: IT, media, telecom",17.1
+B who they are,"regular wage, age 18-34 graduate+",men,industry: transport & storage,4.5
+"C pay, security, hours","regular wage, age 18-34 graduate+",men,median monthly earnings (Rs),24500.0
+"C pay, security, hours","regular wage, age 18-34 graduate+",men,earnings p25 (Rs),15000.0
+"C pay, security, hours","regular wage, age 18-34 graduate+",men,earnings p75 (Rs),38000.0
+"C pay, security, hours","regular wage, age 18-34 graduate+",men,no written contract (%),40.5
+"C pay, security, hours","regular wage, age 18-34 graduate+",men,not eligible for paid leave (%),28.1
+"C pay, security, hours","regular wage, age 18-34 graduate+",men,no social security benefit (%),28.9
+"C pay, security, hours","regular wage, age 18-34 graduate+",men,secure job: contract + paid leave + social security (%),51.3
+"C pay, security, hours","regular wage, age 18-34 graduate+",men,enterprise with 20+ workers (%),52.8
+"C pay, security, hours","regular wage, age 18-34 graduate+",men,median hours worked in last 7 days,48.0
+"C pay, security, hours","regular wage, age 18-34 graduate+",men,worked 60+ hours (%),9.6
+"C pay, security, hours","regular wage, age 18-34 graduate+",men,worked 48+ hours (%),67.5
+"C pay, security, hours","regular wage, age 18-34 graduate+",men,worked all 7 days (%),15.3
+"C pay, security, hours","regular wage, age 18-34 graduate+",men,worked 6 or 7 days (%),71.6
+B who they are,"regular wage, age 18-34 graduate+",women,employer: proprietary / partnership,24.4
+B who they are,"regular wage, age 18-34 graduate+",women,employer: private company,40.6
+B who they are,"regular wage, age 18-34 graduate+",women,"employer: public (govt, PSU, autonomous)",24.5
+B who they are,"regular wage, age 18-34 graduate+",women,"employer: other (co-op, trust, households)",10.6
+B who they are,"regular wage, age 18-34 graduate+",women,occupation: technicians & associate prof.,11.9
+B who they are,"regular wage, age 18-34 graduate+",women,occupation: service & sales,9.0
+B who they are,"regular wage, age 18-34 graduate+",women,occupation: professionals,54.9
+B who they are,"regular wage, age 18-34 graduate+",women,occupation: managers,5.2
+B who they are,"regular wage, age 18-34 graduate+",women,occupation: clerical,15.5
+B who they are,"regular wage, age 18-34 graduate+",women,occupation: elementary,1.8
+B who they are,"regular wage, age 18-34 graduate+",women,occupation: plant & machine operators,0.6
+B who they are,"regular wage, age 18-34 graduate+",women,occupation: craft trades,0.9
+B who they are,"regular wage, age 18-34 graduate+",women,occupation: skilled agriculture,0.1
+B who they are,"regular wage, age 18-34 graduate+",women,industry: health & social work,11.8
+B who they are,"regular wage, age 18-34 graduate+",women,industry: trade,6.6
+B who they are,"regular wage, age 18-34 graduate+",women,industry: education,27.2
+B who they are,"regular wage, age 18-34 graduate+",women,industry: finance & insurance,8.2
+B who they are,"regular wage, age 18-34 graduate+",women,industry: public administration,4.9
+B who they are,"regular wage, age 18-34 graduate+",women,"industry: IT, media, telecom",17.7
+B who they are,"regular wage, age 18-34 graduate+",women,"industry: real estate, professional & admin services",9.6
+B who they are,"regular wage, age 18-34 graduate+",women,industry: manufacturing,6.5
+B who they are,"regular wage, age 18-34 graduate+",women,industry: other,5.5
+B who they are,"regular wage, age 18-34 graduate+",women,industry: transport & storage,2.0
+"C pay, security, hours","regular wage, age 18-34 graduate+",women,median monthly earnings (Rs),20000.0
+"C pay, security, hours","regular wage, age 18-34 graduate+",women,earnings p25 (Rs),12000.0
+"C pay, security, hours","regular wage, age 18-34 graduate+",women,earnings p75 (Rs),35000.0
+"C pay, security, hours","regular wage, age 18-34 graduate+",women,no written contract (%),39.1
+"C pay, security, hours","regular wage, age 18-34 graduate+",women,not eligible for paid leave (%),24.5
+"C pay, security, hours","regular wage, age 18-34 graduate+",women,no social security benefit (%),32.5
+"C pay, security, hours","regular wage, age 18-34 graduate+",women,secure job: contract + paid leave + social security (%),49.6
+"C pay, security, hours","regular wage, age 18-34 graduate+",women,enterprise with 20+ workers (%),51.6
+"C pay, security, hours","regular wage, age 18-34 graduate+",women,median hours worked in last 7 days,48.0
+"C pay, security, hours","regular wage, age 18-34 graduate+",women,worked 60+ hours (%),3.5
+"C pay, security, hours","regular wage, age 18-34 graduate+",women,worked 48+ hours (%),51.7
+"C pay, security, hours","regular wage, age 18-34 graduate+",women,worked all 7 days (%),8.4
+"C pay, security, hours","regular wage, age 18-34 graduate+",women,worked 6 or 7 days (%),62.8
+B who they are,"regular wage, age 18-34 graduate+",all,women (% of group),31.8
+B who they are,"regular wage, age 18-34 graduate+",all,"employer: public (govt, PSU, autonomous)",22.5
+B who they are,"regular wage, age 18-34 graduate+",all,employer: proprietary / partnership,26.3
+B who they are,"regular wage, age 18-34 graduate+",all,employer: private company,44.9
+B who they are,"regular wage, age 18-34 graduate+",all,"employer: other (co-op, trust, households)",6.3
+B who they are,"regular wage, age 18-34 graduate+",all,occupation: clerical,15.9
+B who they are,"regular wage, age 18-34 graduate+",all,occupation: technicians & associate prof.,12.1
+B who they are,"regular wage, age 18-34 graduate+",all,occupation: service & sales,12.1
+B who they are,"regular wage, age 18-34 graduate+",all,occupation: elementary,3.1
+B who they are,"regular wage, age 18-34 graduate+",all,occupation: professionals,42.3
+B who they are,"regular wage, age 18-34 graduate+",all,occupation: managers,7.7
+B who they are,"regular wage, age 18-34 graduate+",all,occupation: craft trades,3.6
+B who they are,"regular wage, age 18-34 graduate+",all,occupation: plant & machine operators,3.1
+B who they are,"regular wage, age 18-34 graduate+",all,occupation: skilled agriculture,0.2
+B who they are,"regular wage, age 18-34 graduate+",all,industry: public administration,6.3
+B who they are,"regular wage, age 18-34 graduate+",all,industry: health & social work,6.9
+B who they are,"regular wage, age 18-34 graduate+",all,industry: trade,10.9
+B who they are,"regular wage, age 18-34 graduate+",all,industry: other,8.4
+B who they are,"regular wage, age 18-34 graduate+",all,industry: education,15.1
+B who they are,"regular wage, age 18-34 graduate+",all,industry: finance & insurance,10.4
+B who they are,"regular wage, age 18-34 graduate+",all,industry: manufacturing,12.7
+B who they are,"regular wage, age 18-34 graduate+",all,"industry: real estate, professional & admin services",8.3
+B who they are,"regular wage, age 18-34 graduate+",all,"industry: IT, media, telecom",17.3
+B who they are,"regular wage, age 18-34 graduate+",all,industry: transport & storage,3.7
+"C pay, security, hours","regular wage, age 18-34 graduate+",all,median monthly earnings (Rs),22600.0
+"C pay, security, hours","regular wage, age 18-34 graduate+",all,earnings p25 (Rs),15000.0
+"C pay, security, hours","regular wage, age 18-34 graduate+",all,earnings p75 (Rs),36000.0
+"C pay, security, hours","regular wage, age 18-34 graduate+",all,no written contract (%),40.1
+"C pay, security, hours","regular wage, age 18-34 graduate+",all,not eligible for paid leave (%),27.0
+"C pay, security, hours","regular wage, age 18-34 graduate+",all,no social security benefit (%),30.0
+"C pay, security, hours","regular wage, age 18-34 graduate+",all,secure job: contract + paid leave + social security (%),50.8
+"C pay, security, hours","regular wage, age 18-34 graduate+",all,enterprise with 20+ workers (%),52.4
+"C pay, security, hours","regular wage, age 18-34 graduate+",all,median hours worked in last 7 days,48.0
+"C pay, security, hours","regular wage, age 18-34 graduate+",all,worked 60+ hours (%),7.6
+"C pay, security, hours","regular wage, age 18-34 graduate+",all,worked 48+ hours (%),62.5
+"C pay, security, hours","regular wage, age 18-34 graduate+",all,worked all 7 days (%),13.1
+"C pay, security, hours","regular wage, age 18-34 graduate+",all,worked 6 or 7 days (%),68.8
+B who they are,"regular wage, all 18+",men,employer: private company,31.0
+B who they are,"regular wage, all 18+",men,"employer: public (govt, PSU, autonomous)",20.1
+B who they are,"regular wage, all 18+",men,employer: proprietary / partnership,43.2
+B who they are,"regular wage, all 18+",men,"employer: other (co-op, trust, households)",5.7
+B who they are,"regular wage, all 18+",men,occupation: service & sales,20.2
+B who they are,"regular wage, all 18+",men,occupation: clerical,9.0
+B who they are,"regular wage, all 18+",men,occupation: craft trades,13.3
+B who they are,"regular wage, all 18+",men,occupation: elementary,13.8
+B who they are,"regular wage, all 18+",men,occupation: professionals,15.4
+B who they are,"regular wage, all 18+",men,occupation: plant & machine operators,15.1
+B who they are,"regular wage, all 18+",men,occupation: technicians & associate prof.,7.0
+B who they are,"regular wage, all 18+",men,occupation: managers,5.1
+B who they are,"regular wage, all 18+",men,occupation: skilled agriculture,1.0
+B who they are,"regular wage, all 18+",men,industry: manufacturing,26.5
+B who they are,"regular wage, all 18+",men,industry: public administration,6.5
+B who they are,"regular wage, all 18+",men,industry: other,17.0
+B who they are,"regular wage, all 18+",men,industry: trade,14.9
+B who they are,"regular wage, all 18+",men,industry: education,7.7
+B who they are,"regular wage, all 18+",men,industry: health & social work,2.9
+B who they are,"regular wage, all 18+",men,industry: transport & storage,9.2
+B who they are,"regular wage, all 18+",men,industry: finance & insurance,4.6
+B who they are,"regular wage, all 18+",men,"industry: real estate, professional & admin services",5.8
+B who they are,"regular wage, all 18+",men,"industry: IT, media, telecom",4.9
+"C pay, security, hours","regular wage, all 18+",men,median monthly earnings (Rs),17000.0
+"C pay, security, hours","regular wage, all 18+",men,earnings p25 (Rs),12000.0
+"C pay, security, hours","regular wage, all 18+",men,earnings p75 (Rs),28000.0
+"C pay, security, hours","regular wage, all 18+",men,no written contract (%),58.2
+"C pay, security, hours","regular wage, all 18+",men,not eligible for paid leave (%),47.9
+"C pay, security, hours","regular wage, all 18+",men,no social security benefit (%),50.3
+"C pay, security, hours","regular wage, all 18+",men,secure job: contract + paid leave + social security (%),33.2
+"C pay, security, hours","regular wage, all 18+",men,enterprise with 20+ workers (%),40.9
+"C pay, security, hours","regular wage, all 18+",men,median hours worked in last 7 days,48.0
+"C pay, security, hours","regular wage, all 18+",men,worked 60+ hours (%),18.1
+"C pay, security, hours","regular wage, all 18+",men,worked 48+ hours (%),76.9
+"C pay, security, hours","regular wage, all 18+",men,worked all 7 days (%),26.1
+"C pay, security, hours","regular wage, all 18+",men,worked 6 or 7 days (%),82.1
+B who they are,"regular wage, all 18+",women,"employer: public (govt, PSU, autonomous)",29.9
+B who they are,"regular wage, all 18+",women,employer: private company,22.2
+B who they are,"regular wage, all 18+",women,employer: proprietary / partnership,26.9
+B who they are,"regular wage, all 18+",women,"employer: other (co-op, trust, households)",21.0
+B who they are,"regular wage, all 18+",women,occupation: elementary,25.8
+B who they are,"regular wage, all 18+",women,occupation: plant & machine operators,2.0
+B who they are,"regular wage, all 18+",women,occupation: technicians & associate prof.,10.4
+B who they are,"regular wage, all 18+",women,occupation: service & sales,19.0
+B who they are,"regular wage, all 18+",women,occupation: professionals,27.2
+B who they are,"regular wage, all 18+",women,occupation: craft trades,3.8
+B who they are,"regular wage, all 18+",women,occupation: managers,2.8
+B who they are,"regular wage, all 18+",women,occupation: clerical,8.2
+B who they are,"regular wage, all 18+",women,occupation: skilled agriculture,0.9
+B who they are,"regular wage, all 18+",women,industry: public administration,4.7
+B who they are,"regular wage, all 18+",women,industry: manufacturing,12.4
+B who they are,"regular wage, all 18+",women,industry: health & social work,13.5
+B who they are,"regular wage, all 18+",women,industry: trade,6.8
+B who they are,"regular wage, all 18+",women,industry: other,23.3
+B who they are,"regular wage, all 18+",women,industry: education,24.5
+B who they are,"regular wage, all 18+",women,industry: finance & insurance,3.5
+B who they are,"regular wage, all 18+",women,"industry: IT, media, telecom",5.1
+B who they are,"regular wage, all 18+",women,"industry: real estate, professional & admin services",4.6
+B who they are,"regular wage, all 18+",women,industry: transport & storage,1.4
+"C pay, security, hours","regular wage, all 18+",women,median monthly earnings (Rs),10500.0
+"C pay, security, hours","regular wage, all 18+",women,earnings p25 (Rs),7000.0
+"C pay, security, hours","regular wage, all 18+",women,earnings p75 (Rs),21000.0
+"C pay, security, hours","regular wage, all 18+",women,no written contract (%),55.6
+"C pay, security, hours","regular wage, all 18+",women,not eligible for paid leave (%),45.5
+"C pay, security, hours","regular wage, all 18+",women,no social security benefit (%),53.5
+"C pay, security, hours","regular wage, all 18+",women,secure job: contract + paid leave + social security (%),32.3
+"C pay, security, hours","regular wage, all 18+",women,enterprise with 20+ workers (%),35.2
+"C pay, security, hours","regular wage, all 18+",women,median hours worked in last 7 days,47.0
+"C pay, security, hours","regular wage, all 18+",women,worked 60+ hours (%),5.5
+"C pay, security, hours","regular wage, all 18+",women,worked 48+ hours (%),49.5
+"C pay, security, hours","regular wage, all 18+",women,worked all 7 days (%),23.6
+"C pay, security, hours","regular wage, all 18+",women,worked 6 or 7 days (%),74.7
+B who they are,"regular wage, all 18+",all,women (% of group),26.0
+B who they are,"regular wage, all 18+",all,"employer: public (govt, PSU, autonomous)",22.6
+B who they are,"regular wage, all 18+",all,employer: private company,28.7
+B who they are,"regular wage, all 18+",all,employer: proprietary / partnership,39.0
+B who they are,"regular wage, all 18+",all,"employer: other (co-op, trust, households)",9.7
+B who they are,"regular wage, all 18+",all,occupation: elementary,16.9
+B who they are,"regular wage, all 18+",all,occupation: plant & machine operators,11.7
+B who they are,"regular wage, all 18+",all,occupation: service & sales,19.9
+B who they are,"regular wage, all 18+",all,occupation: clerical,8.8
+B who they are,"regular wage, all 18+",all,occupation: technicians & associate prof.,7.9
+B who they are,"regular wage, all 18+",all,occupation: craft trades,10.8
+B who they are,"regular wage, all 18+",all,occupation: professionals,18.5
+B who they are,"regular wage, all 18+",all,occupation: managers,4.5
+B who they are,"regular wage, all 18+",all,occupation: skilled agriculture,1.0
+B who they are,"regular wage, all 18+",all,industry: public administration,6.0
+B who they are,"regular wage, all 18+",all,industry: manufacturing,22.9
+B who they are,"regular wage, all 18+",all,industry: health & social work,5.7
+B who they are,"regular wage, all 18+",all,industry: other,18.6
+B who they are,"regular wage, all 18+",all,industry: trade,12.8
+B who they are,"regular wage, all 18+",all,industry: education,12.1
+B who they are,"regular wage, all 18+",all,industry: transport & storage,7.1
+B who they are,"regular wage, all 18+",all,industry: finance & insurance,4.3
+B who they are,"regular wage, all 18+",all,"industry: real estate, professional & admin services",5.5
+B who they are,"regular wage, all 18+",all,"industry: IT, media, telecom",5.0
+"C pay, security, hours","regular wage, all 18+",all,median monthly earnings (Rs),15000.0
+"C pay, security, hours","regular wage, all 18+",all,earnings p25 (Rs),10000.0
+"C pay, security, hours","regular wage, all 18+",all,earnings p75 (Rs),26600.0
+"C pay, security, hours","regular wage, all 18+",all,no written contract (%),57.6
+"C pay, security, hours","regular wage, all 18+",all,not eligible for paid leave (%),47.3
+"C pay, security, hours","regular wage, all 18+",all,no social security benefit (%),51.1
+"C pay, security, hours","regular wage, all 18+",all,secure job: contract + paid leave + social security (%),33.0
+"C pay, security, hours","regular wage, all 18+",all,enterprise with 20+ workers (%),39.4
+"C pay, security, hours","regular wage, all 18+",all,median hours worked in last 7 days,48.0
+"C pay, security, hours","regular wage, all 18+",all,worked 60+ hours (%),14.8
+"C pay, security, hours","regular wage, all 18+",all,worked 48+ hours (%),69.8
+"C pay, security, hours","regular wage, all 18+",all,worked all 7 days (%),25.5
+"C pay, security, hours","regular wage, all 18+",all,worked 6 or 7 days (%),80.2
