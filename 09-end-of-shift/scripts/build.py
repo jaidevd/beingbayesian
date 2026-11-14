@@ -5,7 +5,8 @@ cols=['sector','nss_region','relation_to_hoh','gender','age','marital_status','e
  'major_minor_activity','activity_code','paid_unpaid_status','where_activity_performed','mult']
 p=pd.read_parquet(R+'per-tus-2024.parquet',columns=cols)
 p=p[p.usual_principal_activity_status.fillna('').str.contains('regular salaried')]
-p=p[p.person_response_code=='cooperative'].reset_index()
+p=p[p.person_response_code=='cooperative']
+p=p[p.age>=18].reset_index()   # adults only: 18 is the age of majority and the minimum age for hazardous work
 print('persons',p.groupby(['fsu_serial_no','sample_hh_no','person_serial_no']).ngroups, 'rows',len(p))
 def mins(s): return s.str[:2].astype(int)*60+s.str[3:5].astype(int)
 a=(mins(p.time_from)-240)%1440; b=(mins(p.time_to)-240)%1440

@@ -19,8 +19,8 @@ test it.
 ## Who is in the sample
 
 - **Salaried:** usual principal status "regular salaried / wage employee",
-  cooperative respondents only. n = 50,235 person-days: 44,147 on a normal day
-  ("work day") and 6,088 on an "other day" (weekly off, leave, festival, per the
+  cooperative respondents aged 18 and over. n = 49,954 person-days: 43,886 on a normal day
+  ("work day") and 6,068 on an "other day" (weekly off, leave, festival, per the
   field instructions; "off day").
 - **Each person reports one day**, so weekday and weekend are different people,
   not the same person twice. Calendar weekends are a poor proxy for a day off:
@@ -41,8 +41,8 @@ test it.
 
 | Share still in paid work at | 5 pm | 6 pm | 7 pm | 9 pm |
 |---|---|---|---|---|
-| All salaried | 61% [61-62] | 38% | 24% | 6% |
-| KW core | 77% [75-79] | 42% | 17% [15-19] | 3% |
+| All salaried | 61% [61-62] | 38% | 23% | 6% |
+| KW core | 77% [75-78] | 42% | 17% [15-19] | 3% |
 | KW broad | 53% [52-55] | 28% | 13% [12-14] | 3% |
 | Blue-collar | 72% | 49% | 32% | 7% |
 
@@ -52,7 +52,7 @@ test it.
   still working at 5, but by 7 pm three quarters of KW core are done.
 - KW broad looks early only because of education. Graduates in education
   (NIC 85, mostly teachers) do 16 minutes of paid work after 5 pm. IT/media, finance and professional services
-  are still at 74-78% at 6 pm. Retail is still at 51% at 8 pm.
+  are still at 74-78% at 5 pm (33-51% at 6 pm). Retail is still at 51% at 7 pm (24% at 8 pm).
 
 ### The second shift
 
@@ -60,9 +60,9 @@ test it.
 
 | Minutes between 5 pm and midnight | Paid work | Domestic | Care | Leisure/media |
 |---|---|---|---|---|
-| All salaried women | 48 | 78 [76-80] | 12 | 63 |
-| All salaried men | 93 | 10 [10-11] | 11 | 77 |
-| KW core women | 75 | 45 [39-50] | 12 | 76 |
+| All salaried women | 48 | 78 [76-80] | 13 | 63 |
+| All salaried men | 92 | 10 [10-11] | 11 | 77 |
+| KW core women | 75 | 45 [40-50] | 12 | 76 |
 | KW core men | 86 | 8 [7-9] | 13 | 88 |
 
 - Salaried women do almost eight times the evening domestic work that salaried
@@ -73,7 +73,7 @@ test it.
   to richest group). Women's barely moves (81 to 76). Money buys men into the
   kitchen a little; it does not buy women out of it.
 - **Social group:** in KW broad, ST salaried workers are far less likely to be at
-  work at 5 pm: women 26% [19-34] against 46% [42-50] for General, men 41% [34-47]
+  work at 5 pm: women 26% [19-33] against 46% [42-50] for General, men 41% [34-47]
   against 61% [59-63]. Part of this is industry mix.
 
 ## 2. Weekends and days off
@@ -83,9 +83,9 @@ test it.
 - **Who gets the weekend.** 83% of KW core respondents are off on Sunday, against
   47% of all salaried and 37% of blue-collar. Among KW core off days, 62% fall on
   a Sunday and 18% on a Saturday. For these workers the weekend is real.
-- **What they do with it.** Women's domestic time on an off day is 291 [282-301]
-  minutes for all salaried against 71 [67-76] for men. In KW core, 229 [202-254]
-  against 75 [63-87]. KW core men spend 295 minutes [279-310] on leisure and media
+- **What they do with it.** Women's domestic time on an off day is 292 [281-302]
+  minutes for all salaried against 71 [67-75] for men. In KW core, 229 [206-253]
+  against 75 [64-87]. KW core men spend 295 minutes [280-309] on leisure and media
   (TV alone is about two and a half hours), against 211 [190-232] for women.
 - 13-15% of KW core and KW broad people still do some paid work on an off day,
   against 20% of blue-collar.
@@ -116,12 +116,12 @@ level (NIC 2-digit x graduate cells, weighted to the public worker mix):
 
 | Public minus private | Raw gap | Industry-adjusted gap |
 |---|---|---|
-| Women, evening paid work (min) | -47 [-50, -43] | -21 [-26, -17] |
-| Women, evening domestic (min) | +29 [25, 33] | +14 [8, 19] |
+| Women, evening paid work (min) | -47 [-50, -43] | -22 [-27, -17] |
+| Women, evening domestic (min) | +29 [25, 33] | +14 [9, 20] |
 | Women, % at work at 5 pm | -40 pts | -20 pts [-24, -16] |
-| Men, evening paid work (min) | -52 [-54, -48] | -26 [-32, -19] |
-| Men, evening leisure (min) | +23 [20, 25] | +12 [7, 16] |
-| Men, % at work at 7 pm | -20 pts | -9 pts [-12, -5] |
+| Men, evening paid work (min) | -51 [-54, -48] | -26 [-33, -19] |
+| Men, evening leisure (min) | +23 [20, 25] | +12 [6, 17] |
+| Men, % at work at 7 pm | -20 pts | -9 pts [-13, -5] |
 
 Half the raw gap is industry and education mix, and half is a real public-sector
 effect. An early finish buys women a longer domestic shift (+14 minutes) and men

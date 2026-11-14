@@ -1,5 +1,7 @@
 # Reproducing 09-end-of-shift
 
+Sample: regular salaried / wage employees, cooperative respondents, aged 18 and over (`build.py`).
+
 Inputs: the cleaned TUS 2024 parquet files in `../../time-use-survey-2024/clean/`
 (paths are hard-coded at the top of `build.py`, `grid.py`, `emp.py`).
 
@@ -37,3 +39,6 @@ Extra figure (not in `results.md` yet): `clock.py D OUT` writes `clock-faces.png
 
 `calheat.py D OUT` writes `calendar-activity.png` (most time-consuming activity by day of week and survey quarter,
 same six cohorts as the clocks). It needs steps 1-5 and reads `sub_round` from the raw person file.
+
+Note: run each script to completion. Piping a script into `head` kills it early (SIGPIPE) and can leave a stale
+intermediate file, e.g. `P3.pkl`, which every later step reads.
