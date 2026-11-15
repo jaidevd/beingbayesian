@@ -4,7 +4,6 @@ from matplotlib.patches import Patch, Circle, Wedge
 D=sys.argv[1]; OUT=sys.argv[2]; sys.argv=[sys.argv[0],D,'none']
 exec(open(os.path.dirname(os.path.abspath(__file__))+'/tab.py').read().split("if __name__")[0])
 P=pd.read_pickle(D+'/P3.pkl').reset_index(drop=True)
-P=P.merge(pd.read_parquet(D+'/employer.parquet'),on=k,how='left')
 for f in ['Bold','Regular']: fm.fontManager.addfont(f"/home/jaidevd/.local/share/fonts/Lora-{f}.ttf")
 plt.rcParams['font.family']='Lora'; BG='papayawhip'; FACE='#fffaf0'
 COL={'paid work':'teal','commute':'orchid','housework':'maroon','care':'#C62828','leisure/media':'darkorange',
@@ -44,10 +43,10 @@ def clock(ax,mask,title,stat):
     ax.plot([0,0.5*np.cos(a5)],[0,0.5*np.sin(a5)],color='black',lw=3.5,solid_capstyle='round')
     ax.add_patch(Circle((0,0),0.045,fc='black',zorder=5))
     hh=12+fin; tm=f"{int(hh)%12 or 12}:{int(round((hh%1)*60)):02d} {'pm' if hh<24 else 'am'}"
-    ax.text(0,-1.07,f"For {title},\npaid work ends at {tm}.",ha='center',va='top',fontsize=11,fontweight='bold',color='0.15',linespacing=1.4)
+    ax.text(0,-1.07,f"For {title},\npaid work ends at {tm}.",ha='center',va='top',fontsize=10,fontweight='bold',color='0.15',linespacing=1.4)
 F=P.gender=='female'; M=P.gender=='male'
-cohorts=[('in knowledge work',P.kw_core),('in blue-collar work',P.blue),('in public employment',P.emp=='public')]
-fig,axs=plt.subplots(2,3,figsize=(9.6,7.7)); fig.patch.set_facecolor(BG)
+cohorts=[('in health and public administration',P.nic2.isin([84,86,87,88])),('in knowledge services',P.ind5=='Knowledge services'),('in trade, transport and hospitality',P.ind5=='Trade, transport and hospitality')]
+fig,axs=plt.subplots(2,3,figsize=(13,7.7)); fig.patch.set_facecolor(BG)
 for j,(cn,cm) in enumerate(cohorts):
     for i,(gn,gm) in enumerate([('women',F),('men',M)]):
         clock(axs[i,j],cm&gm&(P.dtype=='work'),f"{gn} {cn}",None)
@@ -55,7 +54,7 @@ fig.suptitle('What Salaried India Does From Noon to Midnight',fontweight='bold',
 fig.text(0.5,0.925,'Normal work day. Rim colour = most common activity in each half hour (paler = less agreement).\nThe hand points to when paid work ends for the median worker. 12 at the top is noon.',
          ha='center',va='top',fontsize=9,color='0.3')
 fig.legend(handles=[Patch(color=c,label=l) for l,c in COL.items() if l not in ('care','social/relig')],frameon=False,fontsize=9,ncol=6,loc='lower center',bbox_to_anchor=(0.5,0.075))
-fig.text(0.01,0.005,"Knowledge work and blue-collar work are approximated from NIC industry codes\n(knowledge work also requires a graduate degree). Public employment is the\nemployer type recorded for paid work, not an NIC code.",ha='left',va='bottom',fontsize=7,color='0.4',linespacing=1.4)
+fig.text(0.01,0.005,"Groups are defined by industry (NIC 2008 divisions). Schools and colleges are left out. Knowledge services: IT, media, telecom,\nfinance, insurance and professional services. Health and public administration: NIC 84, 86-88, private as well as public.",ha='left',va='bottom',fontsize=7,color='0.4',linespacing=1.4)
 fig.text(0.99,0.005,'Source: NSO Time Use Survey 2024, salaried, weighted.',ha='right',fontsize=7,color='0.4')
 fig.subplots_adjust(left=0.02,right=0.98,top=0.855,bottom=0.2,hspace=0.5,wspace=0.04)
 fig.savefig(OUT+'/clock-faces.png',dpi=300,facecolor=BG,bbox_inches='tight')

@@ -8,6 +8,7 @@ key=P[k].copy(); key['i']=np.arange(len(P)); G=G.merge(key,on=k)
 n=len(P)
 slot=np.zeros((n,48),bool)   # paid work by slot
 w_=G[G.g=='paid work']; slot[w_.i.values,w_.slot.values]=True
+slot=on_the_clock(slot)   # 'still working' = between first and last paid slot, breaks of up to 4 hours included
 def mat(lo,hi):
     out={}
     for g_ in GRP+['other']:
@@ -40,7 +41,7 @@ def ratio_cols(df,col):
 def ci(bs): return np.percentile(bs,[2.5,97.5])
 import pickle
 res={'slots':{}, 'eve':{}, 'off':{}}
-COHS={'all salaried':P.index>=0,'KW core':P.kw_core.values,'KW broad':P.kw_broad.values,'WC (03 essay)':P.wc03.values,'blue-collar':P.blue.values}
+COHS={'all salaried':np.ones(n,bool),**{g:(P.ind5==g).to_numpy(bool) for g in IND5}}
 work=(P.dtype=='work').values; off=~work
 for cn,cm in COHS.items():
     cm=np.asarray(cm)

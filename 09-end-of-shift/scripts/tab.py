@@ -2,6 +2,13 @@ import sys, numpy as np, pandas as pd
 D=sys.argv[1]; pd.set_option('display.width',250); pd.set_option('display.max_columns',40); pd.set_option('display.max_rows',300)
 P=pd.read_pickle(D+'/P2.pkl'); G=pd.read_pickle(D+'/G2.pkl')
 k=['fsu_serial_no','sample_hh_no','person_serial_no']
+def on_the_clock(slot,max_gap=8):
+    """slot: persons x 48 bool, True where paid work is the main activity. Returns True from a person's first to last paid slot,
+    filling breaks of up to max_gap half hours (4 hours) so that lunch, tea and short gaps do not count as 'not working'."""
+    idx=np.arange(slot.shape[1])
+    prev=np.maximum.accumulate(np.where(slot,idx,-1),axis=1)
+    nxt=np.minimum.accumulate(np.where(slot,idx,10**3)[:,::-1],axis=1)[:,::-1]
+    return (prev>=0)&(nxt<10**3)&((nxt-prev-1)<=max_gap)
 def grp(a):
     if 110<=a<=150: return 'paid work'
     if a in (181,182): return 'commute'
@@ -17,7 +24,8 @@ def grp(a):
     return 'eat/selfcare'
 G['g']=G.act.map(lambda a: grp(int(a)) if pd.notna(a) else 'unk')
 G=G.drop(columns=['w'])
-COH={'all salaried':P.index==P.index,'KW broad':P.kw_broad,'KW core':P.kw_core,'blue (mfg/constr/trade/transp)':P.blue,'non-graduate':~P.grad}
+IND5=['Manufacturing and construction','Trade, transport and hospitality','Knowledge services','Education, health and administration','Other industries']
+COH={'all salaried':P.index==P.index,**{g:P.ind5==g for g in IND5}}
 def prof(mask,lo,hi):
     ids=P[mask]
     if len(ids)<40: return None

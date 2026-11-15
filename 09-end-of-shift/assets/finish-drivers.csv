@@ -1,0 +1,55 @@
+factor,level,n,median finish,p25,p75,% finishing after 5pm,median,middle half
+Employer,"Other (co-op, trust, household)",3894,18.0,17.0,19.5,70.44,6:00 pm,5:00 pm to 7:30 pm
+Employer,Private company,11616,18.0,17.5,19.5,83.42,6:00 pm,5:30 pm to 7:30 pm
+Employer,Proprietary / partnership,13455,19.0,18.0,20.0,85.04,7:00 pm,6:00 pm to 8:00 pm
+Employer,Public,8927,17.5,17.0,18.5,63.13,5:30 pm,5:00 pm to 6:30 pm
+Gender,Men,30409,18.5,17.5,20.0,82.66,6:30 pm,5:30 pm to 8:00 pm
+Gender,Women,7482,18.0,16.5,19.0,63.62,6:00 pm,4:30 pm to 7:00 pm
+Place,Rural,13418,18.0,17.0,19.0,72.45,6:00 pm,5:00 pm to 7:00 pm
+Place,Urban,24474,18.5,17.5,20.0,83.2,6:30 pm,5:30 pm to 8:00 pm
+Age,Under 25,5140,18.5,18.0,20.0,83.62,6:30 pm,6:00 pm to 8:00 pm
+Age,25 to 34,13842,18.5,17.5,19.5,81.88,6:30 pm,5:30 pm to 7:30 pm
+Age,35 to 49,13385,18.0,17.5,19.5,76.61,6:00 pm,5:30 pm to 7:30 pm
+Age,50 and over,5525,18.0,17.0,19.5,71.79,6:00 pm,5:00 pm to 7:30 pm
+Social group,General,12554,18.5,17.5,19.5,82.62,6:30 pm,5:30 pm to 7:30 pm
+Social group,OBC,15115,18.5,17.5,19.5,80.07,6:30 pm,5:30 pm to 7:30 pm
+Social group,SC,6541,18.0,17.0,19.5,74.89,6:00 pm,5:00 pm to 7:30 pm
+Social group,ST,3682,18.0,17.0,19.0,64.27,6:00 pm,5:00 pm to 7:00 pm
+Education,Graduate,13436,18.0,17.5,19.0,82.29,6:00 pm,5:30 pm to 7:00 pm
+Education,Not a graduate,24456,18.5,17.5,20.0,77.2,6:30 pm,5:30 pm to 8:00 pm
+Household spending,Fourth,8266,18.0,17.5,19.5,79.22,6:00 pm,5:30 pm to 7:30 pm
+Household spending,Middle,7970,18.0,17.5,19.5,78.24,6:00 pm,5:30 pm to 7:30 pm
+Household spending,Poorest fifth,6324,18.0,17.5,19.5,76.65,6:00 pm,5:30 pm to 7:30 pm
+Household spending,Richest fifth,8052,18.5,17.5,19.5,81.47,6:30 pm,5:30 pm to 7:30 pm
+Household spending,Second,7280,18.0,17.5,19.5,78.15,6:00 pm,5:30 pm to 7:30 pm
+Marital status,Married,26115,18.0,17.5,19.5,77.85,6:00 pm,5:30 pm to 7:30 pm
+Marital status,Not married,11777,18.5,17.5,20.0,81.38,6:30 pm,5:30 pm to 8:00 pm
+Day of the week,Monday to Friday,29451,18.0,17.5,19.5,78.93,6:00 pm,5:30 pm to 7:30 pm
+Day of the week,Saturday,5442,18.0,17.5,19.5,78.96,6:00 pm,5:30 pm to 7:30 pm
+Day of the week,Sunday,2999,18.5,17.5,20.0,79.23,6:30 pm,5:30 pm to 8:00 pm
+Industry (NIC),1,614,17.5,16.5,18.5,51.57,5:30 pm,4:30 pm to 6:30 pm
+Industry (NIC),10,883,18.0,17.5,19.5,76.83,6:00 pm,5:30 pm to 7:30 pm
+Industry (NIC),13,1145,19.0,18.0,20.0,85.94,7:00 pm,6:00 pm to 8:00 pm
+Industry (NIC),14,610,18.5,18.0,20.0,88.71,6:30 pm,6:00 pm to 8:00 pm
+Industry (NIC),21,478,18.0,17.5,19.0,82.14,6:00 pm,5:30 pm to 7:00 pm
+Industry (NIC),22,559,18.5,18.0,20.0,85.65,6:30 pm,6:00 pm to 8:00 pm
+Industry (NIC),24,735,18.5,17.5,20.0,82.0,6:30 pm,5:30 pm to 8:00 pm
+Industry (NIC),25,496,18.5,18.0,19.5,86.26,6:30 pm,6:00 pm to 7:30 pm
+Industry (NIC),29,402,18.0,17.5,19.5,76.31,6:00 pm,5:30 pm to 7:30 pm
+Industry (NIC),32,603,19.0,18.0,20.0,87.63,7:00 pm,6:00 pm to 8:00 pm
+Industry (NIC),35,569,18.0,17.5,18.5,75.58,6:00 pm,5:30 pm to 6:30 pm
+Industry (NIC),41,821,18.0,17.5,18.5,75.83,6:00 pm,5:30 pm to 6:30 pm
+Industry (NIC),45,812,19.0,18.0,19.5,90.65,7:00 pm,6:00 pm to 7:30 pm
+Industry (NIC),46,515,19.0,18.0,20.0,84.77,7:00 pm,6:00 pm to 8:00 pm
+Industry (NIC),47,3742,19.5,18.5,20.5,91.49,7:30 pm,6:30 pm to 8:30 pm
+Industry (NIC),49,2163,19.0,17.5,20.0,83.46,7:00 pm,5:30 pm to 8:00 pm
+Industry (NIC),56,1167,19.5,18.0,21.5,82.52,7:30 pm,6:00 pm to 9:30 pm
+Industry (NIC),62,1657,18.5,18.0,19.5,92.25,6:30 pm,6:00 pm to 7:30 pm
+Industry (NIC),64,1683,18.0,17.5,18.5,79.46,6:00 pm,5:30 pm to 6:30 pm
+Industry (NIC),69,511,18.0,17.5,19.0,79.9,6:00 pm,5:30 pm to 7:00 pm
+Industry (NIC),80,784,19.0,18.0,21.0,83.63,7:00 pm,6:00 pm to 9:00 pm
+Industry (NIC),82,1624,18.0,17.0,18.0,70.86,6:00 pm,5:00 pm to 6:00 pm
+Industry (NIC),84,2914,18.0,17.0,18.5,65.69,6:00 pm,5:00 pm to 6:30 pm
+Industry (NIC),86,2215,18.0,17.0,19.0,63.2,6:00 pm,5:00 pm to 7:00 pm
+Industry (NIC),96,881,18.0,17.0,20.0,67.36,6:00 pm,5:00 pm to 8:00 pm
+Industry (NIC),97,1013,17.5,14.0,19.0,55.65,5:30 pm,2:00 pm to 7:00 pm

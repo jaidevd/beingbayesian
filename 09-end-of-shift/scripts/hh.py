@@ -1,9 +1,6 @@
 import sys; A=sys.argv[1]; sys.argv=[sys.argv[0],A,'none']
 exec(open(sys.argv[0].replace('hh.py','tab.py')).read().split("if __name__")[0])
-import yaml
-wc03=set(int(str(k)) for k in yaml.safe_load(open(D+'/nic-white-collar.yaml')).keys())
-P['wc03']=P.nic2.isin(wc03)&P.age.between(15,60)
-COH2={'all salaried':P.index==P.index,'KW core':P.kw_core,'KW broad':P.kw_broad,'WC (03 essay)':P.wc03}
+COH2=COH
 P['rel']=P.religion.where(P.religion.isin(['Hinduism','Islam','Christianity']),'other')
 P['sg']=P.social_group.map({'scheduled tribe':'ST','scheduled caste':'SC','other backward class':'OBC','others':'General'})
 P['qq']=P.q.map({1:'Q1 (poorest)',2:'Q2',3:'Q3',4:'Q4',5:'Q5 (richest)'})

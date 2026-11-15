@@ -4,7 +4,6 @@ from matplotlib.patches import FancyBboxPatch
 D=sys.argv[1]; OUT=sys.argv[2]; sys.argv=[sys.argv[0],D,'none']
 exec(open(os.path.dirname(os.path.abspath(__file__))+'/tab.py').read().split("if __name__")[0])
 P=pd.read_pickle(D+'/P3.pkl').reset_index(drop=True)
-P=P.merge(pd.read_parquet(D+'/employer.parquet'),on=k,how='left')
 raw=pd.read_parquet('/home/jaidevd/src/time-use-survey-2024/clean/per-tus-2024.parquet',columns=['sub_round']).reset_index()
 P=P.merge(raw.drop_duplicates(k)[k+['sub_round']],on=k,how='left')
 mins=G.groupby(k+['g']).size().unstack(fill_value=0)*30
@@ -15,9 +14,7 @@ plt.rcParams['font.family']='Lora'; BG='papayawhip'
 DAYS=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']; QL=['Q1','Q2','Q3','Q4']
 NMIN=30; COVMIN=0.9
 F=P.gender=='female'; M=P.gender=='male'
-# employer type is recorded only on paid-work rows, so the public group is only usable where nearly everyone has a label
-PUB=P.emp=='public'
-COH=[('in knowledge work',P.kw_core,False),('in blue-collar work',P.blue,False),('in public employment',PUB,True)]
+COH=[('in health and public administration',P.nic2.isin([84,86,87,88]),False),('in knowledge services',P.ind5=='Knowledge services',False),('in trade, transport and hospitality',P.ind5=='Trade, transport and hospitality',False)]
 PANELS=[(f"{gn} {cn}",cm&gm,emp,gm) for gn,gm in [('Women',F),('Men',M)] for cn,cm,emp in COH]
 REN={'domestic':'housework','eat/selfcare':'meals/self-care'}
 COL={'paid work':'teal','commute':'orchid','housework':'maroon','care':'#C62828','leisure/media':'darkorange',
@@ -47,13 +44,13 @@ for ax,(nm,_,_,_),(top,m,n) in zip(axs.ravel(),PANELS,vals):
             if t is not None: ax.text(q+0.5,i+0.5,f'{m[i,q]/60:.1f}h',ha='center',va='center',fontsize=7,color='white' if al>0.7 else '0.2')
     for i,dn in enumerate(DAYS): ax.text(-0.12,i+0.5,dn[:3],ha='right',va='center',fontsize=8,fontweight='bold',color='0.25')
     for q in range(4): ax.text(q+0.5,-0.08,QL[q],ha='center',va='bottom',fontsize=7.5,color='0.35')
-    ax.set_title(nm,fontsize=10.5,fontweight='bold',pad=20)
+    ax.set_title(nm.replace(' in ',', ',1).replace('health and public administration','health and public admin.'),fontsize=10,fontweight='bold',pad=20)
 ttl=fig.suptitle('What Salaried India Does Most, Day by Day',fontweight='bold',fontsize=15,y=1.0)
 sub=fig.text(0.5,0.955,"Each square shows the activity that takes the most time on that day of the week, sleep aside,\nwith its average hours; blank squares have too little data.",
          ha='center',va='top',fontsize=8.5,color='0.3')
 from matplotlib.patches import Patch
 leg=fig.legend(handles=[Patch(color=COL[l],label=l) for l in seen],frameon=False,fontsize=9,ncol=len(seen),loc='lower center',bbox_to_anchor=(0.5,0.075))
-fig.text(0.01,0.005,"Knowledge work and blue-collar work are approximated from NIC industry codes\n(knowledge work also requires a graduate degree). Public employment is the\nemployer type recorded for paid work, not an NIC code.",ha='left',va='bottom',fontsize=7,color='0.4',linespacing=1.4)
+fig.text(0.01,0.005,"Groups are defined by industry (NIC 2008 divisions). Schools and colleges are left out. Knowledge services: IT, media, telecom,\nfinance, insurance and professional services. Health and public administration: NIC 84, 86-88, private as well as public.",ha='left',va='bottom',fontsize=7,color='0.4',linespacing=1.4)
 fig.text(0.99,0.005,'Source: NSO Time Use Survey 2024, salaried, weighted.',ha='right',fontsize=7,color='0.4')
 fig.subplots_adjust(left=0.06,right=0.97,top=0.84,bottom=0.13,hspace=0.32,wspace=0.12)
 # centre title, subtitle and legend on the block of grids (the panels are not symmetric about the figure centre)

@@ -9,10 +9,10 @@ for n,m in ind.items():
         if r: rows[(n,gn)]=r
 print(pd.DataFrame(rows).T[['n','paid work','commute','domestic','care','leisure/media','%work@5pm','%work@6pm','%work@7pm','%work@8pm']])
 # median finish: last paid-work slot end
-x=G.merge(P[P.dtype=='work'][k+['w','kw_core','kw_broad','blue','gender']],on=k)
-w=x[x.g=='paid work']; last=w.groupby(k).slot.max().rename('last').reset_index().merge(P[k+['w','kw_core','kw_broad','blue','gender','nic2','grad']],on=k)
+x=G.merge(P[P.dtype=='work'][k+['w','ind5','gender']],on=k)
+w=x[x.g=='paid work']; last=w.groupby(k).slot.max().rename('last').reset_index().merge(P[k+['w','ind5','gender','nic2','grad']],on=k)
 def wmed(df): 
     o=df.sort_values('last'); c=o.w.cumsum()/o.w.sum(); return o['last'][c>=.5].iloc[0]
 def fmt(s): t=((s+1)*30+240)%1440; return f'{t//60:02d}:{t%60:02d}'
-for nm,m in [('all',last['last']>=0),('KW core',last.kw_core),('KW broad',last.kw_broad),('blue',last.blue)]:
+for nm,m in [('all',last['last']>=0)]+[(g,last.ind5==g) for g in IND5]:
     d=last[m]; print(nm,'median end of last paid-work slot',fmt(wmed(d)),'; share finishing by 17:00', round(d[d['last']<=25].w.sum()/d.w.sum()*100),'%; by 18:00',round(d[d['last']<=27].w.sum()/d.w.sum()*100),'%')

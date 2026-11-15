@@ -8,6 +8,7 @@ key=P[k].copy(); key['i']=np.arange(len(P)); G=G.merge(key,on=k)
 n=len(P)
 slot=np.zeros((n,48),bool)   # paid work by slot
 w_=G[G.g=='paid work']; slot[w_.i.values,w_.slot.values]=True
+slot=on_the_clock(slot)   # 'still working' = between first and last paid slot, breaks of up to 4 hours included
 def mat(lo,hi):
     out={}
     for g_ in GRP+['other']:
@@ -34,7 +35,7 @@ P['ageb']=pd.cut(P.age,[0,24,34,49,120],labels=['<25','25-34','35-49','50+']).as
 P['married']=np.where(P.marital_status=='currently married','married','not married')
 P['qt']=P.q.map({1:'Q1-2',2:'Q1-2',3:'Q3',4:'Q4-5',5:'Q4-5'})
 SPL={'sector':'sector','age':'ageb','marital':'married','social group':'sg','religion':'rel','MPCE (grouped)':'qt','care need in HH':'care_hh'}
-COHS={'all salaried':np.ones(n,bool),'KW core':P.kw_core.fillna(False).to_numpy(bool),'KW broad':P.kw_broad.fillna(False).to_numpy(bool),'WC (03 essay)':P.wc03.fillna(False).to_numpy(bool)}
+COHS={'all salaried':np.ones(n,bool),**{g:(P.ind5==g).to_numpy(bool) for g in IND5}}
 work=(P.dtype=='work').values
 VW={'paid work':EVE['paid work'].values,'domestic':EVE['domestic'].values,'care':EVE['care'].values,'leisure':EVE['leisure/media'].values,'%work@5pm':slot[:,26]*100.,'%work@7pm':slot[:,30]*100.}
 VO={'paid work':DAY['paid work'].values,'domestic':DAY['domestic'].values,'care':DAY['care'].values,'leisure':DAY['leisure/media'].values}

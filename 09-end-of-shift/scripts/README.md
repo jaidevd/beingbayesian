@@ -8,7 +8,6 @@ Inputs: the cleaned TUS 2024 parquet files in `../../time-use-survey-2024/clean/
 Every script takes a work directory `D` as its first argument and keeps
 intermediates there. Two inputs must also sit in `D`:
 
-- `D/nic-white-collar.yaml`: copy of `../03-90-hr-workweek/nic-white-collar.yaml`
 - `D/../conv/ICATUS-2016-Sheet1.csv`: the ICATUS-2016 workbook converted to CSV
   (`soffice --headless --convert-to csv ICATUS-2016.xlsx`, then rename the output to
   `ICATUS-2016-Sheet1.csv`; openpyxl cannot read the workbook)
@@ -19,18 +18,17 @@ Run in this order (`python scripts/<name>.py D`):
 |---|---|---|
 | 1 | `build.py` | `sal_rows.parquet`: salaried, cooperative persons, minutes from 4 am |
 | 2 | `grid.py` | `persons.parquet`, `grid.parquet`: 48-slot grid + household merge |
-| 3 | `ana.py` | `P2.pkl`, `G2.pkl`: cohort flags |
-| 4 | `hh.py` | `P3.pkl`: household splits, 03 white-collar flag |
+| 3 | `ana.py` | `P2.pkl`, `G2.pkl`: the five industry groups (`ind5`) |
+| 4 | `hh.py` | `P3.pkl`: household splits |
 | 5 | `emp.py` | `employer.parquet`: public / private labels |
 | 6 | `boot.py` | `boot.pkl`: cluster-bootstrap CIs for the charts |
 | 7 | `boot_splits.py` | `splits_ci.csv` |
 | 8 | `boot_emp.py` | `employer_ci.csv` |
 | 9 | `within.py` | `within_ind.csv` |
-| 10 | `charts.py D OUT` | `still-working.png`, `evening.png`, `off-day.png` in `OUT` |
+| 10 | `charts.py D OUT` | `evening.png`, `off-day.png` in `OUT` |
 
 `tab.py` holds the shared activity grouping and profile function (imported by
-exec from the other scripts). `q1.py`, `ind.py`, `wk.py`, `hh_off.py` print the
-exploratory tables behind the text of `results.md`.
+exec from the other scripts). `ind.py` prints the industry table behind the text of `results.md`.
 
 The CSVs in `assets/` are the outputs of steps 7-9, renamed with hyphens.
 
@@ -38,7 +36,7 @@ Extra figure (not in `results.md` yet): `clock.py D OUT` writes `clock-faces.png
 (it reads `P3.pkl` and `employer.parquet`).
 
 `calheat.py D OUT` writes `calendar-activity.png` (most time-consuming activity by day of week and survey quarter,
-same six cohorts as the clocks). It needs steps 1-5 and reads `sub_round` from the raw person file.
+same six groups as the clocks: women and men in health and public administration, knowledge services, and trade, transport and hospitality; schools and colleges left out). It needs steps 1-5 and reads `sub_round` from the raw person file.
 
 Note: run each script to completion. Piping a script into `head` kills it early (SIGPIPE) and can leave a stale
 intermediate file, e.g. `P3.pkl`, which every later step reads.
@@ -55,7 +53,16 @@ These use other inputs and are independent of steps 1-10 above, except `spouse.p
 - `spouse.py <TUS clean dir> <P3.pkl> <out.csv>`: salaried men linked to their wives in the same TUS household (housework, care,
   paid work and leisure, with cluster-bootstrap intervals). Writes `assets/spouse-housework.csv`. `spouse_chart.py <csv> <png>`
   draws `assets/ideal-worker-day.png`.
+- `second_shift_charts.py <work dir> <splits-ci.csv> <out dir>`: `evening-splits.png` (evening housework, women against men, in 19 groups).
+- `total_work.py <work dir> <out.csv>` and `total_work_chart.py <csv> <png>`: paid work, housework and care of all salaried women and
+  men (whole day and after 5 pm, with bootstrap intervals and the women-minus-men difference); `assets/total-work.png`.
 
 The PLFS 2025 file (`Data_in_CSV.zip`, with no data layout) is not in the repo. The scripts assume the 2023-24 coding for education,
 enterprise type, contract, paid leave and social security; value distributions match. PLFS gives hours for each of the last
 seven days but not the weekday, so "worked all 7 days" is the closest measure of weekend work.
+- `what_matters.py <work dir> <out.csv>` and `what_matters_chart.py <csv> <png>`: which factors explain who is still working at 5 pm
+  (level shares with bootstrap intervals, plus the variation each factor explains); `assets/what-matters.png` and `assets/what-matters.csv`.
+- `finish_spread.py <work dir> <out.csv> <out.png>`: the spread of finishing times (histogram for all salaried, and the share who
+  have finished by each time for education, public and private employers outside education); `assets/finish-spread.png`.
+- `finish_drivers.py <work dir> <out.csv>`: what predicts the finishing time outside education (medians by level, R-squared alone and added, adjusted gaps); `assets/finish-drivers.csv`.
+- `finish_drivers_chart.py <finish-drivers.csv> <out.png>`: dot plot of median finish and middle half by industry, employer and gender; `assets/finish-drivers.png`.

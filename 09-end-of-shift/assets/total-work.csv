@@ -1,0 +1,181 @@
+group,sex,period,metric,n,estimate,lo95,hi95
+all salaried,women,day,paid work,10318,387.5,384.2,390.6
+all salaried,women,day,housework,10318,169.2,166.2,173.6
+all salaried,women,day,care,10318,21.6,20.4,22.9
+all salaried,women,day,commute,10318,63.4,62.2,64.7
+all salaried,women,day,unpaid,10318,190.8,187.2,195.2
+all salaried,women,day,total work,10318,578.3,574.1,582.9
+all salaried,women,evening,paid work,10318,48.4,46.6,50.6
+all salaried,women,evening,housework,10318,78.2,76.5,80.3
+all salaried,women,evening,care,10318,12.5,11.7,13.2
+all salaried,women,evening,commute,10318,21.2,20.5,21.9
+all salaried,women,evening,unpaid,10318,90.7,88.7,92.7
+all salaried,women,evening,total work,10318,139.2,137.2,141.5
+all salaried,men,day,paid work,33567,475.1,473.1,477.5
+all salaried,men,day,housework,33567,21.8,20.8,22.8
+all salaried,men,day,care,33567,16.2,15.6,16.8
+all salaried,men,day,commute,33567,76.4,75.5,77.3
+all salaried,men,day,unpaid,33567,38.1,37.0,39.4
+all salaried,men,day,total work,33567,513.1,510.6,516.0
+all salaried,men,evening,paid work,33567,92.3,91.0,93.7
+all salaried,men,evening,housework,33567,10.4,9.7,11.1
+all salaried,men,evening,care,33567,10.8,10.4,11.2
+all salaried,men,evening,commute,33567,32.2,31.8,32.7
+all salaried,men,evening,unpaid,33567,21.2,20.5,22.0
+all salaried,men,evening,total work,33567,113.5,112.0,115.3
+Manufacturing and construction,women,day,paid work,1276,449.4,440.7,457.2
+Manufacturing and construction,women,day,housework,1276,163.8,156.5,172.1
+Manufacturing and construction,women,day,care,1276,14.8,12.3,17.3
+Manufacturing and construction,women,day,commute,1276,66.2,63.1,69.1
+Manufacturing and construction,women,day,unpaid,1276,178.6,170.6,186.6
+Manufacturing and construction,women,day,total work,1276,628.0,618.9,636.6
+Manufacturing and construction,women,evening,paid work,1276,58.7,54.0,63.5
+Manufacturing and construction,women,evening,housework,1276,78.1,74.8,82.5
+Manufacturing and construction,women,evening,care,1276,9.2,7.6,10.9
+Manufacturing and construction,women,evening,commute,1276,27.8,26.1,29.4
+Manufacturing and construction,women,evening,unpaid,1276,87.3,83.6,91.6
+Manufacturing and construction,women,evening,total work,1276,146.0,140.6,151.0
+Manufacturing and construction,men,day,paid work,9070,494.2,490.6,498.1
+Manufacturing and construction,men,day,housework,9070,25.2,22.8,27.5
+Manufacturing and construction,men,day,care,9070,14.6,13.6,15.6
+Manufacturing and construction,men,day,commute,9070,78.4,76.7,80.2
+Manufacturing and construction,men,day,unpaid,9070,39.8,37.3,42.3
+Manufacturing and construction,men,day,total work,9070,534.0,530.2,537.7
+Manufacturing and construction,men,evening,paid work,9070,94.3,91.5,97.3
+Manufacturing and construction,men,evening,housework,9070,12.6,10.9,14.2
+Manufacturing and construction,men,evening,care,9070,10.0,9.3,10.8
+Manufacturing and construction,men,evening,commute,9070,35.0,34.0,35.9
+Manufacturing and construction,men,evening,unpaid,9070,22.6,21.0,24.4
+Manufacturing and construction,men,evening,total work,9070,116.9,113.9,120.3
+"Trade, transport and hospitality",women,day,paid work,1007,460.3,451.3,469.4
+"Trade, transport and hospitality",women,day,housework,1007,133.7,125.3,143.2
+"Trade, transport and hospitality",women,day,care,1007,14.4,11.6,17.5
+"Trade, transport and hospitality",women,day,commute,1007,67.4,64.4,70.3
+"Trade, transport and hospitality",women,day,unpaid,1007,148.1,138.7,157.9
+"Trade, transport and hospitality",women,day,total work,1007,608.4,600.4,617.1
+"Trade, transport and hospitality",women,evening,paid work,1007,92.3,86.8,98.1
+"Trade, transport and hospitality",women,evening,housework,1007,55.1,50.8,59.1
+"Trade, transport and hospitality",women,evening,care,1007,7.8,6.2,9.7
+"Trade, transport and hospitality",women,evening,commute,1007,29.4,28.0,31.2
+"Trade, transport and hospitality",women,evening,unpaid,1007,63.0,58.2,67.7
+"Trade, transport and hospitality",women,evening,total work,1007,155.3,149.4,161.6
+"Trade, transport and hospitality",men,day,paid work,8296,511.7,507.5,515.8
+"Trade, transport and hospitality",men,day,housework,8296,17.1,15.3,19.0
+"Trade, transport and hospitality",men,day,care,8296,13.5,12.6,14.6
+"Trade, transport and hospitality",men,day,commute,8296,71.6,70.1,73.1
+"Trade, transport and hospitality",men,day,unpaid,8296,30.5,28.7,32.8
+"Trade, transport and hospitality",men,day,total work,8296,542.3,537.7,547.7
+"Trade, transport and hospitality",men,evening,paid work,8296,125.9,123.3,128.9
+"Trade, transport and hospitality",men,evening,housework,8296,6.8,6.0,7.9
+"Trade, transport and hospitality",men,evening,care,8296,7.9,7.4,8.6
+"Trade, transport and hospitality",men,evening,commute,8296,31.0,30.2,31.6
+"Trade, transport and hospitality",men,evening,unpaid,8296,14.8,13.8,15.9
+"Trade, transport and hospitality",men,evening,total work,8296,140.6,137.8,143.9
+Knowledge services,women,day,paid work,1190,425.2,416.7,434.7
+Knowledge services,women,day,housework,1190,102.7,92.5,114.3
+Knowledge services,women,day,care,1190,19.8,16.4,23.4
+Knowledge services,women,day,commute,1190,74.4,70.2,78.4
+Knowledge services,women,day,unpaid,1190,122.5,110.8,135.3
+Knowledge services,women,day,total work,1190,547.7,529.8,565.5
+Knowledge services,women,evening,paid work,1190,71.4,66.9,75.8
+Knowledge services,women,evening,housework,1190,47.7,43.1,52.9
+Knowledge services,women,evening,care,1190,12.1,9.9,14.3
+Knowledge services,women,evening,commute,1190,35.6,33.4,37.7
+Knowledge services,women,evening,unpaid,1190,59.8,53.8,65.6
+Knowledge services,women,evening,total work,1190,131.2,124.1,138.5
+Knowledge services,men,day,paid work,4481,449.9,445.9,454.2
+Knowledge services,men,day,housework,4481,16.4,14.9,18.0
+Knowledge services,men,day,care,4481,18.5,16.2,20.4
+Knowledge services,men,day,commute,4481,84.5,82.0,86.8
+Knowledge services,men,day,unpaid,4481,34.8,32.1,37.2
+Knowledge services,men,day,total work,4481,484.7,481.2,488.9
+Knowledge services,men,evening,paid work,4481,84.6,81.9,87.5
+Knowledge services,men,evening,housework,4481,7.7,6.8,8.5
+Knowledge services,men,evening,care,4481,12.5,11.0,13.7
+Knowledge services,men,evening,commute,4481,39.6,38.4,40.9
+Knowledge services,men,evening,unpaid,4481,20.2,18.5,21.7
+Knowledge services,men,evening,total work,4481,104.8,102.0,108.3
+"Education, health and administration",women,day,paid work,4512,352.8,349.0,356.8
+"Education, health and administration",women,day,housework,4512,190.1,186.2,195.0
+"Education, health and administration",women,day,care,4512,27.1,25.2,29.3
+"Education, health and administration",women,day,commute,4512,60.7,58.8,62.2
+"Education, health and administration",women,day,unpaid,4512,217.2,212.9,222.5
+"Education, health and administration",women,day,total work,4512,570.0,565.6,574.9
+"Education, health and administration",women,evening,paid work,4512,27.6,25.6,29.7
+"Education, health and administration",women,evening,housework,4512,90.8,88.4,93.2
+"Education, health and administration",women,evening,care,4512,16.1,14.9,17.3
+"Education, health and administration",women,evening,commute,4512,14.5,13.7,15.2
+"Education, health and administration",women,evening,unpaid,4512,106.9,104.3,109.6
+"Education, health and administration",women,evening,total work,4512,134.4,131.7,137.3
+"Education, health and administration",men,day,paid work,6460,413.7,410.0,417.6
+"Education, health and administration",men,day,housework,6460,25.0,23.5,26.5
+"Education, health and administration",men,day,care,6460,23.0,21.7,24.3
+"Education, health and administration",men,day,commute,6460,77.8,76.1,79.4
+"Education, health and administration",men,day,unpaid,6460,48.0,45.8,50.2
+"Education, health and administration",men,day,total work,6460,461.7,457.7,465.9
+"Education, health and administration",men,evening,paid work,6460,50.6,48.2,53.3
+"Education, health and administration",men,evening,housework,6460,13.5,12.5,14.5
+"Education, health and administration",men,evening,care,6460,16.2,15.2,17.3
+"Education, health and administration",men,evening,commute,6460,25.0,24.2,25.9
+"Education, health and administration",men,evening,unpaid,6460,29.7,28.3,31.2
+"Education, health and administration",men,evening,total work,6460,80.2,77.6,82.7
+Other industries,women,day,paid work,2333,357.1,351.1,364.1
+Other industries,women,day,housework,2333,191.3,185.9,197.2
+Other industries,women,day,care,2333,20.1,17.6,22.6
+Other industries,women,day,commute,2333,58.1,55.4,60.9
+Other industries,women,day,unpaid,2333,211.3,205.7,217.5
+Other industries,women,day,total work,2333,568.4,561.3,575.3
+Other industries,women,evening,paid work,2333,47.1,43.5,50.8
+Other industries,women,evening,housework,2333,84.2,81.0,87.3
+Other industries,women,evening,care,2333,10.3,8.9,11.8
+Other industries,women,evening,commute,2333,17.1,15.9,18.4
+Other industries,women,evening,unpaid,2333,94.5,91.1,97.7
+Other industries,women,evening,total work,2333,141.6,138.2,145.4
+Other industries,men,day,paid work,5260,464.6,460.3,469.0
+Other industries,men,day,housework,5260,25.0,23.1,27.1
+Other industries,men,day,care,5260,14.6,13.5,15.7
+Other industries,men,day,commute,5260,71.3,69.4,73.1
+Other industries,men,day,unpaid,5260,39.5,37.3,41.8
+Other industries,men,day,total work,5260,504.1,500.0,508.4
+Other industries,men,evening,paid work,5260,83.5,80.1,87.1
+Other industries,men,evening,housework,5260,11.1,10.3,12.1
+Other industries,men,evening,care,5260,9.9,9.1,10.8
+Other industries,men,evening,commute,5260,29.5,28.6,30.4
+Other industries,men,evening,unpaid,5260,21.1,19.8,22.4
+Other industries,men,evening,total work,5260,104.6,101.1,108.4
+all salaried,women minus men,day,total work,0,65.2,60.6,69.6
+all salaried,women minus men,day,paid work,0,-87.6,-91.2,-84.3
+all salaried,women minus men,day,unpaid,0,152.7,149.1,157.1
+all salaried,women minus men,evening,total work,0,25.7,23.3,28.1
+all salaried,women minus men,evening,paid work,0,-43.9,-45.9,-41.8
+all salaried,women minus men,evening,unpaid,0,69.5,67.6,71.8
+Manufacturing and construction,women minus men,day,total work,0,94.0,83.9,103.0
+Manufacturing and construction,women minus men,day,paid work,0,-44.8,-53.1,-37.1
+Manufacturing and construction,women minus men,day,unpaid,0,138.8,130.2,147.5
+Manufacturing and construction,women minus men,evening,total work,0,29.1,23.4,34.7
+Manufacturing and construction,women minus men,evening,paid work,0,-35.6,-40.8,-30.1
+Manufacturing and construction,women minus men,evening,unpaid,0,64.7,60.7,69.3
+"Trade, transport and hospitality",women minus men,day,total work,0,66.2,57.8,75.3
+"Trade, transport and hospitality",women minus men,day,paid work,0,-51.4,-60.3,-42.4
+"Trade, transport and hospitality",women minus men,day,unpaid,0,117.6,108.8,127.9
+"Trade, transport and hospitality",women minus men,evening,total work,0,14.7,8.2,21.9
+"Trade, transport and hospitality",women minus men,evening,paid work,0,-33.5,-39.7,-26.6
+"Trade, transport and hospitality",women minus men,evening,unpaid,0,48.2,43.5,53.0
+Knowledge services,women minus men,day,total work,0,63.0,47.1,78.7
+Knowledge services,women minus men,day,paid work,0,-24.6,-33.0,-15.8
+Knowledge services,women minus men,day,unpaid,0,87.7,75.8,100.1
+Knowledge services,women minus men,evening,total work,0,26.4,19.0,33.4
+Knowledge services,women minus men,evening,paid work,0,-13.2,-17.7,-8.6
+Knowledge services,women minus men,evening,unpaid,0,39.6,33.5,45.9
+"Education, health and administration",women minus men,day,total work,0,108.3,102.4,114.8
+"Education, health and administration",women minus men,day,paid work,0,-60.9,-66.3,-55.3
+"Education, health and administration",women minus men,day,unpaid,0,169.2,164.5,175.0
+"Education, health and administration",women minus men,evening,total work,0,54.2,50.4,57.8
+"Education, health and administration",women minus men,evening,paid work,0,-23.0,-26.2,-19.9
+"Education, health and administration",women minus men,evening,unpaid,0,77.2,74.3,80.4
+Other industries,women minus men,day,total work,0,64.3,56.2,72.0
+Other industries,women minus men,day,paid work,0,-107.5,-115.5,-99.7
+Other industries,women minus men,day,unpaid,0,171.8,165.7,177.5
+Other industries,women minus men,evening,total work,0,37.0,32.2,41.6
+Other industries,women minus men,evening,paid work,0,-36.4,-40.8,-31.4
+Other industries,women minus men,evening,unpaid,0,73.4,69.8,76.9

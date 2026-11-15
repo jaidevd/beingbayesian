@@ -35,20 +35,24 @@ for c_ in ['person_serial_no', 'rel', 'sex', 'age', 'status', 'dow', 'dtype', 'd
     H['h_' + c_] = np.where(m, pr[c_ + '_a'], pr[c_ + '_b']); H['w_' + c_] = np.where(m, pr[c_ + '_b'], pr[c_ + '_a'])
 H['k_person'] = H.h_person_serial_no
 H = H.rename(columns={'person_serial_no_a': 'pa', 'person_serial_no_b': 'pb'})
-P = pd.read_pickle(P3)[k + ['w', 'kw_core', 'blue', 'grad', 'nss_region', 'sector']].rename(columns={'person_serial_no': 'k_person'})
+P = pd.read_pickle(P3)[k + ['w', 'ind5', 'grad', 'nss_region', 'sector']].rename(columns={'person_serial_no': 'k_person'})
 H = H.merge(P, on=hh + ['k_person'])          # keeps husbands in our salaried (18+) sample
 print('salaried husbands with a co-resident wife:', len(H), 'of', len(P[P.w > 0]), 'salaried people;', 'same day of week:', round((H.h_dow == H.w_dow).mean() * 100), '%')
 H['wife'] = np.select([H.w_status.str.contains('domestic duties', na=False), H.w_status.str.contains('regular salaried', na=False)],
                       ['domestic duties only', 'regular salaried'], 'other (working or not)')
 H['wife_in_work'] = ~H.w_status.str.contains('domestic duties|educational|rentier|disab|not able|others', na=False)
 wd = (H.h_dtype == 'normal day')
-kw = H.kw_core.fillna(False).astype(bool); bl = H.blue.fillna(False).astype(bool)
-GROUPS = [('all salaried men with a wife (work day)', wd), ('knowledge work', wd & kw), ('blue-collar', wd & bl),
+IND5 = ['Manufacturing and construction','Trade, transport and hospitality','Knowledge services','Education, health and administration','Other industries']
+GROUPS = [('all salaried men with a wife (work day)', wd)] + [(g, wd & (H.ind5 == g)) for g in IND5] + [
           ('wife on domestic duties only', wd & (H.wife == 'domestic duties only')), ('wife regular salaried', wd & (H.wife == 'regular salaried'))]
+for who in ('h', 'w'):
+    H[who + '_unpaid'] = H[who + '_dom'] + H[who + '_care']; H[who + '_work'] = H[who + '_paid'] + H[who + '_dom'] + H[who + '_care']
 H['wife_dom_only'] = (H.wife == 'domestic duties only') * 100.0; H['wife_salaried'] = (H.wife == 'regular salaried') * 100.0
 METRICS = [('wife_dom_only', 'wife on domestic duties only (%)'), ('wife_salaried', 'wife regular salaried (%)'),
            ('h_paid', 'husband paid work, day'), ('w_paid', 'wife paid work, day'), ('h_dom', 'husband housework, day'), ('w_dom', 'wife housework, day'),
            ('h_care', 'husband care, day'), ('w_care', 'wife care, day'), ('h_leis', 'husband leisure, day'), ('w_leis', 'wife leisure, day'),
+           ('h_unpaid', 'husband unpaid (housework and care), day'), ('w_unpaid', 'wife unpaid (housework and care), day'),
+           ('h_work', 'husband total work (paid and unpaid), day'), ('w_work', 'wife total work (paid and unpaid), day'),
            ('h_dom_e', 'husband housework, 5pm-midnight'), ('w_dom_e', 'wife housework, 5pm-midnight'),
            ('h_paid_e', 'husband paid work, 5pm-midnight'), ('w_paid_e', 'wife paid work, 5pm-midnight'),
            ('h_leis_e', 'husband leisure, 5pm-midnight'), ('w_leis_e', 'wife leisure, 5pm-midnight')]
@@ -67,6 +71,13 @@ for gname, m_ in GROUPS:
         num = np.bincount(fx, weights=(x.w * x[col]).to_numpy(), minlength=F)
         est = num.sum() / den.sum(); bs = (C @ num) / dd
         rows.append((gname, len(x), lab, round(est, 1), round(np.percentile(bs, 2.5), 1), round(np.percentile(bs, 97.5), 1)))
+for gname, m_ in GROUPS:   # wife's share of the couple's unpaid work: ratio of weighted sums, bootstrapped with the same draws
+    x = H[m_]; fx = fi[m_.to_numpy()]
+    if len(x) < 40: continue
+    for lab, wc, hc in [("wife's share of the couple's housework (%)", ['w_dom'], ['h_dom']), ("wife's share of the couple's housework and care (%)", ['w_dom', 'w_care'], ['h_dom', 'h_care'])]:
+        nw = np.bincount(fx, weights=(x.w * x[wc].sum(axis=1)).to_numpy(), minlength=F); nh = np.bincount(fx, weights=(x.w * x[hc].sum(axis=1)).to_numpy(), minlength=F)
+        bs = (C @ nw) / ((C @ nw) + (C @ nh)) * 100
+        rows.append((gname, len(x), lab, round(nw.sum() / (nw.sum() + nh.sum()) * 100, 1), round(np.percentile(bs, 2.5), 1), round(np.percentile(bs, 97.5), 1)))
 res = pd.DataFrame(rows, columns=['group', 'n', 'metric', 'estimate', 'lo95', 'hi95'])
 res.to_csv(out, index=False)
 pd.set_option('display.width', 250); pd.set_option('display.max_rows', 200)
