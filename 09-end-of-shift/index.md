@@ -74,8 +74,8 @@ Last month, speaking to an audience of Dutch businessmen, Piyush Goyal said,
 > families; ... willing to work hard. Nobody in India will tell you it's 5
 > o'clock, and certainly, no Indian will remind you it's the weekend.
 
-When he said "5 o'clock" (or write this as "at '5 o'clock'") he looked at his
-wristwatch. And at the end, he duly paused for laughter.
+At "5 o'clock", he takes a well-rehearsed look at his
+wristwatch. And at the end, he duly pauses for laughter.
 
 To be fair, it *is* funny in a certain sense. The hardworking, underpaid and
 overworked Indian forever eager to please is far from the most offensive
