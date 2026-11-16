@@ -21,6 +21,15 @@ The quote makes three testable statements and leaves one thing out:
 
 ## The answer in short
 
+- **The fulcrum: the quote describes a worker who has someone else covering the rest, and
+  that cannot hold if more women are to join the workforce.** A salaried man's wife does
+  about seven hours of unpaid work a day and he does about forty minutes. When the wife also
+  has a salaried job she still does the evening shift, working 10.1 hours a day to his 8.3.
+  Salaried women work 65 minutes a day more than salaried men once housework is counted.
+  The unpaid work has to go somewhere when more women take jobs; today it stays with them.
+- **The person who fits the description is mostly a man.** Among young graduates, 40% of
+  men and 19% of women are in regular wage work, and 45% of young women graduates are out of
+  the labour force on domestic duties.
 - **At 5 pm most salaried people are still working (69%), but 5 pm is where the exit
   begins.** The median day ends at 6 pm, and a quarter of people are done before 5.
 - **When you stop depends on where you work, not on being Indian.** Outside schools and
@@ -29,12 +38,9 @@ The quote makes three testable statements and leaves one thing out:
   who finishes when.
 - **The weekend is real for some and not for others.** 79% of knowledge-services workers
   are off on Sunday, against 28% in trade, transport and hospitality.
-- **The "available" worker has someone else covering the rest.** A salaried man's wife does
-  about seven hours of unpaid work a day, and he does about forty minutes. Salaried women
-  work 65 minutes a day more than salaried men once housework is counted.
-- **The person who fits the description is mostly a man.** Among young graduates, 40% of
-  men and 19% of women are in regular wage work, and 45% of young women graduates are out of
-  the labour force on domestic duties.
+
+The sections below build to the fulcrum: the claim in the evening (2 and 3) and at the
+weekend (4), the household behind it (5), who can be the ideal worker (6).
 
 ## 1. Who is "nobody": the sample
 
@@ -151,7 +157,10 @@ models; it is not causation; full table in `assets/finish-drivers.csv`):
 - The off-day estimates for women in trade, transport and hospitality (n = 110) have wide
   intervals.
 
-## 5. The day does not end when paid work does
+## 5. The fulcrum: the day does not end when paid work does
+
+The quote assumes a worker who is available at 5 pm and on the weekend. This section shows
+what makes that possible, and where the unpaid work goes when the wife also has a job.
 
 ![](assets/ideal-worker-day.png)
 
@@ -217,14 +226,19 @@ age 18 to 34 with a graduate or postgraduate degree (84,098 people in the 2025 P
 
 ## Verdict: how right is Goyal?
 
+- **The fulcrum:** the quote holds only for a worker whose home is run by someone else, and
+  in these households that is almost entirely the wife. If more women are to be in the
+  workforce, as he reportedly also said (quote to be sourced), the unpaid work cannot stay where it is, and "nobody will tell
+  you it's 5 o'clock" cannot be the norm. The survey shows where the work goes today, not
+  what happens as participation rises (that is an inference).
+- **"Indians":** it generalises from a minority, mostly men: 20.1% of men and 6.9% of women
+  are in regular wage work.
 - **5 o'clock:** mostly right in the private sector, wrong overall. 69% are still working at
   5 pm, but a quarter have stopped, and the median finish of 6 pm is an ordinary working day.
   Retail, hospitality and private small firms run late; schools, health and the public sector
   do not.
 - **The weekend:** wrong for knowledge workers (79% are off on Sunday) and for most others,
   right for trade, transport and hospitality, where only 28% get Sunday.
-- **"Indians":** it generalises from a minority, mostly men, whose availability depends on
-  household work that is almost all done by women.
 
 ## Caveats
 
@@ -250,6 +264,12 @@ age 18 to 34 with a graduate or postgraduate degree (84,098 people in the 2025 P
 
 - **Goyal's audience** (a gathering of Dutch businessmen) and who he was addressing: needs web
   research.
+- **Goyal's exact words on women joining the workforce** in the same speech (recalled, not yet
+  sourced; the quote must be checked before it is used).
+- **A cross-country test of the fulcrum:** in countries where more women are in paid work,
+  do husbands take on unpaid work, or do wives carry a double day? Needs the OECD Time Use
+  Database (stats.oecd.org, dataset TIME_USE), which could not be fetched from here (the OECD
+  host refuses automated requests); a manual download is needed.
 - **What Murthy, Aggarwal and Subrahmanyan's longer-week suggestions imply** for women's labour
   force participation: section 5 gives the household arithmetic, but the extension is yours to
   draw.
