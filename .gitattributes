@@ -12,3 +12,4 @@
 06-public-welfare/data/03-ce-processed-food.parquet filter=lfs diff=lfs merge=lfs -text
 06-public-welfare/data/04-ce-energy-utilities.parquet filter=lfs diff=lfs merge=lfs -text
 06-public-welfare/data/baskets-consumption-value.parquet filter=lfs diff=lfs merge=lfs -text
+**/*.csv filter=lfs diff=lfs merge=lfs -text

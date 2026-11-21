@@ -60,6 +60,12 @@ These use other inputs and are independent of steps 1-10 above, except `spouse.p
 The PLFS 2025 file (`Data_in_CSV.zip`, with no data layout) is not in the repo. The scripts assume the 2023-24 coding for education,
 enterprise type, contract, paid leave and social security; value distributions match. PLFS gives hours for each of the last
 seven days but not the weekday, so "worked all 7 days" is the closest measure of weekend work.
+- `weekend_work.py <work dir> <out.csv>` and `weekend_chart.py <csv> <png>`: paid work, housework and care of salaried women and men
+  outside education on a work day and on a day off (with bootstrap intervals and the women-minus-men difference);
+  `assets/weekend-work.csv` and `assets/weekend.png`.
+- `plfs_days.py <CPERV1.csv> <out.csv>`: days worked in the reference week and weekly hours of salaried workers outside education,
+  and the usual activity of women and men aged 18-59 (PLFS 2025, bootstrap intervals); `assets/plfs-days-worked.csv`.
+  The 2025 zip now unpacks to `CPERV1.csv` and `CHHV1.csv`.
 - `what_matters.py <work dir> <out.csv>` and `what_matters_chart.py <csv> <png>`: which factors explain who is still working at 5 pm
   (level shares with bootstrap intervals, plus the variation each factor explains); `assets/what-matters.png` and `assets/what-matters.csv`.
 - `finish_spread.py <work dir> <out.csv> <out.png>`: the spread of finishing times (histogram for all salaried, and the share who

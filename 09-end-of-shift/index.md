@@ -1,7 +1,5 @@
 # End of Shift
 
-## The Prior
-
 Two years ago, I went on a boat ride on the Mekong river in Luang Prabang. There
 was something ineffable about those two hours. The gorge was beautiful, wide and
 flanked by sheer cliffs — some of which had caves in them. And since the gorge
@@ -23,7 +21,7 @@ started developing an inkling of what the missing ingredient might be: it was,
 quite simply, being present.
 
 That trip to Laos had coincided with a major professional milestone. The hard
-work of a decade had paid off handsomely, and in a very tangible fashion. The
+work of a decade had paid off handsomely. The
 skills acquired over fourteen years had finally amounted to something very
 tangible. I decided to take a sabbatical, and so there I was, floating on the
 Mekong with not a care in the world.
@@ -67,7 +65,8 @@ o'clock — or even the sunset.
 
 ---
 
-Last month, speaking to an audience of Dutch businessmen, Piyush Goyal said,
+Last month, speaking to an audience of Dutch businessmen, Piyush Goyal
+[said](https://youtu.be/2-eDYBjVnJE),
 
 > We are a large country ... young, talented, skilled, aspirational, looking for
 > a better quality of life for themselves, for their children, for their
@@ -85,12 +84,12 @@ labour. His colleagues in Indian politics never tire of accusing each other of
 having a colonial hangover, while at the same time he has no qualms advertising
 the stereotype in a European country, of all places.
 
-Not long ago he scolded Indian entrepreneurs for pretending that fast and cheap
-food delivery was "innovation".[^verify] It's a delicious irony that the Union
+Not long ago he [scolded Indian startups](https://youtu.be/DPaLXe9lF2k) for
+"turning unemployed youth into cheap labour". It's a delicious irony that the Union
 Minister of Commerce & Industry has drawn up his full height to celebrate on
 European soil what he once criticized in India.
 
-You could argue that the speech, however, as a whole, was a good one. And you
+You could argue that the speech, as a whole, was a good one. And you
 would be right. Why, then, take these few sentences out of context? In a country
 where even the PM can barely speak without a teleprompter, why make a big deal
 out of an elected official not choosing their words more carefully?
@@ -105,9 +104,10 @@ So that's exactly what we shall do.
 
 ---
 
-Prima facie, there's nothing wrong with Goyal's claim. It's reasonable to
-believe that most Indians are still at their desk at 5 pm, and most Indians do
-work on weekends. In fact, we could simply replace the generalizing phrases like
+Prima facie, there's nothing wrong with the minister's claim. It's reasonable to
+believe that most salaried Indians are still at their desk at 5 pm, and that
+most work on weekends: 91% do some paid work on a Saturday and 57% on a Sunday.
+In fact, we could simply replace the generalizing phrases like
 "nobody in India" with "very few people in India", and the statement could even
 be taken literally. After all, even in the most emancipated work cultures, you
 can barely expect people to follow the strict 9-to-5 schedule.
@@ -115,7 +115,7 @@ can barely expect people to follow the strict 9-to-5 schedule.
 However, it is the _spirit_ of the statement that is under scrutiny here. What
 does the working class in India do in the evenings and on weekends? Who,
 precisely, are the people who work late evenings, and how do they differ from
-people who don't? To answer these questions, we turn (once again[^90hr]) to
+people who don't? To answer these questions, we turn ([once again](https://www.beingbayesian.in/p/the-90-hour-workweek)) to
 NSO's Time Use Survey of 2024. Now, the minister's claim is about willingness
 and disposition towards work. The survey doesn't measure that, but it does tell
 us how Indians spend their time. The survey itself is comprehensive, and paints a
@@ -132,7 +132,7 @@ public sector workers and 84% of private sector workers have not finished
 working by 5 pm. So the initial claim is about half-right. By 7 pm, a quarter of
 all salaried employees (education included) are still working, and within two
 hours, only 7% are still at their desk. Since we're interested primarily in the
-workforce Goyal was advertising to investors, we set education aside for the
+part of the workforce that was being advertised, we set education aside for the
 remainder of the analysis.
 
 The next step is to ask what seems[^corrcause] to govern people's evenings—not
@@ -146,10 +146,11 @@ trade / transport and hospitality.
 
 ![](assets/clock-faces.png)
 
-Note, however, that women's evenings are dominated by housework, which is
-negligible for men. It's a bit like a gendered twist on Parkinson's law: the
-earlier women finish work, the more time they spend on housework, whereas for
-men, the evenings fill up with leisure.
+Note, however, that women spend far more of their evenings on housework than
+men do: about an hour between 5 pm and midnight, against eight minutes. It's a
+bit like a gendered twist on Parkinson's law: the earlier women finish work, the
+more time they spend on housework, whereas for men, the evenings fill up with
+leisure.
 
 This gender imbalance is, unfortunately, the fulcrum on which this entire piece
 rests. Every story about time use, and indeed, about productivity in the labour
@@ -169,12 +170,13 @@ do. The larger point is that if more women come into the workforce, someone
 still has to do the housework.
 
 As more women enter the workforce, the housework must either be shared,
-outsourced, automated or left undone. Goyal's two visions of the future don't necessarily
-contradict each other, but they raise an uncomfortable question: whose sunsets
-and weekends will pay for them both?
+outsourced, automated or left undone. The two visions of the future—one where
+hustle continues to be a flex and the other where there are more women in the
+workforce—don't necessarily contradict each other, but they raise an
+uncomfortable question: whose sunsets and weekends will pay for them both?
 
 In fact, the tradeoff becomes even more precarious when we consider the second
-aspect of the Indian hustle flex: the weekend[^dayoff]. Here, too, Goyal is
+aspect of the Indian hustle flex: the weekend[^dayoff]. Here, too, the minister is
 somewhat right about the facts, while being spectacularly wrong about what they mean.
 He's right in that many people (almost a fifth of our cohort, for about six
 hours on average) work on their days off. But the burden of housework is
@@ -183,10 +185,57 @@ overwhelmingly borne by women.
 ![](assets/weekend.png)
 
 These are the same women who "don't want to be washing clothes at home." It may
-be they don't _want_ to, and would much rather be doing paid work. Unlike Goyal,
-I won't presume to speak on behalf of any woman, let alone the average Indian
-woman. But something tells me that the hustle flex won't survive no matter how
-many dishwashers and washing machines are sold in India.
+be they don't _want_ to, and would much rather be doing paid work. I won't
+presume to speak on behalf of women, but something tells me that the hustle flex
+won't survive no matter how many dishwashers and washing machines are sold in
+India.
+
+---
+
+After having spent some time away from it, looking back at the previous section,
+even I admit that a lot of it seems like attacking a strawman. I even admitted
+earlier that it was a good speech, and that I was deliberately taking a couple
+of sentences out of context. But it's precisely this investigation that has
+revealed what needs to happen for our vision of the modern, industrious
+workforce to be true: both in the letter and the spirit.
+
+In Jewish folklore, a Golem is an anthropomorphic creature made of clay. It is
+brought to life by writing the word "Emes" (truth) on its forehead.
+Whereupon the Golem would turn into a perfectly obedient automaton with
+limitless stamina and strength.
+
+Who wouldn't want a workforce of Golems? In Indian folklore, people have
+something far more influential than the simple truth inscribed on their
+foreheads: their fates, determined in no small part by the accident of birth.
+That inscription cannot be altered by speeches alone. Instead, there's the risk
+of the description of how Indians work, when advertised to prospective
+employers, becoming a prescription for how they ought to work. And unlike Golems,
+humans have obligations, ambitions and limitations that cannot simply be erased.
+Those with the power to shape these expectations must exercise great care.
+Otherwise, as one version of the legend goes, the Golem could collapse under its
+own weight and crush its maker beneath it.
+
+The very first chapter of Caroline Criado Perez's book, *Invisible Women*, is titled
+"Can Snow-Clearing be Sexist?" She starts with the story of how the public
+officials in the town of Karlskoga, Sweden were addressing gender-equality
+initiatives: re-evaluating policies through a gendered lens. An official joked
+that at least "snow-clearing was something that the 'gender people' could keep their noses
+out of." And as it turns out, even in Sweden, something as seemingly
+gender-neutral as snow clearing has disproportionate consequences for men and
+women — primarily because while snow is unisex, driving, public transport,
+sidewalks and pushing a stroller is not. We should perhaps ask if the hustle and
+the grind are sexist too—both on the demand and the supply sides.
+
+None of this is to say that hustling is bad. I myself on occasion have taken
+some pride in spending long hours at work. But times change. A decade ago my
+friends and I would share productivity tips. Today we share physiotherapy
+recommendations. Workaholism has, like everything else, costs and benefits. For
+those of us privileged enough to choose workaholism, it is a bargain we can
+afford to make. Not everyone has that luxury. Speaking for myself, the cost only
+seemed low: I'm still not good at switching off.
+
+And now my dog is nudging my elbow. She's sensed the keyboard going
+silent.
 
 
 [^corrcause]: Yes, yes, I know, correlation is not causation. But throwing
@@ -210,6 +259,7 @@ many dishwashers and washing machines are sold in India.
     gap in paid work at 5 pm is longer than four hours. Of those who did any
     paid work that day, about 73% have not yet finished.
 
-[^verify]: Be careful about what he actually said here.
+[^regularwagetoo]: When we say "salaried" we also include
+    people who receive regular wages.
 
 [^dayoff]: Not literally a weekend, but any day off from work.

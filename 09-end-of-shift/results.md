@@ -1,8 +1,9 @@
 # Is It 5 O'Clock Yet? What the Time Use Survey Says About Piyush Goyal's Claim: Results
 
-Data: NSO Time Use Survey (TUS) 2024, person-day activity logs from 4 am to 4 am. Section 6
-uses the Periodic Labour Force Survey (PLFS) person file for calendar year 2025, with the
-2023-24 round for comparison. All estimates are weighted (`mult`, ratio of weighted sums).
+Data: NSO Time Use Survey (TUS) 2024, person-day activity logs from 4 am to 4 am. Sections 4
+and 6 also use the Periodic Labour Force Survey (PLFS) person file for calendar year 2025, with
+the 2023-24 round for comparison; section 5 uses the Household Consumption Expenditure Survey
+(HCES) 2023-24 for washing machines. All estimates are weighted (`mult`, ratio of weighted sums).
 Intervals are 95% cluster bootstraps over FSUs, resampled within state x sector strata
 (300 draws); the strata are an approximation of the real design.
 
@@ -156,6 +157,26 @@ models; it is not causation; full table in `assets/finish-drivers.csv`):
   and hospitality (7.3-7.8 hours for women, 7.4-8.2 for men).
 - The off-day estimates for women in trade, transport and hospitality (n = 110) have wide
   intervals.
+- **Most salaried people work on weekends.** 91% [90-92] do some paid work on a Saturday and
+  57% [56-59] on a Sunday (92% and 61% outside education), against 94-96% on Monday to
+  Friday. The PLFS 2025, which does not give the weekday, agrees: outside education 84.7%
+  [84.1-85.3] of salaried workers worked six or more of the last seven days and 28.5%
+  [27.8-29.1] worked all seven (women 30.3%, men 27.9%). Weekly hours average 52.3 for men
+  and 45.2 for women, and 43.9% work more than 48 hours (`assets/plfs-days-worked.csv`).
+- **On any day off, not just the weekend.** Outside education 18.2% [16.4-19.9] do some paid
+  work on a day off (17.9% with education), for 6.0 hours on average among those who do
+  (women 12.8%, men 19.8%). By the day it falls on: Saturday 18.7% [14.6-23.7], Sunday
+  14.5% [12.0-17.2], Monday to Friday 23.0% [20.5-25.6]. 43% are off on a Sunday and 8.8% on a
+  Saturday outside education (47% and 9.5% with education). "Day off" is the respondent's
+  "other day", so it includes leave and festivals: 51% of off days are Sundays and 11.5% are
+  Saturdays.
+- **The weekend chart** (`assets/weekend.png`, `assets/weekend-work.csv`, education excluded).
+  On a day off women work 360 minutes in total (paid work, housework and care) and men 175;
+  unpaid work 320 against 102; housework 276 against 70 (4.6 against 1.2 hours). 93.1% of
+  women do some housework on a day off, against 50.8% of men. On a work day the totals are 584
+  and 520 minutes. The gap holds on Sundays only and after reweighting to the same industry
+  mix. The ratio of women's to men's housework falls from 7.5 to 3.9 because men do more on a
+  day off, but the gap in hours widens, so quote hours, not the ratio.
 
 ## 5. The fulcrum: the day does not end when paid work does
 
@@ -190,8 +211,24 @@ wife answer for the same weekday.
   65 minutes more [61-70]. She does 88 minutes less paid work and 153 minutes more unpaid
   work. In the four industry groups we measured the gap is 63 to 108 minutes.
 - **Between 5 pm and midnight** women do 78 minutes of domestic work against 10 for men
-  (about eight times). Housework peaks at 40% of salaried women in the half hour from 7:30
-  pm, against 4% of men.
+  (about eight times); this is all salaried people on work days, education included. Housework
+  peaks at 40% of salaried women in the half hour from 7:30 pm, against 4% of men.
+- **In the six groups on the clock faces** (education excluded, work days, 5 pm to midnight)
+  women do 62 minutes of housework against 8 for men: health and public administration 77
+  against 10, knowledge services 48 against 8, trade, transport and hospitality 55 against 7.
+  Women's evening leisure is 60, 76 and 53 minutes and men's 84, 88 and 63, so housework
+  outweighs leisure for women only in the first group (and by 2 minutes in the third). Use the
+  word "dominated" with care. The "Parkinson" pattern is real but small, about 9 minutes of
+  extra housework for each hour that work finishes earlier.
+- **Washing machines (HCES 2023-24 and TUS 2024).** 36% of households that live mainly on a
+  wage or salary have a washing machine (46% in cities, 21% in villages; the HCES records
+  presence only). In the TUS, women in salaried households that wash by machine spend about 4
+  minutes a day less on laundry than comparable women who wash by hand (95% interval about 3
+  to 5, controlling for urban or rural, age, household size, per-capita spending and her work
+  status); men under 2 minutes either way. Households that outsource laundry have about 26
+  minutes less, but only about 3% of salaried households do. The TUS variable is machine
+  washing by household members, not ownership, and the comparison is across households, so it
+  is an association, not an effect of buying a machine.
 - **Money does not change it.** Men's evening housework rises from 7 to 14 minutes between
   the poorest and richest households; women's stays at 76-81. In all 19 groups we cut, women
   do 4 to 12 times the evening housework men do.
@@ -216,6 +253,18 @@ age 18 to 34 with a graduate or postgraduate degree (84,098 people in the 2025 P
   within what the difference in survey design could produce) against 79.1% for men. Among
   women aged 15-59 whose main activity is domestic duties, 86% give child care and
   home-making as the reason.
+- **Most working women are not salaried.** Among women aged 18-59 in the PLFS 2025, 8.5%
+  [8.3-8.7] are in regular salaried work against 25.1% [24.7-25.5] of men; 51.7% [51.2-52.2]
+  are in domestic duties against 0.4% of men; 13.6% are self-employed against 34.6%; 8.8% are
+  unpaid family helpers against 7.3% (`assets/plfs-days-worked.csv`). So the "more women in
+  the workforce" story is mostly not a salaried story, and the salaried cohort is not who
+  the minister's comment about women describes. Of the women in domestic duties, 75% give
+  child care and home-making as the main reason (86% of those who gave a reason; 13% have
+  none recorded), 0.9% no work at a convenient location and 0.5% a lack of training.
+- **The PLFS does not measure willingness to work.** It records the reason for being in
+  domestic duties (a constraint, not a preference), whether someone was seeking or available
+  for work (0.1% of these women), and the hours available for additional work on each of the
+  last seven days (`ahr1`-`ahr7`). It has no questions on evenings or weekends.
 - **The people who do fit are in the better part of salaried work.** Young graduates in
   regular wage jobs earn a median Rs 22,600 a month (women 20,000, men 24,500) against
   Rs 15,000 for all regular wage workers. 40% have no written contract (all: 58%) and they
@@ -257,6 +306,10 @@ age 18 to 34 with a graduate or postgraduate degree (84,098 people in the 2025 P
 - **Household pairs** cover households with a single head-spouse or married-child pair.
 - **PLFS 2025** has no data layout in the download; the 2023-24 coding was assumed (the value
   distributions match). PLFS gives hours for each of the last seven days but not the weekday.
+- **Weekday weights.** The TUS weights do not equalise the days of the week (Sunday is 12.5%
+  of person-days against about 14.3% if equal), a minor effect on the weekend figures.
+- **Off days** are the respondent's "other day": weekly off, leave or festival, not literally a
+  weekend.
 - **Medians** sit on a half-hour grid. "Explains X%" is R-squared, not causation. Small cells
   (women's off days in trade, transport and hospitality, ST workers) are indicative only.
 
@@ -282,5 +335,6 @@ week), `what-matters.png` (what predicts still working at 5 pm), and `evening.pn
 `evening-splits.png` and `total-work.png` (the second shift in detail). Tables:
 `assets/splits-ci.csv`, `assets/employer-ci.csv`, `assets/within-industry.csv`,
 `assets/spouse-housework.csv`, `assets/finish-spread.csv`, `assets/finish-drivers.csv`,
-`assets/plfs-women-participation.csv`, `assets/plfs-ideal-cohort.csv`. Scripts and how to run
-them: `scripts/README.md`.
+`assets/plfs-women-participation.csv`, `assets/plfs-ideal-cohort.csv`,
+`assets/plfs-days-worked.csv` and `assets/weekend-work.csv`; the weekend chart is
+`assets/weekend.png`. Scripts and how to run them: `scripts/README.md`.
