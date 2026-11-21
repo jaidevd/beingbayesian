@@ -221,8 +221,9 @@ wife answer for the same weekday.
   word "dominated" with care. The "Parkinson" pattern is real but small, about 9 minutes of
   extra housework for each hour that work finishes earlier.
 - **Washing machines (HCES 2023-24 and TUS 2024).** 36% of households that live mainly on a
-  wage or salary have a washing machine (46% in cities, 21% in villages; the HCES records
-  presence only). In the TUS, women in salaried households that wash by machine spend about 4
+  wage or salary have a washing machine (46% in cities, 21% in villages), against 20.9% of all
+  households (40.4% urban, 11.0% rural); the HCES records presence only, so a missing answer
+  counts as "no". In the TUS, women in salaried households that wash by machine spend about 4
   minutes a day less on laundry than comparable women who wash by hand (95% interval about 3
   to 5, controlling for urban or rural, age, household size, per-capita spending and her work
   status); men under 2 minutes either way. Households that outsource laundry have about 26
