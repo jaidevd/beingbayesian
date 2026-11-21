@@ -33,7 +33,7 @@ this very publication. But more than anything else it brought me unprecedented
 clarity of thought and peace of mind. And here, I suspect, I fell prey to the
 fallacy of the single cause. The sabbatical brought me immersion, and I thought
 only something like it could bring me immersion. Eventually, the sabbatical
-ended and I went back to work. And with work came the questionable distinction
+ended and I went back to work. And with work returned the questionable distinction
 of being a workaholic. It had served me well in the past, and it would serve me
 well now. But being a workaholic also means losing the ability to switch off.
 
@@ -41,11 +41,11 @@ Back in the day my dog had learned to recognize the sound of the keyboard
 falling silent. It meant that it was perhaps time for her walk. Today, that
 familiar clacking is far less prominent in her life — not least because LLMs are
 doing most of my typing for me; her workaholic human is now rarely available in
-the evenings. She still takes him for a walk at night, but that's only because
-*he* does not take *her* any more. Even late at night when they're both sitting
+the evenings. She still walks him at night, but that's only because
+he doesn't walk her anymore. Even late at night when they're both sitting
 on a park bench, he cannot resist pulling out his phone to check the progress
 his coding agents have made; but she's happy touching grass — greedily sniffing
-every inch of it and rolling around in it trying to get its scent in her fur —
+every inch of it and rolling around trying to get the scent in her fur —
 she doesn't know if she can bring him to the park tomorrow. She knows that his
 attention is expensive. And if she had the slightest interest in anything except
 sniffing grass, she'd realize that lovely as she is, she's not the Mekong.
@@ -77,8 +77,8 @@ Last month, speaking to an audience of Dutch businessmen, Piyush Goyal
 At "5 o'clock", he takes a well-rehearsed look at his wristwatch. And at the
 end, he duly pauses for laughter.
 
-To be fair, it *is* funny in a certain sense. The hardworking, underpaid and
-overworked Indian forever eager to please is far from the most offensive
+To be fair, it *is* funny in a certain sense. The hardworking, underpaid,
+overworked, forever eager-to-please Indian is far from the most offensive
 stereotype. But it's also funny because the minister seems to be oblivious to
 the contradiction between "looking for a better quality of life" and cheap
 labour. His colleagues in Indian politics never tire of accusing each other of
@@ -98,7 +98,7 @@ an elected official not choosing their words more carefully?
 I can think of at least three reasons. First, I may be a workaholic, but I'm
 still jobless enough to want to die on obscure hills. Second, it is precisely
 the gaffes of public figures that pave the way to illuminating reality. Third,
-Piyush Goyal disliked people getting into the math of what he's said (since it
+Piyush Goyal dislikes people getting into the math of what he's said (since it
 did not help Einstein discover gravity).
 
 So that's exactly what we shall do.
@@ -109,15 +109,14 @@ Prima facie, there's nothing wrong with the minister's claim. It's reasonable to
 believe that most salaried Indians are still at their desk at 5 pm, and that
 most work on weekends: 91% do some paid work on a Saturday and 57% on a Sunday.
 In fact, we could simply replace the generalizing phrases like "nobody in India"
-with "most salaried Indians", and the statement would come closer to the truth.
+with "few salaried Indians", and the statement would come closer to the truth.
 After all, even in the most emancipated work cultures, you can barely expect
 people to follow the strict 9-to-5 schedule.
 
 However, it is the _spirit_ of the statement that is under scrutiny here. What
 does the working class in India do in the evenings and on weekends? Who,
 precisely, are the people who work late evenings, and how do they differ from
-people who don't? To answer these questions, we turn ([once
-again](https://www.beingbayesian.in/p/the-90-hour-workweek)) to NSO's Time Use
+people who don't? To answer these questions, we [return] (https://www.beingbayesian.in/p/the-90-hour-workweek) to NSO's Time Use
 Survey of 2024. Now, the minister's claim is about willingness and disposition
 towards work. The survey doesn't measure that, but it does tell us how Indians
 spend their time. The survey itself is comprehensive, and paints a detailed
@@ -202,7 +201,7 @@ revealed what needs to happen for our vision of the modern, industrious
 workforce to be true: both in the letter and the spirit.
 
 In Jewish folklore, a Golem is an anthropomorphic creature made of clay. It is
-brought to life by writing the word "Emes" (truth) on its forehead. Whereupon
+brought to life by writing the word "Emes" (truth) on its forehead, whereupon
 the Golem would turn into a perfectly obedient automaton with limitless stamina
 and strength.
 
